@@ -1,26 +1,25 @@
-# Portfolio app legal websites
+# Portfolio app websites (premium)
 
-Public GitHub Pages site for Android Play Console:
+Public GitHub Pages sites for every portfolio Android app — quality bar matched to
+**Kitchen Buddy** and **Daily Affirmation**.
 
-- Privacy policy
-- Terms of use
-- **Data deletion request** (required URL)
+Each app folder includes:
 
-**Live:** https://13ond21.github.io/portfolio-websites/
+- `index.html` — premium marketing + legal entry
+- `privacy.html` — full privacy policy (TOC, Play-ready)
+- `terms.html` — terms of use
+- `delete-data.html` — **data deletion request** URL for Play Console
+- `styles.css` — Fraunces + DM Sans, ambient background, phone mockup, Free vs Premium
 
-**Developer:** Lucky Tools (Northern Ireland)  
-**Contact:** autoaccentsni@gmail.com
+**Live:** https://13ond21.github.io/portfolio-websites/  
+**Repo:** https://github.com/13ond21/portfolio-websites  
 
-## Deploy
-
-Pages: **Settings → Pages → Deploy from branch → `main` / root**
-
-## Regenerate locally
+## Regenerate
 
 ```powershell
 python "C:\Users\corey\Desktop\App Builds\portfolio-24\factory\publish_legal_sites.py"
 cd "C:\Users\corey\Desktop\App Builds\portfolio-24\github-pages-publish"
 git add -A
-git commit -m "Update legal sites"
+git commit -m "Upgrade legal sites to premium quality"
 git push
 ```
