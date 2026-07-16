@@ -11,7 +11,8 @@ Each app folder includes:
 - `delete-data.html` — **data deletion request** URL for Play Console
 - `styles.css` — Fraunces + DM Sans, ambient background, phone mockup, Free vs Premium
 
-**Live:** https://13ond21.github.io/portfolio-websites/  
+**Live hub:** https://13ond21.github.io/portfolio-websites/  
+**★ Bookmark all home pages:** https://13ond21.github.io/portfolio-websites/apps.html  
 **Repo:** https://github.com/13ond21/portfolio-websites  
 
 ## Regenerate

@@ -3,10 +3,66 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lucky Tools — App privacy, terms &amp; data deletion</title>
-  <meta name="description" content="Premium legal and product pages for Lucky Tools Android apps. Privacy policies, terms, and data deletion URLs for Google Play Console." />
+  <title>Lucky Tools Apps — home pages, privacy &amp; data deletion</title>
+  <meta name="description" content="Directory of all Lucky Tools Android app websites. Bookmark all home pages, privacy policies, terms, and data deletion URLs." />
   <meta name="theme-color" content="#5b7c6e" />
+  <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+.hub-bookmark {
+  display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+  margin: 1.25rem 0 0; padding: 1rem 1.15rem;
+  background: var(--accent-tint); border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
+  border-radius: 16px; font-size: 0.95rem;
+}
+.hub-bookmark code {
+  font-size: 0.88em; background: var(--surface); padding: 0.25rem 0.55rem;
+  border-radius: 8px; border: 1px solid var(--border); word-break: break-all;
+}
+.hub-search {
+  width: 100%; max-width: 420px; margin: 0.5rem 0 1.25rem;
+  padding: 0.85rem 1.1rem; border-radius: 14px; border: 1px solid var(--border);
+  background: var(--surface); font: inherit; font-size: 1rem; color: var(--ink);
+  box-shadow: var(--shadow);
+}
+.hub-search:focus { outline: 2px solid color-mix(in srgb, var(--accent) 50%, transparent); border-color: var(--accent); }
+.cat-block { margin: 2rem 0 1rem; }
+.cat-block h2 {
+  margin: 0 0 0.85rem; font-family: var(--font-display); font-size: 1.25rem;
+  letter-spacing: -0.02em; display: flex; align-items: center; gap: 0.5rem;
+}
+.cat-block h2 .count {
+  font-family: var(--font-body); font-size: 0.8rem; font-weight: 600;
+  color: var(--muted); background: var(--surface-high); border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+.app-list .app-card {
+  display: block; padding: 1.05rem 1.15rem; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 16px;
+  box-shadow: var(--shadow); transition: border-color 0.15s, transform 0.15s;
+}
+.app-list .app-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.app-list .app-home { display: block; text-decoration: none; color: var(--ink); }
+.app-list .app-home strong { display: block; font-size: 1.02rem; }
+.app-list .app-home small { display: block; color: var(--muted); margin-top: 0.3rem; font-size: 0.85rem; }
+.app-list .home-label {
+  display: inline-block; margin-top: 0.45rem; font-size: 0.78rem; font-weight: 700;
+  color: var(--accent); letter-spacing: 0.02em;
+}
+.app-list .quick {
+  display: flex; flex-wrap: wrap; gap: 0.45rem 0.75rem; margin-top: 0.65rem;
+  padding-top: 0.55rem; border-top: 1px solid var(--border);
+}
+.app-list .quick a {
+  font-size: 0.78rem; font-weight: 600; color: var(--muted); text-decoration: none;
+}
+.app-list .quick a:hover { color: var(--accent); text-decoration: underline; }
+.hub-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.65rem;
+  margin-top: 1.25rem; max-width: 28rem;
+}
+@media (max-width: 520px) { .hub-stats { grid-template-columns: 1fr; } }
+</style>
 </head>
 <body>
   <div class="page-bg" aria-hidden="true"></div>
@@ -14,89 +70,61 @@
     <div class="inner">
       <a class="brand" href="index.html">
         <span class="brand-mark">LT</span>
-        Lucky Tools Legal
+        Lucky Tools Apps
       </a>
-      <nav class="nav">
-        <a href="index.html" aria-current="page">All apps</a>
-        <a href="PLAY_CONSOLE_URLS.md">Play Console URLs</a>
-        <a class="nav-cta" href="mailto:autoaccentsni@gmail.com">Contact</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="apps.html">All home pages</a>
+        <a href="PLAY_CONSOLE_URLS.md">Play URLs</a>
+        <a href="mailto:autoaccentsni@gmail.com" class="nav-cta">Contact</a>
       </nav>
     </div>
   </header>
   <main class="wrap">
     <section class="hero" style="grid-template-columns:1fr">
       <div>
-        <p class="hero-eyebrow">Google Play ready · 44 apps</p>
-        <h1>Privacy, terms &amp; <em>data deletion</em> — premium sites for every app</h1>
+        <p class="hero-eyebrow">Lucky Tools · 44 apps · GitHub Pages</p>
+        <h1>Every app website in <em>one place</em></h1>
         <p class="lede">
-          Public pages for Lucky Tools Android apps. Each app has its own home, privacy policy,
-          terms of use, and data-deletion request page for Play Console.
+          Premium home pages, privacy policies, terms, and data-deletion links for Play Console.
+          Use the all-apps page as your bookmark / favourite.
         </p>
-        <div class="badge-row">
-          <span class="badge accent">Kitchen Buddy quality bar</span>
-          <span class="badge">HTTPS GitHub Pages</span>
-          <span class="badge">autoaccentsni@gmail.com</span>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="apps.html">★ All app home pages</a>
+          <a class="btn btn-secondary" href="PLAY_CONSOLE_URLS.md">Play Console URLs</a>
+        </div>
+        <div class="hub-bookmark">
+          <strong>Favourite this:</strong>
+          <code>https://13ond21.github.io/portfolio-websites/apps.html</code>
+        </div>
+        <div class="hub-stats">
+          <div class="stat"><strong>44</strong><span>app sites</span></div>
+          <div class="stat"><strong>3</strong><span>legal pages each</span></div>
+          <div class="stat"><strong>1</strong><span>bookmark hub</span></div>
         </div>
       </div>
     </section>
     <section class="section">
       <div class="section-head">
-        <p class="kicker">Directory</p>
-        <h2>All app sites</h2>
-        <p>Open any app for privacy, terms, and the deletion URL Play Console asks for.</p>
+        <p class="kicker">Quick start</p>
+        <h2>What you need for Play Console</h2>
       </div>
-      <div class="app-list">
-      <a href="age-calculator/index.html"><strong>Age Calculator</strong><small>Lifestyle · Privacy · Terms · Delete data</small></a>
-      <a href="bmi-metrics/index.html"><strong>BMI Metrics</strong><small>Health · Privacy · Terms · Delete data</small></a>
-      <a href="break-even-calc/index.html"><strong>Break-Even Calc</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="chore-roulette/index.html"><strong>Chore Roulette</strong><small>Productivity · Privacy · Terms · Delete data</small></a>
-      <a href="compound-interest/index.html"><strong>Compound Interest</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="currency-tip-travel/index.html"><strong>Travel Tip and FX</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="decision-wheel/index.html"><strong>Decision Wheel</strong><small>Productivity · Privacy · Terms · Delete data</small></a>
-      <a href="discount-calc/index.html"><strong>Discount Calc</strong><small>Shopping · Privacy · Terms · Delete data</small></a>
-      <a href="fuel-cost-split/index.html"><strong>Fuel Cost Split</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="gpa-weighted/index.html"><strong>GPA Weighted</strong><small>Education · Privacy · Terms · Delete data</small></a>
-      <a href="grade-calc/index.html"><strong>Grade Calc</strong><small>Education · Privacy · Terms · Delete data</small></a>
-      <a href="guitar-tuner/index.html"><strong>Guitar Tuner</strong><small>Music · Privacy · Terms · Delete data</small></a>
-      <a href="habit-streaks/index.html"><strong>Habit Streaks</strong><small>Health · Privacy · Terms · Delete data</small></a>
-      <a href="home-inventory/index.html"><strong>Home Inventory</strong><small>Productivity · Privacy · Terms · Delete data</small></a>
-      <a href="inflation-calc/index.html"><strong>Inflation Calc</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="loan-calc/index.html"><strong>Loan Calc</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="med-reminder/index.html"><strong>Med Reminder</strong><small>Health · Privacy · Terms · Delete data</small></a>
-      <a href="meeting-cost/index.html"><strong>Meeting Cost</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="mileage-log-uk/index.html"><strong>Mileage Log UK</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="mortgage-overpay/index.html"><strong>Mortgage Overpay</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="paint-room-calc/index.html"><strong>Paint Room Calc</strong><small>Tools · Privacy · Terms · Delete data</small></a>
-      <a href="parking-reminder/index.html"><strong>Parking Reminder</strong><small>Travel · Privacy · Terms · Delete data</small></a>
-      <a href="pass-gen/index.html"><strong>Pass Gen</strong><small>Tools · Privacy · Terms · Delete data</small></a>
-      <a href="percent-master/index.html"><strong>Percent Master</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="plant-care/index.html"><strong>Plant Care</strong><small>Health · Privacy · Terms · Delete data</small></a>
-      <a href="pomodoro-focus/index.html"><strong>Pomodoro Focus</strong><small>Health · Privacy · Terms · Delete data</small></a>
-      <a href="qr-maker/index.html"><strong>QR Maker</strong><small>Tools · Privacy · Terms · Delete data</small></a>
-      <a href="random-team-split/index.html"><strong>Random Team Split</strong><small>Productivity · Privacy · Terms · Delete data</small></a>
-      <a href="recipe-ratio/index.html"><strong>Recipe Ratio</strong><small>Tools · Privacy · Terms · Delete data</small></a>
-      <a href="savings-goal/index.html"><strong>Savings Goal</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="self-employed-tax/index.html"><strong>Self-Employed Tax</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="stamp-duty-calc/index.html"><strong>Stamp Duty Calc</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="teleprompter-pro/index.html"><strong>Teleprompter Pro</strong><small>Education · Privacy · Terms · Delete data</small></a>
-      <a href="tile-count-calc/index.html"><strong>Tile Count Calc</strong><small>Tools · Privacy · Terms · Delete data</small></a>
-      <a href="tip-splitter/index.html"><strong>Tip Splitter</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="torch-tools/index.html"><strong>Torch Tools</strong><small>Tools · Privacy · Terms · Delete data</small></a>
-      <a href="unit-convert/index.html"><strong>Unit Convert</strong><small>Tools · Privacy · Terms · Delete data</small></a>
-      <a href="unit-price-compare/index.html"><strong>Unit Price Compare</strong><small>Shopping · Privacy · Terms · Delete data</small></a>
-      <a href="vat-calc-uk/index.html"><strong>VAT Calc UK</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="warranty-radar/index.html"><strong>Warranty Radar</strong><small>Lifestyle · Privacy · Terms · Delete data</small></a>
-      <a href="white-noise-box/index.html"><strong>White Noise Box</strong><small>Health · Privacy · Terms · Delete data</small></a>
-      <a href="word-counter-pro/index.html"><strong>Word Counter Pro</strong><small>Education · Privacy · Terms · Delete data</small></a>
-      <a href="work-hours-log/index.html"><strong>Work Hours Log</strong><small>Finance · Privacy · Terms · Delete data</small></a>
-      <a href="world-clock-meet/index.html"><strong>World Clock Meet</strong><small>Travel · Privacy · Terms · Delete data</small></a>
+      <div class="grid-2">
+        <article class="card">
+          <h3>All home pages</h3>
+          <p>Open <a href="apps.html"><strong>apps.html</strong></a> — search and jump to any app homepage. Best page to favourite.</p>
+        </article>
+        <article class="card">
+          <h3>Legal URLs</h3>
+          <p>Each app has <code>/privacy.html</code>, <code>/terms.html</code>, and <code>/delete-data.html</code> for the Play listing.</p>
+        </article>
       </div>
     </section>
   </main>
   <footer class="site-footer">
     <div class="inner">
-      <p>© 2026 Lucky Tools · <a href="https://github.com/13ond21/portfolio-websites">GitHub</a> ·
-      Base: <a href="https://13ond21.github.io/portfolio-websites/">https://13ond21.github.io/portfolio-websites/</a></p>
+      <p>© 2026 Lucky Tools · <a href="apps.html">All home pages</a> ·
+      <a href="https://github.com/13ond21/portfolio-websites">GitHub</a></p>
     </div>
   </footer>
 </body>
