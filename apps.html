@@ -3,815 +3,638 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>All app home pages (50 apps)</title>
-  <meta name="description" content="Bookmark this page. Every app homepage, privacy, terms, and data deletion URL — including the first 6 on Google Play." />
+  <title>Try our Android apps — live + closed testing</title>
+  <meta name="description" content="Scan the QR code to try our Android apps. Live on Google Play and closed testing builds in one place." />
   <meta name="theme-color" content="#5b7c6e" />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/apps.html" />
+  <meta property="og:title" content="Try our Android apps" />
+  <meta property="og:description" content="Live store apps and closed testing links — one page for friends and testers." />
+  <meta property="og:url" content="https://13ond21.github.io/portfolio-websites/apps.html" />
   <link rel="stylesheet" href="styles.css" />
   <style>
-.hub-bookmark {
-  display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
-  margin: 1.25rem 0 0; padding: 1rem 1.15rem;
-  background: var(--accent-tint); border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--border));
-  border-radius: 16px; font-size: 0.95rem;
-}
-.hub-bookmark code {
-  font-size: 0.88em; background: var(--surface); padding: 0.25rem 0.55rem;
-  border-radius: 8px; border: 1px solid var(--border); word-break: break-all;
-}
-.hub-search {
-  width: 100%; max-width: 420px; margin: 0.5rem 0 1.25rem;
-  padding: 0.85rem 1.1rem; border-radius: 14px; border: 1px solid var(--border);
-  background: var(--surface); font: inherit; font-size: 1rem; color: var(--ink);
-  box-shadow: var(--shadow);
-}
-.hub-search:focus { outline: 2px solid color-mix(in srgb, var(--accent) 50%, transparent); border-color: var(--accent); }
-.cat-block { margin: 2rem 0 1rem; }
-.cat-block h2 {
-  margin: 0 0 0.85rem; font-family: var(--font-display); font-size: 1.25rem;
-  letter-spacing: -0.02em; display: flex; align-items: center; gap: 0.5rem;
-}
-.cat-block h2 .count {
-  font-family: var(--font-body); font-size: 0.8rem; font-weight: 600;
-  color: var(--muted); background: var(--surface-high); border-radius: 999px;
-  padding: 0.15rem 0.55rem;
-}
-.app-list .app-card {
-  display: block; padding: 1.05rem 1.15rem; background: var(--surface);
-  border: 1px solid var(--border); border-radius: 16px;
-  box-shadow: var(--shadow); transition: border-color 0.15s, transform 0.15s;
-}
-.app-list .app-card:hover { border-color: var(--accent); transform: translateY(-2px); }
-.app-list .app-home { display: block; text-decoration: none; color: var(--ink); }
-.app-list .app-home strong { display: block; font-size: 1.02rem; }
-.app-list .app-home small { display: block; color: var(--muted); margin-top: 0.3rem; font-size: 0.85rem; }
-.app-list .home-label {
-  display: inline-block; margin-top: 0.45rem; font-size: 0.78rem; font-weight: 700;
-  color: var(--accent); letter-spacing: 0.02em;
-}
-.app-list .quick {
-  display: flex; flex-wrap: wrap; gap: 0.45rem 0.75rem; margin-top: 0.65rem;
-  padding-top: 0.55rem; border-top: 1px solid var(--border);
-}
-.app-list .quick a {
-  font-size: 0.78rem; font-weight: 600; color: var(--muted); text-decoration: none;
-}
-.app-list .quick a:hover { color: var(--accent); text-decoration: underline; }
-.hub-stats {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.65rem;
-  margin-top: 1.25rem; max-width: 28rem;
-}
-@media (max-width: 520px) { .hub-stats { grid-template-columns: 1fr; } }
-</style>
+    :root { --play: #01875f; --play-dark: #016b4c; --test: #5b4fc7; --test-soft: #eeedf9; }
+    .page-max { max-width: 1100px; }
+
+    /* Share / QR band */
+    .share-band {
+      display: grid; gap: 1.5rem; align-items: center;
+      margin: 1.25rem 0 0; padding: 1.35rem 1.35rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 22px; box-shadow: var(--shadow);
+    }
+    @media (min-width: 760px) {
+      .share-band { grid-template-columns: 200px 1fr; gap: 1.75rem; padding: 1.5rem 1.75rem; }
+    }
+    .qr-box {
+      margin: 0 auto; width: min(200px, 70vw); text-align: center;
+    }
+    .qr-box img {
+      width: 100%; height: auto; border-radius: 16px;
+      border: 1px solid var(--border); background: #fff; padding: 0.5rem;
+    }
+    .qr-box figcaption {
+      margin-top: 0.55rem; font-size: 0.78rem; font-weight: 700;
+      color: var(--muted); letter-spacing: 0.02em;
+    }
+    .share-actions { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1rem; }
+    .url-chip {
+      display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;
+      margin-top: 0.85rem; padding: 0.7rem 0.85rem;
+      background: var(--accent-tint); border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border));
+      border-radius: 14px; font-size: 0.9rem;
+    }
+    .url-chip code {
+      font-size: 0.84em; word-break: break-all;
+      background: var(--surface); padding: 0.25rem 0.5rem;
+      border-radius: 8px; border: 1px solid var(--border);
+    }
+
+    /* Jump pills */
+    .jump {
+      display: flex; flex-wrap: wrap; gap: 0.55rem; margin: 1.5rem 0 0.25rem;
+    }
+    .jump a {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.55rem 0.95rem; border-radius: 999px;
+      font-weight: 700; font-size: 0.88rem; text-decoration: none;
+      border: 1px solid var(--border); background: var(--surface); color: var(--ink);
+    }
+    .jump a:hover { border-color: var(--accent); color: var(--accent); }
+    .jump a.live { background: #e8f5ef; border-color: #b7dfc9; color: var(--play-dark); }
+    .jump a.test { background: var(--test-soft); border-color: #cfc9f0; color: var(--test); }
+
+    /* Section banners */
+    .zone {
+      margin: 2.25rem 0 1rem; padding: 1.35rem 1.25rem 1.1rem;
+      border-radius: 22px; border: 1px solid var(--border);
+      scroll-margin-top: 5rem;
+    }
+    .zone.live {
+      background: linear-gradient(160deg, #f3faf6 0%, var(--surface) 55%);
+      border-color: #c5e6d4;
+    }
+    .zone.test {
+      background: linear-gradient(160deg, #f5f4fc 0%, var(--surface) 55%);
+      border-color: #d5d0f0;
+    }
+    .zone-head { margin-bottom: 1.1rem; max-width: 48rem; }
+    .zone-head .kicker { margin: 0 0 0.35rem; }
+    .zone.live .kicker { color: var(--play); }
+    .zone.test .kicker { color: var(--test); }
+    .zone-head h2 {
+      margin: 0 0 0.45rem; font-family: var(--font-display);
+      font-size: clamp(1.45rem, 2.8vw, 1.9rem); letter-spacing: -0.02em;
+    }
+    .zone-head p { margin: 0; color: var(--muted); font-size: 0.98rem; line-height: 1.55; }
+    .how {
+      margin: 0.9rem 0 0; padding: 0.85rem 1rem;
+      background: rgba(255,255,255,0.7); border: 1px dashed var(--border);
+      border-radius: 14px; font-size: 0.9rem; color: var(--muted);
+    }
+    .how strong { color: var(--ink); }
+    .how ol { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+    .how li { margin: 0.25rem 0; }
+
+    /* App cards */
+    .app-grid {
+      display: grid; gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) {
+      .app-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 980px) {
+      .app-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .app-tile {
+      display: flex; flex-direction: column;
+      background: #fff; border: 1px solid var(--border);
+      border-radius: 18px; overflow: hidden; box-shadow: var(--shadow);
+      transition: transform 0.15s, border-color 0.15s;
+    }
+    .app-tile:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+    .app-tile .art {
+      aspect-ratio: 1024 / 500; background: var(--surface-high);
+      overflow: hidden; position: relative;
+    }
+    .app-tile .art img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .app-tile .body { padding: 1rem 1.05rem 1.1rem; display: flex; flex-direction: column; flex: 1; }
+    .app-tile h3 { margin: 0 0 0.3rem; font-size: 1.08rem; font-weight: 700; letter-spacing: -0.01em; }
+    .app-tile .blurb { margin: 0 0 0.85rem; color: var(--muted); font-size: 0.9rem; line-height: 1.45; flex: 1; }
+    .pill {
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.03em;
+      text-transform: uppercase; padding: 0.22rem 0.55rem; border-radius: 999px;
+      margin-bottom: 0.55rem; width: fit-content;
+    }
+    .pill.live { background: #e8f5ef; color: var(--play-dark); }
+    .pill.test { background: var(--test-soft); color: var(--test); }
+    .tile-actions { display: flex; flex-direction: column; gap: 0.45rem; }
+    .btn-play {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+      min-height: 46px; padding: 0.65rem 1rem; border-radius: 12px;
+      background: var(--play); color: #fff !important; font-weight: 800;
+      font-size: 0.92rem; text-decoration: none !important; border: none;
+    }
+    .btn-play:hover { background: var(--play-dark); color: #fff !important; filter: none; }
+    .btn-test {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+      min-height: 46px; padding: 0.65rem 1rem; border-radius: 12px;
+      background: var(--test); color: #fff !important; font-weight: 800;
+      font-size: 0.92rem; text-decoration: none !important; border: none;
+    }
+    .btn-test:hover { background: #4a40b0; color: #fff !important; filter: none; }
+    .btn-ghost {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 40px; padding: 0.45rem 0.85rem; border-radius: 12px;
+      background: var(--surface); color: var(--ink) !important; font-weight: 700;
+      font-size: 0.86rem; text-decoration: none !important;
+      border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { background: var(--surface-high); color: var(--ink) !important; }
+    .mini-links {
+      display: flex; flex-wrap: wrap; gap: 0.55rem 0.85rem; margin-top: 0.7rem;
+      padding-top: 0.65rem; border-top: 1px solid var(--border);
+    }
+    .mini-links a {
+      font-size: 0.78rem; font-weight: 600; color: var(--muted); text-decoration: none;
+    }
+    .mini-links a:hover { color: var(--accent); text-decoration: underline; }
+
+    /* Compact legal directory */
+    .dir-search {
+      width: 100%; max-width: 420px; margin: 0.5rem 0 1rem;
+      padding: 0.8rem 1rem; border-radius: 14px; border: 1px solid var(--border);
+      background: var(--surface); font: inherit; font-size: 1rem; color: var(--ink);
+    }
+    .dir-search:focus { outline: 2px solid color-mix(in srgb, var(--accent) 50%, transparent); border-color: var(--accent); }
+    .dir-list { display: grid; gap: 0.55rem; }
+    @media (min-width: 700px) { .dir-list { grid-template-columns: 1fr 1fr; } }
+    .dir-item {
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.45rem;
+      padding: 0.75rem 0.9rem; background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; font-size: 0.92rem;
+    }
+    .dir-item strong { font-size: 0.95rem; }
+    .dir-item .links { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+    .dir-item .links a { font-size: 0.8rem; font-weight: 600; color: var(--muted); text-decoration: none; }
+    .dir-item .links a:hover { color: var(--accent); }
+
+    .toast {
+      position: fixed; bottom: 1.25rem; left: 50%; transform: translateX(-50%) translateY(120%);
+      background: var(--ink); color: #fff; padding: 0.7rem 1.15rem; border-radius: 999px;
+      font-weight: 700; font-size: 0.9rem; z-index: 100; opacity: 0; transition: 0.25s ease;
+      pointer-events: none;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    /* Print: flyer-style QR handout */
+    @media print {
+      .site-header, .jump, .no-print, .site-footer, .dir-search, #result-count { display: none !important; }
+      body { background: #fff; font-size: 12pt; }
+      .page-bg { display: none; }
+      .wrap { max-width: none; padding: 0; }
+      .hero { padding: 0 0 0.5rem; }
+      .share-band {
+        grid-template-columns: 220px 1fr; border: 2px solid #222;
+        box-shadow: none; break-inside: avoid;
+      }
+      .zone { break-inside: avoid; border: 1px solid #ccc; background: #fff !important; }
+      .app-tile { break-inside: avoid; box-shadow: none; }
+      .btn-play, .btn-test, .btn-ghost { border: 1px solid #333 !important; color: #000 !important; background: #fff !important; }
+      a[href]::after { content: none !important; }
+    }
+  </style>
 </head>
 <body>
   <div class="page-bg" aria-hidden="true"></div>
-  <header class="site-header">
-    <div class="inner">
+  <header class="site-header no-print">
+    <div class="inner page-max" style="max-width:1100px">
       <a class="brand" href="index.html">
         <span class="brand-mark">★</span>
         App websites
       </a>
       <nav class="nav" aria-label="Main">
         <a href="index.html">Home</a>
-        <a href="apps.html" aria-current="page">All home pages</a>
-        <a href="PLAY_CONSOLE_URLS.md">Play URLs</a>
+        <a href="apps.html" aria-current="page">Try apps</a>
+        <a href="#all-websites">All sites</a>
         <a href="mailto:autoaccentsni@gmail.com" class="nav-cta">Contact</a>
       </nav>
     </div>
   </header>
-  <main class="wrap">
-    <section class="hero" style="grid-template-columns:1fr">
+
+  <main class="wrap page-max" style="max-width:1100px">
+    <section class="hero" style="grid-template-columns:1fr; padding-bottom:0.5rem">
       <div>
-        <p class="hero-eyebrow">Favourite / bookmark this page</p>
-        <h1>All app <em>home pages</em></h1>
+        <p class="hero-eyebrow">Hand this page to anyone · scan · install</p>
+        <h1>Try our Android apps</h1>
         <p class="lede">
-          First 6 already on Google Play, plus every portfolio app website.
-          Tap a card for the home page, or Privacy / Terms / Delete data underneath.
+          One page for friends and testers. <strong>Live on Google Play</strong> apps install for everyone.
+          <strong>Closed testing</strong> apps are for invited testers only.
         </p>
-        <div class="hub-bookmark">
-          <strong>★ Favourite URL:</strong>
-          <code id="fav-url">https://13ond21.github.io/portfolio-websites/apps.html</code>
-          <button type="button" class="btn btn-secondary" id="copy-fav" style="min-height:40px;padding:0.45rem 0.9rem;font-size:0.88rem">Copy link</button>
+
+        <div class="share-band" id="share">
+          <figure class="qr-box">
+            <img src="assets/hub/qr-apps-hub.png" width="600" height="600" alt="QR code linking to this page" />
+            <figcaption>Scan to open this page</figcaption>
+          </figure>
+          <div>
+            <p class="kicker" style="margin:0 0 0.35rem">Print &amp; share</p>
+            <h2 style="margin:0 0 0.45rem;font-family:var(--font-display);font-size:1.35rem;letter-spacing:-0.02em">
+              QR code for this URL
+            </h2>
+            <p style="margin:0;color:var(--muted);font-size:0.98rem;line-height:1.5">
+              Print this page (or just the QR), hand it out, and people land here on their phone —
+              then tap the big Play / testing buttons below.
+            </p>
+            <div class="url-chip">
+              <strong>Link:</strong>
+              <code id="fav-url">https://13ond21.github.io/portfolio-websites/apps.html</code>
+            </div>
+            <div class="share-actions no-print">
+              <button type="button" class="btn btn-primary" id="copy-fav" style="min-height:44px">Copy link</button>
+              <button type="button" class="btn btn-secondary" id="print-page" style="min-height:44px">Print / save PDF</button>
+              <a class="btn btn-secondary" href="#live" style="min-height:44px">Jump to live apps</a>
+            </div>
+          </div>
         </div>
-        <label for="q" class="kicker" style="display:block;margin-top:1.25rem">Search apps</label>
-        <input class="hub-search" id="q" type="search" placeholder="Search (e.g. kitchen, VAT, affirmation, decibel)…" autocomplete="off" />
-        <p class="legal-meta" id="result-count" style="margin:0;color:var(--muted)">50 apps</p>
+
+        <nav class="jump no-print" aria-label="On this page">
+          <a class="live" href="#live">▶ Live on Play Store</a>
+          <a class="test" href="#testing">🧪 Closed testing</a>
+          <a href="#all-websites">All app websites</a>
+        </nav>
       </div>
     </section>
 
-  <section class="cat-block" data-category="play store">
-    <h2>📱 On Google Play (first 6) <span class="count">6</span></h2>
-    <p class="lede" style="margin:0 0 1rem;font-size:0.95rem">Your live apps — open their existing sites.</p>
-    <div class="app-list">
-      <article class="app-card" data-name="daily affirmation" data-cat="health">
-        <a class="app-home" href="https://13ond21.github.io/daily-affirmation-legal/" target="_blank" rel="noopener noreferrer">
-          <strong>Daily Affirmation</strong>
-          <small>Your morning ritual, beautifully designed.</small>
-          <span class="home-label">On Play Store · open site →</span>
-        </a>
-        <div class="quick">
-          <a href="https://13ond21.github.io/daily-affirmation-legal/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
-          <a href="https://13ond21.github.io/daily-affirmation-legal/terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms</a>
-          <a href="https://13ond21.github.io/daily-affirmation-legal/privacy-policy.html" target="_blank" rel="noopener noreferrer">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="facts for kids" data-cat="education">
-        <a class="app-home" href="https://13ond21.github.io/facts-kids-website/" target="_blank" rel="noopener noreferrer">
-          <strong>Facts for Kids</strong>
-          <small>Fun facts for curious kids.</small>
-          <span class="home-label">On Play Store · open site →</span>
-        </a>
-        <div class="quick">
-          <a href="https://13ond21.github.io/facts-kids-website/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
-          <a href="https://13ond21.github.io/facts-kids-website/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
-          <a href="https://13ond21.github.io/facts-kids-website/privacy.html" target="_blank" rel="noopener noreferrer">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="decibel meter" data-cat="tools">
-        <a class="app-home" href="https://13ond21.github.io/decibel-meter/" target="_blank" rel="noopener noreferrer">
-          <strong>Decibel Meter</strong>
-          <small>Sound level meter for Android.</small>
-          <span class="home-label">On Play Store · open site →</span>
-        </a>
-        <div class="quick">
-          <a href="https://13ond21.github.io/decibel-meter/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
-          <a href="https://13ond21.github.io/decibel-meter/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
-          <a href="https://13ond21.github.io/decibel-meter/delete-data.html" target="_blank" rel="noopener noreferrer">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="bt mic" data-cat="tools">
-        <a class="app-home" href="https://13ond21.github.io/pa-mic/" target="_blank" rel="noopener noreferrer">
-          <strong>BT Mic</strong>
-          <small>Bluetooth microphone for Android.</small>
-          <span class="home-label">On Play Store · open site →</span>
-        </a>
-        <div class="quick">
-          <a href="https://13ond21.github.io/pa-mic/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
-          <a href="https://13ond21.github.io/pa-mic/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
-          <a href="https://13ond21.github.io/pa-mic/delete-data.html" target="_blank" rel="noopener noreferrer">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="kitchen buddy" data-cat="lifestyle">
-        <a class="app-home" href="https://13ond21.github.io/kitchen-buddy/" target="_blank" rel="noopener noreferrer">
-          <strong>Kitchen Buddy</strong>
-          <small>Calm kitchen, on your phone.</small>
-          <span class="home-label">On Play Store · open site →</span>
-        </a>
-        <div class="quick">
-          <a href="https://13ond21.github.io/kitchen-buddy/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
-          <a href="https://13ond21.github.io/kitchen-buddy/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
-          <a href="https://13ond21.github.io/kitchen-buddy/delete-data.html" target="_blank" rel="noopener noreferrer">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="uk pay calc" data-cat="finance">
-        <a class="app-home" href="https://13ond21.github.io/uk-pay-calc/" target="_blank" rel="noopener noreferrer">
-          <strong>UK Pay Calc</strong>
-          <small>UK take-home pay calculator.</small>
-          <span class="home-label">On Play Store · open site →</span>
-        </a>
-        <div class="quick">
-          <a href="https://13ond21.github.io/uk-pay-calc/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
-          <a href="https://13ond21.github.io/uk-pay-calc/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
-          <a href="https://13ond21.github.io/uk-pay-calc/delete-data.html" target="_blank" rel="noopener noreferrer">Delete data</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="cat-block" data-category="finance">
-    <h2>💷 Finance <span class="count">16</span></h2>
-    <div class="app-list">
-      <article class="app-card" data-name="break-even calc" data-cat="finance">
-        <a class="app-home" href="break-even-calc/">
-          <strong>Break-Even Calc</strong>
-          <small>Units you need to sell to break even. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="break-even-calc/privacy.html">Privacy</a>
-          <a href="break-even-calc/terms.html">Terms</a>
-          <a href="break-even-calc/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="compound interest" data-cat="finance">
-        <a class="app-home" href="compound-interest/">
-          <strong>Compound Interest</strong>
-          <small>See how savings and investments grow over time. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="compound-interest/privacy.html">Privacy</a>
-          <a href="compound-interest/terms.html">Terms</a>
-          <a href="compound-interest/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="fuel cost split" data-cat="finance">
-        <a class="app-home" href="fuel-cost-split/">
-          <strong>Fuel Cost Split</strong>
-          <small>Trip fuel cost and fair split per passenger. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="fuel-cost-split/privacy.html">Privacy</a>
-          <a href="fuel-cost-split/terms.html">Terms</a>
-          <a href="fuel-cost-split/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="inflation calc" data-cat="finance">
-        <a class="app-home" href="inflation-calc/">
-          <strong>Inflation Calc</strong>
-          <small>What todays money was worth in another year. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="inflation-calc/privacy.html">Privacy</a>
-          <a href="inflation-calc/terms.html">Terms</a>
-          <a href="inflation-calc/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="loan calc" data-cat="finance">
-        <a class="app-home" href="loan-calc/">
-          <strong>Loan Calc</strong>
-          <small>Mortgage &amp;amp; loan payments with a clear schedule. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="loan-calc/privacy.html">Privacy</a>
-          <a href="loan-calc/terms.html">Terms</a>
-          <a href="loan-calc/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="meeting cost" data-cat="finance">
-        <a class="app-home" href="meeting-cost/">
-          <strong>Meeting Cost</strong>
-          <small>What this meeting is really costing the room. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="meeting-cost/privacy.html">Privacy</a>
-          <a href="meeting-cost/terms.html">Terms</a>
-          <a href="meeting-cost/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="mileage log uk" data-cat="finance">
-        <a class="app-home" href="mileage-log-uk/">
-          <strong>Mileage Log UK</strong>
-          <small>Business miles for tax — simple trip log. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="mileage-log-uk/privacy.html">Privacy</a>
-          <a href="mileage-log-uk/terms.html">Terms</a>
-          <a href="mileage-log-uk/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="mortgage overpay" data-cat="finance">
-        <a class="app-home" href="mortgage-overpay/">
-          <strong>Mortgage Overpay</strong>
-          <small>See how extra payments cut years and interest. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="mortgage-overpay/privacy.html">Privacy</a>
-          <a href="mortgage-overpay/terms.html">Terms</a>
-          <a href="mortgage-overpay/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="percent master" data-cat="finance">
-        <a class="app-home" href="percent-master/">
-          <strong>Percent Master</strong>
-          <small>Any percentage math — tips, marks, markups, change. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="percent-master/privacy.html">Privacy</a>
-          <a href="percent-master/terms.html">Terms</a>
-          <a href="percent-master/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="savings goal" data-cat="finance">
-        <a class="app-home" href="savings-goal/">
-          <strong>Savings Goal</strong>
-          <small>How much to save each week to hit your target. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="savings-goal/privacy.html">Privacy</a>
-          <a href="savings-goal/terms.html">Terms</a>
-          <a href="savings-goal/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="self-employed tax" data-cat="finance">
-        <a class="app-home" href="self-employed-tax/">
-          <strong>Self-Employed Tax</strong>
-          <small>UK self-employed tax and NI estimates. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="self-employed-tax/privacy.html">Privacy</a>
-          <a href="self-employed-tax/terms.html">Terms</a>
-          <a href="self-employed-tax/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="stamp duty calc" data-cat="finance">
-        <a class="app-home" href="stamp-duty-calc/">
-          <strong>Stamp Duty Calc</strong>
-          <small>UK stamp duty land tax estimates for buyers. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="stamp-duty-calc/privacy.html">Privacy</a>
-          <a href="stamp-duty-calc/terms.html">Terms</a>
-          <a href="stamp-duty-calc/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="tip splitter" data-cat="finance">
-        <a class="app-home" href="tip-splitter/">
-          <strong>Tip Splitter</strong>
-          <small>Split the bill and tip without awkward maths. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="tip-splitter/privacy.html">Privacy</a>
-          <a href="tip-splitter/terms.html">Terms</a>
-          <a href="tip-splitter/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="travel tip and fx" data-cat="finance">
-        <a class="app-home" href="currency-tip-travel/">
-          <strong>Travel Tip and FX</strong>
-          <small>Tip in local currency with a simple FX rate. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="currency-tip-travel/privacy.html">Privacy</a>
-          <a href="currency-tip-travel/terms.html">Terms</a>
-          <a href="currency-tip-travel/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="vat calc uk" data-cat="finance">
-        <a class="app-home" href="vat-calc-uk/">
-          <strong>VAT Calc UK</strong>
-          <small>Add or remove UK VAT instantly — 20%, 5%, 0%. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="vat-calc-uk/privacy.html">Privacy</a>
-          <a href="vat-calc-uk/terms.html">Terms</a>
-          <a href="vat-calc-uk/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="work hours log" data-cat="finance">
-        <a class="app-home" href="work-hours-log/">
-          <strong>Work Hours Log</strong>
-          <small>Log shifts and total pay — on your device. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="work-hours-log/privacy.html">Privacy</a>
-          <a href="work-hours-log/terms.html">Terms</a>
-          <a href="work-hours-log/delete-data.html">Delete data</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="cat-block" data-category="tools">
-    <h2>🛠️ Tools <span class="count">7</span></h2>
-    <div class="app-list">
-      <article class="app-card" data-name="paint room calc" data-cat="tools">
-        <a class="app-home" href="paint-room-calc/">
-          <strong>Paint Room Calc</strong>
-          <small>How much paint you need for walls and coats. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="paint-room-calc/privacy.html">Privacy</a>
-          <a href="paint-room-calc/terms.html">Terms</a>
-          <a href="paint-room-calc/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="pass gen" data-cat="tools">
-        <a class="app-home" href="pass-gen/">
-          <strong>Pass Gen</strong>
-          <small>Strong passwords generated on your device. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="pass-gen/privacy.html">Privacy</a>
-          <a href="pass-gen/terms.html">Terms</a>
-          <a href="pass-gen/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="qr maker" data-cat="tools">
-        <a class="app-home" href="qr-maker/">
-          <strong>QR Maker</strong>
-          <small>Create clean QR codes in seconds. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="qr-maker/privacy.html">Privacy</a>
-          <a href="qr-maker/terms.html">Terms</a>
-          <a href="qr-maker/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="recipe ratio" data-cat="tools">
-        <a class="app-home" href="recipe-ratio/">
-          <strong>Recipe Ratio</strong>
-          <small>Scale any recipe up or down by servings. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="recipe-ratio/privacy.html">Privacy</a>
-          <a href="recipe-ratio/terms.html">Terms</a>
-          <a href="recipe-ratio/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="tile count calc" data-cat="tools">
-        <a class="app-home" href="tile-count-calc/">
-          <strong>Tile Count Calc</strong>
-          <small>Tiles needed for floor or wall with waste percent. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="tile-count-calc/privacy.html">Privacy</a>
-          <a href="tile-count-calc/terms.html">Terms</a>
-          <a href="tile-count-calc/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="torch tools" data-cat="tools">
-        <a class="app-home" href="torch-tools/">
-          <strong>Torch Tools</strong>
-          <small>Torch, screen light, and SOS — fast and reliable. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="torch-tools/privacy.html">Privacy</a>
-          <a href="torch-tools/terms.html">Terms</a>
-          <a href="torch-tools/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="unit convert" data-cat="tools">
-        <a class="app-home" href="unit-convert/">
-          <strong>Unit Convert</strong>
-          <small>Fast, offline unit conversion for everyday life. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="unit-convert/privacy.html">Privacy</a>
-          <a href="unit-convert/terms.html">Terms</a>
-          <a href="unit-convert/delete-data.html">Delete data</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="cat-block" data-category="health">
-    <h2>🌿 Health <span class="count">6</span></h2>
-    <div class="app-list">
-      <article class="app-card" data-name="bmi metrics" data-cat="health">
-        <a class="app-home" href="bmi-metrics/">
-          <strong>BMI Metrics</strong>
-          <small>BMI and body metrics with a clear, calm UI. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="bmi-metrics/privacy.html">Privacy</a>
-          <a href="bmi-metrics/terms.html">Terms</a>
-          <a href="bmi-metrics/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="habit streaks" data-cat="health">
-        <a class="app-home" href="habit-streaks/">
-          <strong>Habit Streaks</strong>
-          <small>Track daily habits and keep your streak alive. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="habit-streaks/privacy.html">Privacy</a>
-          <a href="habit-streaks/terms.html">Terms</a>
-          <a href="habit-streaks/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="med reminder" data-cat="health">
-        <a class="app-home" href="med-reminder/">
-          <strong>Med Reminder</strong>
-          <small>Local-only medication reminders. No account. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="med-reminder/privacy.html">Privacy</a>
-          <a href="med-reminder/terms.html">Terms</a>
-          <a href="med-reminder/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="plant care" data-cat="health">
-        <a class="app-home" href="plant-care/">
-          <strong>Plant Care</strong>
-          <small>Watering schedules for happier houseplants. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="plant-care/privacy.html">Privacy</a>
-          <a href="plant-care/terms.html">Terms</a>
-          <a href="plant-care/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="pomodoro focus" data-cat="health">
-        <a class="app-home" href="pomodoro-focus/">
-          <strong>Pomodoro Focus</strong>
-          <small>Simple focus timer with work blocks and breaks. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="pomodoro-focus/privacy.html">Privacy</a>
-          <a href="pomodoro-focus/terms.html">Terms</a>
-          <a href="pomodoro-focus/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="white noise box" data-cat="health">
-        <a class="app-home" href="white-noise-box/">
-          <strong>White Noise Box</strong>
-          <small>Calm loops for sleep and deep focus. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="white-noise-box/privacy.html">Privacy</a>
-          <a href="white-noise-box/terms.html">Terms</a>
-          <a href="white-noise-box/delete-data.html">Delete data</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="cat-block" data-category="productivity">
-    <h2>⏱️ Productivity <span class="count">4</span></h2>
-    <div class="app-list">
-      <article class="app-card" data-name="chore roulette" data-cat="productivity">
-        <a class="app-home" href="chore-roulette/">
-          <strong>Chore Roulette</strong>
-          <small>Fair random chores for flats and families. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="chore-roulette/privacy.html">Privacy</a>
-          <a href="chore-roulette/terms.html">Terms</a>
-          <a href="chore-roulette/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="decision wheel" data-cat="productivity">
-        <a class="app-home" href="decision-wheel/">
-          <strong>Decision Wheel</strong>
-          <small>Spin a custom wheel when you can’t decide. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="decision-wheel/privacy.html">Privacy</a>
-          <a href="decision-wheel/terms.html">Terms</a>
-          <a href="decision-wheel/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="home inventory" data-cat="productivity">
-        <a class="app-home" href="home-inventory/">
-          <strong>Home Inventory</strong>
-          <small>Room-by-room home contents for insurance peace of mind. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="home-inventory/privacy.html">Privacy</a>
-          <a href="home-inventory/terms.html">Terms</a>
-          <a href="home-inventory/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="random team split" data-cat="productivity">
-        <a class="app-home" href="random-team-split/">
-          <strong>Random Team Split</strong>
-          <small>Fair random teams from a list of names. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="random-team-split/privacy.html">Privacy</a>
-          <a href="random-team-split/terms.html">Terms</a>
-          <a href="random-team-split/delete-data.html">Delete data</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="cat-block" data-category="lifestyle">
-    <h2>✨ Lifestyle <span class="count">2</span></h2>
-    <div class="app-list">
-      <article class="app-card" data-name="age calculator" data-cat="lifestyle">
-        <a class="app-home" href="age-calculator/">
-          <strong>Age Calculator</strong>
-          <small>Exact age in years, months, days — plus next birthday. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="age-calculator/privacy.html">Privacy</a>
-          <a href="age-calculator/terms.html">Terms</a>
-          <a href="age-calculator/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="warranty radar" data-cat="lifestyle">
-        <a class="app-home" href="warranty-radar/">
-          <strong>Warranty Radar</strong>
-          <small>Never miss a warranty expiry again. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="warranty-radar/privacy.html">Privacy</a>
-          <a href="warranty-radar/terms.html">Terms</a>
-          <a href="warranty-radar/delete-data.html">Delete data</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="cat-block" data-category="travel">
-    <h2>✈️ Travel <span class="count">2</span></h2>
-    <div class="app-list">
-      <article class="app-card" data-name="parking reminder" data-cat="travel">
-        <a class="app-home" href="parking-reminder/">
-          <strong>Parking Reminder</strong>
-          <small>Pin your bay and never miss the meter. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="parking-reminder/privacy.html">Privacy</a>
-          <a href="parking-reminder/terms.html">Terms</a>
-          <a href="parking-reminder/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="world clock meet" data-cat="travel">
-        <a class="app-home" href="world-clock-meet/">
-          <strong>World Clock Meet</strong>
-          <small>Multi-city clocks and kinder meeting times. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="world-clock-meet/privacy.html">Privacy</a>
-          <a href="world-clock-meet/terms.html">Terms</a>
-          <a href="world-clock-meet/delete-data.html">Delete data</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="cat-block" data-category="education">
-    <h2>📚 Education <span class="count">4</span></h2>
-    <div class="app-list">
-      <article class="app-card" data-name="gpa weighted" data-cat="education">
-        <a class="app-home" href="gpa-weighted/">
-          <strong>GPA Weighted</strong>
-          <small>Semester GPA from credits and grade points. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="gpa-weighted/privacy.html">Privacy</a>
-          <a href="gpa-weighted/terms.html">Terms</a>
-          <a href="gpa-weighted/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="grade calc" data-cat="education">
-        <a class="app-home" href="grade-calc/">
-          <strong>Grade Calc</strong>
-          <small>Weighted grades and what you need on the final. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="grade-calc/privacy.html">Privacy</a>
-          <a href="grade-calc/terms.html">Terms</a>
-          <a href="grade-calc/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="teleprompter pro" data-cat="education">
-        <a class="app-home" href="teleprompter-pro/">
-          <strong>Teleprompter Pro</strong>
-          <small>Smooth scrolling scripts for video and talks. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="teleprompter-pro/privacy.html">Privacy</a>
-          <a href="teleprompter-pro/terms.html">Terms</a>
-          <a href="teleprompter-pro/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="word counter pro" data-cat="education">
-        <a class="app-home" href="word-counter-pro/">
-          <strong>Word Counter Pro</strong>
-          <small>Words, characters, sentences — calm writing stats. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="word-counter-pro/privacy.html">Privacy</a>
-          <a href="word-counter-pro/terms.html">Terms</a>
-          <a href="word-counter-pro/delete-data.html">Delete data</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="cat-block" data-category="shopping">
-    <h2>🏷️ Shopping <span class="count">2</span></h2>
-    <div class="app-list">
-      <article class="app-card" data-name="discount calc" data-cat="shopping">
-        <a class="app-home" href="discount-calc/">
-          <strong>Discount Calc</strong>
-          <small>Sale prices, multi-item baskets, stack discounts. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="discount-calc/privacy.html">Privacy</a>
-          <a href="discount-calc/terms.html">Terms</a>
-          <a href="discount-calc/delete-data.html">Delete data</a>
-        </div>
-      </article>
-      <article class="app-card" data-name="unit price compare" data-cat="shopping">
-        <a class="app-home" href="unit-price-compare/">
-          <strong>Unit Price Compare</strong>
-          <small>Find the real cheapest pack at the supermarket. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="unit-price-compare/privacy.html">Privacy</a>
-          <a href="unit-price-compare/terms.html">Terms</a>
-          <a href="unit-price-compare/delete-data.html">Delete data</a>
-        </div>
-      </article>
-    </div>
-  </section>
-  <section class="cat-block" data-category="music">
-    <h2>🎸 Music <span class="count">1</span></h2>
-    <div class="app-list">
-      <article class="app-card" data-name="guitar tuner" data-cat="music">
-        <a class="app-home" href="guitar-tuner/">
-          <strong>Guitar Tuner</strong>
-          <small>Accurate tuning with a calm, clear display. Built.</small>
-          <span class="home-label">Open home page →</span>
-        </a>
-        <div class="quick">
-          <a href="guitar-tuner/privacy.html">Privacy</a>
-          <a href="guitar-tuner/terms.html">Terms</a>
-          <a href="guitar-tuner/delete-data.html">Delete data</a>
-        </div>
-      </article>
-    </div>
-  </section>
+    <!-- ========== LIVE ON PLAY ========== -->
+    <section class="zone live" id="live">
+      <div class="zone-head">
+        <p class="kicker">Anyone can install</p>
+        <h2>Live on Google Play</h2>
+        <p>
+          These apps are (or will be) available on the public Play Store.
+          Tap <strong>Get on Google Play</strong> — no invite needed.
+        </p>
+      </div>
+      <div class="app-grid">
 
-    <section class="cta-band">
-      <h2>Play Console URLs</h2>
-      <p>Copy-paste privacy, terms, and data-deletion links for every app.</p>
-      <div class="btn-row" style="justify-content:center">
-        <a class="btn btn-primary" href="PLAY_CONSOLE_URLS.md">Open URL list</a>
-        <a class="btn btn-secondary" href="index.html">Hub home</a>
+        <article class="app-tile" data-name="decibel meter">
+          <div class="art">
+            <picture>
+              <source srcset="assets/hub/decibel-meter.webp" type="image/webp" />
+              <img src="assets/hub/decibel-meter.png" alt="Decibel Meter feature graphic" loading="lazy" />
+            </picture>
+          </div>
+          <div class="body">
+            <span class="pill live">Live · Play Store</span>
+            <h3>Decibel Meter</h3>
+            <p class="blurb">Sound level meter for Android — check noise levels around you.</p>
+            <div class="tile-actions">
+              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.luckytools.decibel_meter_pro" target="_blank" rel="noopener noreferrer">
+                Get on Google Play
+              </a>
+              <a class="btn-ghost" href="https://13ond21.github.io/decibel-meter/" target="_blank" rel="noopener noreferrer">App website</a>
+            </div>
+            <div class="mini-links">
+              <a href="https://13ond21.github.io/decibel-meter/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/decibel-meter/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-tile" data-name="bluetooth mic bt mic">
+          <div class="art">
+            <picture>
+              <source srcset="assets/hub/bt-mic.webp" type="image/webp" />
+              <img src="assets/hub/bt-mic.png" alt="Bluetooth Mic feature graphic" loading="lazy" />
+            </picture>
+          </div>
+          <div class="body">
+            <span class="pill live">Live · Play Store</span>
+            <h3>Bluetooth Mic</h3>
+            <p class="blurb">Turn a Bluetooth headset into a wireless mic for karaoke &amp; PA.</p>
+            <div class="tile-actions">
+              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.btcmic.pamic" target="_blank" rel="noopener noreferrer">
+                Get on Google Play
+              </a>
+              <a class="btn-ghost" href="https://13ond21.github.io/pa-mic/" target="_blank" rel="noopener noreferrer">App website</a>
+            </div>
+            <div class="mini-links">
+              <a href="https://13ond21.github.io/pa-mic/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/pa-mic/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-tile" data-name="kitchen buddy">
+          <div class="art">
+            <picture>
+              <source srcset="assets/hub/kitchen-buddy.webp" type="image/webp" />
+              <img src="assets/hub/kitchen-buddy.png" alt="Kitchen Buddy feature graphic" loading="lazy" />
+            </picture>
+          </div>
+          <div class="body">
+            <span class="pill live">Live · Play Store</span>
+            <h3>Kitchen Buddy</h3>
+            <p class="blurb">Timers, pantry &amp; shopping lists — a calmer kitchen on your phone.</p>
+            <div class="tile-actions">
+              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.luckytools.synccook" target="_blank" rel="noopener noreferrer">
+                Get on Google Play
+              </a>
+              <a class="btn-ghost" href="https://13ond21.github.io/kitchen-buddy/" target="_blank" rel="noopener noreferrer">App website</a>
+            </div>
+            <div class="mini-links">
+              <a href="https://13ond21.github.io/kitchen-buddy/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/kitchen-buddy/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-tile" data-name="uk pay calc">
+          <div class="art">
+            <picture>
+              <source srcset="assets/hub/uk-pay-calc.webp" type="image/webp" />
+              <img src="assets/hub/uk-pay-calc.png" alt="UK Pay Calc feature graphic" loading="lazy" />
+            </picture>
+          </div>
+          <div class="body">
+            <span class="pill live">Live · Play Store</span>
+            <h3>UK Pay Calc</h3>
+            <p class="blurb">UK take-home pay calculator — tax, NI and more, made simple.</p>
+            <div class="tile-actions">
+              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.luckytools.uk_pay_calc" target="_blank" rel="noopener noreferrer">
+                Get on Google Play
+              </a>
+              <a class="btn-ghost" href="https://13ond21.github.io/uk-pay-calc/" target="_blank" rel="noopener noreferrer">App website</a>
+            </div>
+            <div class="mini-links">
+              <a href="https://13ond21.github.io/uk-pay-calc/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/uk-pay-calc/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== CLOSED TESTING ========== -->
+    <section class="zone test" id="testing">
+      <div class="zone-head">
+        <p class="kicker">Invited testers only</p>
+        <h2>Closed testing</h2>
+        <p>
+          These builds are for people on the tester list. If you were asked to test, use the buttons below.
+          If a link says you need access, tell us your Google account email so we can add you.
+        </p>
+        <div class="how">
+          <strong>How closed testing works</strong>
+          <ol>
+            <li>We add your Google Play email as a tester.</li>
+            <li>You tap <strong>Join closed testing</strong> and accept.</li>
+            <li>Then install from the Play Store (same as any app).</li>
+          </ol>
+        </div>
+      </div>
+      <div class="app-grid">
+
+        <article class="app-tile" data-name="daily affirmation affirmations">
+          <div class="art">
+            <picture>
+              <source srcset="assets/hub/daily-affirmation.webp" type="image/webp" />
+              <img src="assets/hub/daily-affirmation.jpg" alt="Daily Affirmation screenshot" loading="lazy" />
+            </picture>
+          </div>
+          <div class="body">
+            <span class="pill test">Closed testing</span>
+            <h3>Daily Affirmation</h3>
+            <p class="blurb">Your morning ritual — daily affirmations, beautifully designed.</p>
+            <div class="tile-actions">
+              <a class="btn-test" href="https://play.google.com/apps/testing/com.dailyaffirmation.app" target="_blank" rel="noopener noreferrer">
+                Join closed testing
+              </a>
+              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.dailyaffirmation.app" target="_blank" rel="noopener noreferrer">
+                Open on Play Store
+              </a>
+              <a class="btn-ghost" href="https://13ond21.github.io/daily-affirmation-legal/" target="_blank" rel="noopener noreferrer">App website</a>
+            </div>
+            <div class="mini-links">
+              <a href="https://13ond21.github.io/daily-affirmation-legal/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/daily-affirmation-legal/terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-tile" data-name="facts for kids">
+          <div class="art">
+            <picture>
+              <source srcset="assets/hub/facts-kids.webp" type="image/webp" />
+              <img src="assets/hub/facts-kids.png" alt="Facts for Kids feature graphic" loading="lazy" />
+            </picture>
+          </div>
+          <div class="body">
+            <span class="pill test">Closed testing</span>
+            <h3>Facts for Kids</h3>
+            <p class="blurb">Fun, age-friendly facts for curious kids — offline-friendly learning.</p>
+            <div class="tile-actions">
+              <a class="btn-test" href="https://play.google.com/apps/testing/com.luckytools.facts_kids" target="_blank" rel="noopener noreferrer">
+                Join closed testing
+              </a>
+              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.luckytools.facts_kids" target="_blank" rel="noopener noreferrer">
+                Open on Play Store
+              </a>
+              <a class="btn-ghost" href="https://13ond21.github.io/facts-kids-website/" target="_blank" rel="noopener noreferrer">App website</a>
+            </div>
+            <div class="mini-links">
+              <a href="https://13ond21.github.io/facts-kids-website/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/facts-kids-website/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-tile" data-name="morse beacon morse code">
+          <div class="art">
+            <picture>
+              <source srcset="assets/hub/morse-beacon.webp" type="image/webp" />
+              <img src="assets/hub/morse-beacon.png" alt="Morse Beacon feature graphic" loading="lazy" />
+            </picture>
+          </div>
+          <div class="body">
+            <span class="pill test">Closed testing</span>
+            <h3>Morse Beacon</h3>
+            <p class="blurb">Learn and send Morse with LED flash, sound &amp; lessons — freemium build.</p>
+            <div class="tile-actions">
+              <a class="btn-test" href="https://play.google.com/apps/testing/com.luckytools.morse_beacon" target="_blank" rel="noopener noreferrer">
+                Join closed testing
+              </a>
+              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.luckytools.morse_beacon" target="_blank" rel="noopener noreferrer">
+                Open on Play Store
+              </a>
+              <a class="btn-ghost" href="https://13ond21.github.io/morse-beacon-website/" target="_blank" rel="noopener noreferrer">App website</a>
+            </div>
+            <div class="mini-links">
+              <a href="https://13ond21.github.io/morse-beacon-website/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/morse-beacon-website/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========== ALL WEBSITES (legal / portfolio) ========== -->
+    <section class="section" id="all-websites" style="scroll-margin-top:5rem">
+      <div class="section-head">
+        <p class="kicker">Legal &amp; portfolio sites</p>
+        <h2>All app websites</h2>
+        <p>Home pages, privacy, terms, and data-deletion links (Play Console + portfolio).</p>
+      </div>
+      <label for="q" class="kicker no-print" style="display:block">Search</label>
+      <input class="dir-search no-print" id="q" type="search" placeholder="Search apps…" autocomplete="off" />
+      <p class="legal-meta" id="result-count" style="margin:0 0 0.85rem;color:var(--muted);font-size:0.9rem">Loading…</p>
+      <div class="dir-list" id="dir-list">
+        <!-- filled by script from DATA -->
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
-    <div class="inner footer-grid">
-      <div>
-        <strong style="color:var(--ink)">App websites</strong><br />
-        <span>Bookmark: https://13ond21.github.io/portfolio-websites/apps.html</span>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Hub</a>
-        <a href="apps.html">All homes</a>
-        <a href="PLAY_CONSOLE_URLS.md">Play URLs</a>
-        <a href="mailto:autoaccentsni@gmail.com">Contact</a>
-      </div>
+    <div class="inner page-max" style="max-width:1100px">
+      <p>
+        &copy; 2026 · Northern Ireland ·
+        <a href="index.html">Home</a> ·
+        <a href="#share">QR / share</a> ·
+        <a href="mailto:autoaccentsni@gmail.com">autoaccentsni@gmail.com</a>
+      </p>
     </div>
   </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
+
   <script>
   (function () {
-    var q = document.getElementById('q');
-    var countEl = document.getElementById('result-count');
-    var cards = Array.prototype.slice.call(document.querySelectorAll('.app-card'));
-    var blocks = Array.prototype.slice.call(document.querySelectorAll('.cat-block'));
-    function filter() {
-      var term = (q.value || '').trim().toLowerCase();
+    var PAGE_URL = "https://13ond21.github.io/portfolio-websites/apps.html";
+
+    // Compact directory: name, home, privacy, terms, delete
+    var APPS = [
+      ["Daily Affirmation", "https://13ond21.github.io/daily-affirmation-legal/", "https://13ond21.github.io/daily-affirmation-legal/privacy-policy.html", "https://13ond21.github.io/daily-affirmation-legal/terms-and-conditions.html", "https://13ond21.github.io/daily-affirmation-legal/privacy-policy.html"],
+      ["Facts for Kids", "https://13ond21.github.io/facts-kids-website/", "https://13ond21.github.io/facts-kids-website/privacy.html", "https://13ond21.github.io/facts-kids-website/terms.html", "https://13ond21.github.io/facts-kids-website/privacy.html"],
+      ["Decibel Meter", "https://13ond21.github.io/decibel-meter/", "https://13ond21.github.io/decibel-meter/privacy.html", "https://13ond21.github.io/decibel-meter/terms.html", "https://13ond21.github.io/decibel-meter/delete-data.html"],
+      ["BT Mic", "https://13ond21.github.io/pa-mic/", "https://13ond21.github.io/pa-mic/privacy.html", "https://13ond21.github.io/pa-mic/terms.html", "https://13ond21.github.io/pa-mic/delete-data.html"],
+      ["Kitchen Buddy", "https://13ond21.github.io/kitchen-buddy/", "https://13ond21.github.io/kitchen-buddy/privacy.html", "https://13ond21.github.io/kitchen-buddy/terms.html", "https://13ond21.github.io/kitchen-buddy/delete-data.html"],
+      ["UK Pay Calc", "https://13ond21.github.io/uk-pay-calc/", "https://13ond21.github.io/uk-pay-calc/privacy.html", "https://13ond21.github.io/uk-pay-calc/terms.html", "https://13ond21.github.io/uk-pay-calc/delete-data.html"],
+      ["Morse Beacon", "https://13ond21.github.io/morse-beacon-website/", "https://13ond21.github.io/morse-beacon-website/privacy.html", "https://13ond21.github.io/morse-beacon-website/terms.html", "https://13ond21.github.io/morse-beacon-website/privacy.html"],
+      ["Age Calculator", "age-calculator/", "age-calculator/privacy.html", "age-calculator/terms.html", "age-calculator/delete-data.html"],
+      ["BMI Metrics", "bmi-metrics/", "bmi-metrics/privacy.html", "bmi-metrics/terms.html", "bmi-metrics/delete-data.html"],
+      ["Break-Even Calc", "break-even-calc/", "break-even-calc/privacy.html", "break-even-calc/terms.html", "break-even-calc/delete-data.html"],
+      ["Chore Roulette", "chore-roulette/", "chore-roulette/privacy.html", "chore-roulette/terms.html", "chore-roulette/delete-data.html"],
+      ["Compound Interest", "compound-interest/", "compound-interest/privacy.html", "compound-interest/terms.html", "compound-interest/delete-data.html"],
+      ["Travel Tip and FX", "currency-tip-travel/", "currency-tip-travel/privacy.html", "currency-tip-travel/terms.html", "currency-tip-travel/delete-data.html"],
+      ["Decision Wheel", "decision-wheel/", "decision-wheel/privacy.html", "decision-wheel/terms.html", "decision-wheel/delete-data.html"],
+      ["Discount Calc", "discount-calc/", "discount-calc/privacy.html", "discount-calc/terms.html", "discount-calc/delete-data.html"],
+      ["Fuel Cost Split", "fuel-cost-split/", "fuel-cost-split/privacy.html", "fuel-cost-split/terms.html", "fuel-cost-split/delete-data.html"],
+      ["GPA Weighted", "gpa-weighted/", "gpa-weighted/privacy.html", "gpa-weighted/terms.html", "gpa-weighted/delete-data.html"],
+      ["Grade Calc", "grade-calc/", "grade-calc/privacy.html", "grade-calc/terms.html", "grade-calc/delete-data.html"],
+      ["Guitar Tuner", "guitar-tuner/", "guitar-tuner/privacy.html", "guitar-tuner/terms.html", "guitar-tuner/delete-data.html"],
+      ["Habit Streaks", "habit-streaks/", "habit-streaks/privacy.html", "habit-streaks/terms.html", "habit-streaks/delete-data.html"],
+      ["Home Inventory", "home-inventory/", "home-inventory/privacy.html", "home-inventory/terms.html", "home-inventory/delete-data.html"],
+      ["Inflation Calc", "inflation-calc/", "inflation-calc/privacy.html", "inflation-calc/terms.html", "inflation-calc/delete-data.html"],
+      ["Loan Calc", "loan-calc/", "loan-calc/privacy.html", "loan-calc/terms.html", "loan-calc/delete-data.html"],
+      ["Med Reminder", "med-reminder/", "med-reminder/privacy.html", "med-reminder/terms.html", "med-reminder/delete-data.html"],
+      ["Meeting Cost", "meeting-cost/", "meeting-cost/privacy.html", "meeting-cost/terms.html", "meeting-cost/delete-data.html"],
+      ["Mileage Log UK", "mileage-log-uk/", "mileage-log-uk/privacy.html", "mileage-log-uk/terms.html", "mileage-log-uk/delete-data.html"],
+      ["Mortgage Overpay", "mortgage-overpay/", "mortgage-overpay/privacy.html", "mortgage-overpay/terms.html", "mortgage-overpay/delete-data.html"],
+      ["Paint Room Calc", "paint-room-calc/", "paint-room-calc/privacy.html", "paint-room-calc/terms.html", "paint-room-calc/delete-data.html"],
+      ["Parking Reminder", "parking-reminder/", "parking-reminder/privacy.html", "parking-reminder/terms.html", "parking-reminder/delete-data.html"],
+      ["Pass Gen", "pass-gen/", "pass-gen/privacy.html", "pass-gen/terms.html", "pass-gen/delete-data.html"],
+      ["Percent Master", "percent-master/", "percent-master/privacy.html", "percent-master/terms.html", "percent-master/delete-data.html"],
+      ["Plant Care", "plant-care/", "plant-care/privacy.html", "plant-care/terms.html", "plant-care/delete-data.html"],
+      ["Pomodoro Focus", "pomodoro-focus/", "pomodoro-focus/privacy.html", "pomodoro-focus/terms.html", "pomodoro-focus/delete-data.html"],
+      ["QR Maker", "qr-maker/", "qr-maker/privacy.html", "qr-maker/terms.html", "qr-maker/delete-data.html"],
+      ["Random Team Split", "random-team-split/", "random-team-split/privacy.html", "random-team-split/terms.html", "random-team-split/delete-data.html"],
+      ["Recipe Ratio", "recipe-ratio/", "recipe-ratio/privacy.html", "recipe-ratio/terms.html", "recipe-ratio/delete-data.html"],
+      ["Savings Goal", "savings-goal/", "savings-goal/privacy.html", "savings-goal/terms.html", "savings-goal/delete-data.html"],
+      ["Self-Employed Tax", "self-employed-tax/", "self-employed-tax/privacy.html", "self-employed-tax/terms.html", "self-employed-tax/delete-data.html"],
+      ["Stamp Duty Calc", "stamp-duty-calc/", "stamp-duty-calc/privacy.html", "stamp-duty-calc/terms.html", "stamp-duty-calc/delete-data.html"],
+      ["Teleprompter Pro", "teleprompter-pro/", "teleprompter-pro/privacy.html", "teleprompter-pro/terms.html", "teleprompter-pro/delete-data.html"],
+      ["Tile Count Calc", "tile-count-calc/", "tile-count-calc/privacy.html", "tile-count-calc/terms.html", "tile-count-calc/delete-data.html"],
+      ["Tip Splitter", "tip-splitter/", "tip-splitter/privacy.html", "tip-splitter/terms.html", "tip-splitter/delete-data.html"],
+      ["Torch Tools", "torch-tools/", "torch-tools/privacy.html", "torch-tools/terms.html", "torch-tools/delete-data.html"],
+      ["Unit Convert", "unit-convert/", "unit-convert/privacy.html", "unit-convert/terms.html", "unit-convert/delete-data.html"],
+      ["Unit Price Compare", "unit-price-compare/", "unit-price-compare/privacy.html", "unit-price-compare/terms.html", "unit-price-compare/delete-data.html"],
+      ["VAT Calc UK", "vat-calc-uk/", "vat-calc-uk/privacy.html", "vat-calc-uk/terms.html", "vat-calc-uk/delete-data.html"],
+      ["Warranty Radar", "warranty-radar/", "warranty-radar/privacy.html", "warranty-radar/terms.html", "warranty-radar/delete-data.html"],
+      ["White Noise Box", "white-noise-box/", "white-noise-box/privacy.html", "white-noise-box/terms.html", "white-noise-box/delete-data.html"],
+      ["Word Counter Pro", "word-counter-pro/", "word-counter-pro/privacy.html", "word-counter-pro/terms.html", "word-counter-pro/delete-data.html"],
+      ["Work Hours Log", "work-hours-log/", "work-hours-log/privacy.html", "work-hours-log/terms.html", "work-hours-log/delete-data.html"],
+      ["World Clock Meet", "world-clock-meet/", "world-clock-meet/privacy.html", "world-clock-meet/terms.html", "world-clock-meet/delete-data.html"]
+    ];
+
+    var list = document.getElementById("dir-list");
+    var countEl = document.getElementById("result-count");
+    var q = document.getElementById("q");
+
+    function render(filter) {
+      var f = (filter || "").trim().toLowerCase();
+      var html = "";
       var n = 0;
-      cards.forEach(function (card) {
-        var hay = (card.getAttribute('data-name') || '') + ' ' + (card.getAttribute('data-cat') || '');
-        var ok = !term || hay.indexOf(term) !== -1;
-        card.style.display = ok ? '' : 'none';
-        if (ok) n++;
-      });
-      blocks.forEach(function (block) {
-        var visible = 0;
-        block.querySelectorAll('.app-card').forEach(function (c) {
-          if (c.style.display !== 'none') visible++;
-        });
-        block.style.display = visible ? '' : 'none';
-      });
-      countEl.textContent = n + ' app' + (n === 1 ? '' : 's') + (term ? ' matching “' + term + '”' : '');
-    }
-    q.addEventListener('input', filter);
-    document.getElementById('copy-fav').addEventListener('click', function () {
-      var url = document.getElementById('fav-url').textContent;
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(function () {
-          document.getElementById('copy-fav').textContent = 'Copied!';
-          setTimeout(function () { document.getElementById('copy-fav').textContent = 'Copy link'; }, 1500);
-        });
-      } else {
-        prompt('Copy this URL:', url);
+      for (var i = 0; i < APPS.length; i++) {
+        var a = APPS[i];
+        if (f && a[0].toLowerCase().indexOf(f) === -1) continue;
+        n++;
+        html +=
+          '<div class="dir-item" data-name="' + a[0].toLowerCase() + '">' +
+            "<strong>" + a[0] + "</strong>" +
+            '<div class="links">' +
+              '<a href="' + a[1] + '">Home</a>' +
+              '<a href="' + a[2] + '">Privacy</a>' +
+              '<a href="' + a[3] + '">Terms</a>' +
+              '<a href="' + a[4] + '">Delete data</a>' +
+            "</div>" +
+          "</div>";
       }
-    });
+      list.innerHTML = html || '<p style="color:var(--muted)">No matches.</p>';
+      countEl.textContent = n + " website" + (n === 1 ? "" : "s");
+    }
+    render("");
+    if (q) q.addEventListener("input", function () { render(q.value); });
+
+    function toast(msg) {
+      var t = document.getElementById("toast");
+      t.textContent = msg;
+      t.classList.add("show");
+      setTimeout(function () { t.classList.remove("show"); }, 1800);
+    }
+
+    var copyBtn = document.getElementById("copy-fav");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", function () {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(PAGE_URL).then(function () {
+            toast("Link copied");
+          }).catch(function () {
+            fallbackCopy();
+          });
+        } else {
+          fallbackCopy();
+        }
+      });
+    }
+    function fallbackCopy() {
+      var ta = document.createElement("textarea");
+      ta.value = PAGE_URL;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand("copy"); toast("Link copied"); }
+      catch (e) { toast("Copy failed — select the URL"); }
+      document.body.removeChild(ta);
+    }
+
+    var printBtn = document.getElementById("print-page");
+    if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
   })();
   </script>
 </body>
