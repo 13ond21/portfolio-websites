@@ -3,62 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Closed testing apps — join &amp; install</title>
-  <meta name="description" content="Closed testing Android apps — open on Google Play (testers only)." />
+  <title>Our Android apps — Google Play</title>
+  <meta name="description" content="Handy Android apps — Daily Affirmation, Facts for Kids, Decibel Meter Pro, Bluetooth Mic, Kitchen Buddy, Morse Beacon and more." />
   <meta name="theme-color" content="#5b7c6e" />
   <meta name="robots" content="index,follow" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/try.html" />
-  <meta property="og:title" content="Closed testing apps — join &amp; install" />
-  <meta property="og:description" content="Closed testing only — join as a tester, then install from Play." />
+  <meta property="og:title" content="Our Android apps — Google Play" />
+  <meta property="og:description" content="Discover our Android apps. Get them on Google Play when available." />
   <meta property="og:url" content="https://13ond21.github.io/portfolio-websites/try.html" />
-  <link rel="stylesheet" href="styles.css?v=20260716d" />
+  <link rel="stylesheet" href="styles.css?v=20260716e" />
   <style>
-    :root { --play: #01875f; --play-dark: #016b4c; --test: #5b4fc7; --test-soft: #eeedf9; }
+    :root { --play: #01875f; --play-dark: #016b4c; --soon: #9a9590; --soon-bg: #ebe7e0; }
     .page-max { max-width: 1100px; }
 
-    .top-hero {
-      padding: 1.25rem 0 0.75rem;
-    }
+    .top-hero { padding: 1.25rem 0 0.75rem; }
     .top-hero h1 {
       margin: 0 0 0.4rem;
       font-family: var(--font-display);
-      font-size: clamp(1.65rem, 3.5vw, 2.15rem);
-      letter-spacing: -0.02em; line-height: 1.15;
+      font-size: clamp(1.75rem, 3.6vw, 2.35rem);
+      letter-spacing: -0.02em; line-height: 1.12;
     }
     .top-hero .lede {
-      margin: 0; color: var(--muted); font-size: 0.98rem; max-width: 38em; line-height: 1.5;
+      margin: 0; color: var(--muted); font-size: 1.02rem; max-width: 38em; line-height: 1.55;
     }
-    .how-inline {
-      margin: 0.85rem 0 0; padding: 0.7rem 0.9rem;
-      background: var(--test-soft); border: 1px solid #d5d0f0;
-      border-radius: 14px; font-size: 0.88rem; color: var(--muted);
-    }
-    .how-inline strong { color: var(--ink); }
-    .how-inline ol { margin: 0.35rem 0 0; padding-left: 1.15rem; }
-    .how-inline li { margin: 0.2rem 0; }
 
-    .zone {
-      margin: 1rem 0 0.5rem; padding: 0;
-      border: none; background: transparent;
-    }
-    .zone-head { margin-bottom: 0.85rem; }
-    .zone-head .kicker { margin: 0 0 0.25rem; color: var(--test); }
+    .zone { margin: 1.1rem 0 0.5rem; padding: 0; border: none; background: transparent; }
+    .zone-head { margin-bottom: 0.9rem; }
+    .zone-head .kicker { margin: 0 0 0.25rem; color: var(--accent); }
     .zone-head h2 {
       margin: 0; font-family: var(--font-display);
-      font-size: 1.25rem; letter-spacing: -0.02em;
+      font-size: 1.3rem; letter-spacing: -0.02em;
     }
 
     .app-grid {
       display: grid; gap: 0.9rem;
       grid-template-columns: 1fr;
     }
-    @media (min-width: 640px) {
-      .app-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 980px) {
-      .app-grid { grid-template-columns: repeat(3, 1fr); }
-    }
+    @media (min-width: 640px) { .app-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 980px) { .app-grid { grid-template-columns: repeat(3, 1fr); } }
+
     .app-tile {
       display: flex; flex-direction: column;
       background: #fff; border: 1px solid var(--border);
@@ -76,21 +60,42 @@
     .app-tile .body { padding: 0.95rem 1rem 1.05rem; display: flex; flex-direction: column; flex: 1; }
     .app-tile h3 { margin: 0 0 0.3rem; font-size: 1.05rem; font-weight: 700; letter-spacing: -0.01em; }
     .app-tile .blurb { margin: 0 0 0.75rem; color: var(--muted); font-size: 0.88rem; line-height: 1.4; flex: 1; }
+
     .pill {
       display: inline-flex; align-items: center;
       font-size: 0.7rem; font-weight: 800; letter-spacing: 0.03em;
       text-transform: uppercase; padding: 0.2rem 0.5rem; border-radius: 999px;
       margin-bottom: 0.45rem; width: fit-content;
-      background: var(--test-soft); color: var(--test);
     }
+    .pill.soon { background: var(--soon-bg); color: #6b6560; }
+    .pill.live { background: #e8f5ef; color: var(--play-dark); }
+
     .tile-actions { display: flex; flex-direction: column; gap: 0.4rem; }
+
+    /* Live Play button */
     .btn-play {
       display: inline-flex; align-items: center; justify-content: center;
-      min-height: 44px; padding: 0.6rem 0.95rem; border-radius: 12px;
+      min-height: 46px; padding: 0.65rem 0.95rem; border-radius: 12px;
       background: var(--play); color: #fff !important; font-weight: 800;
-      font-size: 0.9rem; text-decoration: none !important; border: none;
+      font-size: 0.92rem; text-decoration: none !important; border: none;
+      cursor: pointer;
     }
     .btn-play:hover { background: var(--play-dark); color: #fff !important; filter: none; }
+
+    /* Greyed-out until public on Play */
+    .btn-play.is-soon,
+    span.btn-play.is-soon {
+      background: #c5c0b8 !important;
+      color: #f5f2ec !important;
+      cursor: not-allowed;
+      pointer-events: none;
+      box-shadow: none;
+      user-select: none;
+    }
+    .soon-note {
+      margin: 0.15rem 0 0;
+      font-size: 0.78rem; font-weight: 600; color: var(--muted); text-align: center;
+    }
 
     .btn-ghost {
       display: inline-flex; align-items: center; justify-content: center;
@@ -100,6 +105,7 @@
       border: 1px solid var(--border);
     }
     .btn-ghost:hover { background: var(--surface-high); color: var(--ink) !important; }
+
     .mini-links {
       display: flex; flex-wrap: wrap; gap: 0.5rem 0.8rem; margin-top: 0.6rem;
       padding-top: 0.55rem; border-top: 1px solid var(--border);
@@ -109,7 +115,6 @@
     }
     .mini-links a:hover { color: var(--accent); text-decoration: underline; }
 
-    /* QR only for print / sharing — not in the way for people already here */
     .qr-foot {
       margin: 2.5rem 0 1rem; padding: 1.1rem 1.15rem;
       background: var(--surface); border: 1px solid var(--border);
@@ -122,12 +127,8 @@
     .qr-foot summary::-webkit-details-marker { display: none; }
     .qr-foot summary span.hint { font-weight: 600; font-size: 0.85rem; color: var(--muted); }
     .qr-foot[open] summary { margin-bottom: 0.9rem; }
-    .share-band {
-      display: grid; gap: 1.15rem; align-items: center;
-    }
-    @media (min-width: 640px) {
-      .share-band { grid-template-columns: 160px 1fr; }
-    }
+    .share-band { display: grid; gap: 1.15rem; align-items: center; }
+    @media (min-width: 640px) { .share-band { grid-template-columns: 160px 1fr; } }
     .qr-box { margin: 0; text-align: center; }
     .qr-box img {
       width: min(160px, 50vw); height: auto; border-radius: 14px;
@@ -158,7 +159,7 @@
     .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
     @media print {
-      .site-header, .no-print, .site-footer, .how-inline, .top-hero .lede { display: none !important; }
+      .site-header, .no-print, .site-footer, .top-hero .lede { display: none !important; }
       .page-bg { display: none; }
       .qr-foot { display: block !important; border: 2px solid #222; box-shadow: none; }
       .qr-foot summary { display: none; }
@@ -176,11 +177,11 @@
     <div class="inner page-max" style="max-width:1100px">
       <a class="brand" href="index.html">
         <span class="brand-mark">★</span>
-        App websites
+        Our apps
       </a>
       <nav class="nav" aria-label="Main">
         <a href="index.html">Home</a>
-        <a href="try.html" aria-current="page">Closed testing</a>
+        <a href="try.html" aria-current="page">Apps</a>
         <a href="mailto:autoaccentsni@gmail.com" class="nav-cta">Contact</a>
       </nav>
     </div>
@@ -188,29 +189,24 @@
 
   <main class="wrap page-max" style="max-width:1100px">
     <div class="top-hero">
-      <p class="hero-eyebrow" style="margin:0 0 0.4rem">Invited testers only · not public yet</p>
-      <h1>Closed testing apps</h1>
+      <p class="hero-eyebrow" style="margin:0 0 0.4rem">Android · Google Play</p>
+      <h1>Our apps</h1>
       <p class="lede">
-        Tap <strong>Open on Play Store</strong> to install (you must be on the tester list).
-        Need access? Email us your Google account.
+        Handy tools and calm utilities for everyday life.
+        Tap <strong>Get on Google Play</strong> when an app is live — grey buttons mean it’s coming soon.
       </p>
-      <div class="how-inline no-print">
-        <strong>Quick steps</strong>
-        <ol>
-          <li>We add your Google Play email as a tester.</li>
-          <li>Tap <strong>Open on Play Store</strong> and install.</li>
-        </ol>
-      </div>
     </div>
 
-    <section class="zone" id="testing" aria-label="Apps to test">
+    <section class="zone" id="apps" aria-label="Our apps">
       <div class="zone-head">
-        <p class="kicker">6 apps</p>
-        <h2>Pick an app</h2>
+        <p class="kicker">Featured</p>
+        <h2>Get the apps</h2>
       </div>
-      <div class="app-grid">
+      <div class="app-grid" id="app-grid">
 
-        <article class="app-tile">
+        <!-- data-live="false" = greyed Get on Google Play. Set to "true" when public. -->
+        <article class="app-tile" data-id="daily-affirmation" data-live="false"
+          data-play="https://play.google.com/store/apps/details?id=com.dailyaffirmation.app">
           <div class="art">
             <picture>
               <source srcset="assets/hub/daily-affirmation.webp" type="image/webp" />
@@ -218,20 +214,23 @@
             </picture>
           </div>
           <div class="body">
-            <span class="pill">Closed testing</span>
+            <span class="pill soon status-pill">Coming soon</span>
             <h3>Daily Affirmation</h3>
             <p class="blurb">Your morning ritual — daily affirmations, beautifully designed.</p>
             <div class="tile-actions">
-              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.dailyaffirmation.app" target="_blank" rel="noopener noreferrer">Open on Play Store</a>
+              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
+              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-ghost" href="https://13ond21.github.io/daily-affirmation-legal/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
-              <a href="https://13ond21.github.io/daily-affirmation-legal/" target="_blank" rel="noopener noreferrer">Website</a>
               <a href="https://13ond21.github.io/daily-affirmation-legal/privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/daily-affirmation-legal/terms-and-conditions.html" target="_blank" rel="noopener noreferrer">Terms</a>
             </div>
           </div>
         </article>
 
-        <article class="app-tile">
+        <article class="app-tile" data-id="facts-for-kids" data-live="false"
+          data-play="https://play.google.com/store/apps/details?id=com.luckytools.facts_kids">
           <div class="art">
             <picture>
               <source srcset="assets/hub/facts-kids.webp" type="image/webp" />
@@ -239,20 +238,23 @@
             </picture>
           </div>
           <div class="body">
-            <span class="pill">Closed testing</span>
+            <span class="pill soon status-pill">Coming soon</span>
             <h3>Facts for Kids</h3>
             <p class="blurb">Fun, age-friendly facts for curious kids.</p>
             <div class="tile-actions">
-              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.luckytools.facts_kids" target="_blank" rel="noopener noreferrer">Open on Play Store</a>
+              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
+              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-ghost" href="https://13ond21.github.io/facts-kids-website/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
-              <a href="https://13ond21.github.io/facts-kids-website/" target="_blank" rel="noopener noreferrer">Website</a>
               <a href="https://13ond21.github.io/facts-kids-website/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/facts-kids-website/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
             </div>
           </div>
         </article>
 
-        <article class="app-tile">
+        <article class="app-tile" data-id="decibel-meter-pro" data-live="false"
+          data-play="https://play.google.com/store/apps/details?id=com.luckytools.decibel_meter_pro">
           <div class="art" style="background:#0b1220;display:grid;place-items:center;padding:1.1rem">
             <picture>
               <source srcset="assets/hub/decibel-meter-icon.webp" type="image/webp" />
@@ -260,20 +262,23 @@
             </picture>
           </div>
           <div class="body">
-            <span class="pill">Closed testing</span>
+            <span class="pill soon status-pill">Coming soon</span>
             <h3>Decibel Meter Pro</h3>
             <p class="blurb">Live dB meter with min/max/avg, calibration &amp; optional Premium.</p>
             <div class="tile-actions">
-              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.luckytools.decibel_meter_pro" target="_blank" rel="noopener noreferrer">Open on Play Store</a>
+              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
+              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-ghost" href="https://13ond21.github.io/decibel-meter/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
-              <a href="https://13ond21.github.io/decibel-meter/" target="_blank" rel="noopener noreferrer">Website</a>
               <a href="https://13ond21.github.io/decibel-meter/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/decibel-meter/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
             </div>
           </div>
         </article>
 
-        <article class="app-tile">
+        <article class="app-tile" data-id="bluetooth-mic" data-live="false"
+          data-play="https://play.google.com/store/apps/details?id=com.btcmic.pamic">
           <div class="art">
             <picture>
               <source srcset="assets/hub/bt-mic.webp" type="image/webp" />
@@ -281,20 +286,23 @@
             </picture>
           </div>
           <div class="body">
-            <span class="pill">Closed testing</span>
+            <span class="pill soon status-pill">Coming soon</span>
             <h3>Bluetooth Mic</h3>
             <p class="blurb">Wireless mic for karaoke &amp; PA with a Bluetooth headset.</p>
             <div class="tile-actions">
-              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.btcmic.pamic" target="_blank" rel="noopener noreferrer">Open on Play Store</a>
+              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
+              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-ghost" href="https://13ond21.github.io/pa-mic/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
-              <a href="https://13ond21.github.io/pa-mic/" target="_blank" rel="noopener noreferrer">Website</a>
               <a href="https://13ond21.github.io/pa-mic/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/pa-mic/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
             </div>
           </div>
         </article>
 
-        <article class="app-tile">
+        <article class="app-tile" data-id="kitchen-buddy" data-live="false"
+          data-play="https://play.google.com/store/apps/details?id=com.luckytools.synccook">
           <div class="art">
             <picture>
               <source srcset="assets/hub/kitchen-buddy.webp" type="image/webp" />
@@ -302,20 +310,23 @@
             </picture>
           </div>
           <div class="body">
-            <span class="pill">Closed testing</span>
+            <span class="pill soon status-pill">Coming soon</span>
             <h3>Kitchen Buddy</h3>
             <p class="blurb">Timers, pantry &amp; shopping lists — calmer kitchen on your phone.</p>
             <div class="tile-actions">
-              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.luckytools.synccook" target="_blank" rel="noopener noreferrer">Open on Play Store</a>
+              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
+              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-ghost" href="https://13ond21.github.io/kitchen-buddy/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
-              <a href="https://13ond21.github.io/kitchen-buddy/" target="_blank" rel="noopener noreferrer">Website</a>
               <a href="https://13ond21.github.io/kitchen-buddy/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/kitchen-buddy/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
             </div>
           </div>
         </article>
 
-        <article class="app-tile">
+        <article class="app-tile" data-id="morse-beacon" data-live="false"
+          data-play="https://play.google.com/store/apps/details?id=com.luckytools.morse_beacon">
           <div class="art">
             <picture>
               <source srcset="assets/hub/morse-beacon.webp" type="image/webp" />
@@ -323,15 +334,17 @@
             </picture>
           </div>
           <div class="body">
-            <span class="pill">Closed testing</span>
+            <span class="pill soon status-pill">Coming soon</span>
             <h3>Morse Beacon</h3>
             <p class="blurb">Learn and send Morse with LED flash, sound &amp; lessons.</p>
             <div class="tile-actions">
-              <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.luckytools.morse_beacon" target="_blank" rel="noopener noreferrer">Open on Play Store</a>
+              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
+              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-ghost" href="https://13ond21.github.io/morse-beacon-website/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
-              <a href="https://13ond21.github.io/morse-beacon-website/" target="_blank" rel="noopener noreferrer">Website</a>
               <a href="https://13ond21.github.io/morse-beacon-website/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
+              <a href="https://13ond21.github.io/morse-beacon-website/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
             </div>
           </div>
         </article>
@@ -339,7 +352,7 @@
       </div>
     </section>
 
-    <!-- Same QR URL as before — collapsed for people already on the page; expands for print/share -->
+    <!-- Same QR URL — for handouts / marketing -->
     <details class="qr-foot" id="share">
       <summary>
         Print / share this page
@@ -352,7 +365,7 @@
         </figure>
         <div>
           <p style="margin:0;color:var(--muted);font-size:0.95rem;line-height:1.5">
-            Same link forever — print the QR and hand it out. People land on this page and tap an app above.
+            Same marketing link forever — print the QR and hand it out.
           </p>
           <div class="url-chip">
             <strong>Link:</strong>
@@ -381,6 +394,54 @@
 
   <script>
   (function () {
+    /**
+     * Flip an app live when it leaves closed testing / is public on Play:
+     * On that card, set data-live="true"
+     * (or tell me which app — I'll flip it for you)
+     */
+    function applyLiveState(tile) {
+      var live = (tile.getAttribute("data-live") || "false").toLowerCase() === "true";
+      var playUrl = tile.getAttribute("data-play") || "#";
+      var cta = tile.querySelector(".play-cta");
+      var note = tile.querySelector(".play-note");
+      var pill = tile.querySelector(".status-pill");
+      if (!cta) return;
+
+      if (live) {
+        cta.classList.remove("is-soon");
+        cta.setAttribute("href", playUrl);
+        cta.removeAttribute("aria-disabled");
+        cta.setAttribute("target", "_blank");
+        cta.setAttribute("rel", "noopener noreferrer");
+        cta.textContent = "Get on Google Play";
+        if (note) note.hidden = true;
+        if (pill) {
+          pill.textContent = "On Google Play";
+          pill.classList.remove("soon");
+          pill.classList.add("live");
+        }
+      } else {
+        cta.classList.add("is-soon");
+        cta.setAttribute("href", "#");
+        cta.setAttribute("aria-disabled", "true");
+        cta.removeAttribute("target");
+        cta.removeAttribute("rel");
+        cta.textContent = "Get on Google Play";
+        cta.addEventListener("click", function (e) { e.preventDefault(); });
+        if (note) {
+          note.hidden = false;
+          note.textContent = "Coming soon on Google Play";
+        }
+        if (pill) {
+          pill.textContent = "Coming soon";
+          pill.classList.add("soon");
+          pill.classList.remove("live");
+        }
+      }
+    }
+
+    document.querySelectorAll(".app-tile[data-play]").forEach(applyLiveState);
+
     var PAGE_URL = "https://13ond21.github.io/portfolio-websites/try.html";
     function toast(msg) {
       var t = document.getElementById("toast");
