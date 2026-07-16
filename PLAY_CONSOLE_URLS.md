@@ -1,7 +1,8 @@
 # Play Console URLs
 
 **Live hub:** https://13ond21.github.io/portfolio-websites/
-**Tester / QR page (print this):** https://13ond21.github.io/portfolio-websites/apps.html
+**Tester / QR page (print this):** https://13ond21.github.io/portfolio-websites/try.html  
+**(Old apps.html link redirects here.)**
 **Contact:** `autoaccentsni@gmail.com`
 
 ### Play package IDs (all closed testing for now — not public live)
