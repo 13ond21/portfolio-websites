@@ -4,17 +4,18 @@
 **Tester / QR page (print this):** https://13ond21.github.io/portfolio-websites/apps.html
 **Contact:** `autoaccentsni@gmail.com`
 
-### Play package IDs (direct store links)
+### Play package IDs (all closed testing for now — not public live)
 
-| App | Package | Public store | Closed testing opt-in |
-|-----|---------|--------------|------------------------|
-| Decibel Meter | `com.luckytools.decibel_meter_pro` | [Play](https://play.google.com/store/apps/details?id=com.luckytools.decibel_meter_pro) | — |
-| Bluetooth Mic | `com.btcmic.pamic` | [Play](https://play.google.com/store/apps/details?id=com.btcmic.pamic) | — |
-| Kitchen Buddy | `com.luckytools.synccook` | [Play](https://play.google.com/store/apps/details?id=com.luckytools.synccook) | — |
-| UK Pay Calc | `com.luckytools.uk_pay_calc` | [Play](https://play.google.com/store/apps/details?id=com.luckytools.uk_pay_calc) | — |
-| Daily Affirmation | `com.dailyaffirmation.app` | [Play](https://play.google.com/store/apps/details?id=com.dailyaffirmation.app) | [Join testing](https://play.google.com/apps/testing/com.dailyaffirmation.app) |
-| Facts for Kids | `com.luckytools.facts_kids` | [Play](https://play.google.com/store/apps/details?id=com.luckytools.facts_kids) | [Join testing](https://play.google.com/apps/testing/com.luckytools.facts_kids) |
-| Morse Beacon | `com.luckytools.morse_beacon` | [Play](https://play.google.com/store/apps/details?id=com.luckytools.morse_beacon) | [Join testing](https://play.google.com/apps/testing/com.luckytools.morse_beacon) |
+UK Pay Calc is **not listed** on the tester hub yet.
+
+| App | Package | Closed testing opt-in | Play listing (after opt-in) |
+|-----|---------|----------------------|-----------------------------|
+| Daily Affirmation | `com.dailyaffirmation.app` | [Join testing](https://play.google.com/apps/testing/com.dailyaffirmation.app) | [Play](https://play.google.com/store/apps/details?id=com.dailyaffirmation.app) |
+| Facts for Kids | `com.luckytools.facts_kids` | [Join testing](https://play.google.com/apps/testing/com.luckytools.facts_kids) | [Play](https://play.google.com/store/apps/details?id=com.luckytools.facts_kids) |
+| Decibel Meter | `com.luckytools.decibel_meter_pro` | [Join testing](https://play.google.com/apps/testing/com.luckytools.decibel_meter_pro) | [Play](https://play.google.com/store/apps/details?id=com.luckytools.decibel_meter_pro) |
+| Bluetooth Mic | `com.btcmic.pamic` | [Join testing](https://play.google.com/apps/testing/com.btcmic.pamic) | [Play](https://play.google.com/store/apps/details?id=com.btcmic.pamic) |
+| Kitchen Buddy | `com.luckytools.synccook` | [Join testing](https://play.google.com/apps/testing/com.luckytools.synccook) | [Play](https://play.google.com/store/apps/details?id=com.luckytools.synccook) |
+| Morse Beacon | `com.luckytools.morse_beacon` | [Join testing](https://play.google.com/apps/testing/com.luckytools.morse_beacon) | [Play](https://play.google.com/store/apps/details?id=com.luckytools.morse_beacon) |
 
 ## On Google Play (first 6 websites)
 
