@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pass Gen — secure password generator for Android</title>
-  <meta name="description" content="Pass Gen creates strong passwords and passphrases on your device. Free with optional ads. Premium removes ads. No cloud vault." />
-  <meta name="theme-color" content="#5b6b7c" />
-  <meta property="og:title" content="Pass Gen — secure password generator" />
-  <meta property="og:description" content="Cryptographically secure passwords offline. Free + optional Premium. Privacy-first Android tool by Lucky Tools." />
+  <meta name="description" content="Generate strong passwords and passphrases on your device. Free with optional ads. Premium removes ads and unlocks custom words mixed into passwords." />
+  <meta name="theme-color" content="#0b0712" />
+  <meta property="og:title" content="Pass Gen — strong passwords on your phone" />
+  <meta property="og:description" content="Cryptographically secure · on-device · free + optional Premium." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://13ond21.github.io/portfolio-websites/pass-gen/" />
-  <meta property="og:image" content="https://13ond21.github.io/portfolio-websites/pass-gen/assets/feature_graphic.png" />
+  <meta property="og:image" content="https://13ond21.github.io/portfolio-websites/pass-gen/assets/shot-password-1.png" />
   <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/pass-gen/" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="assets/icon_512.png" />
@@ -30,19 +30,20 @@
 </head>
 <body>
   <div class="page-bg" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="inner">
       <a class="brand" href="index.html">
-        <span class="brand-mark" aria-hidden="true">🔐</span>
+        <img src="assets/icon_512.png" width="38" height="38" alt="" />
         Pass Gen
       </a>
       <nav class="nav" aria-label="Main">
         <a href="index.html" aria-current="page">Home</a>
+        <a href="#screens">Screens</a>
         <a href="#features">Features</a>
+        <a href="#premium">Premium</a>
         <a href="privacy.html">Privacy</a>
-        <a href="delete-data.html">Delete data</a>
-        <a href="terms.html">Terms</a>
-        <a href="delete-data.html" class="nav-cta">Request deletion</a>
+        <a href="https://play.google.com/store/apps/details?id=com.luckytools.pass_gen" class="nav-cta">Get the app</a>
       </nav>
     </div>
   </header>
@@ -50,16 +51,17 @@
   <main class="wrap">
     <section class="hero">
       <div>
-        <p class="hero-eyebrow">Tools · Android · Privacy-first</p>
-        <h1>Pass Gen — <em>strong passwords, on your phone</em></h1>
+        <p class="hero-eyebrow">Android · Tools · Privacy-first</p>
+        <h1>Strong passwords.<br /><em>On your phone. Offline.</em></h1>
         <p class="lede">
-          Generate cryptographically secure passwords and memorable passphrases offline.
-          No account. No cloud vault. Free with optional ads; Premium removes ads forever.
+          Pass Gen creates cryptographically secure passwords and memorable passphrases
+          on your device — no cloud vault, no account. Free forever; Premium removes ads
+          and mixes your own words into passwords.
         </p>
         <div class="badge-row">
           <span class="badge accent">On-device only</span>
-          <span class="badge">No account</span>
-          <span class="badge">Android</span>
+          <span class="badge">Random.secure</span>
+          <span class="badge">Jumble · Copy</span>
           <span class="badge">Optional Premium</span>
         </div>
         <div class="btn-row">
@@ -69,19 +71,19 @@
         </div>
         <div class="stats">
           <div class="stat"><strong>0</strong><span>accounts</span></div>
-          <div class="stat"><strong>CS</strong><span>Random.secure</span></div>
+          <div class="stat"><strong>CS</strong><span>secure RNG</span></div>
           <div class="stat"><strong>10</strong><span>local history</span></div>
           <div class="stat"><strong>£</strong><span>optional Premium</span></div>
         </div>
       </div>
-      <div class="phone-stage">
-        <div class="phone phone-real">
+      <div class="hero-visual">
+        <div class="device">
+          <div class="device-glow" aria-hidden="true"></div>
           <img
-            class="phone-shot"
             src="assets/shot-password-1.png"
             width="720"
-            height="1560"
-            alt="Pass Gen generating a strong password on Android — Excellent strength meter"
+            height="1400"
+            alt="Pass Gen showing a strong password with Excellent strength — no ads"
           />
         </div>
       </div>
@@ -90,39 +92,51 @@
     <div class="proof" role="note">
       <span>Generated locally</span>·
       <span>No password cloud</span>·
-      <span>Premium optional · Google Play</span>
+      <span>Ads stay below the buttons</span>
     </div>
 
     <section class="section" id="screens" aria-labelledby="screens-title">
       <div class="section-head">
-        <p class="kicker">Inside the app</p>
-        <h2 id="screens-title">Real screenshots — real passwords</h2>
-        <p>Captured on device. Tap Generate when you are ready — options never auto-spam new secrets.</p>
+        <p class="kicker">Real device</p>
+        <h2 id="screens-title">Screenshots — no ads, real passwords</h2>
+        <p>Captured on a Samsung phone with Premium (ad-free). Status bar removed for the store &amp; site.</p>
       </div>
-      <div class="shot-gallery shot-gallery-real">
+      <div class="shot-gallery">
         <figure class="shot-card">
-          <img src="assets/shot-password-1.png" alt="Password example with Excellent strength" loading="lazy" />
-          <figcaption>Password<span>Strong random string · Excellent entropy</span></figcaption>
+          <div class="shot-frame">
+            <img src="assets/shot-password-1.png" alt="Password y&amp;8RNE-?u>]KwM$V Excellent 101 bits" loading="lazy" />
+          </div>
+          <figcaption>Strong password<span>Excellent entropy · one-tap Generate</span></figcaption>
         </figure>
         <figure class="shot-card">
-          <img src="assets/shot-password-2.png" alt="Another generated password example" loading="lazy" />
-          <figcaption>Another password<span>One tap to regenerate when you need a new one</span></figcaption>
+          <div class="shot-frame">
+            <img src="assets/shot-password-alt.png" alt="Another generated password example" loading="lazy" />
+          </div>
+          <figcaption>Another example<span>Clear options · Jumble · Copy</span></figcaption>
         </figure>
         <figure class="shot-card">
-          <img src="assets/shot-passphrase-1.png" alt="Passphrase example refuse-sing-empower-occur-visual" loading="lazy" />
-          <figcaption>Passphrase<span>Memorable words · still strong entropy</span></figcaption>
+          <div class="shot-frame">
+            <img src="assets/shot-ready.png" alt="Pass Gen ready state before generating" loading="lazy" />
+          </div>
+          <figcaption>Ready state<span>Set options, then Generate</span></figcaption>
         </figure>
         <figure class="shot-card">
-          <img src="assets/shot-password-3.png" alt="Third password generation example" loading="lazy" />
-          <figcaption>More examples<span>Length, symbols, and toggles — then Generate</span></figcaption>
+          <div class="shot-frame">
+            <img src="assets/shot-custom.png" alt="Custom words Premium field and full option list" loading="lazy" />
+          </div>
+          <figcaption>Premium custom text<span>Mix your words into passwords</span></figcaption>
         </figure>
         <figure class="shot-card">
-          <img src="assets/shot-passphrase-2.png" alt="Second passphrase generation example" loading="lazy" />
-          <figcaption>Passphrase options<span>Word count, separators, capitalize</span></figcaption>
+          <div class="shot-frame">
+            <img src="assets/shot-passphrase-1.png" alt="Passphrase mode screenshot" loading="lazy" />
+          </div>
+          <figcaption>Passphrase mode<span>Memorable words · separators</span></figcaption>
         </figure>
         <figure class="shot-card">
-          <img src="assets/shot-ready.png" alt="Pass Gen ready state before generate" loading="lazy" />
-          <figcaption>Ready state<span>Set options first, then tap Generate</span></figcaption>
+          <div class="shot-frame">
+            <img src="assets/shot-privacy.png" alt="Privacy and legal screen" loading="lazy" />
+          </div>
+          <figcaption>Privacy first<span>On-device · clear policies</span></figcaption>
         </figure>
       </div>
     </section>
@@ -130,44 +144,62 @@
     <section class="section" id="features" aria-labelledby="features-title">
       <div class="section-head">
         <p class="kicker">Why Pass Gen</p>
-        <h2 id="features-title">Secure. Simple. Offline-first.</h2>
-        <p>Built for real passwords — not another cloud vault.</p>
+        <h2 id="features-title">Built for real use</h2>
+        <p>Obvious controls. Strong results. Your secrets never leave the phone.</p>
       </div>
       <div class="grid-2">
-        <article class="card"><h3>Password mode</h3><p>Length 8–64 with uppercase, lowercase, numbers, symbols, and ambiguous-character exclusion.</p></article>
-        <article class="card"><h3>Passphrase mode</h3><p>3–8 words with separators (hyphen, underscore, space, and more) for memorable secrets.</p></article>
-        <article class="card"><h3>Strength meter</h3><p>Entropy estimate in bits with clear weak-to-excellent labels so you can choose confidently.</p></article>
-        <article class="card"><h3>Local history</h3><p>Last 10 values stay in private app storage. Clear anytime. Never synced by us.</p></article>
-        <article class="card"><h3>Cryptographically secure</h3><p>Uses Dart <code>Random.secure</code> — not a predictable pseudo-random sequence.</p></article>
-        <article class="card"><h3>Honest free tier</h3><p>Full generator free. Optional banner and occasional full-screen ads. Premium removes ads.</p></article>
+        <article class="card">
+          <h3>Password mode</h3>
+          <p>Length, uppercase, lowercase, numbers, symbols, and exclude look-alikes — with plain-English labels.</p>
+        </article>
+        <article class="card">
+          <h3>Passphrase mode</h3>
+          <p>3–8 words with hyphen, underscore, space, or none. Capitalize optional.</p>
+        </article>
+        <article class="card">
+          <h3>Generate · Jumble · Copy</h3>
+          <p>Large primary button. Jumble reshuffles the current password. Copy in one tap.</p>
+        </article>
+        <article class="card">
+          <h3>Cryptographically secure</h3>
+          <p>Uses Dart <code>Random.secure</code> — not a predictable pseudo-random sequence.</p>
+        </article>
+        <article class="card">
+          <h3>Ads stay out of the way</h3>
+          <p>Free tier banner sits below the action bar only — not over Generate or Copy.</p>
+        </article>
+        <article class="card">
+          <h3>Premium custom letters</h3>
+          <p>Mix names, pets, or years into passwords. Optional lifetime unlock via Google Play.</p>
+        </article>
       </div>
     </section>
 
     <section class="section" id="premium" aria-labelledby="premium-title">
       <div class="section-head">
         <p class="kicker">Free vs Premium</p>
-        <h2 id="premium-title">What you get</h2>
-        <p>Free is fully useful. Premium is a one-time unlock via Google Play.</p>
+        <h2 id="premium-title">Honest free tier</h2>
+        <p>Core generation is free. Premium is a one-time unlock.</p>
       </div>
       <div class="plans">
         <div class="plan">
           <h3>Free</h3>
-          <p class="tagline">Start at no cost</p>
+          <p class="tagline">Everything you need to start</p>
           <ul>
             <li>Unlimited password &amp; passphrase generation</li>
-            <li>Strength meter and on-device history</li>
-            <li>Works offline for generation</li>
-            <li>May show banner / occasional full-screen ads</li>
+            <li>Jumble &amp; copy</li>
+            <li>Strength meter &amp; local history</li>
+            <li>Banner ads only under the buttons</li>
           </ul>
         </div>
         <div class="plan premium">
           <h3>Premium <span class="tag">optional</span></h3>
-          <p class="tagline">Everything in Free, plus</p>
+          <p class="tagline">One-time · <code>pass_gen_premium_lifetime</code></p>
           <ul>
-            <li><strong>No ads</strong> (lifetime unlock)</li>
-            <li>Product ID: <code>pass_gen_premium_lifetime</code></li>
+            <li><strong>No ads</strong></li>
+            <li>Custom words / letters mixed into passwords</li>
             <li>Billed once via Google Play</li>
-            <li>Restore purchases on reinstall</li>
+            <li>Restore purchases after reinstall</li>
           </ul>
         </div>
       </div>
@@ -175,43 +207,41 @@
 
     <section class="cta-band">
       <h2>Privacy, terms &amp; data deletion</h2>
-      <p>Everything Google Play needs — clear URLs for policy and user data requests.</p>
-      <div class="btn-row" style="justify-content:center">
+      <p>Everything Google Play needs — clear policy URLs for Console.</p>
+      <div class="btn-row">
         <a class="btn btn-primary" href="privacy.html">Privacy policy</a>
         <a class="btn btn-secondary" href="delete-data.html">Request data deletion</a>
         <a class="btn btn-secondary" href="terms.html">Terms of use</a>
       </div>
     </section>
 
-    <article class="card meta-card" style="margin-top:1.5rem">
+    <article class="card meta-card">
       <h3>App details</h3>
       <p>
-        Application ID: <code>com.luckytools.pass_gen</code><br />
+        Package: <code>com.luckytools.pass_gen</code><br />
         Publisher: Lucky Tools · Northern Ireland<br />
         Support: <a href="mailto:autoaccentsni@gmail.com">autoaccentsni@gmail.com</a><br />
-        Legal site: <a href="https://13ond21.github.io/portfolio-websites/pass-gen/">https://13ond21.github.io/portfolio-websites/pass-gen/</a>
+        Site: <a href="https://13ond21.github.io/portfolio-websites/pass-gen/">13ond21.github.io/portfolio-websites/pass-gen/</a>
       </p>
     </article>
+  </main>
 
   <footer class="site-footer">
-    <div class="inner footer-grid">
+    <div class="footer-grid">
       <div>
         <strong style="color:var(--ink)">Pass Gen</strong><br />
-        <span>Northern Ireland · <a href="mailto:autoaccentsni@gmail.com">autoaccentsni@gmail.com</a></span>
+        Northern Ireland · <a href="mailto:autoaccentsni@gmail.com">autoaccentsni@gmail.com</a>
       </div>
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy</a>
         <a href="delete-data.html">Delete data</a>
         <a href="terms.html">Terms</a>
-        <a href="mailto:autoaccentsni@gmail.com">Contact</a>
       </div>
     </div>
-    <div class="inner" style="margin-top:1rem">
-      <p style="margin:0">&copy; 2026 Lucky Tools · Northern Ireland. Not a password manager — generate and copy where you need.</p>
+    <div class="footer-grid" style="margin-top:1rem">
+      <p style="margin:0">&copy; 2026 Lucky Tools. Not a password manager — generate and copy where you need.</p>
     </div>
   </footer>
-
-  </main>
 </body>
 </html>
