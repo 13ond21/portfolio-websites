@@ -143,7 +143,7 @@ a:hover { color: color-mix(in srgb, var(--accent) 80%, #000); }
 }
 .stat span { font-size: 0.75rem; color: var(--muted); font-weight: 600; }
 
-/* Phone mockup */
+/* Phone mockup — real screenshots */
 .phone-stage { display: flex; justify-content: center; perspective: 900px; }
 .phone {
   width: min(280px, 78vw);
@@ -152,6 +152,17 @@ a:hover { color: color-mix(in srgb, var(--accent) 80%, #000); }
   padding: 12px;
   box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,0.08) inset;
   transform: rotateY(-6deg) rotateX(2deg);
+}
+.phone.phone-real {
+  padding: 10px;
+  background: linear-gradient(160deg, #1a1228, #0f0a18);
+}
+.phone-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  background: #0f0a18;
 }
 @media (max-width: 899px) { .phone { transform: none; } }
 .phone-notch {
@@ -162,6 +173,28 @@ a:hover { color: color-mix(in srgb, var(--accent) 80%, #000); }
   border-radius: 26px; overflow: hidden; min-height: 480px;
   background: linear-gradient(165deg, var(--surface) 0%, var(--accent-tint) 100%);
   position: relative;
+}
+.shot-gallery-real {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 700px) {
+  .shot-gallery-real { grid-template-columns: repeat(3, 1fr); }
+}
+.shot-gallery-real .shot-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 19.5;
+  object-fit: cover;
+  object-position: top center;
+  background: #0f0a18;
+}
+.shot-gallery-real .shot-card figcaption span {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
 }
 .fake-app { padding: 1.1rem 1rem 1.25rem; }
 .fake-top {
