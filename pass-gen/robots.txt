@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://13ond21.github.io/portfolio-websites/pass-gen/sitemap.xml
