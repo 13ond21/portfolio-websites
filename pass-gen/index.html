@@ -77,14 +77,31 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="device">
+        <div
+          class="device carousel"
+          data-carousel
+          data-autoplay="4500"
+          aria-roledescription="carousel"
+          aria-label="Pass Gen app preview"
+        >
           <div class="device-glow" aria-hidden="true"></div>
-          <img
-            src="assets/shot-password-1.png"
-            width="720"
-            height="1400"
-            alt="Pass Gen showing a strong password with Excellent strength — no ads"
-          />
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <figure class="carousel-slide is-active">
+                <img src="assets/shot-password-1.png" width="720" height="1400" alt="Password with whole custom words Fluffy and 2019" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-ready.png" width="720" height="1400" alt="Ready to generate with custom field" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-passphrase-1.png" width="720" height="1400" alt="Passphrase mode options" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-privacy.png" width="720" height="1400" alt="Privacy and legal screen" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+          <div class="carousel-dots" role="tablist" aria-label="Preview slides"></div>
         </div>
       </div>
     </section>
@@ -140,45 +157,69 @@
       <div class="section-head">
         <p class="kicker">Real device · July 2026</p>
         <h2 id="screens-title">Screenshots — Premium, no ads</h2>
-        <p>Samsung phone · custom whole words · status bar cropped for Play &amp; this site.</p>
+        <p>Swipe or use the arrows · Samsung phone · custom whole words · status bar cropped.</p>
       </div>
-      <div class="shot-gallery">
-        <figure class="shot-card">
-          <div class="shot-frame">
-            <img src="assets/shot-password-1.png" alt="Pass Gen password with whole custom words Fluffy and 2019" loading="lazy" />
+
+      <div
+        class="shot-carousel carousel"
+        data-carousel
+        data-autoplay="6000"
+        aria-roledescription="carousel"
+        aria-label="Pass Gen screenshots"
+      >
+        <button type="button" class="carousel-btn prev" data-carousel-prev aria-label="Previous screenshot">
+          <span aria-hidden="true">‹</span>
+        </button>
+
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <figure class="carousel-slide shot-card is-active">
+              <div class="shot-frame">
+                <img src="assets/shot-password-1.png" alt="Pass Gen password with whole custom words Fluffy and 2019" />
+              </div>
+              <figcaption>Custom words kept whole<span>Fluffy · 2019 inside the password</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame">
+                <img src="assets/shot-ready.png" alt="Pass Gen ready with custom field Fluffy 2019" loading="lazy" />
+              </div>
+              <figcaption>Ready to generate<span>Type words · separate with spaces</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame">
+                <img src="assets/shot-custom.png" alt="Premium custom words and Generate" loading="lazy" />
+              </div>
+              <figcaption>Generate · Jumble · Copy<span>Jumble slides the whole word</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame">
+                <img src="assets/shot-passphrase-1.png" alt="Passphrase mode options" loading="lazy" />
+              </div>
+              <figcaption>Passphrase mode<span>Words · separators · capitalize</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame">
+                <img src="assets/shot-privacy.png" alt="Privacy and legal screen" loading="lazy" />
+              </div>
+              <figcaption>Privacy first<span>On-device · clear policies</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame">
+                <img src="assets/shot-password-2.png" alt="Strong password Excellent entropy" loading="lazy" />
+              </div>
+              <figcaption>Strong results<span>Excellent entropy · Random.secure</span></figcaption>
+            </figure>
           </div>
-          <figcaption>Custom words kept whole<span>Fluffy · 2019 inside the password</span></figcaption>
-        </figure>
-        <figure class="shot-card">
-          <div class="shot-frame">
-            <img src="assets/shot-ready.png" alt="Pass Gen ready with custom field Fluffy 2019" loading="lazy" />
-          </div>
-          <figcaption>Ready to generate<span>Type words · separate with spaces</span></figcaption>
-        </figure>
-        <figure class="shot-card">
-          <div class="shot-frame">
-            <img src="assets/shot-custom.png" alt="Premium custom words and Generate" loading="lazy" />
-          </div>
-          <figcaption>Generate · Jumble · Copy<span>Jumble slides the whole word</span></figcaption>
-        </figure>
-        <figure class="shot-card">
-          <div class="shot-frame">
-            <img src="assets/shot-passphrase-1.png" alt="Passphrase mode options" loading="lazy" />
-          </div>
-          <figcaption>Passphrase mode<span>Words · separators · capitalize</span></figcaption>
-        </figure>
-        <figure class="shot-card">
-          <div class="shot-frame">
-            <img src="assets/shot-privacy.png" alt="Privacy and legal screen" loading="lazy" />
-          </div>
-          <figcaption>Privacy first<span>On-device · clear policies</span></figcaption>
-        </figure>
-        <figure class="shot-card">
-          <div class="shot-frame">
-            <img src="assets/shot-password-2.png" alt="Strong password Excellent entropy" loading="lazy" />
-          </div>
-          <figcaption>Strong results<span>Excellent entropy · Random.secure</span></figcaption>
-        </figure>
+        </div>
+
+        <button type="button" class="carousel-btn next" data-carousel-next aria-label="Next screenshot">
+          <span aria-hidden="true">›</span>
+        </button>
+
+        <div class="carousel-footer">
+          <div class="carousel-dots" role="tablist" aria-label="Screenshot slides"></div>
+          <p class="carousel-status" data-carousel-status aria-live="polite">1 / 6</p>
+        </div>
       </div>
     </section>
 
@@ -285,5 +326,7 @@
       <p style="margin:0">&copy; 2026 Lucky Tools. Not a password manager — generate and copy where you need.</p>
     </div>
   </footer>
+
+  <script src="carousel.js" defer></script>
 </body>
 </html>
