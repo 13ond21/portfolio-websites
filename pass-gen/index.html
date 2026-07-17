@@ -39,8 +39,8 @@
       </a>
       <nav class="nav" aria-label="Main">
         <a href="index.html" aria-current="page">Home</a>
+        <a href="#how">How it works</a>
         <a href="#screens">Screens</a>
-        <a href="#features">Features</a>
         <a href="#premium">Premium</a>
         <a href="privacy.html">Privacy</a>
         <a href="https://play.google.com/store/apps/details?id=com.luckytools.pass_gen" class="nav-cta">Get the app</a>
@@ -55,25 +55,25 @@
         <h1>Strong passwords.<br /><em>On your phone. Offline.</em></h1>
         <p class="lede">
           Pass Gen creates cryptographically secure passwords and memorable passphrases
-          on your device — no cloud vault, no account. Free forever; Premium removes ads
-          and mixes your own words into passwords.
+          on your device — no cloud vault, no account. Free with ads; Premium (~£1.99/mo)
+          removes ads and keeps your full custom words whole inside the password.
         </p>
         <div class="badge-row">
           <span class="badge accent">On-device only</span>
           <span class="badge">Random.secure</span>
-          <span class="badge">Jumble · Copy</span>
-          <span class="badge">Optional Premium</span>
+          <span class="badge">Whole-word custom</span>
+          <span class="badge">£1.99/mo Premium</span>
         </div>
         <div class="btn-row">
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.pass_gen">Get on Google Play</a>
+          <a class="btn btn-secondary" href="#how">How it works</a>
           <a class="btn btn-secondary" href="privacy.html">Privacy policy</a>
-          <a class="btn btn-secondary" href="delete-data.html">Delete my data</a>
         </div>
         <div class="stats">
           <div class="stat"><strong>0</strong><span>accounts</span></div>
           <div class="stat"><strong>CS</strong><span>secure RNG</span></div>
-          <div class="stat"><strong>10</strong><span>local history</span></div>
-          <div class="stat"><strong>£</strong><span>optional Premium</span></div>
+          <div class="stat"><strong>64</strong><span>chars Premium</span></div>
+          <div class="stat"><strong>£1.99</strong><span>Premium / mo</span></div>
         </div>
       </div>
       <div class="hero-visual">
@@ -92,51 +92,92 @@
     <div class="proof" role="note">
       <span>Generated locally</span>·
       <span>No password cloud</span>·
-      <span>Free with ads</span>
+      <span>Free with ads · Premium optional</span>
     </div>
+
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="section-head">
+        <p class="kicker">User guide</p>
+        <h2 id="how-title">How it works</h2>
+        <p>One screen. Generate, jumble, copy. Premium custom words stay whole.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>1. Pick Password or Passphrase</h3>
+          <p>
+            <strong>Password</strong> — random letters, numbers &amp; symbols with clear toggles
+            (uppercase, lowercase, numbers, symbols, exclude look-alikes).<br />
+            <strong>Passphrase</strong> — memorable word list with hyphen, underscore, space, or none.
+          </p>
+        </article>
+        <article class="card">
+          <h3>2. Set length &amp; options</h3>
+          <p>
+            Free: up to 32 characters / 5 words. Premium: up to 64 characters / 8 words.
+            Strength meter shows estimated entropy as you generate.
+          </p>
+        </article>
+        <article class="card">
+          <h3>3. Custom words (Premium)</h3>
+          <p>
+            Type full words separated by spaces — e.g. <code>Fluffy 2019</code>.
+            Each word stays <strong>whole</strong> near the middle of the password
+            (never letter-scrambled). Spaces only separate words; they are not added to the result.
+          </p>
+        </article>
+        <article class="card">
+          <h3>4. Generate · Jumble · Copy</h3>
+          <p>
+            <strong>Generate</strong> creates a new value.
+            <strong>Jumble</strong> moves your full custom word around as a block (letters stay together).
+            <strong>Copy</strong> puts it on the clipboard. Nothing is uploaded.
+          </p>
+        </article>
+      </div>
+    </section>
 
     <section class="section" id="screens" aria-labelledby="screens-title">
       <div class="section-head">
-        <p class="kicker">Real device</p>
-        <h2 id="screens-title">Screenshots — no ads, real passwords</h2>
-        <p>Captured on a Samsung phone with Premium (ad-free). Status bar removed for the store &amp; site.</p>
+        <p class="kicker">Real device · July 2026</p>
+        <h2 id="screens-title">Screenshots — Premium, no ads</h2>
+        <p>Samsung phone · custom whole words · status bar cropped for Play &amp; this site.</p>
       </div>
       <div class="shot-gallery">
         <figure class="shot-card">
           <div class="shot-frame">
-            <img src="assets/shot-password-1.png" alt="Password y&amp;8RNE-?u>]KwM$V Excellent 101 bits" loading="lazy" />
+            <img src="assets/shot-password-1.png" alt="Pass Gen password with whole custom words Fluffy and 2019" loading="lazy" />
           </div>
-          <figcaption>Strong password<span>Excellent entropy · one-tap Generate</span></figcaption>
+          <figcaption>Custom words kept whole<span>Fluffy · 2019 inside the password</span></figcaption>
         </figure>
         <figure class="shot-card">
           <div class="shot-frame">
-            <img src="assets/shot-password-alt.png" alt="Another generated password example" loading="lazy" />
+            <img src="assets/shot-ready.png" alt="Pass Gen ready with custom field Fluffy 2019" loading="lazy" />
           </div>
-          <figcaption>Another example<span>Clear options · Jumble · Copy</span></figcaption>
+          <figcaption>Ready to generate<span>Type words · separate with spaces</span></figcaption>
         </figure>
         <figure class="shot-card">
           <div class="shot-frame">
-            <img src="assets/shot-ready.png" alt="Pass Gen ready state before generating" loading="lazy" />
+            <img src="assets/shot-custom.png" alt="Premium custom words and Generate" loading="lazy" />
           </div>
-          <figcaption>Ready state<span>Set options, then Generate</span></figcaption>
+          <figcaption>Generate · Jumble · Copy<span>Jumble slides the whole word</span></figcaption>
         </figure>
         <figure class="shot-card">
           <div class="shot-frame">
-            <img src="assets/shot-custom.png" alt="Custom words Premium field and full option list" loading="lazy" />
+            <img src="assets/shot-passphrase-1.png" alt="Passphrase mode options" loading="lazy" />
           </div>
-          <figcaption>Premium custom text<span>Mix your words into passwords</span></figcaption>
-        </figure>
-        <figure class="shot-card">
-          <div class="shot-frame">
-            <img src="assets/shot-passphrase-1.png" alt="Passphrase mode screenshot" loading="lazy" />
-          </div>
-          <figcaption>Passphrase mode<span>Memorable words · separators</span></figcaption>
+          <figcaption>Passphrase mode<span>Words · separators · capitalize</span></figcaption>
         </figure>
         <figure class="shot-card">
           <div class="shot-frame">
             <img src="assets/shot-privacy.png" alt="Privacy and legal screen" loading="lazy" />
           </div>
           <figcaption>Privacy first<span>On-device · clear policies</span></figcaption>
+        </figure>
+        <figure class="shot-card">
+          <div class="shot-frame">
+            <img src="assets/shot-password-2.png" alt="Strong password Excellent entropy" loading="lazy" />
+          </div>
+          <figcaption>Strong results<span>Excellent entropy · Random.secure</span></figcaption>
         </figure>
       </div>
     </section>
@@ -157,8 +198,8 @@
           <p>3–8 words with hyphen, underscore, space, or none. Capitalize optional.</p>
         </article>
         <article class="card">
-          <h3>Generate · Jumble · Copy</h3>
-          <p>Large primary button. Jumble reshuffles the current password. Copy in one tap.</p>
+          <h3>Whole-word Premium custom</h3>
+          <p>Your words stay intact in the middle. Jumble only moves the block — never scatters letters.</p>
         </article>
         <article class="card">
           <h3>Cryptographically secure</h3>
@@ -166,11 +207,11 @@
         </article>
         <article class="card">
           <h3>Free with ads</h3>
-          <p>Use the full generator at no cost. Advertising helps keep it free; Premium removes ads.</p>
+          <p>Full generator free. Ads support the free tier; Premium removes them while subscribed.</p>
         </article>
         <article class="card">
-          <h3>Premium extras</h3>
-          <p>Custom words in passwords, longer lengths, bigger history — monthly subscription on Google Play.</p>
+          <h3>No accounts</h3>
+          <p>No cloud vault. Clear storage or uninstall wipes local data. Support email only if you write to us.</p>
         </article>
       </div>
     </section>
@@ -186,8 +227,8 @@
           <h3>Premium <span class="tag">£1.99/mo</span></h3>
           <p class="tagline">Subscription · <code>pass_gen_premium_monthly</code></p>
           <ul>
-            <li><strong>Zero ads</strong> while subscribed — no interruptions while you generate</li>
-            <li><strong>Custom words &amp; letters</strong> mixed into every password</li>
+            <li><strong>Zero ads</strong> while subscribed</li>
+            <li><strong>Whole custom words</strong> (space-separated) kept intact in passwords</li>
             <li><strong>Longer passwords</strong> — up to 64 characters (free max 32)</li>
             <li><strong>Longer passphrases</strong> — up to 8 words (free max 5)</li>
             <li><strong>5× history</strong> — last 50 on device (free keeps 10)</li>
