@@ -40,35 +40,72 @@
 
     <div class="note">
       Use this page for Google Play’s <strong>data deletion request</strong> URL.
-      Pass Gen is offline-first for password generation. Most data never leaves your phone.
+      Pass Gen has <strong>no accounts, no sign-in, and no in-app forms</strong> that send data to us.
+      Password generation stays on your device. The only personal data the developer may hold
+      is if <strong>you choose to email support</strong>.
     </div>
+
+    <h2 id="what">What data exists where</h2>
+    <ul>
+      <li>
+        <strong>On your phone (app storage)</strong> — generated passwords/history, settings,
+        and a local Premium flag. We cannot access this remotely.
+      </li>
+      <li>
+        <strong>With the developer</strong> — only support emails you send us (and our replies).
+        There is no Pass Gen cloud account or password database.
+      </li>
+      <li>
+        <strong>With Google / ad partners</strong> — Play Billing and AdMob process data under
+        their own policies. We cannot delete those records for you; use Google’s tools (below).
+      </li>
+    </ul>
 
     <h2 id="steps">Steps to delete your data</h2>
     <ol>
       <li>
-        <strong>Delete local app data (immediate)</strong><br />
+        <strong>Delete local app data (immediate — no email needed)</strong><br />
         On Android:
         <ul>
           <li>Open <strong>Settings → Apps → Pass Gen → Storage</strong></li>
           <li>Tap <strong>Clear storage</strong> / <strong>Clear data</strong></li>
         </ul>
-        Or <strong>uninstall</strong> Pass Gen. This removes local history, settings, and the cached Premium flag for that install.
+        Or <strong>uninstall</strong> Pass Gen. This removes local history, settings, and the
+        cached Premium flag for that install. No confirmation from us is required because we
+        never held that data on a server.
       </li>
       <li>
-        <strong>Clear history inside the app</strong><br />
-        Open Pass Gen → History → clear, if you only want to wipe stored generations without full uninstall.
+        <strong>Clear history inside the app (optional)</strong><br />
+        Open Pass Gen → History → clear, if you only want to wipe stored generations without uninstalling.
       </li>
       <li>
-        <strong>Purchases</strong><br />
-        Premium is a Google Play subscription. Uninstall does not cancel billing — cancel
-        under Google Play → Payments &amp; subscriptions. To restore Premium after reinstall,
-        use <strong>Restore purchases</strong> in the app with the same Google account.
+        <strong>Support emails only (the part we can delete for you)</strong><br />
+        If you have emailed us and want that correspondence removed:
+        <ul>
+          <li>
+            Email
+            <a href="mailto:autoaccentsni@gmail.com?subject=Pass%20Gen%20data%20deletion%20request">autoaccentsni@gmail.com</a>
+            with subject <strong>Pass Gen data deletion request</strong>.
+          </li>
+          <li>
+            Include the email address you used to contact us (and approximate date if you know it)
+            so we can find the thread.
+          </li>
+        </ul>
+        <strong>What we will do:</strong> delete support messages we hold that we can identify
+        as yours, within <strong>90 days</strong> of a clear request (usually much sooner).<br />
+        <strong>Confirmation email:</strong> yes — we will send <strong>one short reply</strong>
+        confirming that we have completed (or already had nothing to delete). That is the only
+        automated-style notice; there is no separate account dashboard.<br />
+        If you never emailed us, there is nothing for us to delete on our side after you clear
+        the app.
       </li>
       <li>
-        <strong>Support emails</strong><br />
-        Email <a href="mailto:autoaccentsni@gmail.com?subject=Pass%20Gen%20data%20deletion%20request">autoaccentsni@gmail.com</a>
-        with subject “Pass Gen data deletion request”. Include enough detail to find your message
-        (approximate date / email address used). We will delete support correspondence we hold where applicable.
+        <strong>Premium subscription (Google Play, not us)</strong><br />
+        Premium is a Google Play subscription. Uninstall does not cancel billing — cancel under
+        Google Play → Payments &amp; subscriptions. Purchase records stay with Google.
+        After reinstall, use <strong>Restore purchases</strong> in the app with the same Google account
+        if you still want Premium.
       </li>
       <li>
         <strong>Advertising partners</strong><br />
@@ -76,6 +113,20 @@
         Reset or limit your advertising ID in Android settings. See Google’s ad settings for further controls.
       </li>
     </ol>
+
+    <h2 id="play">Google Play Console (for the developer)</h2>
+    <p>
+      Because Pass Gen has <strong>no user accounts</strong>, account-deletion in-app paths do not apply.
+      For Data safety / data deletion answers:
+    </p>
+    <ul>
+      <li>App does <strong>not</strong> allow users to create an account</li>
+      <li>Users can request deletion — yes (this URL + clear storage / uninstall)</li>
+      <li>
+        Developer-held data (support email only): process deletion requests within
+        <strong>90 days</strong> — you may select that option in Play Console
+      </li>
+    </ul>
 
     <h2>What we do not store</h2>
     <p>
