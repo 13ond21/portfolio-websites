@@ -1,0 +1,4 @@
+# Choice Roulette — AdMob app-ads.txt
+# Host this file at the domain/path you verify in AdMob (same site as privacy policy).
+# Publisher: ca-app-pub-7762187779913216
+google.com, pub-7762187779913216, DIRECT, f08c47fec0942fa0
