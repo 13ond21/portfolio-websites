@@ -1,0 +1,415 @@
+[
+  {
+    "slug": "age-calculator",
+    "name": "",
+    "title_tag": "Age Calculator \u2014 privacy-first Android app",
+    "desc": "Age Calculator: Exact age in years, months, days \u2014 plus next birthday. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#7c6b5b",
+    "package": "com.luckytools.age_calculator",
+    "shots": []
+  },
+  {
+    "slug": "bmi-metrics",
+    "name": "",
+    "title_tag": "BMI Metrics \u2014 privacy-first Android app",
+    "desc": "BMI Metrics: BMI and body metrics with a clear, calm UI. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#4a7c6a",
+    "package": "com.luckytools.bmi_metrics",
+    "shots": []
+  },
+  {
+    "slug": "break-even-calc",
+    "name": "",
+    "title_tag": "Break-Even Calc \u2014 privacy-first Android app",
+    "desc": "Break-Even Calc: Units you need to sell to break even. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.break_even_calc",
+    "shots": []
+  },
+  {
+    "slug": "chore-roulette",
+    "name": "\u23f1\ufe0f",
+    "title_tag": "Chore Roulette \u2014 privacy-first Android app",
+    "desc": "Chore Roulette: Fair random chores for flats and families. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b5b7c",
+    "package": "com.luckytools.chore_roulette",
+    "shots": []
+  },
+  {
+    "slug": "compound-interest",
+    "name": "",
+    "title_tag": "Compound Interest \u2014 privacy-first Android app",
+    "desc": "Compound Interest: See how savings and investments grow over time. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.compound_interest",
+    "shots": []
+  },
+  {
+    "slug": "currency-tip-travel",
+    "name": "",
+    "title_tag": "Travel Tip and FX \u2014 privacy-first Android app",
+    "desc": "Travel Tip and FX: Tip in local currency with a simple FX rate. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.currency_tip_travel",
+    "shots": []
+  },
+  {
+    "slug": "decision-wheel",
+    "name": "\u23f1\ufe0f",
+    "title_tag": "Decision Wheel \u2014 privacy-first Android app",
+    "desc": "Decision Wheel: Spin a custom wheel when you can\u2019t decide. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b5b7c",
+    "package": "com.luckytools.decision_wheel",
+    "shots": []
+  },
+  {
+    "slug": "discount-calc",
+    "name": "\ud83c\udff7\ufe0f",
+    "title_tag": "Discount Calc \u2014 privacy-first Android app",
+    "desc": "Discount Calc: Sale prices, multi-item baskets, stack discounts. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#8c5b6b",
+    "package": "com.luckytools.discount_calc",
+    "shots": []
+  },
+  {
+    "slug": "fuel-cost-split",
+    "name": "",
+    "title_tag": "Fuel Cost Split \u2014 privacy-first Android app",
+    "desc": "Fuel Cost Split: Trip fuel cost and fair split per passenger. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.fuel_cost_split",
+    "shots": []
+  },
+  {
+    "slug": "gpa-weighted",
+    "name": "",
+    "title_tag": "GPA Weighted \u2014 privacy-first Android app",
+    "desc": "GPA Weighted: Semester GPA from credits and grade points. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#4a6fa5",
+    "package": "com.luckytools.gpa_weighted",
+    "shots": []
+  },
+  {
+    "slug": "grade-calc",
+    "name": "",
+    "title_tag": "Grade Calc \u2014 privacy-first Android app",
+    "desc": "Grade Calc: Weighted grades and what you need on the final. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#4a6fa5",
+    "package": "com.luckytools.grade_calc",
+    "shots": []
+  },
+  {
+    "slug": "guitar-tuner",
+    "name": "",
+    "title_tag": "Guitar Tuner \u2014 privacy-first Android app",
+    "desc": "Guitar Tuner: Accurate tuning with a calm, clear display. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#6b5b7c",
+    "package": "com.luckytools.guitar_tuner",
+    "shots": []
+  },
+  {
+    "slug": "habit-streaks",
+    "name": "",
+    "title_tag": "Habit Streaks \u2014 privacy-first Android app",
+    "desc": "Habit Streaks: Track daily habits and keep your streak alive. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#4a7c6a",
+    "package": "com.luckytools.habit_streaks",
+    "shots": []
+  },
+  {
+    "slug": "home-inventory",
+    "name": "\u23f1\ufe0f",
+    "title_tag": "Home Inventory \u2014 privacy-first Android app",
+    "desc": "Home Inventory: Room-by-room home contents for insurance peace of mind. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b5b7c",
+    "package": "com.luckytools.home_inventory",
+    "shots": []
+  },
+  {
+    "slug": "inflation-calc",
+    "name": "",
+    "title_tag": "Inflation Calc \u2014 privacy-first Android app",
+    "desc": "Inflation Calc: What todays money was worth in another year. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.inflation_calc",
+    "shots": []
+  },
+  {
+    "slug": "loan-calc",
+    "name": "",
+    "title_tag": "Loan Calc \u2014 privacy-first Android app",
+    "desc": "Loan Calc: Mortgage &amp;amp; loan payments with a clear schedule. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.loan_calc",
+    "shots": []
+  },
+  {
+    "slug": "med-reminder",
+    "name": "Med Reminder",
+    "title_tag": "Med Reminder \u2014 private dose reminders for Android",
+    "desc": "Calm, local-only medication reminders. Today timeline, adherence log, optional Premium (~\u00a32.99/mo). No account. Free with ads.",
+    "theme": "#07120e",
+    "package": "com.luckytools.med_reminder",
+    "shots": [
+      "shot-howto.png",
+      "shot-meds.png",
+      "shot-settings.png",
+      "shot-stats.png",
+      "shot-today.png"
+    ]
+  },
+  {
+    "slug": "meeting-cost",
+    "name": "",
+    "title_tag": "Meeting Cost \u2014 privacy-first Android app",
+    "desc": "Meeting Cost: What this meeting is really costing the room. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.meeting_cost",
+    "shots": []
+  },
+  {
+    "slug": "mileage-log-uk",
+    "name": "",
+    "title_tag": "Mileage Log UK \u2014 privacy-first Android app",
+    "desc": "Mileage Log UK: Business miles for tax \u2014 simple trip log. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.mileage_log_uk",
+    "shots": []
+  },
+  {
+    "slug": "mortgage-overpay",
+    "name": "",
+    "title_tag": "Mortgage Overpay \u2014 privacy-first Android app",
+    "desc": "Mortgage Overpay: See how extra payments cut years and interest. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.mortgage_overpay",
+    "shots": []
+  },
+  {
+    "slug": "paint-room-calc",
+    "name": "\ud83d\udee0\ufe0f",
+    "title_tag": "Paint Room Calc \u2014 privacy-first Android app",
+    "desc": "Paint Room Calc: How much paint you need for walls and coats. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b6b7c",
+    "package": "com.luckytools.paint_room_calc",
+    "shots": []
+  },
+  {
+    "slug": "parking-reminder",
+    "name": "\u2708\ufe0f",
+    "title_tag": "Parking Reminder \u2014 privacy-first Android app",
+    "desc": "Parking Reminder: Pin your bay and never miss the meter. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#3d7a8c",
+    "package": "com.luckytools.parking_reminder",
+    "shots": []
+  },
+  {
+    "slug": "pass-gen",
+    "name": "Pass Gen",
+    "title_tag": "Pass Gen \u2014 secure password generator for Android",
+    "desc": "Generate strong passwords and passphrases on your device. Free with optional ads. Premium removes ads and unlocks custom words mixed into passwords.",
+    "theme": "#0b0712",
+    "package": "com.luckytools.pass_gen",
+    "shots": [
+      "shot-custom.png",
+      "shot-passphrase-1.png",
+      "shot-passphrase-2.png",
+      "shot-password-1.png",
+      "shot-password-2.png",
+      "shot-password-3.png",
+      "shot-password-alt.png",
+      "shot-privacy.png",
+      "shot-ready.png",
+      "shot-settings.png"
+    ]
+  },
+  {
+    "slug": "percent-master",
+    "name": "",
+    "title_tag": "Percent Master \u2014 privacy-first Android app",
+    "desc": "Percent Master: Any percentage math \u2014 tips, marks, markups, change. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.percent_master",
+    "shots": []
+  },
+  {
+    "slug": "plant-care",
+    "name": "",
+    "title_tag": "Plant Care \u2014 privacy-first Android app",
+    "desc": "Plant Care: Watering schedules for happier houseplants. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#4a7c6a",
+    "package": "com.luckytools.plant_care",
+    "shots": []
+  },
+  {
+    "slug": "pomodoro-focus",
+    "name": "",
+    "title_tag": "Pomodoro Focus \u2014 privacy-first Android app",
+    "desc": "Pomodoro Focus: Simple focus timer with work blocks and breaks. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#4a7c6a",
+    "package": "com.luckytools.pomodoro_focus",
+    "shots": []
+  },
+  {
+    "slug": "qr-maker",
+    "name": "\ud83d\udee0\ufe0f",
+    "title_tag": "QR Maker \u2014 privacy-first Android app",
+    "desc": "QR Maker: Create clean QR codes in seconds. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b6b7c",
+    "package": "com.luckytools.qr_maker",
+    "shots": []
+  },
+  {
+    "slug": "random-team-split",
+    "name": "\u23f1\ufe0f",
+    "title_tag": "Random Team Split \u2014 privacy-first Android app",
+    "desc": "Random Team Split: Fair random teams from a list of names. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b5b7c",
+    "package": "com.luckytools.random_team_split",
+    "shots": []
+  },
+  {
+    "slug": "recipe-ratio",
+    "name": "\ud83d\udee0\ufe0f",
+    "title_tag": "Recipe Ratio \u2014 privacy-first Android app",
+    "desc": "Recipe Ratio: Scale any recipe up or down by servings. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b6b7c",
+    "package": "com.luckytools.recipe_ratio",
+    "shots": []
+  },
+  {
+    "slug": "savings-goal",
+    "name": "",
+    "title_tag": "Savings Goal \u2014 privacy-first Android app",
+    "desc": "Savings Goal: How much to save each week to hit your target. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.savings_goal",
+    "shots": []
+  },
+  {
+    "slug": "self-employed-tax",
+    "name": "",
+    "title_tag": "Self-Employed Tax \u2014 privacy-first Android app",
+    "desc": "Self-Employed Tax: UK self-employed tax and NI estimates. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.self_employed_tax",
+    "shots": []
+  },
+  {
+    "slug": "stamp-duty-calc",
+    "name": "",
+    "title_tag": "Stamp Duty Calc \u2014 privacy-first Android app",
+    "desc": "Stamp Duty Calc: UK stamp duty land tax estimates for buyers. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.stamp_duty_calc",
+    "shots": []
+  },
+  {
+    "slug": "teleprompter-pro",
+    "name": "",
+    "title_tag": "Teleprompter Pro \u2014 privacy-first Android app",
+    "desc": "Teleprompter Pro: Smooth scrolling scripts for video and talks. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#4a6fa5",
+    "package": "com.luckytools.teleprompter_pro",
+    "shots": []
+  },
+  {
+    "slug": "tile-count-calc",
+    "name": "\ud83d\udee0\ufe0f",
+    "title_tag": "Tile Count Calc \u2014 privacy-first Android app",
+    "desc": "Tile Count Calc: Tiles needed for floor or wall with waste percent. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b6b7c",
+    "package": "com.luckytools.tile_count_calc",
+    "shots": []
+  },
+  {
+    "slug": "tip-splitter",
+    "name": "",
+    "title_tag": "Tip Splitter \u2014 privacy-first Android app",
+    "desc": "Tip Splitter: Split the bill and tip without awkward maths. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.tip_splitter",
+    "shots": []
+  },
+  {
+    "slug": "torch-tools",
+    "name": "\ud83d\udee0\ufe0f",
+    "title_tag": "Torch Tools \u2014 privacy-first Android app",
+    "desc": "Torch Tools: Torch, screen light, and SOS \u2014 fast and reliable. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b6b7c",
+    "package": "com.luckytools.torch_tools",
+    "shots": []
+  },
+  {
+    "slug": "unit-convert",
+    "name": "\ud83d\udee0\ufe0f",
+    "title_tag": "Unit Convert \u2014 privacy-first Android app",
+    "desc": "Unit Convert: Fast, offline unit conversion for everyday life. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b6b7c",
+    "package": "com.luckytools.unit_convert",
+    "shots": []
+  },
+  {
+    "slug": "unit-price-compare",
+    "name": "\ud83c\udff7\ufe0f",
+    "title_tag": "Unit Price Compare \u2014 privacy-first Android app",
+    "desc": "Unit Price Compare: Find the real cheapest pack at the supermarket. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#8c5b6b",
+    "package": "com.luckytools.unit_price_compare",
+    "shots": []
+  },
+  {
+    "slug": "vat-calc-uk",
+    "name": "",
+    "title_tag": "VAT Calc UK \u2014 privacy-first Android app",
+    "desc": "VAT Calc UK: Add or remove UK VAT instantly \u2014 20%, 5%, 0%. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.vat_calc_uk",
+    "shots": []
+  },
+  {
+    "slug": "warranty-radar",
+    "name": "",
+    "title_tag": "Warranty Radar \u2014 privacy-first Android app",
+    "desc": "Warranty Radar: Never miss a warranty expiry again. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#7c6b5b",
+    "package": "com.luckytools.warranty_radar",
+    "shots": []
+  },
+  {
+    "slug": "white-noise-box",
+    "name": "",
+    "title_tag": "White Noise Box \u2014 privacy-first Android app",
+    "desc": "White Noise Box: Calm loops for sleep and deep focus. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#4a7c6a",
+    "package": "com.luckytools.white_noise_box",
+    "shots": []
+  },
+  {
+    "slug": "word-counter-pro",
+    "name": "",
+    "title_tag": "Word Counter Pro \u2014 privacy-first Android app",
+    "desc": "Word Counter Pro: Words, characters, sentences \u2014 calm writing stats. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#4a6fa5",
+    "package": "com.luckytools.word_counter_pro",
+    "shots": []
+  },
+  {
+    "slug": "work-hours-log",
+    "name": "",
+    "title_tag": "Work Hours Log \u2014 privacy-first Android app",
+    "desc": "Work Hours Log: Log shifts and total pay \u2014 on your device. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#5b7c6e",
+    "package": "com.luckytools.work_hours_log",
+    "shots": []
+  },
+  {
+    "slug": "world-clock-meet",
+    "name": "\u2708\ufe0f",
+    "title_tag": "World Clock Meet \u2014 privacy-first Android app",
+    "desc": "World Clock Meet: Multi-city clocks and kinder meeting times. Built. Privacy policy, terms, and data deletion.",
+    "theme": "#3d7a8c",
+    "package": "com.luckytools.world_clock_meet",
+    "shots": []
+  }
+]
