@@ -3,23 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Med Reminder — privacy-first Android app</title>
-  <meta name="description" content="Simple medication schedule on your device — taken or skip, optional local alerts, personal adherence. No account. Free with ads; Premium (~£2.99/mo) unlocks fam" />
-  <meta name="theme-color" content="#6b9e88" />
-  <meta property="og:title" content="Med Reminder — on your phone" />
-  <meta property="og:description" content="Simple medication schedule on your device — taken or skip, optional local alerts, personal adherence. No account. Free with ads; Premium (~£2.99/mo) unlocks fam" />
+  <title>Med Reminder — calm, private dose reminders for Android</title>
+  <meta name="description" content="Simple medication reminders on your phone. Large clear text, optional alerts, no account. Built for everyday use including older adults and people managing long-term conditions. Not medical advice." />
+  <meta name="theme-color" content="#3d6b5a" />
+  <meta property="og:title" content="Med Reminder — calm dose reminders" />
+  <meta property="og:description" content="Private, on-device medication schedule. Clear screens. Optional Premium. Not a medical device." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://13ond21.github.io/portfolio-websites/med-reminder/" />
+  <meta property="og:image" content="https://13ond21.github.io/portfolio-websites/med-reminder/assets/feature_graphic.png" />
   <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/med-reminder/" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="assets/icon_512.png" />
+  <link rel="apple-touch-icon" href="assets/icon_512.png" />
 </head>
 <body>
   <div class="page-bg" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="inner">
-      <a class="brand" href="index.html"><img src="assets/icon_512.png" width="38" height="38" alt="" /> Med Reminder</a>
+      <a class="brand" href="index.html">
+        <img src="assets/icon_512.png" width="44" height="44" alt="" />
+        Med Reminder
+      </a>
       <nav class="nav" aria-label="Main">
         <a href="index.html" aria-current="page">Home</a>
         <a href="#benefits">Benefits</a>
@@ -34,23 +39,54 @@
   <main class="wrap">
     <section class="hero">
       <div>
-        <p class="hero-eyebrow">Android · Health · Privacy-first</p>
-        <h1>Dose times.<br /><em>Calm. Private. On your phone.</em></h1>
-        <p class="lede">Simple medication schedule on your device — taken or skip, optional local alerts, personal adherence. No account. Free with ads; Premium (~£2.99/mo) unlocks family, photos, and more.</p>
-        <div class="badge-row"><span class="badge accent">Offline-first</span><span class="badge">No account</span><span class="badge">Local notifications</span><span class="badge">£2.99/mo Premium</span></div>
+        <p class="hero-eyebrow">Android · Calm · Privacy-first</p>
+        <h1>Your dose times.<br /><em>Clear. Gentle. On your phone.</em></h1>
+        <p class="lede">
+          Med Reminder helps you remember medicines with a simple daily list.
+          Large time and date, easy Taken / Skip buttons, and optional gentle alerts.
+          No account to create. Your list stays on your device.
+        </p>
+        <div class="badge-row">
+          <span class="badge accent">Easy to read</span>
+          <span class="badge">No account</span>
+          <span class="badge">Optional alerts</span>
+          <span class="badge">Private on-device</span>
+        </div>
         <div class="btn-row">
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.med_reminder">Get on Google Play</a>
-          <a class="btn btn-secondary" href="#premium">See Premium benefits</a>
+          <a class="btn btn-secondary" href="#how">How it works</a>
           <a class="btn btn-secondary" href="privacy.html">Privacy policy</a>
         </div>
-        <div class="stats"><div class="stat"><strong>0</strong><span>accounts</span></div><div class="stat"><strong>2</strong><span>free meds</span></div><div class="stat"><strong>£2.99</strong><span>Premium / mo</span></div><div class="stat"><strong>NI</strong><span>support</span></div></div>
+        <div class="stats">
+          <div class="stat"><strong>0</strong><span>accounts needed</span></div>
+          <div class="stat"><strong>2</strong><span>free meds</span></div>
+          <div class="stat"><strong>£2.99</strong><span>Premium / month</span></div>
+          <div class="stat"><strong>NI</strong><span>email support</span></div>
+        </div>
       </div>
       <div class="hero-visual">
-        <div class="device carousel" data-carousel data-autoplay="4500" aria-roledescription="carousel" aria-label="Med Reminder preview">
+        <div
+          class="device carousel"
+          data-carousel
+          data-autoplay="7000"
+          aria-roledescription="carousel"
+          aria-label="Med Reminder app screens"
+        >
           <div class="device-glow" aria-hidden="true"></div>
           <div class="carousel-viewport">
             <div class="carousel-track">
-              <figure class="carousel-slide is-active"><img src="assets/shot-howto.png" width="720" height="1400" alt="Med Reminder screenshot" /></figure><figure class="carousel-slide"><img src="assets/shot-meds.png" width="720" height="1400" alt="Med Reminder screenshot" loading="lazy" /></figure><figure class="carousel-slide"><img src="assets/shot-settings.png" width="720" height="1400" alt="Med Reminder screenshot" loading="lazy" /></figure><figure class="carousel-slide"><img src="assets/shot-stats.png" width="720" height="1400" alt="Med Reminder screenshot" loading="lazy" /></figure><figure class="carousel-slide"><img src="assets/shot-today.png" width="720" height="1400" alt="Med Reminder screenshot" loading="lazy" /></figure>
+              <figure class="carousel-slide is-active">
+                <img src="assets/shot-today.png" width="720" height="1400" alt="Today screen with large clock and dose list" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-meds.png" width="720" height="1400" alt="Medications list" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-stats.png" width="720" height="1400" alt="Adherence overview" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-settings.png" width="720" height="1400" alt="Settings and Premium" loading="lazy" />
+              </figure>
             </div>
           </div>
           <div class="carousel-dots" role="tablist" aria-label="Preview slides"></div>
@@ -59,74 +95,181 @@
     </section>
 
     <div class="proof" role="note">
-      <span>Privacy-first</span>·
-      <span>On your device</span>·
-      <span>No forced account</span>·
-      <span>Premium optional</span>
+      <span>Private</span> ·
+      <span>On your phone</span> ·
+      <span>Not medical advice</span> ·
+      <span>Not a medical device</span>
     </div>
+
+    <aside class="care-note" role="note">
+      <strong>Designed to be calm and readable.</strong>
+      Clear type, soft colours, and simple steps — helpful if you are older, managing a long-term condition,
+      helping a family member, or prefer less busy screens. Always follow your doctor or pharmacist for real treatment decisions.
+    </aside>
 
     <section class="section" id="benefits" aria-labelledby="benefits-title">
       <div class="section-head">
         <p class="kicker">Why Med Reminder</p>
-        <h2 id="benefits-title">What you actually get</h2>
-        <p>Straight benefits — not fluff. Built for daily use on Android.</p>
+        <h2 id="benefits-title">What helps day to day</h2>
+        <p>Straight benefits — easy to understand, no jargon.</p>
       </div>
-      <div class="benefit-grid"><article class="benefit-card"><span class="tag">You get</span><h3>Large local clock</h3><p>See the time and today’s doses at a glance.</p></article><article class="benefit-card"><span class="tag">You get</span><h3>More meds on Premium</h3><p>Free caps at 2 active; Premium lifts the limit.</p></article><article class="benefit-card"><span class="tag">You get</span><h3>Family profiles</h3><p>Track more than one person on one phone (Premium).</p></article><article class="benefit-card"><span class="tag">You get</span><h3>Pill photos</h3><p>Match the right tablet visually (Premium).</p></article><article class="benefit-card"><span class="tag">You get</span><h3>Refill &amp; backup</h3><p>Stock alerts and export/import (Premium).</p></article><article class="benefit-card"><span class="tag">You get</span><h3>No cloud med list</h3><p>Your schedule stays on-device. No account.</p></article></div>
+      <div class="benefit-grid">
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>A large clock on Today</h3>
+          <p>See the time, the date, and what is due without squinting at a cluttered dashboard.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>Big Taken / Skip buttons</h3>
+          <p>Mark a dose in one tap. Undo if you tapped too soon. Simple and forgiving.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>Optional gentle alerts</h3>
+          <p>Reminders on your phone when a dose is due. You can also use Taken / Skip / Snooze from the notification.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>Privacy by default</h3>
+          <p>No account wall. Your medicine names stay on this device — not in a cloud account we run.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>Help for carers (Premium)</h3>
+          <p>Family profiles so more than one person’s schedule can live on the same phone.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>Pill photos (Premium)</h3>
+          <p>Optional photos to help match the right tablet — useful when several look similar.</p>
+        </article>
+      </div>
     </section>
 
     <section class="section" id="how" aria-labelledby="how-title">
       <div class="section-head">
-        <p class="kicker">User guide</p>
+        <p class="kicker">Simple steps</p>
         <h2 id="how-title">How it works</h2>
-        <p>Fast to learn. No account wall.</p>
+        <p>Four calm steps. No sign-up.</p>
       </div>
-      <div class="grid-2"><article class="card"><h3>1. Add a medication</h3><p>Name, dose, times, days — stored only on this phone.</p></article><article class="card"><h3>2. Use Today</h3><p>Large local time + schedule. Tap Taken or Skip.</p></article><article class="card"><h3>3. Optional alerts</h3><p>Local notifications with Taken / Skip / Snooze actions.</p></article><article class="card"><h3>4. Adherence</h3><p>Personal log. Free 7 days · Premium 30 days. Not clinical monitoring.</p></article></div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>1. Add a medicine</h3>
+          <p>Name, optional dose, times of day, and which days. Stored only on this phone.</p>
+        </article>
+        <article class="card">
+          <h3>2. Open Today</h3>
+          <p>See what is due. Tap <strong>Taken</strong> or <strong>Skip</strong>. The large clock keeps you oriented.</p>
+        </article>
+        <article class="card">
+          <h3>3. Turn on alerts if you want</h3>
+          <p>Local notifications at dose times (you will be asked for permission on Android 13+).</p>
+        </article>
+        <article class="card">
+          <h3>4. Check your log</h3>
+          <p>A personal record of what you marked. Free: 7 days. Premium: 30 days. Not clinical monitoring.</p>
+        </article>
+      </div>
     </section>
 
     <section class="section" id="screens" aria-labelledby="screens-title">
       <div class="section-head">
-        <p class="kicker">Real screenshots</p>
+        <p class="kicker">Real screens</p>
         <h2 id="screens-title">Inside the app</h2>
-        <p>Swipe or use the arrows. Captured on device.</p>
+        <p>Swipe or use the arrows. Soft colours, clear layout.</p>
       </div>
-      <div class="shot-carousel carousel" data-carousel data-autoplay="6000" aria-roledescription="carousel" aria-label="Med Reminder screens">
-        <button type="button" class="carousel-btn prev" data-carousel-prev aria-label="Previous"><span aria-hidden="true">‹</span></button>
+      <div
+        class="shot-carousel carousel"
+        data-carousel
+        data-autoplay="8000"
+        aria-roledescription="carousel"
+        aria-label="Med Reminder screenshots"
+      >
+        <button type="button" class="carousel-btn prev" data-carousel-prev aria-label="Previous screenshot">
+          <span aria-hidden="true">‹</span>
+        </button>
         <div class="carousel-viewport">
           <div class="carousel-track">
-            <figure class="carousel-slide shot-card is-active"><div class="shot-frame"><img src="assets/shot-howto.png" alt="Med Reminder — How to use" /></div><figcaption>How to use<span>Quick guide</span></figcaption></figure><figure class="carousel-slide shot-card"><div class="shot-frame"><img src="assets/shot-meds.png" alt="Med Reminder — Medications" loading="lazy" /></div><figcaption>Medications<span>Your list on-device</span></figcaption></figure><figure class="carousel-slide shot-card"><div class="shot-frame"><img src="assets/shot-settings.png" alt="Med Reminder — Settings" loading="lazy" /></div><figcaption>Settings<span>Control &amp; Premium</span></figcaption></figure><figure class="carousel-slide shot-card"><div class="shot-frame"><img src="assets/shot-stats.png" alt="Med Reminder — Stats" loading="lazy" /></div><figcaption>Stats<span>Personal progress</span></figcaption></figure><figure class="carousel-slide shot-card"><div class="shot-frame"><img src="assets/shot-today.png" alt="Med Reminder — Today" loading="lazy" /></div><figcaption>Today<span>Schedule at a glance</span></figcaption></figure>
+            <figure class="carousel-slide shot-card is-active">
+              <div class="shot-frame">
+                <img src="assets/shot-today.png" alt="Today with large local time and doses" />
+              </div>
+              <figcaption>Today<span>Large time · due, taken, skip</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame">
+                <img src="assets/shot-meds.png" alt="Medications list" loading="lazy" />
+              </div>
+              <figcaption>Medications<span>Your list, on this phone only</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame">
+                <img src="assets/shot-stats.png" alt="Adherence overview" loading="lazy" />
+              </div>
+              <figcaption>Your log<span>Personal history, not clinical monitoring</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame">
+                <img src="assets/shot-settings.png" alt="Settings" loading="lazy" />
+              </div>
+              <figcaption>Settings<span>Alerts and Premium options</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame">
+                <img src="assets/shot-howto.png" alt="How to use guide" loading="lazy" />
+              </div>
+              <figcaption>How to use<span>In-app guide in plain language</span></figcaption>
+            </figure>
           </div>
         </div>
-        <button type="button" class="carousel-btn next" data-carousel-next aria-label="Next"><span aria-hidden="true">›</span></button>
+        <button type="button" class="carousel-btn next" data-carousel-next aria-label="Next screenshot">
+          <span aria-hidden="true">›</span>
+        </button>
         <div class="carousel-footer">
-          <div class="carousel-dots" role="tablist" aria-label="Slides"></div>
-          <p class="carousel-status" data-carousel-status>1 / 5</p>
+          <div class="carousel-dots" role="tablist" aria-label="Screenshot slides"></div>
+          <p class="carousel-status" data-carousel-status aria-live="polite">1 / 5</p>
         </div>
       </div>
     </section>
 
     <section class="section" id="premium" aria-labelledby="premium-title">
       <div class="section-head">
-        <p class="kicker">Free vs Premium</p>
-        <h2 id="premium-title">Premium that cuts to the chase</h2>
-        <p>Pay for outcomes you feel — not a vague “pro” badge.</p>
+        <p class="kicker">Free and Premium</p>
+        <h2 id="premium-title">What you pay for (if you choose)</h2>
+        <p>Free is useful. Premium is optional — about £2.99 per month, cancel anytime in Google Play.</p>
       </div>
       <div class="plans">
         <div class="plan premium">
           <h3>Premium <span class="tag">£2.99/mo</span></h3>
-          <p class="tagline">Subscription · <code>med_reminder_premium_monthly</code></p>
-          <ul><li>Zero ads while subscribed</li><li>Many more medications (free: 2 active)</li><li>Family profiles (up to 6)</li><li>Pill photos, stock/refill, backup</li><li>30-day adherence (free: 7 days)</li><li>Cancel anytime in Google Play</li></ul>
+          <p class="tagline">For busier routines and carers · <code>med_reminder_premium_monthly</code></p>
+          <ul>
+            <li><strong>No ads</strong> while subscribed</li>
+            <li><strong>More medicines</strong> (free allows 2 active)</li>
+            <li><strong>Family profiles</strong> — more than one person on one phone</li>
+            <li><strong>Pill photos</strong> to help recognise tablets</li>
+            <li><strong>Stock / refill</strong> and backup export</li>
+            <li><strong>30-day log</strong> (free shows 7 days)</li>
+            <li>Cancel anytime in Google Play → Payments &amp; subscriptions</li>
+          </ul>
         </div>
         <div class="plan">
           <h3>Free</h3>
           <p class="tagline">Start with no purchase</p>
-          <ul><li>Up to 2 active medications</li><li>Today schedule + taken / skip</li><li>Local notifications (optional)</li><li>7-day adherence · contains ads</li></ul>
+          <ul>
+            <li>Up to 2 active medicines</li>
+            <li>Today list with Taken / Skip</li>
+            <li>Optional local alerts</li>
+            <li>7-day personal log</li>
+            <li>May show ads</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section class="cta-band">
-      <h2>Privacy, terms &amp; data deletion</h2>
-      <p>Clear policy URLs for Google Play Console.</p>
+      <h2>Privacy, terms &amp; deleting data</h2>
+      <p>Clear policies for Google Play. Support by email if you need help.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="privacy.html">Privacy policy</a>
         <a class="btn btn-secondary" href="delete-data.html">Request data deletion</a>
@@ -138,8 +281,13 @@
       <h3>App details</h3>
       <p>
         Package: <code>com.luckytools.med_reminder</code><br />
+        Premium: <code>med_reminder_premium_monthly</code><br />
         Support: <a href="mailto:autoaccentsni@gmail.com">autoaccentsni@gmail.com</a><br />
         Site: <a href="https://13ond21.github.io/portfolio-websites/med-reminder/">13ond21.github.io/portfolio-websites/med-reminder/</a>
+      </p>
+      <p style="margin-top:0.9rem">
+        <strong style="color:var(--ink)">Not a medical device.</strong>
+        Not professional medical advice. Always follow your clinician or pharmacist.
       </p>
     </article>
   </main>
@@ -158,7 +306,7 @@
       </div>
     </div>
     <div class="footer-grid" style="margin-top:1rem">
-      <p style="margin:0">&copy; 2026 Med Reminder. Informational tools only — not professional advice.</p>
+      <p style="margin:0">&copy; 2026 Med Reminder. Personal schedule tool only — not medical advice.</p>
     </div>
   </footer>
 
