@@ -1,6 +1,6 @@
 /**
- * Lightweight carousel for Pass Gen site.
- * - data-carousel root
+ * Viewport-width carousel (pixel transforms — avoids % of full track bugs).
+ * - [data-carousel] root
  * - optional data-autoplay="ms"
  * - [data-carousel-prev] / [data-carousel-next]
  * - .carousel-dots (filled automatically)
@@ -19,6 +19,7 @@
     const dotsHost = root.querySelector(".carousel-dots");
     const statusEl = root.querySelector("[data-carousel-status]");
     const viewport = root.querySelector(".carousel-viewport") || track.parentElement;
+    if (!viewport) return;
 
     let index = Math.max(
       0,
@@ -33,7 +34,7 @@
     let touchDeltaX = 0;
     let isDragging = false;
 
-    // Build dots
+    // Build dots once
     if (dotsHost) {
       dotsHost.innerHTML = "";
       slides.forEach((_, i) => {
@@ -51,8 +52,37 @@
       return dotsHost ? Array.from(dotsHost.querySelectorAll(".carousel-dot")) : [];
     }
 
-    function render() {
-      track.style.transform = "translate3d(" + -index * 100 + "%, 0, 0)";
+    function slideWidth() {
+      return viewport.clientWidth || root.clientWidth || 1;
+    }
+
+    function layoutSlides() {
+      const w = slideWidth();
+      // Each slide must match the visible viewport width exactly
+      slides.forEach((slide) => {
+        slide.style.flex = "0 0 " + w + "px";
+        slide.style.width = w + "px";
+        slide.style.minWidth = w + "px";
+        slide.style.maxWidth = w + "px";
+      });
+      track.style.width = w * slides.length + "px";
+    }
+
+    function render(animate) {
+      layoutSlides();
+      const w = slideWidth();
+      if (animate === false) {
+        track.style.transition = "none";
+      } else {
+        track.style.transition = "";
+      }
+      track.style.transform = "translate3d(" + -index * w + "px, 0, 0)";
+      // Force reflow then restore transition after hard jump
+      if (animate === false) {
+        void track.offsetWidth;
+        track.style.transition = "";
+      }
+
       slides.forEach((slide, i) => {
         const on = i === index;
         slide.classList.toggle("is-active", on);
@@ -66,13 +96,11 @@
       if (statusEl) {
         statusEl.textContent = index + 1 + " / " + slides.length;
       }
-      if (prevBtn) prevBtn.disabled = false;
-      if (nextBtn) nextBtn.disabled = false;
     }
 
     function goTo(i, userInitiated) {
       index = ((i % slides.length) + slides.length) % slides.length;
-      render();
+      render(true);
       if (userInitiated) restartAutoplay();
     }
 
@@ -105,7 +133,6 @@
     if (prevBtn) prevBtn.addEventListener("click", () => prev(true));
     if (nextBtn) nextBtn.addEventListener("click", () => next(true));
 
-    // Keyboard when focused inside carousel
     root.tabIndex = 0;
     root.addEventListener("keydown", (e) => {
       if (e.key === "ArrowRight") {
@@ -117,7 +144,6 @@
       }
     });
 
-    // Pause autoplay on hover / focus
     root.addEventListener("mouseenter", stopAutoplay);
     root.addEventListener("mouseleave", startAutoplay);
     root.addEventListener("focusin", stopAutoplay);
@@ -125,7 +151,6 @@
       if (!root.contains(e.relatedTarget)) startAutoplay();
     });
 
-    // Touch / pointer swipe
     function onPointerDown(e) {
       isDragging = true;
       touchStartX = e.clientX ?? (e.touches && e.touches[0].clientX) ?? 0;
@@ -138,22 +163,21 @@
       if (!isDragging) return;
       const x = e.clientX ?? (e.touches && e.touches[0].clientX) ?? 0;
       touchDeltaX = x - touchStartX;
-      const width = viewport.clientWidth || 1;
-      const pct = (touchDeltaX / width) * 100;
+      const w = slideWidth();
       track.style.transform =
-        "translate3d(" + (-index * 100 + pct) + "%, 0, 0)";
+        "translate3d(" + (-index * w + touchDeltaX) + "px, 0, 0)";
     }
 
     function onPointerUp() {
       if (!isDragging) return;
       isDragging = false;
       track.style.transition = "";
-      const width = viewport.clientWidth || 1;
-      const threshold = width * 0.18;
+      const w = slideWidth();
+      const threshold = w * 0.18;
       if (touchDeltaX > threshold) prev(true);
       else if (touchDeltaX < -threshold) next(true);
       else {
-        render();
+        render(true);
         restartAutoplay();
       }
       touchDeltaX = 0;
@@ -164,7 +188,6 @@
     window.addEventListener("pointerup", onPointerUp);
     window.addEventListener("pointercancel", onPointerUp);
 
-    // Touch fallbacks (older iOS)
     viewport.addEventListener(
       "touchstart",
       (e) => {
@@ -182,16 +205,22 @@
       (e) => {
         if (!isDragging || !e.touches[0]) return;
         touchDeltaX = e.touches[0].clientX - touchStartX;
-        const width = viewport.clientWidth || 1;
-        const pct = (touchDeltaX / width) * 100;
+        const w = slideWidth();
         track.style.transform =
-          "translate3d(" + (-index * 100 + pct) + "%, 0, 0)";
+          "translate3d(" + (-index * w + touchDeltaX) + "px, 0, 0)";
       },
       { passive: true }
     );
     viewport.addEventListener("touchend", onPointerUp);
 
-    render();
+    // Keep layout correct on resize / font load
+    window.addEventListener("resize", () => render(false));
+    if (typeof ResizeObserver !== "undefined") {
+      const ro = new ResizeObserver(() => render(false));
+      ro.observe(viewport);
+    }
+
+    render(false);
     startAutoplay();
   }
 

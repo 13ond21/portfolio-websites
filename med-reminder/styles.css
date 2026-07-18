@@ -221,8 +221,11 @@ a:hover { color: #fff; }
 }
 .device .carousel-viewport {
   border-radius: 26px;
-  overflow: hidden;
+  overflow: hidden !important;
   background: #0c1611;
+  /* Fixed phone aspect so hero cannot grow with full-res screenshots */
+  aspect-ratio: 9 / 19.5;
+  max-height: min(62vh, 560px);
 }
 .device .carousel-slide {
   margin: 0;
@@ -230,12 +233,13 @@ a:hover { color: #fff; }
   border: 0;
   background: transparent;
   box-shadow: none;
+  height: 100%;
 }
 .device .carousel-slide img {
   width: 100%;
+  height: 100%;
   border-radius: 26px;
   background: #0c1611;
-  aspect-ratio: 9 / 16;
   object-fit: cover;
   object-position: top center;
   display: block;
@@ -286,29 +290,42 @@ a:hover { color: #fff; }
 }
 .section-head p { margin: 0; color: var(--muted); }
 
-/* Shared carousel */
+/* Shared carousel — viewport clips; track is a horizontal strip sized in JS */
 .carousel {
   position: relative;
   --carousel-gap: 0;
+  max-width: 100%;
+  overflow: hidden; /* never let slides expand the page */
 }
 .carousel-viewport {
-  overflow: hidden;
+  overflow: hidden !important;
   width: 100%;
+  max-width: 100%;
   touch-action: pan-y;
   cursor: grab;
   border-radius: var(--radius-lg);
+  /* Isolate layout so flex children cannot grow the document */
+  contain: layout paint;
 }
 .carousel:active .carousel-viewport { cursor: grabbing; }
 .carousel-track {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform;
+  /* Width set in JS to n * viewport; do not stretch page */
+  min-width: 0;
 }
 .carousel-slide {
-  flex: 0 0 100%;
-  min-width: 100%;
+  flex: 0 0 auto;
   margin: 0;
-  scroll-snap-align: center;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 .carousel-slide[hidden] { display: none; }
 
@@ -321,7 +338,7 @@ a:hover { color: #fff; }
   height: 44px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(26, 18, 40, 0.92);
+  background: rgba(18, 36, 28, 0.94);
   color: var(--ink);
   font-size: 1.75rem;
   line-height: 1;
@@ -332,7 +349,7 @@ a:hover { color: #fff; }
   transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
 }
 .carousel-btn:hover {
-  background: rgba(36, 27, 53, 0.98);
+  background: rgba(27, 53, 40, 0.98);
   border-color: var(--accent);
   color: var(--accent-2);
 }
@@ -390,16 +407,18 @@ a:hover { color: #fff; }
 
 /* Screens carousel */
 .shot-carousel {
-  max-width: 420px;
+  max-width: 380px;
   margin: 0 auto;
-  padding: 0 2.5rem;
+  padding: 0 2.75rem;
+  box-sizing: border-box;
 }
 @media (min-width: 700px) {
-  .shot-carousel { max-width: 460px; }
+  .shot-carousel { max-width: 420px; }
 }
 .shot-carousel .carousel-viewport {
   background: transparent;
   border-radius: var(--radius-lg);
+  overflow: hidden !important;
 }
 .shot-carousel .shot-card {
   background: var(--surface);
@@ -407,24 +426,32 @@ a:hover { color: #fff; }
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: none;
 }
 .shot-carousel .shot-frame {
-  background: linear-gradient(180deg, #140e20, #07120e);
-  padding: 1rem 1rem 0;
+  background: linear-gradient(180deg, #0e1a14, #07120e);
+  padding: 0.85rem 0.85rem 0;
+  flex: 0 0 auto;
 }
 .shot-carousel .shot-card img {
   width: 100%;
+  height: auto;
+  max-height: min(58vh, 520px);
   border-radius: 16px 16px 0 0;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 9 / 19.5;
   object-fit: cover;
   object-position: top center;
   box-shadow: 0 0 0 1px rgba(107,158,136,0.12);
   display: block;
 }
 .shot-carousel .shot-card figcaption {
-  padding: 1rem 1.1rem 1.15rem;
+  padding: 0.9rem 1.1rem 1.05rem;
   font-weight: 800;
   font-size: 1rem;
+  flex: 0 0 auto;
 }
 .shot-carousel .shot-card figcaption span {
   display: block;
