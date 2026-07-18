@@ -17,6 +17,7 @@ UK Pay Calc is **not listed** on the tester hub yet.
 | Bluetooth Mic | `com.btcmic.pamic` | [Join testing](https://play.google.com/apps/testing/com.btcmic.pamic) | [Play](https://play.google.com/store/apps/details?id=com.btcmic.pamic) |
 | Kitchen Buddy | `com.luckytools.synccook` | [Join testing](https://play.google.com/apps/testing/com.luckytools.synccook) | [Play](https://play.google.com/store/apps/details?id=com.luckytools.synccook) |
 | Morse Beacon | `com.luckytools.morse_beacon` | [Join testing](https://play.google.com/apps/testing/com.luckytools.morse_beacon) | [Play](https://play.google.com/store/apps/details?id=com.luckytools.morse_beacon) |
+| Choice Roulette | `com.luckytools.choice_roulette` | [Join testing](https://play.google.com/apps/testing/com.luckytools.choice_roulette) | [Play](https://play.google.com/store/apps/details?id=com.luckytools.choice_roulette) |
 
 ## On Google Play (first 6 websites)
 
@@ -61,6 +62,15 @@ UK Pay Calc is **not listed** on the tester hub yet.
 - **Privacy:** https://13ond21.github.io/uk-pay-calc/privacy.html
 - **Terms:** https://13ond21.github.io/uk-pay-calc/terms.html
 - **Delete data:** https://13ond21.github.io/uk-pay-calc/delete-data.html
+
+### Choice Roulette
+
+- **Home:** https://13ond21.github.io/portfolio-websites/decision-roulette/
+- **Privacy:** https://13ond21.github.io/portfolio-websites/decision-roulette/privacy.html
+- **Terms:** https://13ond21.github.io/portfolio-websites/decision-roulette/terms.html
+- **Delete data:** https://13ond21.github.io/portfolio-websites/decision-roulette/delete-data.html
+- **Package:** `com.luckytools.choice_roulette`
+- **Premium:** monthly subscription `premium_monthly` (£1.49)
 
 ---
 
