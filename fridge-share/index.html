@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fridge Share — shared pantry log for student flats</title>
+  <meta name="description" content="Shared pantry log for flats. Track milk, soap, and low stock on one kitchen phone. Offline-first, no account, no ads." />
+  <meta name="theme-color" content="#8B6F47" />
+  <meta property="og:title" content="Fridge Share — shared pantry for flats" />
+  <meta property="og:description" content="Communal and personal fridge stock on one phone. Low-stock alerts and a flat shop list. Private and offline-first." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://13ond21.github.io/portfolio-websites/fridge-share/" />
+  <meta property="og:image" content="https://13ond21.github.io/portfolio-websites/fridge-share/assets/feature_graphic.png" />
+  <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/fridge-share/" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/icon_512.png" />
+  <link rel="apple-touch-icon" href="assets/icon_512.png" />
+  <style>
+    :root {
+      --bg: #F4EFE6;
+      --bg-elevated: #FAF7F1;
+      --surface: #FFFFFF;
+      --surface-2: #F0E9DC;
+      --ink: #2C2416;
+      --muted: #6B5E4E;
+      --accent: #8B6F47;
+      --accent-2: #C4A574;
+      --accent-dim: #6F5636;
+      --border: rgba(139,111,71,0.22);
+      --glow: rgba(139,111,71,0.35);
+    }
+    .page-bg {
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(139,111,71,0.28) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 95% 10%, rgba(111,86,54,0.22) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 35% at 50% 100%, rgba(196,165,116,0.08) 0%, transparent 55%),
+        var(--bg) !important;
+    }
+    .hero-visual .hero-card {
+      width: min(360px, 90vw);
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.45), 0 0 60px var(--glow);
+      background: var(--surface);
+    }
+    .hero-visual .hero-card img { width: 100%; display: block; }
+    .hero-visual .hero-card .cap {
+      padding: 1rem 1.15rem 1.15rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .hero-visual .hero-card .cap strong { color: var(--ink); display: block; margin-bottom: 0.25rem; }
+  </style>
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html"><img src="assets/icon_512.png" width="38" height="38" alt="" /> Fridge Share</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#how">How it works</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.luckytools.fridge_split" class="nav-cta">Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <p class="hero-eyebrow">Android · Lifestyle · Privacy-first</p>
+        <h1>One kitchen phone.<br /><em>Everyone sees the fridge.</em></h1>
+        <p class="lede">
+          Fridge Share is a shared pantry log for student flats and house shares.
+          Track communal milk and labelled personal items, spot low stock, and keep a flat shop list — offline, no account.
+        </p>
+        <div class="badge-row">
+          <span class="badge accent">Offline-first</span>
+          <span class="badge">No account</span>
+          <span class="badge">No ads</span>
+          <span class="badge">On-device only</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.fridge_split">Get on Google Play</a>
+          <a class="btn btn-secondary" href="#how">How it works</a>
+          <a class="btn btn-secondary" href="privacy.html">Privacy policy</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>0</strong><span>accounts</span></div>
+          <div class="stat"><strong>2</strong><span>pantry tabs</span></div>
+          <div class="stat"><strong>7d</strong><span>use trends</span></div>
+          <div class="stat"><strong>NI</strong><span>support</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <img src="assets/feature_graphic.png" width="1024" height="500" alt="Fridge Share feature graphic" />
+          <div class="cap">
+            <strong>Fridge Share</strong>
+            Shared pantry · Flat shop · Low stock — calm offline helper for house shares.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="proof" role="note">
+      <span>Privacy-first</span>·
+      <span>On your device</span>·
+      <span>No forced account</span>·
+      <span>No ads</span>
+    </div>
+
+    <section class="section" id="benefits" aria-labelledby="benefits-title">
+      <div class="section-head">
+        <p class="kicker">Why Fridge Share</p>
+        <h2 id="benefits-title">What you actually get</h2>
+        <p>Built for a real shared kitchen — not a social network.</p>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card"><span class="tag">You get</span><h3>Communal + personal tabs</h3><p>Shared shelf for everyone, labelled items for “my milk”.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Quick-add staples</h3><p>Milk, eggs, bread, loo roll, washing-up liquid in one tap.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Tap Used (−1)</h3><p>Grab something? Log it. Low and empty items hit the shop list.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Low-stock banner</h3><p>See what needs restocking before the flat runs out.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>7-day trends</h3><p>Simple bars show what the flat actually uses.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Export / import</h3><p>Local JSON backup — move phones without a cloud account.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="section-head">
+        <p class="kicker">User guide</p>
+        <h2 id="how-title">How it works</h2>
+        <p>Fast to learn. No account wall.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card"><h3>1. Park one phone in the kitchen</h3><p>Everyone opens Fridge Share on the shared handset and sees the same pantry.</p></article>
+        <article class="card"><h3>2. Set your name once</h3><p>Personal tab uses your name as the default label — like writing on your milk.</p></article>
+        <article class="card"><h3>3. Add stock &amp; tap Used</h3><p>Log communal or personal items. Hit −1 Used when you take something.</p></article>
+        <article class="card"><h3>4. Shop from the flat list</h3><p>Low and empty items appear on the shop list so restocking is obvious.</p></article>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <h2>Privacy, terms &amp; data deletion</h2>
+      <p>Clear policy URLs for Google Play Console.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="privacy.html">Privacy policy</a>
+        <a class="btn btn-secondary" href="delete-data.html">Request data deletion</a>
+        <a class="btn btn-secondary" href="terms.html">Terms of use</a>
+      </div>
+    </section>
+
+    <article class="card meta-card">
+      <h3>App details</h3>
+      <p>
+        Package: <code>com.luckytools.fridge_split</code><br />
+        Support: <a href="mailto:support.fridgesplit@gmail.com">support.fridgesplit@gmail.com</a><br />
+        Site: <a href="https://13ond21.github.io/portfolio-websites/fridge-share/">13ond21.github.io/portfolio-websites/fridge-share/</a>
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <span>© 2026 Fridge Share · Northern Ireland</span>
+      <span>
+        <a href="privacy.html">Privacy</a> ·
+        <a href="terms.html">Terms</a> ·
+        <a href="delete-data.html">Delete data</a> ·
+        <a href="https://play.google.com/store/apps/details?id=com.luckytools.fridge_split">Google Play</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
