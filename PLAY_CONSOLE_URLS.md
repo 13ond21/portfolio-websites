@@ -72,6 +72,16 @@ UK Pay Calc is **not listed** on the tester hub yet.
 - **Package:** `com.luckytools.choice_roulette`
 - **Premium:** monthly subscription `premium_monthly` (£1.49)
 
+### Ingredient Scan
+
+- **Home:** https://13ond21.github.io/portfolio-websites/ingredient-scan/
+- **Privacy:** https://13ond21.github.io/portfolio-websites/ingredient-scan/privacy.html
+- **Terms:** https://13ond21.github.io/portfolio-websites/ingredient-scan/terms.html
+- **Delete data:** https://13ond21.github.io/portfolio-websites/ingredient-scan/delete-data.html
+- **Package:** `com.luckytools.ingredient_scan`
+- **AAB (local):** `Desktop\AppBuilds\ingredient-scan\ingredient-scan-1.4.4.aab`
+- **Icon / feature graphic:** `Desktop\AppBuilds\_play-store-3d-icons-2026-07\ingredient\`
+
 ---
 
 ## Portfolio apps

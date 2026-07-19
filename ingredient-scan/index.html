@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ingredient Scan — barcode &amp; allergen safety for Android</title>
+  <meta name="description" content="Scan barcodes or ingredient labels. Allergen and lifestyle safety checks, Health Score 0–100, on-device profiles. Privacy-first Android app with weekly Premium." />
+  <meta name="theme-color" content="#3d6b5a" />
+  <meta property="og:title" content="Ingredient Scan — private food &amp; cosmetics scanner" />
+  <meta property="og:description" content="Barcode scan, allergen checks, Health Score. Profiles stay on your device. Weekly Premium: unlimited scans, ad-free, themes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://13ond21.github.io/portfolio-websites/ingredient-scan/" />
+  <meta property="og:image" content="https://13ond21.github.io/portfolio-websites/ingredient-scan/assets/feature_graphic.png" />
+  <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/ingredient-scan/" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/icon_512.png" />
+  <link rel="apple-touch-icon" href="assets/icon_512.png" />
+  <style>
+    :root {
+      --accent: #3d6b5a;
+      --accent-soft: #5b8f7a;
+      --accent-tint: #e4f0ea;
+    }
+    .benefit-grid {
+      display: grid; gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) {
+      .benefit-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .benefit-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.25rem 1.3rem; box-shadow: var(--shadow);
+    }
+    .benefit-card .tag {
+      display: inline-block; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.04em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.45rem;
+    }
+    .benefit-card h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+    .benefit-card p { margin: 0; color: var(--muted); font-size: 0.94rem; }
+    .card-grid {
+      display: grid; gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) {
+      .card-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .feature-banner {
+      margin: 1.75rem 0 0;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .feature-banner img { width: 100%; height: auto; display: block; }
+    .shot-grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    .shot-grid figure {
+      margin: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .shot-grid img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 9/19;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+    .shot-grid figcaption {
+      padding: 0.7rem 0.85rem 0.9rem;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+    .shot-grid figcaption span {
+      display: block;
+      margin-top: 0.2rem;
+      font-weight: 500;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html">
+        <img src="assets/icon_512.png" width="42" height="42" alt="" style="border-radius:12px" />
+        Ingredient Scan
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="#screens">Screens</a>
+        <a href="#features">Features</a>
+        <a href="#premium">Premium</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.luckytools.ingredient_scan" class="nav-cta">Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <p class="hero-eyebrow">Health · Android · Privacy-first</p>
+        <h1>Scan the label.<br /><em>Know if it fits you.</em></h1>
+        <p class="lede">
+          Ingredient Scan checks barcodes and ingredient lists against your allergens and lifestyle
+          (vegan, halal, kosher, Big-14, and more). Health Score 0–100 at a glance.
+          Free Oatmeal theme. Weekly Premium unlocks unlimited scans, zero ads, and more looks.
+        </p>
+        <div class="badge-row">
+          <span class="badge accent">On-device profiles</span>
+          <span class="badge">Barcode + OCR</span>
+          <span class="badge">No account</span>
+          <span class="badge">Weekly Premium</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.ingredient_scan">Get on Google Play</a>
+          <a class="btn btn-secondary" href="#screens">See screenshots</a>
+          <a class="btn btn-secondary" href="privacy.html">Privacy policy</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>0</strong><span>accounts</span></div>
+          <div class="stat"><strong>0–100</strong><span>Health Score</span></div>
+          <div class="stat"><strong>Weekly</strong><span>Premium plan</span></div>
+          <div class="stat"><strong>NI</strong><span>support</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div
+          class="device carousel"
+          data-carousel
+          data-autoplay="5500"
+          aria-roledescription="carousel"
+          aria-label="Ingredient Scan app screens"
+        >
+          <div class="device-glow" aria-hidden="true"></div>
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <figure class="carousel-slide is-active">
+                <img src="assets/shot-home.png" width="720" height="1400" alt="Home barcode scan screen" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-ocr.png" width="720" height="1400" alt="OCR ingredient paste screen" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-history.png" width="720" height="1400" alt="Scan history with health scores" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-profile.png" width="720" height="1400" alt="Profile allergens and lifestyles" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-settings.png" width="720" height="1400" alt="Settings and app themes" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-guide.png" width="720" height="1400" alt="How to use guide" loading="lazy" />
+              </figure>
+              <figure class="carousel-slide">
+                <img src="assets/shot-premium.png" width="720" height="1400" alt="Premium benefits" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+          <div class="carousel-dots" role="tablist" aria-label="Preview slides"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="feature-banner" aria-hidden="true">
+      <img src="assets/feature_graphic.png" width="1024" height="500" alt="" />
+    </div>
+
+    <div class="proof" role="note">
+      <span>Privacy-first</span> ·
+      <span>Data on your device</span> ·
+      <span>Not medical advice</span> ·
+      <span>Free Oatmeal theme</span>
+    </div>
+
+    <section class="section" id="screens" aria-labelledby="screens-title">
+      <div class="section-head">
+        <p class="kicker">Screenshots</p>
+        <h2 id="screens-title">Real phone captures</h2>
+        <p>Ad-free store shots on oatmeal UI — guide, settings, themes, and Premium included.</p>
+      </div>
+      <div class="shot-grid">
+        <figure>
+          <img src="assets/shot-home.png" alt="Barcode home" loading="lazy" />
+          <figcaption>Scan home<span>Barcode + search</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/shot-ocr.png" alt="OCR fallback" loading="lazy" />
+          <figcaption>OCR fallback<span>Paste ingredient lists</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/shot-history.png" alt="History" loading="lazy" />
+          <figcaption>History<span>Scores at a glance</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/shot-profile.png" alt="Profile" loading="lazy" />
+          <figcaption>Profile<span>Allergens &amp; lifestyles</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/shot-settings.png" alt="Settings" loading="lazy" />
+          <figcaption>Settings<span>Themes + Premium</span></figcaption>
+        </figure>
+        <figure>
+          <img src="assets/shot-guide.png" alt="Guide" loading="lazy" />
+          <figcaption>Guide<span>How to use</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="section-head">
+        <p class="kicker">Product</p>
+        <h2 id="features-title">Inside Ingredient Scan</h2>
+        <p>Straightforward tabs: Barcode, OCR, History, Profile — plus Guide and Settings.</p>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>Health Score 0–100</h3>
+          <p>Excellent / Good / Fair / Poor so you can decide quickly in the aisle.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>Barcode + OCR</h3>
+          <p>Open Food Facts lookup with local cache, plus OCR when the barcode is missing.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>Your profile</h3>
+          <p>Vegan, halal, kosher, Big-14 allergens, seed oils, palm oil, ultra-processed flags.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>Guide built in</h3>
+          <p>How-to steps from first open — no guesswork.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>Free Oatmeal theme</h3>
+          <p>Warm light UI. Premium unlocks Ocean, Ember, Midnight, Blush, Graphite.</p>
+        </article>
+        <article class="benefit-card">
+          <span class="tag">You get</span>
+          <h3>History &amp; favourites</h3>
+          <p>Re-open past scans and star products you buy again.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="privacy-brief">
+      <div class="section-head">
+        <p class="kicker">Trust</p>
+        <h2>Privacy in plain English</h2>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h3>On your device</h3>
+          <p>Dietary profile, scan history, and caches stay in local app storage.</p>
+        </article>
+        <article class="card">
+          <h3>Soft free ads</h3>
+          <p>Free tier may show a banner and rare full-screen ads after scans — never mid-camera. Premium is ad-free.</p>
+        </article>
+        <article class="card">
+          <h3>You control deletion</h3>
+          <p>Clear app data or uninstall. See <a href="delete-data.html">delete-data.html</a>.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="premium" aria-labelledby="premium-title">
+      <div class="section-head">
+        <p class="kicker">Plans</p>
+        <h2 id="premium-title">Weekly Premium (no lifetime)</h2>
+        <p>Subscriptions maximise flexibility for you and recurring value for the app. Cancel anytime in Google Play.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <h3>Free</h3>
+          <p class="tagline">Start scanning without an account</p>
+          <ul>
+            <li>Barcode and OCR scanning</li>
+            <li>Allergen &amp; lifestyle profile</li>
+            <li>Health Score and match HUD</li>
+            <li>Daily free scan allowance</li>
+            <li>Oatmeal theme</li>
+            <li>Optional soft ads</li>
+          </ul>
+        </article>
+        <article class="plan premium">
+          <h3>Premium <span class="tag">Weekly / Yearly</span></h3>
+          <p class="tagline">Via Google Play Billing</p>
+          <ul>
+            <li>Unlimited scans</li>
+            <li>Zero ads</li>
+            <li>All Premium themes</li>
+            <li>Full history &amp; favourites feel</li>
+            <li>Cancel anytime in Play</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-title">
+      <h2 id="cta-title">Ready to scan smarter?</h2>
+      <p>Private allergen and lifestyle checks on your Android phone.</p>
+      <div class="btn-row" style="justify-content:center">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.ingredient_scan">Get on Google Play</a>
+        <a class="btn btn-secondary" href="privacy.html">Read privacy</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner footer-grid">
+      <div>
+        <p><strong>Ingredient Scan</strong> · package <code>com.luckytools.ingredient_scan</code></p>
+        <p class="muted">© 2026 Cloudy NI · Northern Ireland · Not medical advice</p>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="delete-data.html">Delete data</a>
+        <a href="mailto:support.ingredientscan@gmail.com">support.ingredientscan@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+  <script src="carousel.js" defer></script>
+</body>
+</html>
