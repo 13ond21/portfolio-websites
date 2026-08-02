@@ -1,11 +1,11 @@
 # Play Console URLs
 
-**Live hub:** https://13ond21.github.io/portfolio-websites/
-**Tester / QR page (print this):** https://13ond21.github.io/portfolio-websites/try.html  
+**Live hub (redirects to /try):** https://13ond21.github.io/portfolio-websites/
+**Apps hub (print this):** https://13ond21.github.io/portfolio-websites/try.html  
 **(Old apps.html link redirects here.)**
 **Contact:** `autoaccentsni@gmail.com`
 
-### Play package IDs (all closed testing for now — not public live)
+### Play package IDs (closed testing unless marked live)
 
 UK Pay Calc is **not listed** on the tester hub yet.
 

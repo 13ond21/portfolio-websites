@@ -3,8 +3,8 @@
 Public GitHub Pages sites for portfolio Android apps — quality bar matched to
 **Kitchen Buddy** and **Daily Affirmation**.
 
-**★ Bookmark all home pages:** https://13ond21.github.io/portfolio-websites/apps.html  
-(Includes the first 6 already on Google Play.)
+**★ Live apps hub:** https://13ond21.github.io/portfolio-websites/try.html  
+(The root https://13ond21.github.io/portfolio-websites/ redirects here.)
 
 Each portfolio app folder includes:
 
@@ -14,7 +14,6 @@ Each portfolio app folder includes:
 - `delete-data.html` — data deletion request URL for Play Console
 - `styles.css` — premium theme
 
-**Live:** https://13ond21.github.io/portfolio-websites/  
 **Repo:** https://github.com/13ond21/portfolio-websites  
 
 ## Regenerate
