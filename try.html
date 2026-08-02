@@ -512,6 +512,19 @@
 
     document.querySelectorAll(".app-tile[data-play]").forEach(applyLiveState);
 
+    // Pin live apps to the top (stable sort keeps original order within each group)
+    var grid = document.getElementById("app-grid");
+    if (grid) {
+      var tiles = Array.prototype.slice.call(grid.querySelectorAll(".app-tile"));
+      tiles.sort(function (a, b) {
+        var aLive = (a.getAttribute("data-live") || "false").toLowerCase() === "true";
+        var bLive = (b.getAttribute("data-live") || "false").toLowerCase() === "true";
+        if (aLive === bLive) return 0;
+        return aLive ? -1 : 1;
+      });
+      tiles.forEach(function (tile) { grid.appendChild(tile); });
+    }
+
     var PAGE_URL = "https://13ond21.github.io/portfolio-websites/try.html";
     function toast(msg) {
       var t = document.getElementById("toast");
