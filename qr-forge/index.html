@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QR Forge — create QR codes with your style</title>
+  <meta name="description" content="QR Forge: on-device QR generator for links, Wi-Fi, contacts, texts, email and SMS. Customise colours, logos and styles. Print-sharp 2048px export. No account, no tracking, no backend." />
+  <meta name="theme-color" content="#7C5CFF" />
+  <meta property="og:title" content="QR Forge — create QR codes with your style" />
+  <meta property="og:description" content="Generate links, Wi-Fi, contacts and text QR codes offline. Custom colours, logos and module styles. PNG + SVG export. Privacy-first, on-device only." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://13ond21.github.io/portfolio-websites/qr-forge/" />
+  <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/qr-forge/" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-bg {
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(124,92,255,0.34) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 95% 10%, rgba(84,54,204,0.3) 0%, transparent 50%),
+        radial-gradient(ellipse 50% 35% at 50% 100%, rgba(157,134,255,0.12) 0%, transparent 55%),
+        var(--bg) !important;
+    }
+    .qr-hero-card {
+      width: min(340px, 86vw);
+      border-radius: 28px;
+      padding: 1.6rem;
+      border: 1px solid var(--border);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.45), 0 0 60px var(--glow);
+      background: var(--surface);
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 6px;
+      aspect-ratio: 1 / 1;
+    }
+    .qr-hero-card span {
+      border-radius: 3px;
+      background: var(--ink);
+      aspect-ratio: 1 / 1;
+    }
+    .qr-hero-card span.dots { border-radius: 50%; }
+    .qr-hero-card span.off { background: transparent; }
+    .qr-hero-card .eye {
+      grid-column: span 3; grid-row: span 3;
+      background: transparent;
+      border: 3px solid var(--ink);
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      place-items: center;
+      padding: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html"><span class="brand-mark">◈</span> QR Forge</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#how">How it works</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="https://play.google.com/store/apps/details?id=com.cloudyni.qr_forge" class="nav-cta">Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <p class="hero-eyebrow">Android &middot; Tools &middot; Privacy-first</p>
+        <h1>Create a QR code.<br /><em>Make it yours.</em></h1>
+        <p class="lede">
+          QR Forge is a fully on-device QR generator. Make codes for links, Wi-Fi, contacts,
+          plain text, email and SMS — then style them with colours, gradients, logos and
+          module shapes. Export print-sharp 2048px PNGs, or vector SVGs with Premium.
+          No account. No tracking. No backend.
+        </p>
+        <div class="badge-row">
+          <span class="badge accent">Offline-first</span>
+          <span class="badge">No account</span>
+          <span class="badge">No tracking</span>
+          <span class="badge">On-device only</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.cloudyni.qr_forge">Get on Google Play</a>
+          <a class="btn btn-secondary" href="#how">How it works</a>
+          <a class="btn btn-secondary" href="privacy.html">Privacy policy</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="qr-hero-card" aria-hidden="true">
+          <span class="eye"></span>
+          <span class="off"></span><span class="off"></span><span class="off"></span><span class="off"></span><span class="off"></span>
+          <span class="eye"></span>
+          <span class="off"></span><span class="off"></span><span></span><span></span><span class="off"></span><span class="off"></span>
+          <span class="off"></span><span class="off"></span><span class="off"></span><span></span><span class="dots"></span><span class="off"></span>
+          <span class="off"></span><span></span><span></span><span class="off"></span><span class="off"></span><span></span>
+          <span class="off"></span><span></span><span class="off"></span><span class="dots"></span><span></span><span class="off"></span>
+          <span class="off"></span><span></span><span></span><span class="off"></span><span class="off"></span><span class="off"></span>
+          <span class="eye"></span>
+          <span class="off"></span><span></span><span class="off"></span><span class="dots"></span><span></span><span class="off"></span>
+          <span></span><span class="off"></span><span></span><span class="off"></span><span></span><span></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="benefits" class="section">
+      <h2>Why QR Forge</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>◈ Six content types</h3>
+          <p>Links, Wi-Fi, contacts (vCard), plain text, email and SMS — all the codes people actually use, pre-filled from quick-start cards.</p>
+        </div>
+        <div class="card">
+          <h3>◈ Style it your way</h3>
+          <p>Foreground and background colours with wheel pickers, gradients, centred logos, and module styles — Standard, Rounded, Dots, Blocks.</p>
+        </div>
+        <div class="card">
+          <h3>◈ Print-sharp export</h3>
+          <p>Save a 2048px PNG direct to Pictures/QR Forge, or export a crisp vector SVG with Premium. Perfect for flyers, menus and labels.</p>
+        </div>
+        <div class="card">
+          <h3>◈ Fully private</h3>
+          <p>Everything happens on your device. No accounts, no analytics, no backend, no camera, no scanning. Uninstall and everything is gone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><strong>Pick a QR type</strong> — Link, Wi-Fi, Contact, Text, Email or SMS.</li>
+        <li><strong>Enter your details</strong> — the form adapts to the type you chose.</li>
+        <li><strong>Make it yours</strong> — colours, gradient, logo and module style (Premium).</li>
+        <li><strong>Create QR</strong> — get a full-size preview with exactly what's encoded, then save, share or export.</li>
+      </ol>
+    </section>
+
+    <section class="cta-section">
+      <h2>Your codes, on your device.</h2>
+      <p>Download QR Forge and generate your first code in seconds — completely offline.</p>
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.cloudyni.qr_forge">Get on Google Play</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <span class="brand"><span class="brand-mark">◈</span> QR Forge</span>
+      <p>Published by CloudyNI · Built for Android</p>
+      <nav class="nav">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
