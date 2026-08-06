@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — Morse Beacon</title>
-  <meta name="description" content="Privacy policy for Morse Beacon Android app." />
+  <meta name="description" content="Privacy policy for Morse Beacon Android app. On-device Morse processing. Free tier uses AdMob; Premium is ad-free." />
   <meta name="theme-color" content="#64748b" />
   <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/morse-beacon/privacy.html" />
   <link rel="stylesheet" href="styles.css" />
@@ -18,7 +18,9 @@
       <nav class="nav" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="delete-data.html">Delete data</a>
         <a href="terms.html">Terms</a>
+        <a href="https://play.google.com/store/apps/details?id=com.luckytools.morse_beacon" class="nav-cta">Get the app</a>
       </nav>
     </div>
   </header>
@@ -28,23 +30,126 @@
     <p class="doc-meta">
       <strong>Morse Beacon</strong> (Android package <code>com.luckytools.morse_beacon</code>)<br />
       Region: Northern Ireland<br />
-      Effective date: February 2025<br />
+      Last updated: 16 July 2026<br />
       Contact: <a href="mailto:autoaccentsni@gmail.com">autoaccentsni@gmail.com</a>
     </p>
 
     <div class="note">
-      Morse Beacon is designed with privacy in mind. Most data stays on your device. We use RevenueCat to manage subscriptions and Supabase to sync premium status.
+      Morse Beacon is designed with privacy in mind. Text you enter for Morse transmission is
+      processed <strong>locally on your device</strong>. We do not operate a server that receives
+      your messages. Free tier may show ads; Premium removes all ads.
     </div>
 
-    <h2>1. Data Collection</h2>
-    <p>We process minimal data necessary to provide the service. This includes subscription status and anonymous analytics to improve the app.</p>
+    <h2>1. Data you enter</h2>
+    <p>
+      Text you type for Morse transmission is processed <strong>locally on your device</strong>.
+      We do not operate a server that receives your messages. Message text is not uploaded to us.
+      Premium users may keep recent messages in local history on the device only.
+    </p>
 
-    <h2>2. Third Parties</h2>
-    <p>We use Google Play for payments, RevenueCat for subscription management, and Supabase for backend services.</p>
+    <h2>2. Camera flash</h2>
+    <p>
+      The app uses your device's camera flash (torch/LED) to output Morse code signals.
+      The app does not access the camera preview, capture photos, or record video.
+      No images or video are stored or transmitted by Morse Beacon.
+    </p>
 
-    <div class="footer">
-        <p>&copy; 2025 Cloudy NI. Contact: autoaccentsni@gmail.com</p>
-    </div>
+    <h2>3. Settings and learn progress</h2>
+    <p>
+      Preferences (speed, timing, display options), learn-mode statistics, custom phrases
+      (Premium), and local history are stored with <strong>on-device storage</strong>
+      (SharedPreferences). This information is not transmitted to our servers.
+    </p>
+
+    <h2>4. Advertising (free tier only)</h2>
+    <p>
+      The free version shows ads provided by <strong>Google AdMob</strong> (Google LLC):
+      banner ads and full-screen interstitial ads (approximately every 90 seconds while the app
+      is idle — never while the LED is actively transmitting Morse).
+    </p>
+    <p>
+      Google and its partners may collect and process data such as advertising identifiers,
+      IP address, device information, and ad interaction data to deliver and measure ads,
+      subject to Google's policies. See
+      <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a>
+      and
+      <a href="https://support.google.com/admob/answer/6128543" rel="noopener noreferrer" target="_blank">AdMob & privacy</a>.
+    </p>
+    <p>
+      <strong>Premium</strong> (monthly subscription <code>morse_beacon_premium</code>,
+      or optional Lifetime) removes all ads. When Premium is active, the app does not
+      load AdMob ad units for that session.
+    </p>
+
+    <h2>5. Purchases</h2>
+    <p>
+      Premium is sold via <strong>Google Play Billing</strong> (subscription and/or
+      one-time Lifetime). We do not receive your payment card details. Google processes
+      purchase-related information under its privacy policy. Entitlement status may be
+      stored locally and revalidated with Google Play (including when a subscription ends,
+      so ads can return).
+    </p>
+
+    <h2>6. Internet access</h2>
+    <p>
+      Free tier requires network access for ads. The app may also open external links
+      (this policy, terms, support email) when you choose to tap them. Core Morse flash
+      and learn features work offline once the app is installed; ads and store purchases
+      require connectivity.
+    </p>
+
+    <h2>7. Analytics</h2>
+    <p>
+      Morse Beacon does not include a separate analytics product (for example, we do not ship
+      Firebase Analytics for usage tracking of your Morse content). Advertising partners may
+      collect their own measurement data as described above on the free tier.
+    </p>
+
+    <h2>8. Children</h2>
+    <p>
+      The app is not directed at children under 13. We do not knowingly collect personal
+      information from children. The free tier contains ads that are not intended for
+      a child-directed experience under Families policies.
+    </p>
+
+    <h2>9. Your choices</h2>
+    <ul>
+      <li>Use free with ads, or subscribe to Premium / buy Lifetime to remove ads</li>
+      <li>Cancel monthly Premium anytime in Google Play → Payments & subscriptions</li>
+      <li>Adjust device advertising preferences / reset advertising ID in Android settings</li>
+      <li>Uninstall the app to remove local settings, history, and learn progress</li>
+      <li>See our <a href="delete-data.html">data deletion</a> page for full steps</li>
+    </ul>
+
+    <h2>10. Changes</h2>
+    <p>
+      We may update this policy from time to time. The "Last updated" date at the top
+      will reflect any changes.
+    </p>
+
+    <h2>11. Contact</h2>
+    <p>
+      Questions about this policy? Email
+      <a href="mailto:autoaccentsni@gmail.com">autoaccentsni@gmail.com</a>.
+    </p>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <strong style="color:var(--ink)">Morse Beacon</strong><br />
+        Northern Ireland · <a href="mailto:autoaccentsni@gmail.com">autoaccentsni@gmail.com</a>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="delete-data.html">Delete data</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+    <div class="footer-grid" style="margin-top:1rem">
+      <p style="margin:0">&copy; 2026 Morse Beacon. Informational tools only — not professional advice.</p>
+    </div>
+  </footer>
 </body>
 </html>
