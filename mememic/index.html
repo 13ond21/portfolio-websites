@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MemeMic — Voice Changer & Soundboard</title>
+  <meta name="description" content="MemeMic is a real-time voice changer and meme soundboard for Android. Chipmunk, robot, deep, echo and more — plus a huge soundboard of meme sounds." />
+  <meta name="theme-color" content="#7C4DFF" />
+  <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/mememic/" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; line-height: 1.7; color: #1c1c1c; background: #f5f3ff; }
+    header { background: linear-gradient(135deg, #7C4DFF, #4FC3F7); color: white; text-align: center; padding: 3rem 1rem; }
+    header .inner { max-width: 720px; margin: 0 auto; }
+    header .logo { font-size: 48px; margin-bottom: 0.5rem; }
+    header h1 { font-size: 2.4rem; font-weight: 800; }
+    header p { opacity: 0.95; margin-top: 0.6rem; font-size: 1.1rem; }
+    header .badge { display: inline-block; margin-top: 1.2rem; background: rgba(255,255,255,0.2); padding: 0.4rem 1rem; border-radius: 999px; font-size: 0.9rem; }
+    main { max-width: 860px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+    .card { background: #fff; border-radius: 16px; padding: 2rem; margin: 1rem 0; box-shadow: 0 2px 12px rgba(124,77,255,0.08); }
+    .card h2 { color: #7C4DFF; font-size: 1.3rem; margin-bottom: 0.8rem; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .feature { background: #faf8ff; border-radius: 12px; padding: 1.2rem; }
+    .feature .icon { font-size: 28px; }
+    .feature h3 { font-size: 1rem; color: #2c2c2c; margin-top: 0.4rem; }
+    .feature p { font-size: 0.85rem; color: #666; margin-top: 0.3rem; }
+    .effects-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .effect-chip { background: #f0ecff; color: #7C4DFF; border-radius: 999px; padding: 0.3rem 0.9rem; font-size: 0.85rem; font-weight: 600; }
+    .effect-chip.locked { opacity: 0.6; text-decoration: line-through; }
+    .cta { text-align: center; background: linear-gradient(135deg, #7C4DFF, #4FC3F7); color: white; border-radius: 16px; padding: 2.5rem 1.5rem; margin: 1.5rem 0; }
+    .cta h2 { font-size: 1.8rem; }
+    .cta .btn { display: inline-block; background: white; color: #7C4DFF; font-weight: 700; padding: 0.8rem 2rem; border-radius: 999px; text-decoration: none; margin-top: 1rem; }
+    footer { text-align: center; padding: 2rem 1rem; color: #888; font-size: 0.9rem; }
+    footer a { color: #7C4DFF; margin: 0 0.5rem; }
+    .links { text-align: center; margin-top: 1rem; }
+    .links a { color: #7C4DFF; margin: 0 0.75rem; font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="inner">
+      <div class="logo">🎙️</div>
+      <h1>MemeMic</h1>
+      <p>Real-time voice changer & meme soundboard</p>
+      <p class="badge">Android app · Free + Premium (£2.99/mo)</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2>What is MemeMic?</h2>
+      <p>MemeMic turns your voice into <strong>chipmunk, robot, alien, deep, demon, helium, darth</strong> and more — in real time. Add a <strong>soundboard of meme sounds</strong> and play them mid-conversation for maximum chaos. Record clips, share them, and download fresh meme packs each month.</p>
+      <p>All audio processing happens <strong>on your device</strong>. Nothing is uploaded.</p>
+    </div>
+
+    <div class="card">
+      <h2>Features</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <div class="icon">🎤</div>
+          <h3>Live voice effects</h3>
+          <p>20+ effects including Chipmunk, Robot, Alien, Deep, Demon, Helium, and more.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">🔊</div>
+          <h3>Meme soundboard</h3>
+          <p>Tap to play airhorns, vine booms, sad trombones and classic internet sounds instantly.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">📼</div>
+          <h3>Record & share</h3>
+          <p>Save your processed voice clips and share them anywhere.</p>
+        </div>
+        <div class="feature">
+          <div class="icon">📦</div>
+          <h3>Monthly meme packs</h3>
+          <p>Premium subscribers get new sound packs every month.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Effect Library</h2>
+      <div class="effects-list">
+        <span class="effect-chip">Clean</span>
+        <span class="effect-chip">Echo</span>
+        <span class="effect-chip">Reverb</span>
+        <span class="effect-chip">Megaphone</span>
+        <span class="effect-chip">Deep</span>
+        <span class="effect-chip locked">Chipmunk</span>
+        <span class="effect-chip locked">Robot</span>
+        <span class="effect-chip locked">Alien</span>
+        <span class="effect-chip locked">Demon</span>
+        <span class="effect-chip locked">Helium</span>
+        <span class="effect-chip locked">Darth</span>
+        <span class="effect-chip locked">Radio</span>
+        <span class="effect-chip locked">Monster</span>
+        <span class="effect-chip locked">Underwater</span>
+        <span class="effect-chip locked">Opera</span>
+        <span class="effect-chip locked">...and more</span>
+      </div>
+      <p style="margin-top:1rem; font-size:0.85rem; color:#666;">Free: 5 effects + 15 starter sounds. Premium unlocks everything.</p>
+    </div>
+
+    <div class="cta">
+      <h2>Ready to sound ridiculous?</h2>
+      <p>Get MemeMic on Google Play</p>
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.cloudyni.mememic" target="_blank" rel="noopener noreferrer">Get it on Google Play</a>
+    </div>
+
+    <div class="links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </main>
+
+  <footer>© 2026 CloudyNI · <a href="mailto:autoaccentsni@gmail.com">Contact</a></footer>
+</body>
+</html>
