@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Join a Pantry Pals kitchen</title>
+  <meta name="description" content="Join a shared Pantry Pals fridge with an invite code. Free, offline-first, no account needed." />
+  <meta name="theme-color" content="#8B6F47" />
+  <meta property="og:title" content="Join a Pantry Pals kitchen" />
+  <meta property="og:description" content="Someone invited you to share a fridge on Pantry Pals. Install the app and enter your invite code." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://13ond21.github.io/portfolio-websites/pantry-pals/join.html" />
+  <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/pantry-pals/join.html" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/icon_512.png" />
+  <style>
+    .join-code {
+      font-size: 2.4rem;
+      font-weight: 800;
+      letter-spacing: 0.35em;
+      color: var(--accent, #8B6F47);
+      background: var(--surface, #fff);
+      border: 2px dashed var(--border, rgba(139,111,71,0.4));
+      border-radius: 16px;
+      padding: 1.1rem 1.2rem;
+      margin: 1.2rem 0 0.4rem;
+      text-align: center;
+      font-variant-numeric: tabular-nums;
+      max-width: 26rem;
+    }
+    .join-code.empty { color: var(--muted, #6B5E4E); letter-spacing: normal; font-size: 1rem; font-weight: 500; }
+    .join-hint { color: var(--muted, #6B5E4E); font-size: 0.9rem; margin-top: 0.9rem; }
+    .join-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html"><img src="assets/icon_512.png" width="38" height="38" alt="" /> Pantry Pals</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div>
+        <p class="hero-eyebrow">Kitchen invite</p>
+        <h1>Join the kitchen.<br /><em>Enter your invite code.</em></h1>
+        <p class="lede">
+          Someone has invited you to share a fridge on Pantry Pals. Install the app,
+          open <strong>Settings → Cloud / Join a kitchen</strong>, and enter the code below.
+        </p>
+        <div class="join-code" id="codeBox"></div>
+        <button type="button" class="btn btn-secondary" id="copyBtn" style="display:none">Copy invite code</button>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.fridge_split">Get Pantry Pals on Google Play</a>
+        </div>
+        <p class="join-hint">No account needed. The code is case-sensitive. Cloud invites are an opt-in feature.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="how-title">
+      <div class="section-head">
+        <p class="kicker">Three steps</p>
+        <h2 id="how-title">How to join</h2>
+      </div>
+      <div class="join-steps">
+        <article class="card"><h3>1. Install the app</h3><p>Get Pantry Pals from Google Play (free).</p></article>
+        <article class="card"><h3>2. Open the join flow</h3><p>In the app, choose <strong>Join with a code</strong> and paste the invite code.</p></article>
+        <article class="card"><h3>3. Share the fridge</h3><p>You'll see the same items, cleaning day and shop list as everyone else in the kitchen.</p></article>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <h2>Already have the app?</h2>
+      <p>Open Pantry Pals and enter the code from the invite you were sent.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <span>© 2026 Pantry Pals · Northern Ireland</span>
+      <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="index.html">Home</a></span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var code = (params.get('code') || '').trim().toUpperCase();
+      var box = document.getElementById('codeBox');
+      var btn = document.getElementById('copyBtn');
+      if (code) {
+        box.textContent = code;
+        box.classList.remove('empty');
+        btn.style.display = 'inline-block';
+        btn.addEventListener('click', function () {
+          if (navigator.clipboard) { navigator.clipboard.writeText(code); }
+          btn.textContent = 'Copied ✓';
+          setTimeout(function () { btn.textContent = 'Copy invite code'; }, 2000);
+        });
+      } else {
+        box.textContent = 'No invite code found in this link.';
+        box.classList.add('empty');
+      }
+    })();
+  </script>
+</body>
+</html>
