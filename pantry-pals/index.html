@@ -3,18 +3,37 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pantry Pals — the fair-share fridge app for flats &amp; house shares</title>
-  <meta name="description" content="Pantry Pals keeps shared fridges fair — signed QR labels, cleaning day, collaborative shop list, QR invites, receipts, voice entry, barcode &amp; nutrition scanning, borrow &amp; replace. Offline-first, multi-kitchen." />
+  <title>Pantry Pals — the fair-share fridge app for flats, house shares &amp; offices</title>
+  <meta name="description" content="Pantry Pals keeps shared fridges fair — signed QR labels, cleaning day, a collaborative shop list, 500 recipes, and a barcode &amp; nutrition scanner for the supermarket. Works offline; optional live sync." />
   <meta name="theme-color" content="#8B6F47" />
   <meta property="og:title" content="Pantry Pals — the fair-share fridge app" />
-  <meta property="og:description" content="Signed QR labels, a cleaning day nobody can argue with, a shared shop list, QR invites, receipts, voice entry and a nutrition scanner. Offline-first, multi-kitchen, no account." />
+  <meta property="og:description" content="Signed QR labels, 500 recipes, a barcode &amp; nutrition scanner, and a cleaning day nobody can argue with. Works offline; optional live sync." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://13ond21.github.io/portfolio-websites/pantry-pals/" />
   <meta property="og:image" content="https://13ond21.github.io/portfolio-websites/pantry-pals/assets/feature_graphic.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pantry Pals — the fair-share fridge app" />
+  <meta name="twitter:description" content="Signed QR labels, 500 recipes, a barcode &amp; nutrition scanner, and a cleaning day nobody can argue with." />
+  <meta name="twitter:image" content="https://13ond21.github.io/portfolio-websites/pantry-pals/assets/feature_graphic.png" />
   <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/pantry-pals/" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="assets/icon_512.png" />
   <link rel="apple-touch-icon" href="assets/icon_512.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Pantry Pals",
+    "operatingSystem": "Android",
+    "applicationCategory": "LifestyleApplication",
+    "offers": [
+      { "@type": "Offer", "price": "0", "priceCurrency": "GBP", "description": "Free with ads" },
+      { "@type": "Offer", "price": "0.99", "priceCurrency": "GBP", "description": "Ad-Free Premium (monthly)" },
+      { "@type": "Offer", "price": "3.99", "priceCurrency": "GBP", "description": "Kitchen Premium (monthly, 7-day trial)" }
+    ],
+    "url": "https://13ond21.github.io/portfolio-websites/pantry-pals/"
+  }
+  </script>
   <style>
     :root {
       --bg: #F4EFE6;
@@ -62,7 +81,9 @@
       <nav class="nav" aria-label="Main">
         <a href="index.html" aria-current="page">Home</a>
         <a href="#benefits">Benefits</a>
-        <a href="#how">How it works</a>
+        <a href="#screens">Screens</a>
+        <a href="#recipes">Recipes</a>
+        <a href="#faq">FAQ</a>
         <a href="privacy.html">Privacy</a>
         <a href="https://play.google.com/store/apps/details?id=com.luckytools.fridge_split?utm_source=landing&utm_medium=web&utm_campaign=pantry-pals-landing" class="nav-cta">Get the app</a>
       </nav>
@@ -73,36 +94,36 @@
     <section class="hero">
       <div>
         <p class="hero-eyebrow">Android · Lifestyle · Privacy-first</p>
-        <h1>Stop the fridge fights.<br /><em>Labels, scans &amp; a fair cleaning day.</em></h1>
+        <h1>The fair fridge for shared kitchens.<br /><em>Labels, scans, 500 recipes &amp; a cleaning day nobody can argue with.</em></h1>
         <p class="lede">
-          Pantry Pals is the shared-fridge app for student flats, house shares and small offices.
-          Signed QR labels, use-by reminders, a cleaning day nobody can argue with, a collaborative shop
-          list, QR invites, receipts, voice entry and a barcode &amp; nutrition scanner — all offline-first, no account.
+          Pantry Pals is the shared-pantry app for flats, house shares, student digs and small offices.
+          Signed QR labels, use-by reminders, a collaborative shopping list, a barcode &amp; nutrition scanner
+          for the supermarket, and 500 recipes from around the world — all offline-first, with optional live sync.
         </p>
         <div class="badge-row">
           <span class="badge accent">Offline-first</span>
-          <span class="badge">No account</span>
-          <span class="badge">Multi-kitchen</span>
-          <span class="badge">QR invites</span>
+          <span class="badge">500 recipes</span>
+          <span class="badge">Barcode scanner</span>
+          <span class="badge">Optional live sync</span>
         </div>
         <div class="btn-row">
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.fridge_split?utm_source=landing&utm_medium=web&utm_campaign=pantry-pals-landing">Get on Google Play</a>
-          <a class="btn btn-secondary" href="#how">How it works</a>
+          <a class="btn btn-secondary" href="#screens">See it in action</a>
           <a class="btn btn-secondary" href="privacy.html">Privacy policy</a>
         </div>
         <div class="stats">
-          <div class="stat"><strong>0</strong><span>accounts</span></div>
+          <div class="stat"><strong>500</strong><span>recipes</span></div>
           <div class="stat"><strong>∞</strong><span>kitchens</span></div>
-          <div class="stat"><strong>2</strong><span>premium tiers</span></div>
-          <div class="stat"><strong>NI</strong><span>support</span></div>
+          <div class="stat"><strong>11</strong><span>languages</span></div>
+          <div class="stat"><strong>0</strong><span>accounts needed</span></div>
         </div>
       </div>
       <div class="hero-visual">
         <div class="hero-card">
-          <img src="assets/feature_graphic.png" width="1024" height="500" alt="Pantry Pals feature graphic" />
+          <img src="assets/feature_graphic.png" width="1024" height="500" alt="Pantry Pals feature graphic" loading="lazy" />
           <div class="cap">
             <strong>Pantry Pals</strong>
-            QR labels · Cleaning day · Shared shop list — the fair fridge for house shares.
+            QR labels · Cleaning day · Shared shop list · 500 recipes — the fair fridge for shared kitchens.
           </div>
         </div>
       </div>
@@ -112,7 +133,8 @@
       <span>Privacy-first</span>·
       <span>On your device</span>·
       <span>No forced account</span>·
-      <span>Optional Premium</span>
+      <span>Optional Premium</span>·
+      <span>11 languages</span>
     </div>
 
     <section class="section" id="benefits" aria-labelledby="benefits-title">
@@ -123,11 +145,81 @@
       </div>
       <div class="benefit-grid">
         <article class="benefit-card"><span class="tag">You get</span><h3>Signed QR labels</h3><p>Print or scan a label — forged stickers fail the signature check.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>500 recipes</h3><p>Dishes from Italy to India, each with ingredients, method, timings and calories.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Barcode &amp; nutrition scanner</h3><p>Scan in the supermarket — ingredients, allergens &amp; nutrition before it reaches your kitchen.</p></article>
         <article class="benefit-card"><span class="tag">You get</span><h3>Cleaning day</h3><p>Weekly schedule, 48h/2h reminders, quiet hours and photo proof.</p></article>
-        <article class="benefit-card"><span class="tag">You get</span><h3>Collaborative shop list</h3><p>Low stock &amp; past use-by items land on one shared list.</p></article>
-        <article class="benefit-card"><span class="tag">You get</span><h3>QR invites &amp; multi-kitchen</h3><p>Invite housemates with a code and switch between kitchens.</p></article>
-        <article class="benefit-card"><span class="tag">You get</span><h3>Barcode &amp; nutrition scanner</h3><p>Scan to add items and check allergens &amp; nutrition.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Live sync &amp; QR invites</h3><p>Optional account syncs one fridge across phones; invite a kitchen in seconds.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Collaborative shop list</h3><p>Low stock &amp; past use-by items land on one shared, aisle-grouped list.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Allergen profiles</h3><p>Set up household profiles and every scan flags anything that matches.</p></article>
         <article class="benefit-card"><span class="tag">You get</span><h3>Receipts &amp; voice entry</h3><p>Scan a receipt or just speak — items land in seconds.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="screens" aria-labelledby="screens-title">
+      <div class="section-head">
+        <p class="kicker">See it in action</p>
+        <h2 id="screens-title">One app, a whole fairer kitchen</h2>
+        <p>Swipe through the app — home, pantry, recipes, shopping, scanning and cleaning day.</p>
+      </div>
+      <div class="carousel shot-carousel" data-carousel data-autoplay="6000">
+        <div class="carousel-viewport">
+          <div class="carousel-track">
+            <figure class="carousel-slide shot-card is-active">
+              <div class="shot-frame"><img src="assets/screenshots/home.png" alt="Pantry Pals home dashboard showing the pantry at a glance" loading="lazy" /></div>
+              <figcaption>Home dashboard<span>Your whole kitchen at a glance — items, owners and what's about to go off.</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame"><img src="assets/screenshots/pantry.png" alt="Pantry Pals fridge zone with item owners and use-by dates" loading="lazy" /></div>
+              <figcaption>Pantry zones<span>Fridge, freezer, spices and pantry — every item tagged to its owner.</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame"><img src="assets/screenshots/recipes.png" alt="Pantry Pals recipe detail with ingredients, method and cook timer" loading="lazy" /></div>
+              <figcaption>500 recipes<span>From carbonara to korma, with ingredients, timings and calories.</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame"><img src="assets/screenshots/shopping.png" alt="Pantry Pals shared shopping list grouped by aisle" loading="lazy" /></div>
+              <figcaption>Shared shopping list<span>Aisle-grouped, with who's buying and what it costs.</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame"><img src="assets/screenshots/scan.png" alt="Pantry Pals barcode scan result showing allergens and nutrition" loading="lazy" /></div>
+              <figcaption>Scan in the supermarket<span>Allergens, nutrition and use-by info before it reaches your kitchen.</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame"><img src="assets/screenshots/cleaning.png" alt="Pantry Pals cleaning day schedule with reminders" loading="lazy" /></div>
+              <figcaption>Cleaning day<span>A schedule nobody can argue with, plus past use-by items to bin.</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame"><img src="assets/screenshots/profiles.png" alt="Pantry Pals household allergen profiles" loading="lazy" /></div>
+              <figcaption>Allergen profiles<span>Household profiles flag warnings that match someone at home.</span></figcaption>
+            </figure>
+            <figure class="carousel-slide shot-card">
+              <div class="shot-frame"><img src="assets/screenshots/more.png" alt="Pantry Pals More menu with settings, notifications and premium" loading="lazy" /></div>
+              <figcaption>Everything in one place<span>Settings, notifications, sync and premium.</span></figcaption>
+            </figure>
+          </div>
+        </div>
+        <button type="button" class="carousel-btn prev" data-carousel-prev aria-label="Previous screenshot">&#8249;</button>
+        <button type="button" class="carousel-btn next" data-carousel-next aria-label="Next screenshot">&#8250;</button>
+        <div class="carousel-dots" role="tablist"></div>
+        <div class="carousel-footer"><p class="carousel-status" data-carousel-status></p></div>
+      </div>
+    </section>
+
+    <section class="section" id="recipes" aria-labelledby="recipes-title">
+      <div class="section-head">
+        <p class="kicker">New in 2.4</p>
+        <h2 id="recipes-title">500 recipes &amp; a scanner that shops with you</h2>
+        <p>Two of the biggest reasons people open Pantry Pals every day.</p>
+      </div>
+      <div class="grid-2">
+        <article class="card">
+          <h3>🍳 500 recipes from around the world</h3>
+          <p>Italian, Indian, Mexican, Japanese and more — each with ingredients, method, timings, calories and a cook timer. Five recipes free to try, unlock more by watching a short ad, or get them all with Kitchen Premium.</p>
+        </article>
+        <article class="card">
+          <h3>📷 Scan in the supermarket</h3>
+          <p>Point the scanner at any barcode and see ingredients, allergens and nutrition instantly — with household profiles flagging anything that matches someone at home. No squinting at tiny labels.</p>
+        </article>
       </div>
     </section>
 
@@ -151,25 +243,51 @@
         <h2 id="premium-title">Two small subscriptions, zero ads pressure</h2>
         <p>Managed by Google Play. Cancel anytime. Restore purchases on any device.</p>
       </div>
-      <div class="grid-2">
-        <article class="card">
-          <h3>Ad-Free Premium — £0.99/month</h3>
-          <p>Removes every ad from your copy of Pantry Pals and unlocks extra colour themes.</p>
+      <div class="plans">
+        <article class="plan">
+          <h3>Ad-Free Premium <span class="tag">£0.99/month</span></h3>
+          <p class="tagline">For you, on your install.</p>
+          <ul>
+            <li>Removes every ad</li>
+            <li>Unlocks extra colour themes</li>
+            <li>Cancel anytime in Google Play</li>
+          </ul>
         </article>
-        <article class="card">
-          <h3>Kitchen Premium — £2.99/month</h3>
-          <p>Unlocks Premium for the whole kitchen: one person pays, and every member of the shared fridge gets the ad-free, unlocked experience while the subscription is active.</p>
+        <article class="plan premium">
+          <h3>Kitchen Premium <span class="tag">£3.99/month · 7-day free trial</span></h3>
+          <p class="tagline">One person pays — the whole kitchen benefits.</p>
+          <ul>
+            <li>Ad-free for every member of your shared fridge</li>
+            <li>Unlimited pantry items</li>
+            <li>All 500 recipes unlocked</li>
+            <li>Cancel anytime in Google Play</li>
+          </ul>
         </article>
       </div>
     </section>
 
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="section-head">
+        <p class="kicker">Questions</p>
+        <h2 id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="grid-2">
+        <article class="card"><h3>Do I need an account?</h3><p>No. Pantry Pals works fully offline and local-first without an account. An account and live sync are optional extras if you want one fridge shared across phones.</p></article>
+        <article class="card"><h3>How does cleaning day actually work?</h3><p>Pick a weekly schedule and the app reminds everyone, with quiet hours so you are not pinged at 2am. Past use-by items are fair game — with photo proof if needed.</p></article>
+        <article class="card"><h3>Is my data private?</h3><p>Core data stays on your device by default; cloud sync is opt-in. We do not sell data and do not use your pantry for ad targeting. Made by Cloudy NI, ICO registration ZC222090.</p></article>
+        <article class="card"><h3>How do allergen profiles work?</h3><p>Set up profiles for each member. When anyone scans a product, the app flags anything that matches a profile — direct matches in red, possible cross-reactions in amber.</p></article>
+        <article class="card"><h3>How do I cancel a subscription?</h3><p>Open Google Play &rarr; Payments &amp; subscriptions and cancel there. Kitchen Premium starts with a 7-day free trial and auto-renews at £3.99/month unless cancelled.</p></article>
+        <article class="card"><h3>How do I delete my data?</h3><p>Clear app data or uninstall for on-device data, and delete your account in the app for the cloud copy. Full instructions on the <a href="delete-data.html">data deletion page</a>.</p></article>
+      </div>
+    </section>
+
     <section class="cta-band">
-      <h2>Privacy, terms &amp; data deletion</h2>
-      <p>Clear policy URLs for Google Play Console.</p>
+      <h2>Try it free on Google Play</h2>
+      <p>Free to download · optional Premium · no forced account · ICO-registered developer.</p>
       <div class="btn-row">
-        <a class="btn btn-primary" href="privacy.html">Privacy policy</a>
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.fridge_split?utm_source=landing&utm_medium=web&utm_campaign=pantry-pals-landing">Get on Google Play</a>
+        <a class="btn btn-secondary" href="privacy.html">Privacy policy</a>
         <a class="btn btn-secondary" href="delete-data.html">Request data deletion</a>
-        <a class="btn btn-secondary" href="terms.html">Terms of use</a>
       </div>
     </section>
 
@@ -177,6 +295,7 @@
       <h3>App details</h3>
       <p>
         Package: <code>com.luckytools.fridge_split</code><br />
+        Developer: Cloudy NI · ICO data protection registration <strong>ZC222090</strong><br />
         Support: <a href="mailto:autoaccentsni@gmail.com">autoaccentsni@gmail.com</a><br />
         Site: <a href="https://13ond21.github.io/portfolio-websites/pantry-pals/">13ond21.github.io/portfolio-websites/pantry-pals/</a>
       </p>
@@ -194,5 +313,6 @@
       </span>
     </div>
   </footer>
+  <script src="carousel.js" defer></script>
 </body>
 </html>

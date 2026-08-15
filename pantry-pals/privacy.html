@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — Pantry Pals</title>
-  <meta name="description" content="Privacy policy for Pantry Pals Android app." />
+  <meta name="description" content="Privacy policy for the Pantry Pals shared-fridge Android app. Data controller Cloudy NI, ICO registration ZC222090." />
   <meta name="theme-color" content="#8B6F47" />
   <link rel="canonical" href="https://13ond21.github.io/portfolio-websites/pantry-pals/privacy.html" />
   <link rel="stylesheet" href="styles.css" />
@@ -19,6 +19,8 @@
         <a href="index.html">Home</a>
         <a href="privacy.html" aria-current="page">Privacy</a>
         <a href="terms.html">Terms</a>
+        <a href="delete-data.html">Delete data</a>
+        <a href="https://play.google.com/store/apps/details?id=com.luckytools.fridge_split" class="nav-cta">Get the app</a>
       </nav>
     </div>
   </header>
@@ -35,17 +37,115 @@
     </p>
 
     <div class="note">
-      Pantry Pals is designed with privacy in mind. Your fridge data stays on your device (SQLite), with optional cloud sync through Supabase. Premium is managed through Google Play Billing.
+      Pantry Pals is built <strong>local-first</strong>: your pantry works fully offline and most data never leaves
+      your device. Cloud sync, live sharing and an account are <strong>optional</strong> — you choose to turn them on.
     </div>
 
-    <h2>1. Data Collection</h2>
-    <p>We process minimal data necessary to provide the service. This includes subscription status and anonymous analytics to improve the app.</p>
+    <h2>1. Who we are</h2>
+    <p>Pantry Pals is made by <strong>Cloudy NI</strong>, a sole trader based in Northern Ireland. We are registered
+      with the UK Information Commissioner's Office — data protection registration number <strong>ZC222090</strong>.</p>
 
-    <h2>2. Third Parties</h2>
-    <p>We use Google Play for payments and subscriptions, Supabase for optional cloud sync and premium status, and Google AdMob for ads on the free tier.</p>
+    <h2>2. What data the app processes</h2>
+    <h3>2.1 Pantry content (your shared fridge)</h3>
+    <ul>
+      <li>Pantry items you add: name, quantity, unit, zone, use-by date, sharing setting and optional photo.</li>
+      <li>The recorded owner of each item — your chosen display name.</li>
+      <li>Consumption history and shopping list entries (item, quantity, store, estimated cost, who is buying).</li>
+    </ul>
+    <h3>2.2 Member profiles</h3>
+    <ul>
+      <li>Your display name within the shared pantry.</li>
+      <li>Allergen profiles and dietary preferences you add. Allergen and dietary information can be sensitive personal
+        data; it is used only to show you warnings, and you choose what to enter.</li>
+    </ul>
+    <h3>2.3 Account and optional cloud sync</h3>
+    <ul>
+      <li>If you create an account or enable live sync, we process your email address and an account password.
+        Authentication and storage are handled by Supabase (our processor, servers in the EU, eu-west-2).</li>
+      <li>Live sync shares pantry items, profiles and the shopping list across your kitchen's devices. It is opt-in.</li>
+    </ul>
+    <h3>2.4 Scanning and product lookups</h3>
+    <ul>
+      <li>When you scan a barcode, the barcode number is sent to OpenFoodFacts to fetch product name, nutrition,
+        ingredients and allergens. No personal data is sent with that request.</li>
+      <li>Receipt OCR runs entirely on your device; the image is not uploaded to us.</li>
+    </ul>
+    <h3>2.5 Advertising (free tier)</h3>
+    <ul>
+      <li>The free version shows ads served by Google AdMob, which may process the Android advertising ID and standard
+        ad-request data (IP address, device model, approximate usage) under Google's policies.</li>
+    </ul>
+    <h3>2.6 Purchases and support</h3>
+    <ul>
+      <li>Premium subscriptions are sold through Google Play Billing; we receive only an entitlement status, not your
+        payment details.</li>
+      <li>If you email support, we process the content of your message and your email address to reply.</li>
+    </ul>
+
+    <h2>3. Data that stays on your device</h2>
+    <p>Core Pantry Pals data — items, history, preferences and photos — is stored in private app storage on your phone
+      (SQLite). In local-first mode nothing is uploaded. Uninstalling the app or clearing app storage removes this data.</p>
+
+    <h2>4. Cloud sync and accounts (optional)</h2>
+    <p>Creating an account and enabling live sync is a choice. When enabled, the pantry content in sections 2.1 and 2.2
+      is synced to Supabase (eu-west-2) so every member of your kitchen sees the same fridge. You can stop syncing at
+      any time in the app, and deleting your account removes the cloud copy (see the
+      <a href="delete-data.html">delete-data page</a>).</p>
+    <h2>5. Advertising choices</h2>
+    <p>You can reset or limit your Android advertising ID at any time in Android settings. Ad-Free Premium and Kitchen
+      Premium remove all ads. We do not sell personal data, and we do not use your pantry data for ad targeting.</p>
+
+    <h2>6. Third parties (processors)</h2>
+    <ul>
+      <li><strong>Google (AdMob / Play Billing / Play Services)</strong> — advertising on the free tier and subscription payments.</li>
+      <li><strong>Supabase</strong> — optional account authentication and cloud sync (servers in the EU).</li>
+      <li><strong>OpenFoodFacts</strong> — public product database used for barcode lookups (community-maintained).</li>
+    </ul>
+
+    <h2>7. Legal basis</h2>
+    <ul>
+      <li><strong>Contract</strong> — providing the app and the subscriptions you buy.</li>
+      <li><strong>Consent</strong> — advertising identifiers (controlled in Android settings), optional account and sync, and any sensitive profile data you enter.</li>
+      <li><strong>Legitimate interests</strong> — operating the service and responding to support enquiries.</li>
+    </ul>
+
+    <h2>8. Retention</h2>
+    <p>Local data stays until you clear it or uninstall. Cloud-sync data stays until you delete your account or stop
+      syncing. Support emails are kept only as long as needed to handle your request and are deleted on request within
+      90 days.</p>
+
+    <h2>9. Data deletion</h2>
+    <p>You can delete items and profiles in the app at any time, and delete your account in the app's settings.
+      See <a href="delete-data.html">Request data deletion</a> for full instructions and the support-email route.</p>
+
+    <h2>10. Security</h2>
+    <p>All network traffic uses HTTPS. Passwords are handled by Supabase Auth. We apply reasonable measures for a
+      local-first app — protect your phone with a lock screen and keep Android updated.</p>
+
+    <h2>11. Children</h2>
+    <p>Pantry Pals is not directed at children under 13. If you believe a child has provided personal data via support
+      email, contact us and we will delete what we can identify.</p>
+
+    <h2>12. International transfers</h2>
+    <p>Google and OpenFoodFacts may process data on infrastructure outside the UK/EEA under their own terms and
+      safeguards. Supabase data is stored in the EU.</p>
+
+    <h2>13. Your rights</h2>
+    <p>Under UK data protection law you have rights to access, correct, erase, restrict, port, and object to processing
+      of your personal data, and to withdraw consent. To exercise any right, email
+      <a href="mailto:autoaccentsni@gmail.com">autoaccentsni@gmail.com</a>. You can also complain to the ICO at
+      <a href="https://ico.org.uk" rel="noopener" target="_blank">ico.org.uk</a>.</p>
+
+    <h2>14. Changes</h2>
+    <p>We may update this policy. The effective date above changes when we do; material changes are reflected in the
+      Play Store listing.</p>
+
+    <h2>15. Contact</h2>
+    <p>Questions: <a href="mailto:autoaccentsni@gmail.com">autoaccentsni@gmail.com</a>. Subject line suggestion:
+      "Pantry Pals privacy".</p>
 
     <div class="footer">
-        <p>&copy; 2026 Cloudy NI. Contact: autoaccentsni@gmail.com</p>
+      <p>&copy; 2026 Cloudy NI. Contact: autoaccentsni@gmail.com</p>
     </div>
   </main>
 </body>
