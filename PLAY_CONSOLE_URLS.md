@@ -32,45 +32,45 @@ UK Pay Calc is **not listed** on the tester hub yet.
 
 ### Daily Affirmation
 
-- **Home:** https://13ond21.github.io/daily-affirmation-legal/
-- **Privacy:** https://13ond21.github.io/daily-affirmation-legal/privacy-policy.html
-- **Terms:** https://13ond21.github.io/daily-affirmation-legal/terms-and-conditions.html
-- **Delete data:** https://13ond21.github.io/daily-affirmation-legal/privacy-policy.html
+- **Home:** https://cloudyni.com/daily-affirmation/
+- **Privacy:** https://cloudyni.com/daily-affirmation/privacy.html
+- **Terms:** https://cloudyni.com/daily-affirmation/terms.html
+- **Delete data:** https://cloudyni.com/daily-affirmation/privacy.html
 
 ### FactSwipe
 
-- **Home:** https://13ond21.github.io/facts-kids-website/
-- **Privacy:** https://13ond21.github.io/facts-kids-website/privacy.html
-- **Terms:** https://13ond21.github.io/facts-kids-website/terms.html
-- **Delete data:** https://13ond21.github.io/facts-kids-website/privacy.html
+- **Home:** https://cloudyni.com/facts-kids/
+- **Privacy:** https://cloudyni.com/facts-kids/privacy.html
+- **Terms:** https://cloudyni.com/facts-kids/terms.html
+- **Delete data:** https://cloudyni.com/facts-kids/privacy.html
 
 ### Decibel Meter
 
-- **Home:** https://13ond21.github.io/decibel-meter/
-- **Privacy:** https://13ond21.github.io/decibel-meter/privacy.html
-- **Terms:** https://13ond21.github.io/decibel-meter/terms.html
-- **Delete data:** https://13ond21.github.io/decibel-meter/delete-data.html
+- **Home:** https://cloudyni.com/decibel-meter-pro/
+- **Privacy:** https://cloudyni.com/decibel-meter-pro/privacy.html
+- **Terms:** https://cloudyni.com/decibel-meter-pro/terms.html
+- **Delete data:** https://cloudyni.com/decibel-meter-pro/delete-data.html
 
 ### BT Mic
 
-- **Home:** https://13ond21.github.io/pa-mic/
-- **Privacy:** https://13ond21.github.io/pa-mic/privacy.html
-- **Terms:** https://13ond21.github.io/pa-mic/terms.html
-- **Delete data:** https://13ond21.github.io/pa-mic/delete-data.html
+- **Home:** https://cloudyni.com/pa-mic/
+- **Privacy:** https://cloudyni.com/pa-mic/privacy.html
+- **Terms:** https://cloudyni.com/pa-mic/terms.html
+- **Delete data:** https://cloudyni.com/pa-mic/delete-data.html
 
 ### Kitchen Buddy
 
-- **Home:** https://13ond21.github.io/kitchen-buddy/
-- **Privacy:** https://13ond21.github.io/kitchen-buddy/privacy.html
-- **Terms:** https://13ond21.github.io/kitchen-buddy/terms.html
-- **Delete data:** https://13ond21.github.io/kitchen-buddy/delete-data.html
+- **Home:** https://cloudyni.com/synccook/
+- **Privacy:** https://cloudyni.com/synccook/privacy.html
+- **Terms:** https://cloudyni.com/synccook/terms.html
+- **Delete data:** https://cloudyni.com/synccook/delete-data.html
 
 ### UK Pay Calc
 
-- **Home:** https://13ond21.github.io/uk-pay-calc/
-- **Privacy:** https://13ond21.github.io/uk-pay-calc/privacy.html
-- **Terms:** https://13ond21.github.io/uk-pay-calc/terms.html
-- **Delete data:** https://13ond21.github.io/uk-pay-calc/delete-data.html
+- **Home:** https://cloudyni.com/uk-pay-calc/
+- **Privacy:** https://cloudyni.com/uk-pay-calc/privacy.html
+- **Terms:** https://cloudyni.com/uk-pay-calc/terms.html
+- **Delete data:** https://cloudyni.com/uk-pay-calc/delete-data.html
 
 ### Choice Roulette
 
