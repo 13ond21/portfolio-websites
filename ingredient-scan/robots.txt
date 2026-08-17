@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://13ond21.github.io/portfolio-websites/ingredient-scan/sitemap.xml
+Sitemap: https://cloudyni.com/ingredient-scan/sitemap.xml

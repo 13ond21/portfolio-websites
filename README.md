@@ -3,8 +3,8 @@
 Public GitHub Pages sites for portfolio Android apps — quality bar matched to
 **Kitchen Buddy** and **Daily Affirmation**.
 
-**★ Live apps hub:** https://13ond21.github.io/portfolio-websites/try.html  
-(The root https://13ond21.github.io/portfolio-websites/ redirects here.)
+**★ Live apps hub:** https://cloudyni.com/try.html  
+(The root https://cloudyni.com/ redirects here.)
 
 Each portfolio app folder includes:
 
