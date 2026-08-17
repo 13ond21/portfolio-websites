@@ -12,7 +12,7 @@ UK Pay Calc is **not listed** on the tester hub yet.
 | App | Package | Closed testing opt-in | Play listing (after opt-in) |
 |-----|---------|----------------------|-----------------------------|
 | Daily Affirmation | `com.dailyaffirmation.app` | [Join testing](https://play.google.com/apps/testing/com.dailyaffirmation.app) | [Play](https://play.google.com/store/apps/details?id=com.dailyaffirmation.app) |
-| Facts for Kids | `com.luckytools.facts_kids` | [Join testing](https://play.google.com/apps/testing/com.luckytools.facts_kids) | [Play](https://play.google.com/store/apps/details?id=com.luckytools.facts_kids) |
+| FactSwipe | `com.luckytools.facts_kids` | [Join testing](https://play.google.com/apps/testing/com.luckytools.facts_kids) | [Play](https://play.google.com/store/apps/details?id=com.luckytools.facts_kids) |
 | Decibel Meter Pro (updated icon) | `com.luckytools.decibel_meter_pro` | [Join testing](https://play.google.com/apps/testing/com.luckytools.decibel_meter_pro) | [Play](https://play.google.com/store/apps/details?id=com.luckytools.decibel_meter_pro) |
 | Bluetooth Mic | `com.btcmic.pamic` | [Join testing](https://play.google.com/apps/testing/com.btcmic.pamic) | [Play](https://play.google.com/store/apps/details?id=com.btcmic.pamic) |
 | Kitchen Buddy | `com.luckytools.synccook` | [Join testing](https://play.google.com/apps/testing/com.luckytools.synccook) | [Play](https://play.google.com/store/apps/details?id=com.luckytools.synccook) |
@@ -37,7 +37,7 @@ UK Pay Calc is **not listed** on the tester hub yet.
 - **Terms:** https://13ond21.github.io/daily-affirmation-legal/terms-and-conditions.html
 - **Delete data:** https://13ond21.github.io/daily-affirmation-legal/privacy-policy.html
 
-### Facts for Kids
+### FactSwipe
 
 - **Home:** https://13ond21.github.io/facts-kids-website/
 - **Privacy:** https://13ond21.github.io/facts-kids-website/privacy.html
