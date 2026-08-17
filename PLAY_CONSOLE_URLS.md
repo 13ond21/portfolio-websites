@@ -3,7 +3,7 @@
 **Live hub (redirects to /try):** https://13ond21.github.io/portfolio-websites/
 **Apps hub (print this):** https://13ond21.github.io/portfolio-websites/try.html  
 **(Old apps.html link redirects here.)**
-**Contact:** `autoaccentsni@gmail.com`
+**Contact:** `support@cloudyni.com`
 
 ### Play package IDs (closed testing unless marked live)
 
