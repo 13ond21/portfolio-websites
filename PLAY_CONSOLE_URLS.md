@@ -21,6 +21,15 @@ UK Pay Calc is **not listed** on the tester hub yet.
 
 ## On Google Play (first 6 websites)
 
+### Bible Buddy
+
+- **Home:** https://13ond21.github.io/portfolio-websites/bible-buddy/
+- **Privacy:** https://13ond21.github.io/portfolio-websites/bible-buddy/privacy.html
+- **Terms:** https://13ond21.github.io/portfolio-websites/bible-buddy/terms.html
+- **Delete data:** https://13ond21.github.io/portfolio-websites/bible-buddy/delete-data.html
+
+
+
 ### Daily Affirmation
 
 - **Home:** https://13ond21.github.io/daily-affirmation-legal/
