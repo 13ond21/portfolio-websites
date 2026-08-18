@@ -8,7 +8,7 @@ Generic pattern: `https://cloudyni.com/<slug>/{privacy.html, terms.html, delete-
 | App | Privacy policy (Play field) | Terms | Delete data | Website |
 |-----|------|-------|-------------|---------|
 | Bible Buddy | `https://cloudyni.com/bible-buddy/privacy.html` | `https://cloudyni.com/bible-buddy/terms.html` | `https://cloudyni.com/bible-buddy/delete-data.html` | `https://cloudyni.com/bible-buddy/` |
-| Daily Affirmation | `https://cloudyni.com/daily-affirmation/privacy.html` | `https://cloudyni.com/daily-affirmation/terms.html` | `https://cloudyni.com/daily-affirmation/privacy.html` | `https://cloudyni.com/daily-affirmation/` |
+| Daily Affirmation | `https://cloudyni.com/daily-affirmation/privacy.html` | `https://cloudyni.com/daily-affirmation/terms.html` | `https://cloudyni.com/daily-affirmation/delete-data.html` | `https://cloudyni.com/daily-affirmation/` |
 | FactSwipe | `https://cloudyni.com/facts-kids/privacy.html` | `https://cloudyni.com/facts-kids/terms.html` | `https://cloudyni.com/facts-kids/privacy.html` | `https://cloudyni.com/facts-kids/` |
 | Decibel Meter | `https://cloudyni.com/decibel-meter-pro/privacy.html` | `https://cloudyni.com/decibel-meter-pro/terms.html` | `https://cloudyni.com/decibel-meter-pro/delete-data.html` | `https://cloudyni.com/decibel-meter-pro/` |
 | BT Mic | `https://cloudyni.com/pa-mic/privacy.html` | `https://cloudyni.com/pa-mic/terms.html` | `https://cloudyni.com/pa-mic/delete-data.html` | `https://cloudyni.com/pa-mic/` |
