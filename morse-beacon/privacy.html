@@ -100,11 +100,23 @@
       require connectivity.
     </p>
 
-    <h2>7. Analytics</h2>
+    <h2>7. Analytics and Firebase</h2>
     <p>
-      Morse Beacon does not include a separate analytics product (for example, we do not ship
-      Firebase Analytics for usage tracking of your Morse content). Advertising partners may
-      collect their own measurement data as described above on the free tier.
+      Morse Beacon uses <strong>Google Analytics for Firebase</strong> to collect anonymous,
+      aggregate usage statistics (app opens, screens viewed, Morse transmissions started) so we
+      can improve the app. The Morse text you enter is processed <strong>locally on your
+      device</strong> and is never uploaded; analytics events never contain message content.
+    </p>
+    <p>
+      The app also uses <strong>Firebase Crashlytics</strong> (crash and error diagnostics),
+      <strong>Firebase Performance Monitoring</strong> (performance metrics),
+      <strong>Firebase Remote Config</strong> (remote configuration and feature flags) and
+      <strong>Firebase Cloud Messaging</strong> (push notifications). These services are provided
+      by Google under the
+      <a href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google Privacy Policy</a>.
+      You can limit analytics in your Android advertising settings, and where legally required
+      analytics only runs with your consent. Advertising partners may also collect their own
+      measurement data as described above on the free tier.
     </p>
 
     <h2>8. Children</h2>
