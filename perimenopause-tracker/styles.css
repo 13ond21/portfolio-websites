@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 
 :root {
   --ivory: #FAF5EE;
@@ -18,7 +18,7 @@
   --shadow: 0 18px 50px rgba(90, 78, 66, 0.10);
   --radius: 20px;
   --max: 1120px;
-  --font-display: "Lora", Georgia, serif;
+  --font-display: "Outfit", system-ui, sans-serif;
   --font-body: "Outfit", system-ui, sans-serif;
 }
 

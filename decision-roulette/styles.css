@@ -1,10 +1,10 @@
 /* Med Reminder â€” calm, accessible site for older adults & everyday care
    Matches the in-app oatmeal + sage palette. Large type, clear contrast. */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 
 :root {
-  --font-display: "Lora", Georgia, "Times New Roman", serif;
-  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-body: "Outfit", system-ui, sans-serif;
   --bg: #f4f1fb;
   --bg-soft: #faf8ff;
   --surface: #ffffff;
