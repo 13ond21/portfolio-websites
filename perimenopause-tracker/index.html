@@ -149,10 +149,7 @@
   <header class="site-head">
     <div class="inner">
       <a class="brand" href="index.html" aria-label="PeriLog home">
-        <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true">
-          <circle cx="24" cy="24" r="23" fill="#5F7A67"/>
-          <path d="M24 12c-2 4-5 5.5-9 5.5 0 4.5 2.5 7.5 6.5 8.5l2.5 8 2.5-8c4-1 6.5-4 6.5-8.5-4 0-7-1.5-9-5.5z" fill="#F4E6DC"/>
-        </svg>
+        <img src="assets/icon.png" width="34" height="34" alt="" style="border-radius:9px" />
         PeriLog
       </a>
       <nav class="nav" aria-label="Main">
@@ -232,6 +229,10 @@
       <span>Optional encrypted backup</span>
     </div>
 
+    <div class="shot-band">
+      <img src="assets/feature.png" alt="PeriLog — track symptoms, periods, mood and sleep through perimenopause" />
+    </div>
+
     <style>
       .proof {
         display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 0.9rem;
@@ -239,6 +240,8 @@
         background: var(--white); border: 1px solid var(--line); border-radius: 999px;
         color: var(--sage-deep); font-weight: 600; font-size: 0.88rem;
       }
+      .shot-band { margin: 0 0 3.5rem; }
+      .shot-band img { width: 100%; border-radius: var(--radius-lg); border: 1px solid var(--line); box-shadow: var(--shadow); }
       .proof i { color: var(--line); font-style: normal; }
       .section { padding: 1rem 0 3.5rem; }
       .section-head { max-width: 38rem; margin-bottom: 2rem; }
