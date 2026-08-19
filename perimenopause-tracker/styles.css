@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Outfit:wght@400;500;600;700&display=swap");
 
 :root {
   --ivory: #FAF5EE;
@@ -18,7 +18,7 @@
   --shadow: 0 18px 50px rgba(90, 78, 66, 0.10);
   --radius: 20px;
   --max: 1120px;
-  --font-display: "Fraunces", Georgia, serif;
+  --font-display: "Lora", Georgia, serif;
   --font-body: "Outfit", system-ui, sans-serif;
 }
 
