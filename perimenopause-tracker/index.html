@@ -3,296 +3,495 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PeriLog — Perimenopause & Cycle Tracker</title>
-  <meta name="description" content="Log symptoms, track periods, monitor mood & sleep through perimenopause — all on your device. Free with ads; Premium monthly removes ads." />
-  <meta name="theme-color" content="#d946ef" />
-  <meta property="og:title" content="PeriLog — Perimenopause & Cycle Tracker" />
-  <meta property="og:description" content="Log symptoms, track periods, monitor mood & sleep through perimenopause — on your device." />
+  <title>PeriLog — Perimenopause &amp; Cycle Tracker for Android</title>
+  <meta name="description" content="PeriLog is a private, on-device tracker for periods, symptoms, mood and sleep through perimenopause. No account needed. Free with ads; Premium removes ads." />
+  <meta name="theme-color" content="#5F7A67" />
+  <link rel="canonical" href="https://cloudyni.com/perimenopause-tracker/" />
+  <meta property="og:title" content="PeriLog — a calm tracker for perimenopause" />
+  <meta property="og:description" content="Log symptoms, periods, mood &amp; sleep through perimenopause — privately, on your phone." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cloudyni.com/perimenopause-tracker/" />
-  <link rel="canonical" href="https://cloudyni.com/perimenopause-tracker/" />
-  <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="assets/icon.png" />
-  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ivory: #FAF5EE; --cream: #F3EADF; --white: #FFFFFF;
+      --sage: #5F7A67; --sage-deep: #45604D; --sage-soft: #8AA28F; --sage-wash: #E7EDE4;
+      --rose: #C0856B; --rose-deep: #A56A50; --rose-soft: #DCAF99; --blush: #F4E6DC;
+      --lav: #B9A9C6; --ink: #3D3A34; --muted: #8A8076; --line: #E9DFD2;
+      --shadow: 0 18px 50px rgba(90, 78, 66, 0.10);
+      --radius: 20px; --radius-lg: 30px; --max: 1120px;
+      --font-display: "Fraunces", Georgia, serif;
+      --font-body: "Outfit", system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; font-family: var(--font-body);
+      background: var(--ivory); color: var(--ink);
+      line-height: 1.6; font-size: 17px; overflow-x: hidden;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--sage-deep); text-decoration: none; }
+    a:hover { color: var(--rose-deep); }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.4rem 4rem; }
+    .bg {
+      position: fixed; inset: 0; z-index: -2; pointer-events: none;
+      background:
+        radial-gradient(ellipse 70% 55% at 8% -5%, rgba(192,133,107,0.14) 0%, transparent 55%),
+        radial-gradient(ellipse 55% 45% at 96% 8%, rgba(95,122,103,0.16) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 40% at 50% 110%, rgba(185,169,198,0.14) 0%, transparent 55%),
+        var(--ivory);
+    }
+    .bg::after {
+      content: ""; position: absolute; inset: 0;
+      background-image:
+        radial-gradient(rgba(95,122,103,0.06) 1px, transparent 1px),
+        radial-gradient(rgba(192,133,107,0.05) 1px, transparent 1px);
+      background-size: 34px 34px, 52px 52px;
+      background-position: 0 0, 17px 26px;
+      mask-image: radial-gradient(ellipse at center, black 15%, transparent 78%);
+      opacity: 0.7;
+    }
+    .site-head {
+      position: sticky; top: 0; z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(250, 245, 238, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+    .site-head .inner {
+      max-width: var(--max); margin: 0 auto;
+      padding: 0.85rem 1.4rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .brand { display: flex; align-items: center; gap: 0.6rem; font-weight: 700; font-size: 1.12rem; color: var(--ink); }
+    .nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; align-items: center; }
+    .nav a { color: var(--muted); font-weight: 600; font-size: 0.92rem; }
+    .nav a:hover { color: var(--sage-deep); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+      border-radius: 999px; font-weight: 700; font-size: 0.95rem;
+      padding: 0.8rem 1.5rem; border: 1px solid transparent; cursor: pointer; text-align: center;
+      transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    }
+    .btn-primary { background: var(--sage); color: #fff !important; box-shadow: 0 10px 26px rgba(95,122,103,0.35); }
+    .btn-primary:hover { background: var(--sage-deep); transform: translateY(-2px); }
+    .btn-secondary { background: var(--white); color: var(--sage-deep) !important; border-color: var(--line); }
+    .btn-secondary:hover { border-color: var(--sage-soft); background: var(--sage-wash); transform: translateY(-2px); }
+    .nav-cta { padding: 0.5rem 1.1rem; font-size: 0.85rem; }
+    .nav a.nav-cta { color: #fff !important; }
+  </style>
+  <style>
+    .hero {
+      display: grid; gap: 3rem; align-items: center;
+      grid-template-columns: 1.05fr 0.95fr;
+      padding: 3.2rem 0 2.6rem;
+    }
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; padding-top: 2.2rem; } }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      margin: 0 0 1rem; padding: 0.35rem 0.9rem; border-radius: 999px;
+      background: var(--blush); color: var(--rose-deep);
+      font-size: 0.82rem; font-weight: 700;
+    }
+    .hero h1 {
+      margin: 0 0 1rem; font-family: var(--font-display); font-weight: 600;
+      font-size: clamp(2.3rem, 5vw, 3.5rem); line-height: 1.08; letter-spacing: -0.02em;
+    }
+    .hero h1 em { font-style: italic; color: var(--rose-deep); }
+    .lede { margin: 0 0 1.4rem; font-size: 1.08rem; color: var(--muted); max-width: 34em; line-height: 1.65; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.5rem; }
+    .badge { padding: 0.4rem 0.85rem; border-radius: 999px; background: var(--sage-wash); color: var(--sage-deep); font-size: 0.8rem; font-weight: 600; }
+    .badge.rose { background: var(--blush); color: var(--rose-deep); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-bottom: 2rem; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; max-width: 30rem; }
+    @media (max-width: 640px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+    .stat { padding: 0.9rem 1rem; border-radius: 16px; background: var(--white); border: 1px solid var(--line); }
+    .stat strong { display: block; font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--sage-deep); }
+    .stat span { font-size: 0.78rem; color: var(--muted); font-weight: 500; }
+    .hero-visual { display: flex; justify-content: center; }
+    .phone {
+      width: min(340px, 82vw); aspect-ratio: 9 / 18.5;
+      border-radius: 44px; background: #FDFAF4;
+      border: 10px solid #3D3A34; box-shadow: var(--shadow), 0 40px 90px rgba(90,78,66,0.16);
+      position: relative; overflow: hidden; display: flex; flex-direction: column;
+    }
+    .phone::before {
+      content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+      width: 130px; height: 26px; background: #3D3A34; border-radius: 0 0 18px 18px; z-index: 2;
+    }
+    .phone .screen { padding: 40px 18px 18px; flex: 1; display: flex; flex-direction: column; gap: 12px; font-size: 0.78rem; }
+    .screen .greet { color: var(--muted); font-size: 0.72rem; font-weight: 600; }
+    .screen .big { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; line-height: 1.25; }
+    .chip-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { padding: 6px 10px; border-radius: 999px; background: var(--sage-wash); color: var(--sage-deep); font-weight: 600; font-size: 0.72rem; }
+    .chip.hot { background: var(--blush); color: var(--rose-deep); }
+    .dots { display: flex; gap: 4px; align-items: center; }
+    .dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); }
+    .dots i.on { background: var(--rose-soft); }
+    .screen .card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 12px; }
+    .screen .card .k { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 700; margin-bottom: 6px; }
+    .screen .card .v { font-weight: 700; font-size: 0.8rem; }
+    .screen .ring { width: 12px; height: 12px; border-radius: 50%; background: var(--rose-soft); flex: none; }
+    .screen .row { display: flex; align-items: center; gap: 8px; }
+    .mini-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .mini-stats .card { text-align: center; padding: 10px 6px; }
+    .mini-stats .card .v { font-family: var(--font-display); font-size: 0.95rem; color: var(--sage-deep); }
+    .screen .pill-cta { background: var(--sage); color: #fff; text-align: center; border-radius: 999px; padding: 9px; font-weight: 700; font-size: 0.74rem; }
+    @media (max-width: 900px) { .hero-visual { order: 2; } }
+  </style>
 </head>
 <body>
-  <div class="page-bg" aria-hidden="true"></div>
+  <div class="bg" aria-hidden="true"></div>
 
-  <header class="site-header">
+  <header class="site-head">
     <div class="inner">
-      <a class="brand" href="index.html">
-        <img src="assets/icon.png" width="38" height="38" alt="" />
+      <a class="brand" href="index.html" aria-label="PeriLog home">
+        <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="23" fill="#5F7A67"/>
+          <path d="M24 12c-2 4-5 5.5-9 5.5 0 4.5 2.5 7.5 6.5 8.5l2.5 8 2.5-8c4-1 6.5-4 6.5-8.5-4 0-7-1.5-9-5.5z" fill="#F4E6DC"/>
+        </svg>
         PeriLog
       </a>
       <nav class="nav" aria-label="Main">
-        <a href="index.html" aria-current="page">Home</a>
         <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#privacy">Privacy</a>
         <a href="#premium">Premium</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="https://play.google.com/store/apps/details?id=com.luckytools.perimenopause_tracker" class="nav-cta">Get on Google Play</a>
+        <a href="https://play.google.com/store/apps/details?id=com.luckytools.perimenopause_tracker" class="btn btn-primary nav-cta">Get the app</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="hero">
+    <section class="hero" aria-label="Introduction">
       <div>
-        <p class="hero-eyebrow">Android · Health & Wellness · Private</p>
-        <h1>Track your cycle through <em>perimenopause</em></h1>
-        <p class="lede">Log symptoms, periods, mood, sleep & more — all on your device. No account needed. Free with ads; Premium removes ads and unlocks unlimited history.</p>
+        <p class="hero-eyebrow">🌸 For women navigating perimenopause</p>
+        <h1>A calm place to track your <em>changing body</em></h1>
+        <p class="lede">
+          PeriLog is a private, on-device tracker for periods, symptoms, mood and sleep
+          through perimenopause. No jargon. No judgement. Just a clearer picture of your own
+          rhythm — and the confidence to bring it to your GP.
+        </p>
         <div class="badge-row">
-          <span class="badge accent">On-device privacy</span>
           <span class="badge">Period tracking</span>
-          <span class="badge">Symptom diary</span>
-          <span class="badge">Mood & sleep</span>
-          <span class="badge">Premium monthly</span>
+          <span class="badge rose">Symptom diary</span>
+          <span class="badge">Mood &amp; sleep</span>
+          <span class="badge rose">On-device privacy</span>
         </div>
         <div class="btn-row">
           <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.perimenopause_tracker">Get on Google Play</a>
-          <a class="btn btn-secondary" href="#premium">See Premium benefits</a>
+          <a class="btn btn-secondary" href="#how">See how it works</a>
           <a class="btn btn-secondary" href="privacy.html">Privacy policy</a>
         </div>
         <div class="stats">
           <div class="stat"><strong>0</strong><span>accounts required</span></div>
           <div class="stat"><strong>On-device</strong><span>data stays private</span></div>
-          <div class="stat"><strong>10+</strong><span>trackable metrics</span></div>
+          <div class="stat"><strong>30+</strong><span>trackable signals</span></div>
           <div class="stat"><strong>£1.99</strong><span>Premium / mo</span></div>
         </div>
       </div>
+
       <div class="hero-visual">
-        <div class="device carousel" data-carousel data-autoplay="4500" aria-roledescription="carousel" aria-label="PeriLog preview">
-          <div class="device-glow" aria-hidden="true"></div>
-          <div class="carousel-viewport">
-            <div class="carousel-track">
-              <figure class="carousel-slide is-active">
-                <div class="slide-card">
-                  <strong>🌺 Log symptoms</strong>
-                  <span>Hot flushes, headaches, fatigue — tap to log, swipe to scroll.</span>
-                </div>
-              </figure>
-              <figure class="carousel-slide">
-                <div class="slide-card">
-                  <strong>📅 Period tracking</strong>
-                  <span>Log flow, predict next cycle, see patterns over months.</span>
-                </div>
-              </figure>
-              <figure class="carousel-slide">
-                <div class="slide-card">
-                  <strong>😌 Mood & sleep</strong>
-                  <span>Track mood swings, sleep quality, and energy levels daily.</span>
-                </div>
-              </figure>
-              <figure class="carousel-slide">
-                <div class="slide-card">
-                  <strong>📊 Monthly stats</strong>
-                  <span>See symptom frequency, cycle length trends, and heatmap view.</span>
-                </div>
-              </figure>
-              <figure class="carousel-slide">
-                <div class="slide-card">
-                  <strong>🔒 Private by design</strong>
-                  <span>No cloud. No servers. No account. Your data stays on your phone.</span>
-                </div>
-              </figure>
-              <figure class="carousel-slide">
-                <div class="slide-card">
-                  <strong>⭐ Premium</strong>
-                  <span>Remove ads, unlock unlimited history & export. £1.99/month.</span>
-                </div>
-              </figure>
+        <div class="phone" aria-hidden="true">
+          <div class="screen">
+            <div class="greet">Tuesday · 7:42 am</div>
+            <div class="big">Good morning 🌿<br />How are you feeling?</div>
+            <div class="chip-grid">
+              <span class="chip hot">🌡️ Hot flush</span>
+              <span class="chip">😣 Headache</span>
+              <span class="chip">😴 Fatigue</span>
+              <span class="chip">😢 Low mood</span>
             </div>
+            <div class="row" style="margin-top:2px">
+              <span style="color:var(--muted);font-weight:600">Mood</span>
+              <div class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="card">
+              <div class="k">Cycle</div>
+              <div class="row"><span class="ring"></span><span class="v">Period watch window — in ~4 days</span></div>
+              <div style="margin-top:6px;color:var(--muted)">Cycle day 26 · gentle reminder only</div>
+            </div>
+            <div class="mini-stats">
+              <div class="card"><div class="v">9</div><div style="color:var(--muted);font-size:0.66rem">days logged</div></div>
+              <div class="card"><div class="v">3</div><div style="color:var(--muted);font-size:0.66rem">hot flushes</div></div>
+              <div class="card"><div class="v">7h</div><div style="color:var(--muted);font-size:0.66rem">sleep</div></div>
+            </div>
+            <div class="pill-cta">+ Add to today's log</div>
           </div>
-          <div class="carousel-dots" role="tablist" aria-label="Preview slides"></div>
         </div>
       </div>
     </section>
 
     <div class="proof" role="note">
-      <span>No account</span> ·
-      <span>On-device</span> ·
-      <span>Free with ads</span> ·
-      <span>Premium optional</span>
+      <span>No account needed</span><i>·</i>
+      <span>Free with ads</span><i>·</i>
+      <span>Premium optional</span><i>·</i>
+      <span>Optional encrypted backup</span>
     </div>
+
+    <style>
+      .proof {
+        display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 0.9rem;
+        margin: 0.5rem 0 3.5rem; padding: 1rem 1.2rem;
+        background: var(--white); border: 1px solid var(--line); border-radius: 999px;
+        color: var(--sage-deep); font-weight: 600; font-size: 0.88rem;
+      }
+      .proof i { color: var(--line); font-style: normal; }
+      .section { padding: 1rem 0 3.5rem; }
+      .section-head { max-width: 38rem; margin-bottom: 2rem; }
+      .kicker { margin: 0 0 0.4rem; color: var(--rose-deep); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.04em; text-transform: uppercase; }
+      .section-head h2 { margin: 0 0 0.6rem; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.7rem, 3.4vw, 2.3rem); line-height: 1.15; letter-spacing: -0.02em; }
+      .section-head p { margin: 0; color: var(--muted); font-size: 1rem; }
+      .benefit-grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(4, 1fr); }
+      @media (max-width: 980px) { .benefit-grid { grid-template-columns: repeat(2, 1fr); } }
+      @media (max-width: 560px) { .benefit-grid { grid-template-columns: 1fr; } }
+      .benefit-card {
+        padding: 1.4rem 1.35rem; border-radius: var(--radius);
+        background: var(--white); border: 1px solid var(--line);
+        transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+      }
+      .benefit-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--sage-soft); }
+      .benefit-card .tag { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--rose-deep); background: var(--blush); padding: 0.25rem 0.6rem; border-radius: 999px; margin-bottom: 0.7rem; }
+      .benefit-card h3 { margin: 0 0 0.45rem; font-size: 1.06rem; font-weight: 700; letter-spacing: -0.01em; }
+      .benefit-card p { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.55; }
+    </style>
 
     <section class="section" id="features" aria-labelledby="features-title">
       <div class="section-head">
         <p class="kicker">Why PeriLog</p>
-        <h2 id="features-title">Track what matters through perimenopause</h2>
-        <p>Understand your cycle and symptoms with simple daily logging — no fluff, just clarity.</p>
+        <h2 id="features-title">Everything you track, in one gentle daily check-in</h2>
+        <p>Built for real, messy patterns — not a rigid 28-day calendar.</p>
       </div>
       <div class="benefit-grid">
         <article class="benefit-card">
-          <span class="tag">Symptom logging</span>
-          <h3>🌡️ Log symptoms daily</h3>
-          <p>Hot flushes, headaches, fatigue, bloating, cramps, and more — tap common symptoms or add custom ones.</p>
+          <span class="tag">Symptoms</span>
+          <h3>🌿 Symptom diary</h3>
+          <p>Hot flushes, headaches, fatigue, bloating, cramps — tap to log in seconds, or add your own custom symptoms.</p>
         </article>
         <article class="benefit-card">
-          <span class="tag">Period tracking</span>
-          <h3>🩸 Period & cycle logs</h3>
-          <p>Log flow intensity, track cycle length, and predict your next period. See cycle history at a glance.</p>
+          <span class="tag">Periods</span>
+          <h3>🩸 Period &amp; cycle tracking</h3>
+          <p>Irregular is normal here. Variable cycle lengths, skipped months and spotting are all supported.</p>
         </article>
         <article class="benefit-card">
-          <span class="tag">Mood & sleep</span>
-          <h3>😴 Mood, sleep & energy</h3>
-          <p>Track mood swings, sleep quality, and energy levels. Spot patterns over weeks and months.</p>
+          <span class="tag">Mood &amp; sleep</span>
+          <h3>🌙 Sleep, mood &amp; energy</h3>
+          <p>Track restless nights, low moods and energy dips to see how they connect to your cycle.</p>
         </article>
         <article class="benefit-card">
-          <span class="tag">Intimate health</span>
-          <h3>💧 Intimate & wellness</h3>
-          <p>Log intimacy, cervical fluid, and other wellness signals that matter during perimenopause.</p>
-        </article>
-        <article class="benefit-card">
-          <span class="tag">Data insights</span>
-          <h3>📊 Monthly stats & heatmap</h3>
-          <p>See symptom frequency charts, cycle length trends, and a colour-coded symptom heatmap.</p>
+          <span class="tag">Insights</span>
+          <h3>📊 Gentle insights</h3>
+          <p>Monthly stats and a colour-coded heatmap that only restate what you log. No invented scores.</p>
         </article>
         <article class="benefit-card">
           <span class="tag">Photos</span>
-          <h3>📸 Photo journal</h3>
-          <p>Add photo entries to your daily log — track visible changes like skin, bloating, or anything else.</p>
+          <h3>📷 Photo journal</h3>
+          <p>Add photos to your daily log to track visible changes — skin, bloating and anything else.</p>
         </article>
         <article class="benefit-card">
           <span class="tag">Education</span>
-          <h3>📖 Cycle phase education</h3>
-          <p>Learn about each phase of your cycle and how perimenopause affects hormones, mood, and body.</p>
+          <h3>📖 Cycle education</h3>
+          <p>Plain-language guides to each cycle phase and how perimenopause affects your body and mood.</p>
         </article>
         <article class="benefit-card">
-          <span class="tag">Goals</span>
-          <h3>🎯 Set wellness goals</h3>
-          <p>Set daily or weekly wellness goals — drink more water, move more, rest better.</p>
+          <span class="tag">Wellness</span>
+          <h3>🎯 Gentle goals</h3>
+          <p>Small, kind goals — water, movement, rest — that fit into real life, not guilt.</p>
         </article>
         <article class="benefit-card">
           <span class="tag">Privacy</span>
-          <h3>🔒 100% on-device</h3>
-          <p>No accounts, no cloud sync, no servers. All your health data stays on your phone. Private by design.</p>
+          <h3>🔒 Private by default</h3>
+          <p>All data stays on your phone. Optional end-to-end encrypted cloud backup — never required.</p>
         </article>
       </div>
     </section>
 
+    <style>
+      .how-grid { display: grid; gap: 1.1rem; grid-template-columns: repeat(3, 1fr); }
+      @media (max-width: 760px) { .how-grid { grid-template-columns: 1fr; } }
+      .how-step { display: flex; gap: 1rem; align-items: flex-start; padding: 1.4rem; border-radius: var(--radius); background: var(--white); border: 1px solid var(--line); }
+      .how-step .num { flex: none; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 50%; background: var(--sage-wash); color: var(--sage-deep); font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
+      .how-step h3 { margin: 0 0 0.3rem; font-size: 1.02rem; font-weight: 700; }
+      .how-step p { margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.55; }
+      .privacy-panel {
+        border-radius: var(--radius-lg); padding: 2.2rem;
+        background:
+          radial-gradient(ellipse 60% 80% at 100% 0%, rgba(192,133,107,0.16), transparent 55%),
+          linear-gradient(150deg, var(--sage-wash), #F4EDE2);
+        border: 1px solid rgba(95,122,103,0.25);
+      }
+      .privacy-panel h2 { margin: 0 0 0.6rem; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.7rem, 3.2vw, 2.2rem); letter-spacing: -0.02em; }
+      .privacy-panel .intro { margin: 0 0 1.4rem; color: var(--sage-deep); font-size: 1rem; max-width: 36em; }
+      .privacy-list { display: grid; gap: 0.8rem; grid-template-columns: repeat(2, 1fr); margin-bottom: 1.6rem; }
+      @media (max-width: 700px) { .privacy-list { grid-template-columns: 1fr; } }
+      .privacy-item { display: flex; gap: 0.7rem; align-items: flex-start; background: rgba(255,255,255,0.7); border: 1px solid rgba(95,122,103,0.18); border-radius: 16px; padding: 0.95rem 1rem; font-size: 0.92rem; color: var(--ink); }
+      .privacy-item strong { color: var(--sage-deep); }
+    </style>
+
+    <section class="section" id="how" aria-labelledby="how-title">
+      <div class="section-head">
+        <p class="kicker">How it works</p>
+        <h2 id="how-title">Three gentle steps</h2>
+      </div>
+      <div class="how-grid">
+        <article class="how-step">
+          <span class="num">1</span>
+          <div><h3>Download &amp; open</h3><p>No sign-up, no forms. You'll be tracking within a minute.</p></div>
+        </article>
+        <article class="how-step">
+          <span class="num">2</span>
+          <div><h3>Log in seconds</h3><p>A daily check-in that takes less time than making tea.</p></div>
+        </article>
+        <article class="how-step">
+          <span class="num">3</span>
+          <div><h3>See your patterns</h3><p>Monthly trends that help you understand — and explain — what's happening.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="privacy" aria-labelledby="privacy-title">
+      <div class="privacy-panel">
+        <p class="kicker" style="margin-bottom:0.5rem">Privacy</p>
+        <h2 id="privacy-title">Your story stays yours</h2>
+        <p class="intro">PeriLog is local-first. Your health data belongs on your phone — and only your phone.</p>
+        <div class="privacy-list">
+          <div class="privacy-item"><strong>On-device storage.</strong>&nbsp;All health data stays in private app storage on your device.</div>
+          <div class="privacy-item"><strong>No account needed.</strong>&nbsp;Core use is fully offline and anonymous.</div>
+          <div class="privacy-item"><strong>Optional encrypted backup.</strong>&nbsp;End-to-end encrypted (AES-256-GCM) if you choose cloud backup.</div>
+          <div class="privacy-item"><strong>Delete anything, anytime.</strong>&nbsp;Clear local data, or request account &amp; backup deletion.</div>
+        </div>
+        <div class="btn-row" style="margin-bottom:0">
+          <a class="btn btn-primary" href="privacy.html">Read the privacy policy</a>
+          <a class="btn btn-secondary" href="delete-data.html">Request data deletion</a>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .plans { display: grid; gap: 1.2rem; grid-template-columns: 1.1fr 0.9fr; }
+      @media (max-width: 760px) { .plans { grid-template-columns: 1fr; } }
+      .plan { padding: 1.7rem 1.6rem; border-radius: var(--radius-lg); background: var(--white); border: 1px solid var(--line); }
+      .plan.premium { border-color: rgba(192,133,107,0.45); background: linear-gradient(165deg, var(--blush), var(--white)); }
+      .plan h3 { margin: 0 0 0.3rem; font-size: 1.25rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+      .plan .tag { font-size: 0.7rem; padding: 0.2rem 0.55rem; border-radius: 6px; background: rgba(192,133,107,0.25); color: var(--rose-deep); font-weight: 800; }
+      .plan .tagline { margin: 0 0 1rem; color: var(--muted); font-size: 0.95rem; }
+      .plan ul { margin: 0 0 1.2rem; padding: 0; list-style: none; }
+      .plan li { position: relative; padding: 0.42rem 0 0.42rem 1.5rem; font-size: 0.95rem; }
+      .plan li::before { content: "✓"; position: absolute; left: 0; color: var(--sage); font-weight: 800; }
+      .faq-list { max-width: 46rem; display: grid; gap: 0.7rem; }
+      .faq details { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 0.4rem 1.1rem; }
+      .faq summary { cursor: pointer; font-weight: 700; padding: 0.7rem 0; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+      .faq summary::-webkit-details-marker { display: none; }
+      .faq summary::after { content: "+"; color: var(--rose-deep); font-size: 1.2rem; font-weight: 600; }
+      .faq details[open] summary::after { content: "–"; }
+      .faq p { margin: 0 0 0.8rem; color: var(--muted); font-size: 0.95rem; }
+    </style>
+
     <section class="section" id="premium" aria-labelledby="premium-title">
       <div class="section-head">
         <p class="kicker">Free vs Premium</p>
-        <h2 id="premium-title">Premium that removes ads and unlocks history</h2>
-        <p>Free is full-featured. Premium removes ads and gives you complete access to all your data.</p>
+        <h2 id="premium-title">Calm tracking, your choice</h2>
+        <p>Free is full-featured. Premium removes ads and opens up your full history.</p>
       </div>
       <div class="plans">
         <div class="plan premium">
           <h3>Premium <span class="tag">£1.99/mo</span></h3>
-          <p class="tagline">Subscription · <code>premium_monthly</code></p>
+          <p class="tagline">Or one-time lifetime · <code>premium_monthly</code> / <code>premium_lifetime</code></p>
           <ul>
-            <li>Zero ads — no banner or interstitial ads</li>
+            <li>No ads — no banners, no interstitials</li>
             <li>Unlimited daily log history (free retains 90 days)</li>
             <li>Export your data</li>
             <li>Unlimited symptom customisation</li>
             <li>Cancel anytime in Google Play</li>
           </ul>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.perimenopause_tracker">Get Premium on Google Play</a>
         </div>
         <div class="plan">
           <h3>Free</h3>
           <p class="tagline">Start with no purchase</p>
           <ul>
-            <li>Log symptoms, periods, mood, sleep & more</li>
-            <li>Monthly stats & heatmap</li>
+            <li>Log symptoms, periods, mood &amp; sleep</li>
+            <li>Monthly stats &amp; heatmap</li>
             <li>Cycle phase education</li>
             <li>Photo journal</li>
-            <li>Contains ads (banner & interstitial)</li>
+            <li>Contains ads (banner &amp; interstitial)</li>
           </ul>
+          <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.luckytools.perimenopause_tracker">Get the free app</a>
         </div>
       </div>
     </section>
 
-    <section class="cta-band">
-      <h2>Privacy, terms & data deletion</h2>
-      <p>Clear policy URLs for Google Play Console.</p>
-      <div class="btn-row">
-        <a class="btn btn-primary" href="privacy.html">Privacy policy</a>
-        <a class="btn btn-secondary" href="delete-data.html">Request data deletion</a>
-        <a class="btn btn-secondary" href="terms.html">Terms of use</a>
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="section-head">
+        <p class="kicker">Questions</p>
+        <h2 id="faq-title">You might be wondering</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Do I need an account to use PeriLog?</summary>
+          <p>No. Core use is fully offline and requires no sign-up. An optional account is only used if you want end-to-end encrypted cloud backup.</p>
+        </details>
+        <details>
+          <summary>Is my health data private?</summary>
+          <p>Yes. Your logs stay in private app storage on your phone. If you turn on cloud backup, data is encrypted on your device before it is uploaded — no one else can read it.</p>
+        </details>
+        <details>
+          <summary>What if I forget my cloud backup password?</summary>
+          <p>Because backups are end-to-end encrypted, a forgotten password cannot be recovered — even by us. This is a deliberate privacy choice, and it's explained in the app before you sign up.</p>
+        </details>
+        <details>
+          <summary>Can I export or delete my data?</summary>
+          <p>Yes. You can export a PDF or JSON copy anytime, clear all logs in Settings, or use our <a href="delete-data.html">data deletion page</a> for account and cloud-backup deletion (within 30 days).</p>
+        </details>
+        <details>
+          <summary>Is PeriLog medical advice?</summary>
+          <p>No. PeriLog is a personal tracking and information tool, not a medical device, and does not diagnose or treat anything. Always talk to a qualified healthcare professional about your health.</p>
+        </details>
       </div>
     </section>
 
-    <article class="card meta-card">
-      <h3>App details</h3>
-      <p>
-        App name: PeriLog<br />
-        Package: <code>com.luckytools.perimenopause_tracker</code><br />
-        Support: <a href="mailto:support@cloudyni.com">support@cloudyni.com</a><br />
-        Site: <a href="https://cloudyni.com/perimenopause-tracker/">cloudyni.com/perimenopause-tracker/</a>
-      </p>
-    </article>
+    <style>
+      .cta-band { margin: 3rem 0 1rem; padding: 2.4rem 1.6rem; text-align: center; border-radius: var(--radius-lg); border: 1px solid var(--line); background: radial-gradient(ellipse 60% 80% at 50% 0%, rgba(192,133,107,0.16), transparent 60%), var(--white); }
+      .cta-band h2 { margin: 0 0 0.5rem; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.5rem, 2.8vw, 2rem); }
+      .cta-band p { margin: 0 0 1.25rem; color: var(--muted); }
+      .cta-band .btn-row { justify-content: center; margin: 0; }
+      .site-foot { margin-top: 3rem; padding: 2rem 0 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; }
+      .foot-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; max-width: var(--max); margin: 0 auto; padding: 0 1.4rem; }
+      .foot-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+      .foot-links a { color: var(--muted); font-weight: 600; }
+      .foot-links a:hover { color: var(--sage-deep); }
+    </style>
+
+    <section class="cta-band">
+      <h2>Start feeling more in tune with your body today</h2>
+      <p>Private, calm and kind — tracking that fits into your life.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.perimenopause_tracker">Get on Google Play</a>
+        <a class="btn btn-secondary" href="privacy.html">Privacy policy</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-grid">
+  <footer class="site-foot">
+    <div class="foot-grid">
       <div>
         <strong style="color:var(--ink)">PeriLog</strong><br />
         Northern Ireland · <a href="mailto:support@cloudyni.com">support@cloudyni.com</a>
       </div>
-      <div class="footer-links">
+      <div class="foot-links">
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy</a>
         <a href="delete-data.html">Delete data</a>
         <a href="terms.html">Terms</a>
       </div>
     </div>
-    <div class="footer-grid" style="margin-top:1rem">
-      <p style="margin:0">&copy; 2026 PeriLog. Health tracking tool — not medical advice.</p>
+    <div class="foot-grid" style="margin-top:1rem">
+      <p style="margin:0">Health tracking tool — not medical advice. © 2026 PeriLog.</p>
     </div>
   </footer>
-
-  <script>
-  (function() {
-    var carousels = document.querySelectorAll('[data-carousel]');
-    carousels.forEach(function(carousel) {
-      var track = carousel.querySelector('.carousel-track');
-      var slides = track ? track.querySelectorAll('.carousel-slide') : [];
-      var dotsContainer = carousel.querySelector('.carousel-dots');
-      if (!track || slides.length < 2) return;
-
-      var current = 0;
-      var autoplay = parseInt(carousel.getAttribute('data-autoplay'), 10) || 0;
-      var interval;
-
-      function goTo(index) {
-        if (index < 0) index = slides.length - 1;
-        if (index >= slides.length) index = 0;
-        current = index;
-        track.style.transform = 'translateX(-' + (current * 100) + '%)';
-        var dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
-        dots.forEach(function(dot, i) {
-          dot.classList.toggle('is-active', i === current);
-          dot.setAttribute('aria-selected', i === current);
-        });
-      }
-
-      function createDots() {
-        if (!dotsContainer) return;
-        dotsContainer.innerHTML = '';
-        for (var i = 0; i < slides.length; i++) {
-          var dot = document.createElement('button');
-          dot.className = 'carousel-dot' + (i === 0 ? ' is-active' : '');
-          dot.setAttribute('role', 'tab');
-          dot.setAttribute('aria-selected', i === 0);
-          dot.setAttribute('aria-label', 'Slide ' + (i + 1));
-          dot.addEventListener('click', function(idx) { return function() { goTo(idx); resetAutoplay(); }; }(i));
-          dotsContainer.appendChild(dot);
-        }
-      }
-
-      function resetAutoplay() {
-        if (!autoplay) return;
-        clearInterval(interval);
-        interval = setInterval(function() { goTo(current + 1); }, autoplay);
-      }
-
-      createDots();
-      if (autoplay) {
-        interval = setInterval(function() { goTo(current + 1); }, autoplay);
-        carousel.addEventListener('mouseenter', function() { clearInterval(interval); });
-        carousel.addEventListener('mouseleave', function() { resetAutoplay(); });
-      }
-    });
-  })();
-  </script>
 </body>
 </html>
+

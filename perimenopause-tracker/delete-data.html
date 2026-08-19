@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Request data deletion — PeriLog</title>
-  <meta name="description" content="How to delete PeriLog data and request deletion for Google Play." />
+  <meta name="description" content="How to delete PeriLog data and request deletion of your PeriLog account and cloud backup for Google Play." />
   <meta name="theme-color" content="#d946ef" />
   <link rel="canonical" href="https://cloudyni.com/perimenopause-tracker/delete-data.html" />
   <link rel="stylesheet" href="styles.css" />
@@ -33,14 +33,14 @@
       <strong>App:</strong> PeriLog<br />
       <strong>Android package:</strong> <code>com.luckytools.perimenopause_tracker</code><br />
       <strong>Developer contact:</strong> <a href="mailto:support@cloudyni.com">support@cloudyni.com</a><br />
-      Last updated: 29 July 2026
+      Last updated: 19 August 2026
     </p>
 
     <div class="note">
-      Use this page for Google Play's <strong>data deletion request</strong> URL.
-      PeriLog has <strong>no accounts, no sign-in, and no in-app forms</strong> that send data to us.
-      All your health and cycle data stays on your device. The only personal data the developer may hold
-      is if <strong>you choose to email support</strong>.
+      This page is PeriLog's <strong>data deletion request</strong> URL for Google Play.
+      PeriLog is local-first — your health data lives on your phone. The only data that
+      may exist away from your device is (1) the optional cloud backup account you choose to create,
+      and (2) any support emails you send us. Deleting both is described below.
     </div>
 
     <h2 id="what">What data exists where</h2>
@@ -50,8 +50,14 @@
         photos, preferences, and the local Premium flag. We cannot access this remotely.
       </li>
       <li>
+        <strong>Cloud backup (only if you opted in)</strong> — if you signed in to
+        <em>Cloud backup &amp; sync</em>, an account (email address) and one end-to-end encrypted
+        backup row are stored by our hosting provider (Supabase, UK/EU). We cannot read the contents
+        of the backup, but we can delete the account and the encrypted row for you.
+      </li>
+      <li>
         <strong>With the developer</strong> — only support emails you send us (and our replies).
-        There is no PeriLog cloud account or health database.
+        There is no other PeriLog cloud database.
       </li>
       <li>
         <strong>With Google / ad partners</strong> — Play Billing and AdMob process data under
@@ -68,36 +74,34 @@
           <li>Open <strong>Settings → Apps → PeriLog → Storage</strong></li>
           <li>Tap <strong>Clear storage</strong> / <strong>Clear data</strong></li>
         </ul>
-        Or <strong>uninstall</strong> PeriLog. This removes all logs, photos, preferences, and the
-        cached Premium flag for that install. No confirmation from us is required because we
-        never held that data on a server.
+        Or use <strong>Settings → Delete all health logs</strong> inside the app, or
+        <strong>uninstall</strong> PeriLog. This removes all logs, photos, preferences, and the
+        cached Premium flag for that install.
       </li>
       <li>
-        <strong>Support emails only (the part we can delete for you)</strong><br />
-        If you have emailed us and want that correspondence removed:
+        <strong>Delete a cloud backup account (only if you signed in)</strong><br />
+        If you created a cloud backup account and want it and its encrypted backup removed:
         <ul>
           <li>
             Email
             <a href="mailto:support@cloudyni.com?subject=PeriLog%20data%20deletion%20request">support@cloudyni.com</a>
             with subject <strong>PeriLog data deletion request</strong>.
           </li>
+          <li>Include the email address you used for the account (and the date you created it, if you know it).</li>
           <li>
-            Include the email address you used to contact us (and approximate date if you know it)
-            so we can find the thread.
+            You can also <strong>sign out</strong> of cloud backup in the app first — this removes
+            the local encryption key so the backup cannot be restored locally.
           </li>
         </ul>
-        <strong>What we will do:</strong> delete support messages we hold that we can identify
-        as yours, within <strong>90 days</strong> of a clear request (usually much sooner).<br />
-        <strong>Confirmation email:</strong> yes — we will send <strong>one short reply</strong>
-        confirming that we have completed (or already had nothing to delete). That is the only
-        automated-style notice; there is no separate account dashboard.<br />
-        If you never emailed us, there is nothing for us to delete on our side after you clear
-        the app.
+        <strong>What we will do:</strong> delete the account and its encrypted backup row within
+        <strong>30 days</strong> of a clear request (usually much sooner), and send
+        <strong>one short confirmation reply</strong> when done. This is a manual process because
+        we must verify the account belongs to the requester.
       </li>
       <li>
         <strong>Premium subscription (Google Play, not us)</strong><br />
         Premium is a Google Play subscription. Uninstall does not cancel billing — cancel under
-        Google Play → Payments & subscriptions. Purchase records stay with Google.
+        Google Play → Payments &amp; subscriptions. Purchase records stay with Google.
         After reinstall, use <strong>Restore purchases</strong> in the app with the same Google account
         if you still want Premium.
       </li>
@@ -110,27 +114,23 @@
 
     <h2 id="play">Google Play Console (for the developer)</h2>
     <p>
-      Because PeriLog has <strong>no user accounts</strong>, account-deletion in-app paths do not apply.
-      For Data safety / data deletion answers:
+      PeriLog allows users to create an <strong>optional</strong> account (cloud backup), so the
+      following answers apply in the Play Console <strong>Data deletion</strong> section:
     </p>
     <ul>
-      <li>App does <strong>not</strong> allow users to create an account</li>
-      <li>Users can request deletion — yes (this URL + clear storage / uninstall)</li>
-      <li>
-        Developer-held data (support email only): process deletion requests within
-        <strong>90 days</strong> — you may select that option in Play Console
-      </li>
+      <li>An account is <strong>not required</strong> to use the app.</li>
+      <li>Users can request deletion — <strong>yes</strong> (this URL + in-app delete options).</li>
+      <li>Deletion requests are processed within <strong>30 days</strong>.</li>
     </ul>
 
     <h2>What we do not store</h2>
     <p>
-      We do not operate a PeriLog cloud. Your health data is not uploaded by the app.
-      We cannot delete your cycle logs from "our servers" because they were never sent to us.
+      We do not collect your health data unless you opt into cloud backup, and even then it is
+      encrypted on your device before upload. Without an account, your cycle logs exist only on your
+      phone, and we have nothing on a server to delete.
     </p>
 
-    <p>
-      Full policy: <a href="privacy.html">Privacy policy</a>.
-    </p>
+    <p>Full policy: <a href="privacy.html">Privacy policy</a>.</p>
   </main>
 
   <footer class="site-footer">
