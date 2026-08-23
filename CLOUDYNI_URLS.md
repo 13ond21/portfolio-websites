@@ -5,6 +5,14 @@ Support email: **support@cloudyni.com** everywhere.
 
 Generic pattern: `https://cloudyni.com/<slug>/{privacy.html, terms.html, delete-data.html}`
 
+## Site-wide (Facebook / page publisher)
+
+The **CloudyNI Publisher** Facebook app and the **Cloudy NI Apps** page use site-wide pages:
+
+- Privacy: `https://cloudyni.com/privacy.html`
+- Terms: `https://cloudyni.com/terms.html`
+- Data deletion: `https://cloudyni.com/delete-data.html`
+
 | App | Privacy policy (Play field) | Terms | Delete data | Website |
 |-----|------|-------|-------------|---------|
 | Bible Buddy | `https://cloudyni.com/bible-buddy/privacy.html` | `https://cloudyni.com/bible-buddy/terms.html` | `https://cloudyni.com/bible-buddy/delete-data.html` | `https://cloudyni.com/bible-buddy/` |
