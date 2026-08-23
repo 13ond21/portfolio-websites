@@ -3,59 +3,137 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kitchen Buddy — Recipes and cooking, together</title>
-  <meta name="description" content="Plan meals and cook together — recipes, lists and live sync." />
+  <title>Kitchen Buddy — timers, pantry &amp; shopping lists</title>
+  <meta name="description" content="A calmer kitchen on your phone — cooking timers, pantry stock and shared shopping lists. Plan meals and cook together with live sync. No account needed." />
+  <meta name="theme-color" content="#d97706" />
+  <meta property="og:title" content="Kitchen Buddy — timers, pantry &amp; shopping lists" />
+  <meta property="og:description" content="Multi-timers, pantry stock, shared shopping lists, recipes and meal planning — the calmer kitchen app for real households. Live sync, no account." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cloudyni.com/synccook/" />
+  <meta property="og:image" content="https://cloudyni.com/synccook/assets/feature_graphic.png" />
   <link rel="canonical" href="https://cloudyni.com/synccook/" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/icon_512.png" />
+  <style>
+    .hero-visual .hero-card {
+      width: min(360px, 90vw);
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.45), 0 0 60px var(--glow);
+      background: var(--surface);
+    }
+    .hero-visual .hero-card img { width: 100%; display: block; }
+    .hero-visual .hero-card .cap {
+      padding: 1rem 1.15rem 1.15rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .hero-visual .hero-card .cap strong { color: var(--ink); display: block; margin-bottom: 0.25rem; }
+  </style>
 </head>
 <body>
+  <div class="page-bg" aria-hidden="true"></div>
+
   <header class="site-header">
     <div class="inner">
-      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">◆</span> Kitchen Buddy</a>
+      <a class="brand" href="index.html"><img src="assets/icon_512.png" width="38" height="38" alt="" /> Kitchen Buddy</a>
       <nav class="nav" aria-label="Main">
         <a href="index.html" aria-current="page">Home</a>
+        <a href="#features">Features</a>
         <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
+        <a href="https://play.google.com/store/apps/details?id=com.luckytools.synccook&utm_source=landing&utm_medium=web&utm_campaign=kitchen-buddy-landing" class="nav-cta">Get the app</a>
       </nav>
     </div>
   </header>
+
   <main class="wrap">
     <section class="hero">
       <div>
-        <p class="hero-eyebrow">Android · Food & Drink</p>
-        <h1>Kitchen Buddy<br /><em>Recipes and cooking, together</em></h1>
-        <p class="lede">Plan meals and cook together — recipes, lists and live sync.</p>
-        <div class="badge-row"><span class="badge accent">Privacy-first</span><span class="badge">No account</span></div>
+        <p class="hero-eyebrow">Android · Food &amp; Drink · Privacy-first</p>
+        <h1>A calmer kitchen,<br /><em>on your phone</em></h1>
+        <p class="lede">Kitchen Buddy is the kitchen companion for real households — cooking timers, pantry stock, shared shopping lists, recipes and meal planning, with <strong>live sync</strong> so everyone cooks from the same page. No account needed.</p>
+        <div class="badge-row"><span class="badge accent">Timers</span><span class="badge">Pantry</span><span class="badge">Shopping lists</span><span class="badge">Live sync</span><span class="badge">No account</span></div>
         <div class="btn-row">
-          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.synccook">Get it on Google Play</a>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.synccook&utm_source=landing&utm_medium=web&utm_campaign=kitchen-buddy-landing">Get on Google Play</a>
+          <a class="btn btn-secondary" href="#features">See features</a>
           <a class="btn btn-secondary" href="privacy.html">Privacy policy</a>
-          <a class="btn btn-secondary" href="terms.html">Terms of use</a>
+        </div>
+        <div class="stats"><div class="stat"><strong>Timers</strong><span>multi-dish cooking</span></div><div class="stat"><strong>Pantry</strong><span>stock aware</span></div><div class="stat"><strong>Shop list</strong><span>shared</span></div><div class="stat"><strong>0</strong><span>accounts</span></div></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <img src="assets/feature_graphic.png" width="1024" height="500" alt="Kitchen Buddy feature graphic" />
+          <div class="cap">
+            <strong>Kitchen Buddy</strong>
+            Timers · Pantry · Shared shopping lists — the calmer kitchen for real households.
+          </div>
         </div>
       </div>
     </section>
+
+    <div class="proof" role="note">
+      <span>Cook together</span>·
+      <span>Shared lists</span>·
+      <span>Offline-first</span>·
+      <span>No forced account</span>
+    </div>
+
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="section-head">
+        <p class="kicker">Why Kitchen Buddy</p>
+        <h2 id="features-title">The kitchen runs on coordination</h2>
+        <p>Timers, pantry and lists that the whole household actually uses — simple, private and fast.</p>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card"><span class="tag">You get</span><h3>Multi-timers</h3><p>Run several cooking timers at once so every dish lands at the same time — no more burnt rice.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Pantry &amp; stock</h3><p>Track what you have and what&rsquo;s running low, so you never buy a fourth jar of the same spice.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Shared shopping lists</h3><p>One list the whole household can add to and tick off — even while someone is mid-recipe.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Recipes &amp; meal planning</h3><p>Explore recipes and plan the week ahead, with ingredients that land straight on your list.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Barcode scan</h3><p>Point at a barcode to identify a product and add it to your pantry in seconds.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Live sync</h3><p>The same kitchen on every phone — lists and stock stay in step while you cook together.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Privacy-first</h3><p>No forced account. Works offline first; your data stays on your device unless you choose to sync.</p></article>
+        <article class="benefit-card"><span class="tag">You get</span><h3>Simple by default</h3><p>Open, cook, tick things off. No feeds, no noise — just a calmer kitchen.</p></article>
+      </div>
+    </section>
+
     <section class="cta-band">
-      <h2>Privacy, terms &amp; data</h2>
+      <h2>Privacy, terms &amp; data deletion</h2>
       <p>Clear policy URLs for Google Play Console.</p>
       <div class="btn-row">
         <a class="btn btn-primary" href="privacy.html">Privacy policy</a>
+        <a class="btn btn-secondary" href="delete-data.html">Request data deletion</a>
         <a class="btn btn-secondary" href="terms.html">Terms of use</a>
       </div>
     </section>
+
     <article class="card meta-card">
       <h3>App details</h3>
-      <p>Support: <a href="mailto:support@cloudyni.com">support@cloudyni.com</a><br />
-      Site: <a href="https://cloudyni.com/synccook/">https://cloudyni.com/synccook/</a></p>
+      <p>
+        Package: <code>com.luckytools.synccook</code><br />
+        Support: <a href="mailto:support@cloudyni.com">support@cloudyni.com</a><br />
+        Site: <a href="https://cloudyni.com/synccook/">cloudyni.com/synccook/</a>
+      </p>
     </article>
   </main>
+
   <footer class="site-footer">
-    <div class="inner footer-grid">
-      <div><strong style="color:var(--ink)">Kitchen Buddy</strong><br />support@cloudyni.com</div>
+    <div class="footer-grid">
+      <div>
+        <strong style="color:var(--ink)">Kitchen Buddy</strong><br />
+        Cloudy NI · <a href="mailto:support@cloudyni.com">support@cloudyni.com</a>
+      </div>
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy</a>
+        <a href="delete-data.html">Delete data</a>
         <a href="terms.html">Terms</a>
       </div>
+    </div>
+    <div class="footer-grid" style="margin-top:1rem">
+      <p style="margin:0">&copy; 2026 Kitchen Buddy · Cloudy NI</p>
     </div>
   </footer>
 </body>
 </html>
+
