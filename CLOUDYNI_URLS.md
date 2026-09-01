@@ -15,7 +15,7 @@ The **CloudyNI Publisher** Facebook app and the **Cloudy NI Apps** page use site
 
 | App | Privacy policy (Play field) | Terms | Delete data | Website |
 |-----|------|-------|-------------|---------|
-| Bible Buddy | `https://cloudyni.com/bible-buddy/privacy.html` | `https://cloudyni.com/bible-buddy/terms.html` | `https://cloudyni.com/bible-buddy/delete-data.html` | `https://cloudyni.com/bible-buddy/` |
+| Bible Buddy (renamed → Religious Reader) | `https://cloudyni.com/religious-reader/privacy.html` | `https://cloudyni.com/religious-reader/terms.html` | `https://cloudyni.com/religious-reader/delete-data.html` | `https://cloudyni.com/religious-reader/` |
 | Daily Affirmation | `https://cloudyni.com/daily-affirmation/privacy.html` | `https://cloudyni.com/daily-affirmation/terms.html` | `https://cloudyni.com/daily-affirmation/delete-data.html` | `https://cloudyni.com/daily-affirmation/` |
 | FactSwipe | `https://cloudyni.com/facts-kids/privacy.html` | `https://cloudyni.com/facts-kids/terms.html` | `https://cloudyni.com/facts-kids/privacy.html` | `https://cloudyni.com/facts-kids/` |
 | Decibel Meter | `https://cloudyni.com/decibel-meter-pro/privacy.html` | `https://cloudyni.com/decibel-meter-pro/terms.html` | `https://cloudyni.com/decibel-meter-pro/delete-data.html` | `https://cloudyni.com/decibel-meter-pro/` |

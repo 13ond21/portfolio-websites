@@ -21,12 +21,12 @@ UK Pay Calc is **not listed** on the tester hub yet.
 
 ## On Google Play (first 6 websites)
 
-### Bible Buddy
+### Religious Reader (was Bible Buddy)
 
-- **Home:** https://cloudyni.com/bible-buddy/
-- **Privacy:** https://cloudyni.com/bible-buddy/privacy.html
-- **Terms:** https://cloudyni.com/bible-buddy/terms.html
-- **Delete data:** https://cloudyni.com/bible-buddy/delete-data.html
+- **Home:** https://cloudyni.com/religious-reader/
+- **Privacy:** https://cloudyni.com/religious-reader/privacy.html
+- **Terms:** https://cloudyni.com/religious-reader/terms.html
+- **Delete data:** https://cloudyni.com/religious-reader/delete-data.html
 
 
 
