@@ -17,7 +17,7 @@ The **CloudyNI Publisher** Facebook app and the **Cloudy NI Apps** page use site
 |-----|------|-------|-------------|---------|
 | Bible Buddy (renamed → Religious Reader) | `https://cloudyni.com/religious-reader/privacy.html` | `https://cloudyni.com/religious-reader/terms.html` | `https://cloudyni.com/religious-reader/delete-data.html` | `https://cloudyni.com/religious-reader/` |
 | Daily Affirmation | `https://cloudyni.com/daily-affirmation/privacy.html` | `https://cloudyni.com/daily-affirmation/terms.html` | `https://cloudyni.com/daily-affirmation/delete-data.html` | `https://cloudyni.com/daily-affirmation/` |
-| FactSwipe | `https://cloudyni.com/facts-kids/privacy.html` | `https://cloudyni.com/facts-kids/terms.html` | `https://cloudyni.com/facts-kids/privacy.html` | `https://cloudyni.com/facts-kids/` |
+| FactSwipe | `https://cloudyni.com/facts-kids/privacy.html` | `https://cloudyni.com/facts-kids/terms.html` | `https://cloudyni.com/facts-kids/delete-data.html` | `https://cloudyni.com/facts-kids/` |
 | Decibel Meter | `https://cloudyni.com/decibel-meter-pro/privacy.html` | `https://cloudyni.com/decibel-meter-pro/terms.html` | `https://cloudyni.com/decibel-meter-pro/delete-data.html` | `https://cloudyni.com/decibel-meter-pro/` |
 | BT Mic | `https://cloudyni.com/pa-mic/privacy.html` | `https://cloudyni.com/pa-mic/terms.html` | `https://cloudyni.com/pa-mic/delete-data.html` | `https://cloudyni.com/pa-mic/` |
 | Kitchen Buddy | `https://cloudyni.com/synccook/privacy.html` | `https://cloudyni.com/synccook/terms.html` | `https://cloudyni.com/synccook/delete-data.html` | `https://cloudyni.com/synccook/` |

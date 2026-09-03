@@ -42,7 +42,7 @@ UK Pay Calc is **not listed** on the tester hub yet.
 - **Home:** https://cloudyni.com/facts-kids/
 - **Privacy:** https://cloudyni.com/facts-kids/privacy.html
 - **Terms:** https://cloudyni.com/facts-kids/terms.html
-- **Delete data:** https://cloudyni.com/facts-kids/privacy.html
+- **Delete data:** https://cloudyni.com/facts-kids/delete-data.html
 
 ### Decibel Meter
 
