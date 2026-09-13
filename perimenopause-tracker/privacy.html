@@ -72,7 +72,7 @@
       <li><strong>Cycle and symptom data</strong> — periods, flow intensity, symptoms (hot flushes, headaches, fatigue, etc.), mood, sleep quality, energy levels, intimacy, cervical fluid, medications, weight, water, activity, goals, and custom symptom notes.</li>
       <li><strong>Photo journal entries</strong> — photos you choose to attach to daily logs, stored in private app storage.</li>
       <li><strong>App preferences</strong> — theme, notification settings, onboarding state, and feature toggles stored locally.</li>
-      <li><strong>Purchase status</strong> — Google Play confirms Premium ownership so the app can remove ads and unlock features.</li>
+      <li><strong>Purchase status</strong> — Google Play confirms Premium ownership so the app can remove ads and extend trend history.</li>
       <li><strong>Advertising identifiers</strong> (free tier) — used by Google AdMob to show and measure ads.</li>
       <li><strong>Account email</strong> — only if you opt into cloud backup, you sign in with an email address and password (handled by Supabase).</li>
       <li><strong>Support messages</strong> — if you email us, we process the content of your message to reply.</li>
@@ -106,7 +106,14 @@
       <li><strong>Interstitial ads</strong> — full-screen ads shown occasionally when navigating between sections.</li>
     </ul>
     <p>
-      Ad networks may process your <strong>advertising ID</strong> and standard ad-request data under their policies. Premium subscription removes all ads. You can reset or limit your advertising ID in Android settings at any time. Learn more at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+      The Google Mobile Ads SDK may process your <strong>advertising ID and app set ID</strong>, your
+      <strong>IP address</strong> (which it uses to estimate general/approximate location), interactions
+      with ads and the app (such as app launches and taps), and <strong>ad performance/diagnostic data</strong>.
+      This is the SDK's standard behaviour for ad serving, measurement and fraud prevention, described in
+      <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener">Google's Play data disclosure for the Mobile Ads SDK</a>
+      and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+      The app itself requests <strong>no location permission</strong> and uses no GPS. A Premium subscription
+      removes all ads. You can reset or limit your advertising ID in Android settings at any time.
     </p>
 
     <h2 id="children">7. Children</h2>
