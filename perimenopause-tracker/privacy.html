@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — PeriLog</title>
-  <meta name="description" content="Privacy policy for PeriLog (Perimenopause Tracker) Android app. On-device health data, optional end-to-end encrypted cloud backup, ads via AdMob, optional Premium subscription." />
-  <meta name="theme-color" content="#d946ef" />
-  <link rel="canonical" href="https://cloudyni.com/perimenopause-tracker/privacy.html" />
+  <title>Privacy policy — PeriLog</title>
+  <meta name="description" content="How PeriLog handles your information: what stays on your device, what is collected, and the choices you have." />
+  <meta name="theme-color" content="#5F7A67" />
+  <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://cloudyni.com/perimenopause-tracker/privacy.html" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="assets/icon.png" />
 </head>
@@ -17,161 +18,347 @@
       <a class="brand" href="index.html"><img src="assets/icon.png" width="38" height="38" alt="" /> PeriLog</a>
       <nav class="nav" aria-label="Main">
         <a href="index.html">Home</a>
-        <a href="index.html#features">Features</a>
-        <a href="index.html#premium">Premium</a>
         <a href="privacy.html" aria-current="page">Privacy</a>
-        <a href="delete-data.html">Delete data</a>
         <a href="terms.html">Terms</a>
+        <a href="delete-data.html">Delete data</a>
         <a href="https://play.google.com/store/apps/details?id=com.luckytools.perimenopause_tracker" class="nav-cta">Get the app</a>
       </nav>
     </div>
   </header>
 
   <main class="wrap doc">
-    <h1>Privacy Policy</h1>
+    <h1>Privacy policy</h1>
     <p class="doc-meta">
-      <strong>PeriLog</strong> (formerly Perimenopause Tracker, Android package <code>com.luckytools.perimenopause_tracker</code>)<br />
-      Region: Northern Ireland<br />
-      Data controller: Cloudy NI (sole trader) · ICO data protection registration: ZC222090<br />
-      Effective date: 19 August 2026<br />
-      Contact: <a href="mailto:support@cloudyni.com">support@cloudyni.com</a><br />
-      Canonical: <a href="https://cloudyni.com/perimenopause-tracker/privacy.html">https://cloudyni.com/perimenopause-tracker/privacy.html</a>
+      <strong>App:</strong> PeriLog &middot; Android package <code>com.luckytools.perimenopause_tracker</code><br />
+      <strong>Data controller:</strong> Cloudy NI (sole trader)<br />
+      <strong>ICO data protection registration:</strong> <a href="https://ico.org.uk" rel="noopener" target="_blank">ZC222090</a><br />
+      <strong>Region:</strong> Northern Ireland, United Kingdom<br />
+      <strong>Last updated:</strong> 27 September 2026<br />
+      <strong>Contact:</strong> <a href="mailto:support@cloudyni.com">support@cloudyni.com</a><br />
+    </p>
+    <div class="note">
+      <p>
+        We do not sell your data, we do not use your health entries to target advertising, and we
+        hold no readable copy of them. Without a cloud backup account, your cycle and symptom
+        history exists only on your phone, and we have nothing on a server to read, export or
+        delete. There is no social feature, no clinical register and no sharing with anyone.
+      </p>
+    </div>
+    <nav class="toc" aria-label="On this page">
+      <strong>On this page</strong>
+      <ul>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#device">What stays on your device</a></li>
+        <li><a href="#access">What the app can access</a></li>
+        <li><a href="#handled">Information the app handles</a></li>
+        <li><a href="#cloud">Optional encrypted cloud backup</a></li>
+        <li><a href="#sensitive">Sensitive information</a></li>
+        <li><a href="#children">Children and families</a></li>
+        <li><a href="#ads">Advertising</a></li>
+        <li><a href="#analytics">Analytics, diagnostics and crash reports</a></li>
+        <li><a href="#purchases">Purchases and subscriptions</a></li>
+        <li><a href="#retention">How long we keep things</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#security">How we protect your data</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+    </nav>
+    <h2 id="who">Who we are</h2>
+    <p>
+      This policy covers the <strong>PeriLog</strong> Android app, package
+      <code>com.luckytools.perimenopause_tracker</code>, as published on Google Play by Cloudy NI
+      (sole trader), together with the cloudyni.com pages that support it: this policy, the <a
+      href="terms.html">terms of use</a> and the <a href="delete-data.html">data deletion</a>
+      page.
+    </p>
+    <p>
+      It describes the build that is on Google Play now. Where a feature is optional this policy
+      says so, and where the app keeps nothing on our servers it says that too. We do not sell
+      personal data.
+    </p>
+    <h2 id="device">What stays on your device</h2>
+    <p>
+      The following is written into the app's own private storage on your phone and is never sent
+      to us:
+    </p>
+    <ul>
+      <li>Your cycle, symptom, mood, sleep, medication and goal entries.</li>
+      <li>Photo journal entries, including the app's own copy of each picture.</li>
+      <li>Reminder schedule, theme, text size and the optional app lock.</li>
+      <li>Any JSON backup or PDF report you export, until you delete the file.</li>
+      <li>The locally cached Premium entitlement for this install.</li>
+    </ul>
+    <p>
+      Clearing the app's storage or uninstalling the app deletes all of it at once, without
+      contacting us. The <a href="delete-data.html">data deletion</a> page lists the steps.
+    </p>
+    <h2 id="access">What the app can access</h2>
+    <p>
+      The app asks Android for as little as it can. This is the complete list for the published
+      build:
+    </p>
+    <ul>
+      <li>Notifications and scheduled reminders, only if you switch a reminder on</li>
+      <li>Run at start-up, so a reminder you set still fires after a restart</li>
+      <li>Vibration, for reminder alerts</li>
+      <li>Internet access, for free-tier advertising, Google Play purchases and the optional cloud
+        backup</li>
+      <li>None for your body or your photos &mdash; the app requests no location, camera,
+        microphone, contacts, phone or storage permission</li>
+    </ul>
+    <p>
+      An item above is used only while the feature that needs it is running, and nothing beyond
+      this list is accessed by the app.
+    </p>
+    <h2 id="handled">Information the app handles</h2>
+    <p>
+      This is the full picture for the published build: everything the app records, processes or
+      transmits, and where it goes.
+    </p>
+    <ul>
+      <li><strong>Cycle and symptom entries you record.</strong> Periods, flow, symptoms, mood,
+        sleep, energy, medication and the rest are written to the app's private database on your
+        device. They are not sent to us and we cannot see them unless you deliberately create an
+        account and leave cloud backup switched on.</li>
+      <li><strong>Photo journal entries.</strong> A journal entry stores the path of a photo
+        already on your device, which the screen copies into the app's own private folder, plus
+        any caption and tags you add. The app asks for no camera or gallery permission, and the
+        picture itself is not uploaded.</li>
+      <li><strong>Goals and notes.</strong> Anything you type into a goal or note stays in the
+        same local database.</li>
+      <li><strong>Settings and reminders.</strong> Theme, cycle-length defaults, reminder times,
+        text size and the optional app lock.</li>
+      <li><strong>An optional account email</strong>, only if you choose to create a cloud backup
+        account.</li>
+      <li><strong>Advertising data</strong> processed by Google AdMob on the free tier (see the
+        advertising section).</li>
+      <li><strong>Correspondence</strong> you send to support.</li>
+    </ul>
+    <h2 id="cloud">Optional encrypted cloud backup</h2>
+    <p>
+      Cloud backup is <strong>optional and off by default</strong>. PeriLog is complete without an
+      account &mdash; every feature works with your data on the phone. If you choose
+      <strong>Settings &rarr; Cloud backup &amp; sync</strong> and create an account, your logs
+      are encrypted <strong>on your device</strong> with AES-256-GCM using a key derived from your
+      password (PBKDF2-HMAC-SHA256, 120,000 iterations). Only that ciphertext leaves the phone:
+      your account holds one encrypted backup record, and the key stays in this device's secure
+      storage. Authentication and storage are provided by <strong>Supabase</strong>, our
+      processor, with the project hosted in the <strong>United Kingdom (London,
+      eu-west-2)</strong>.
+    </p>
+    <p>
+      Because your password is what decrypts the backup, <strong>we cannot read it, we cannot
+      recover it for you, and a password reset cannot unlock an older backup</strong>. Signing in
+      on another device with the same email and password restores the same encrypted data. Signing
+      out removes the local key. One encrypted row per account is all that exists server-side
+      &mdash; there is no readable copy, no analytics copy and no second database.
+    </p>
+    <p>
+      If you choose to use that optional feature, these rules apply:
+    </p>
+    <ul>
+      <li>Your logs are encrypted on your device before upload. The server stores ciphertext it
+        cannot read, and so can we.</li>
+      <li>A forgotten backup password cannot be recovered by us and the backup cannot be decrypted
+        without it. There is no master key and no reset. Do not treat cloud backup as your only
+        copy of anything you cannot afford to lose.</li>
+      <li>The backup is a convenience, not a medical record. Do not rely on it for clinical
+        purposes, and keep your own exports (the app can write a JSON backup file or a PDF report)
+        if the data matters to you.</li>
+      <li>You may delete the account and its encrypted backup at any time &mdash; from inside the
+        app or by asking us. We complete verified deletions within 30 days.</li>
+    </ul>
+    <p>
+      Deleting the account deletes the stored backup with it. Both routes &mdash; the in-app one
+      and the email one &mdash; are set out on the <a href="delete-data.html">data deletion</a>
+      page.
+    </p>
+    <h2 id="sensitive">Sensitive information</h2>
+    <p>
+      PeriLog exists to record information about your body and your health, so nearly everything
+      in it is the most sensitive category of personal data. We treat it that way: it is written
+      to your device's private storage, it is excluded from analytics, and it is not used to build
+      a profile of you, to target advertising or to train anything.
+    </p>
+    <p>
+      We do not sell it and we do not share it with advertisers, insurers, employers or data
+      brokers. It reaches a server only if you deliberately create a cloud backup account, and
+      even then only as a blob encrypted with your password that we cannot read. You can erase it
+      at any time from inside the app.
+    </p>
+    <p>
+      Where that is special category data under UK GDPR &mdash; health information, for example
+      &mdash; the basis for using it is your explicit consent, given when you choose to record it,
+      and withdrawn by deleting the entry. If the text above says the record stays on your device,
+      your device is the only place it is processed.
+    </p>
+    <h2 id="children">Children and families</h2>
+    <p>
+      PeriLog is designed for adults tracking perimenopause and menstrual health, and it is not
+      directed at children. We do not knowingly collect personal information from a child. If a
+      child has used the app on a shared device, clearing the app's storage or uninstalling it
+      removes everything held locally, and you can contact <a
+      href="mailto:support@cloudyni.com">support@cloudyni.com</a> about any account or support
+      email.
+    </p>
+    <h2 id="ads">Advertising</h2>
+    <p>
+      The free version shows banner and interstitial advertising served by <strong>Google
+      AdMob</strong>, with consent collected through <strong>Google's User Messaging
+      Platform</strong> where the law requires it. Google and its partners may process your
+      advertising ID, IP address and device information to serve and measure ads. The app requests
+      <strong>no location permission</strong>, and no entry you make &mdash; cycle, symptom, mood
+      or photo &mdash; is ever passed to AdMob or to any advertiser. An active Premium
+      subscription removes advertising entirely.
+    </p>
+    <p>
+      Where the law requires it, the app asks for your advertising consent through
+      <strong>Google's User Messaging Platform</strong> before it requests an advertisement, and
+      you can change or withdraw that choice from the app's privacy options at any time.
+    </p>
+    <p>
+      Advertising is served and measured by Google and its partners under <a
+      href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google
+      Privacy Policy</a> and <a href="https://support.google.com/admob/answer/6128543"
+      rel="noopener noreferrer" target="_blank">AdMob &amp; privacy</a>. You can reset or delete
+      your advertising ID, and turn personalised advertising off, in Android <em>Settings &rarr;
+      Privacy &rarr; Ads</em>.
+    </p>
+    <p>
+      Buying a paid product removes advertising for as long as that product is active; the next
+      section explains what we learn from Google Play.
+    </p>
+    <h2 id="analytics">Analytics, diagnostics and crash reports</h2>
+    <p>
+      This release contains no Google Analytics for Firebase, no Crashlytics and no third-party
+      crash reporter, so nothing about how you use the app is reported anywhere.
+    </p>
+    <p>
+      This app contains <strong>no third-party analytics or crash-reporting SDK</strong>. Nobody
+      receives a record of how you use it, there is no session recording and there is no crash
+      telemetry, so a crash stays on your phone &mdash; which also means we cannot see it unless
+      you tell us. The only outside software in the app is Google's: AdMob for the ads on the free
+      tier and Play Billing for purchases. Google Play itself collects install and payment
+      information under Google's own privacy policy.
+    </p>
+    <h2 id="purchases">Purchases and subscriptions</h2>
+    <p>
+      Anything you buy in PeriLog is sold through <strong>Google Play Billing</strong>. Google is
+      the merchant of record, so your payment method, billing address and the amount you paid are
+      held by Google and never shared with us.
+    </p>
+    <p>
+      To unlock a paid feature the app asks Google Play whether the product is active. The product
+      identifiers are on the <a href="terms.html">terms of</a> page, and the price is always the
+      amount shown on the Google Play purchase sheet when you confirm it. See <a
+      href="https://play.google.com/intl/en_GB/about/play-terms/" rel="noopener noreferrer"
+      target="_blank">Google Play Terms of Service</a> and <a
+      href="https://policies.google.com/privacy" rel="noopener noreferrer" target="_blank">Google
+      Privacy Policy</a>.
+    </p>
+    <p>
+      A subscription is cancelled in Google Play, not by deleting anything here, and deleting your
+      data does not cancel it.
+    </p>
+    <h2 id="retention">How long we keep things</h2>
+    <p>
+      Your entries stay on your device until you delete them, clear the app's storage or uninstall
+      the app. If you create an account, the encrypted backup is kept until you delete it or
+      delete the account from inside the app, after which the record is removed from our
+      processor's storage. Deletion requests sent by email are completed within 30 days. Support
+      correspondence is kept only as long as needed to answer the query. Google keeps purchase
+      records as merchant of record, and the advertising identifiers held by Google are governed
+      by Google's retention rules, not ours.
+    </p>
+    <p>
+      A cloud copy is kept only for as long as the account exists; deleting the account, or asking
+      us to delete it, erases it.
+    </p>
+    <p>
+      Google keeps purchase records and advertising data under its own policies, as the store and
+      as an advertising provider rather than on our behalf.
+    </p>
+    <h2 id="rights">Your rights</h2>
+    <p>
+      Under UK GDPR you can ask us for a copy of your information, ask us to correct or erase it,
+      restrict or object to how we use it, ask for it in a portable format, and withdraw consent
+      where consent is what we rely on.
+    </p>
+    <p>
+      Most of what this app holds is on your device, so you are the fastest route to erasure:
+      delete the entries, clear the app's storage, or uninstall the app. Where an account exists,
+      deleting it erases the copy we hold: see the <a href="delete-data.html">data deletion</a>
+      page.
+    </p>
+    <p>
+      Email <a href="mailto:support@cloudyni.com">support@cloudyni.com</a> for any of these. We
+      answer within one month and we do not charge for a first request. You can also <a
+      href="https://ico.org.uk/make-a-complaint/" rel="noopener noreferrer" target="_blank">raise
+      a complaint with the ICO</a> if you are unhappy with how we have handled your information.
+    </p>
+    <h2 id="security">How we protect your data</h2>
+    <p>
+      Data kept by the app sits in its private app storage, inside Android's application sandbox,
+      protected by your device lock and by Android's file-based encryption. Anything the app sends
+      or receives travels over HTTPS.
+    </p>
+    <p>
+      Cloud data is stored on EU infrastructure by our processor, transferred over TLS, and
+      reachable only with the credentials that belong to the account.
+    </p>
+    <p>
+      No system is perfect. If we learn of a breach that puts your information at risk we will
+      tell you and the ICO as UK GDPR requires; where we hold nothing about you, there is nothing
+      for a breach to expose.
+    </p>
+    <h2 id="changes">Changes to this policy</h2>
+    <p>
+      This page was last updated on 27 September 2026, and it describes the build that was on
+      Google Play on that date. If a change affects what the app collects or where it goes, we
+      update this page and the date above before the change ships. If the change is significant we
+      will say so on the app's Google Play listing.
+    </p>
+    <h2 id="contact">Contact us</h2>
+    <p>
+      Cloudy NI (sole trader) is a sole trader based in Northern Ireland, registered with the ICO
+      for data protection under reference <a href="https://ico.org.uk" rel="noopener"
+      target="_blank">ZC222090</a>.
+    </p>
+    <p>
+      Email <a href="mailto:support@cloudyni.com">support@cloudyni.com</a> for privacy questions,
+      a purchase problem or a deletion request. We answer data-protection requests within one
+      month and deletion requests within 30 days.
+    </p>
+    <p>
+      The exact steps for deleting data, and what to send us if you cannot use them, are on the <a
+      href="delete-data.html">data deletion</a> page.
     </p>
 
-    <div class="note">
-      PeriLog is <strong>local-first</strong>: your health and cycle data is stored <strong>on your device</strong> by default and never leaves it unless you choose to export it. The free version shows ads via Google AdMob. Optional <strong>Premium</strong> (Google Play purchase) removes ads. An optional <strong>end-to-end encrypted cloud backup</strong> (email/password account via Supabase) is available from Settings — it is never required and never automatic.
+    <div class="btn-row" style="margin:2rem 0 0">
+      <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.luckytools.perimenopause_tracker" rel="noopener" target="_blank">Get PeriLog on Google Play</a>
+      <a class="btn" href="../index.html">See all our apps</a>
     </div>
 
-    <nav class="toc" aria-label="Contents">
-      <strong>Contents</strong>
-      <ol>
-        <li><a href="#who">Who we are</a></li>
-        <li><a href="#data">What data the app handles</a></li>
-        <li><a href="#device">Data that stays on your device</a></li>
-        <li><a href="#cloud">Optional encrypted cloud backup</a></li>
-        <li><a href="#purchases">Purchases and Google Play</a></li>
-        <li><a href="#ads">Advertising</a></li>
-        <li><a href="#children">Children</a></li>
-        <li><a href="#rights">Your choices and rights</a></li>
-        <li><a href="#deletion">Data deletion</a></li>
-        <li><a href="#security">Security</a></li>
-        <li><a href="#retention">Retention</a></li>
-        <li><a href="#changes">Changes</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ol>
-    </nav>
-
-    <h2 id="who">1. Who we are</h2>
-    <p>
-      PeriLog is an Android app developed in Northern Ireland. This policy explains how the application handles information when you use it from Google Play.
-    </p>
-
-    <h2 id="data">2. What data the app handles</h2>
-    <p>Depending on how you use the app, it may process:</p>
-    <ul>
-      <li><strong>Cycle and symptom data</strong> — periods, flow intensity, symptoms (hot flushes, headaches, fatigue, etc.), mood, sleep quality, energy levels, intimacy, cervical fluid, medications, weight, water, activity, goals, and custom symptom notes.</li>
-      <li><strong>Photo journal entries</strong> — photos you choose to attach to daily logs, stored in private app storage.</li>
-      <li><strong>App preferences</strong> — theme, notification settings, onboarding state, and feature toggles stored locally.</li>
-      <li><strong>Purchase status</strong> — Google Play confirms Premium ownership so the app can remove ads and extend trend history.</li>
-      <li><strong>Advertising identifiers</strong> (free tier) — used by Google AdMob to show and measure ads.</li>
-      <li><strong>Account email</strong> — only if you opt into cloud backup, you sign in with an email address and password (handled by Supabase).</li>
-      <li><strong>Support messages</strong> — if you email us, we process the content of your message to reply.</li>
-    </ul>
-
-    <h2 id="device">3. Data that stays on your device</h2>
-    <p>
-      All health data you enter in PeriLog (symptoms, cycles, moods, photos, notes, preferences) is stored exclusively in <strong>private app storage on your device</strong> by default. We do not operate cloud servers that receive your health data automatically. Uninstalling the app or clearing app data removes all local data for that install.
-    </p>
-
-    <h2 id="cloud">4. Optional encrypted cloud backup</h2>
-    <p>Core use is fully offline and requires <strong>no account</strong>. If you choose <strong>Settings → Cloud backup &amp; sync → Sign in</strong>, the following applies:</p>
-    <ul>
-      <li>You create an account with an <strong>email address and password</strong> (provided by Supabase, our authentication and hosting provider).</li>
-      <li>Your health data is <strong>encrypted on your device</strong> (AES-256-GCM) with a key derived from your password before it is uploaded. The server stores only ciphertext and cannot read it.</li>
-      <li>Signing in on another device restores the same encrypted data.</li>
-      <li>Because of end-to-end encryption, <strong>a forgotten password cannot be recovered</strong> — even a password reset cannot decrypt the backup.</li>
-      <li>Backups are stored by <strong>Supabase</strong> (our data processor) in the UK/EU, protected by per-account access controls.</li>
-      <li>From Settings you can back up now, disable automatic backup, restore from the cloud, or sign out at any time. Signing out removes the locally stored encryption key.</li>
-    </ul>
-
-    <h2 id="purchases">5. Purchases and Google Play</h2>
-    <p>
-      Optional Premium is a <strong>monthly subscription</strong> (<code>premium_monthly</code>, £1.99/month) or a <strong>one-time lifetime</strong> purchase (<code>premium_lifetime</code>), both sold through Google Play Billing. Payment details are processed by Google, not by us. We only receive an entitlement status to unlock Premium features. Manage or cancel in Google Play → Payments &amp; subscriptions.
-    </p>
-
-    <h2 id="ads">6. Advertising</h2>
-    <p>The free version contains ads served via <strong>Google AdMob</strong>. These include:</p>
-    <ul>
-      <li><strong>Banner ads</strong> — displayed at the bottom of the home screen and log screens.</li>
-      <li><strong>Interstitial ads</strong> — full-screen ads shown occasionally when navigating between sections.</li>
-    </ul>
-    <p>
-      The Google Mobile Ads SDK may process your <strong>advertising ID and app set ID</strong>, your
-      <strong>IP address</strong> (which it uses to estimate general/approximate location), interactions
-      with ads and the app (such as app launches and taps), and <strong>ad performance/diagnostic data</strong>.
-      This is the SDK's standard behaviour for ad serving, measurement and fraud prevention, described in
-      <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener">Google's Play data disclosure for the Mobile Ads SDK</a>
-      and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
-      The app itself requests <strong>no location permission</strong> and uses no GPS. A Premium subscription
-      removes all ads. You can reset or limit your advertising ID in Android settings at any time.
-    </p>
-
-    <h2 id="children">7. Children</h2>
-    <p>
-      PeriLog is designed for adults tracking perimenopause and menstrual health. It is not directed at children under 13. If you believe a child has provided personal data via support email, contact us and we will delete it.
-    </p>
-
-    <h2 id="rights">8. Your choices and rights</h2>
-    <p>
-      You can clear app data or uninstall at any time — this removes all locally stored health data. Depending on where you live (including under the GDPR / UK GDPR), you may have rights to access, correct, or delete personal data we hold (for example support emails or a cloud backup account). Contact us at <a href="mailto:support@cloudyni.com">support@cloudyni.com</a>.
-    </p>
-
-    <h2 id="deletion">9. Data deletion</h2>
-    <p>See our dedicated page: <a href="delete-data.html">Request data deletion</a>. In short:</p>
-    <ul>
-      <li><strong>Local data</strong> — removed immediately by clearing app storage or uninstalling (no email needed).</li>
-      <li><strong>Cloud backup account</strong> — email us and we will delete your account and its encrypted backup row within <strong>30 days</strong> of a clear request, and send one short confirmation reply.</li>
-    </ul>
-
-    <h2 id="security">10. Security</h2>
-    <p>
-      Health data stays in private app storage protected by the Android operating system. Cloud backup data is end-to-end encrypted before upload. Network traffic for ads, Play purchases, and cloud backup uses HTTPS. No method of storage is perfect — protect your device with a lock screen and be mindful of who has physical access to your phone.
-    </p>
-
-    <h2 id="retention">11. Retention</h2>
-    <p>
-      Local data remains until you clear app storage or uninstall. Cloud backup rows remain until you delete your account (via the request above). Support emails are retained only as long as needed to handle your request. Ad partners retain data per their own policies.
-    </p>
-
-    <h2 id="changes">12. Changes</h2>
-    <p>
-      We may update this policy. The effective date at the top will change when we do. Continued use after an update means you accept the revised policy.
-    </p>
-
-    <h2 id="contact">13. Contact</h2>
-    <p>
-      Questions: <a href="mailto:support@cloudyni.com">support@cloudyni.com</a><br />
-      Subject line suggestion: "PeriLog privacy".
-    </p>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-grid">
+    <div class="inner footer-grid">
       <div>
         <strong style="color:var(--ink)">PeriLog</strong><br />
-        Northern Ireland · <a href="mailto:support@cloudyni.com">support@cloudyni.com</a>
+        Northern Ireland &middot; <a href="mailto:support@cloudyni.com">support@cloudyni.com</a>
       </div>
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy</a>
-        <a href="delete-data.html">Delete data</a>
         <a href="terms.html">Terms</a>
+        <a href="delete-data.html">Delete data</a>
+        <a href="../index.html">All our apps</a>
       </div>
     </div>
-    <div class="footer-grid" style="margin-top:1rem">
-      <p style="margin:0">&copy; 2026 PeriLog. Health tracking tool — not medical advice.</p>
+    <div class="inner" style="margin-top:1rem">
+      <p style="margin:0">&copy; 2026 PeriLog. Health and wellbeing tracker — not medical advice, not a contraceptive and not a diagnostic device.</p>
     </div>
   </footer>
 </body>
 </html>
-

@@ -21,6 +21,10 @@ UK Pay Calc is **not listed** on the tester hub yet.
 
 ## On Google Play (first 6 websites)
 
+**Retired URLs still work.** `facts-kids/`, `bible-buddy/` and
+`perimenopause-tracker-legal/` are kept as `noindex` redirect stubs pointing at the canonical
+slug, so an old Play Console field or a stale search result still lands on the live page.
+
 ### Religious Reader (was Bible Buddy)
 
 - **Home:** https://cloudyni.com/religious-reader/
@@ -35,14 +39,14 @@ UK Pay Calc is **not listed** on the tester hub yet.
 - **Home:** https://cloudyni.com/daily-affirmation/
 - **Privacy:** https://cloudyni.com/daily-affirmation/privacy.html
 - **Terms:** https://cloudyni.com/daily-affirmation/terms.html
-- **Delete data:** https://cloudyni.com/daily-affirmation/privacy.html
+- **Delete data:** https://cloudyni.com/daily-affirmation/delete-data.html
 
 ### FactSwipe
 
-- **Home:** https://cloudyni.com/facts-kids/
-- **Privacy:** https://cloudyni.com/facts-kids/privacy.html
-- **Terms:** https://cloudyni.com/facts-kids/terms.html
-- **Delete data:** https://cloudyni.com/facts-kids/delete-data.html
+- **Home:** https://cloudyni.com/factswipe/
+- **Privacy:** https://cloudyni.com/factswipe/privacy.html
+- **Terms:** https://cloudyni.com/factswipe/terms.html
+- **Delete data:** https://cloudyni.com/factswipe/delete-data.html
 
 ### Decibel Meter
 
@@ -237,6 +241,14 @@ Pattern:
 - **Terms:** https://cloudyni.com/mileage-log-uk/terms.html
 - **Delete data:** https://cloudyni.com/mileage-log-uk/delete-data.html
 
+### Morse Beacon
+
+- **Home:** https://cloudyni.com/morse-beacon/
+- **Privacy:** https://cloudyni.com/morse-beacon/privacy.html
+- **Terms:** https://cloudyni.com/morse-beacon/terms.html
+- **Delete data:** https://cloudyni.com/morse-beacon/delete-data.html
+
+
 ### Mortgage Overpay
 
 - **Home:** https://cloudyni.com/mortgage-overpay/
@@ -250,6 +262,14 @@ Pattern:
 - **Privacy:** https://cloudyni.com/paint-room-calc/privacy.html
 - **Terms:** https://cloudyni.com/paint-room-calc/terms.html
 - **Delete data:** https://cloudyni.com/paint-room-calc/delete-data.html
+
+### Pantry Pals
+
+- **Home:** https://cloudyni.com/pantry-pals/
+- **Privacy:** https://cloudyni.com/pantry-pals/privacy.html
+- **Terms:** https://cloudyni.com/pantry-pals/terms.html
+- **Delete data:** https://cloudyni.com/pantry-pals/delete-data.html
+
 
 ### Parking Reminder
 
@@ -271,6 +291,14 @@ Pattern:
 - **Privacy:** https://cloudyni.com/percent-master/privacy.html
 - **Terms:** https://cloudyni.com/percent-master/terms.html
 - **Delete data:** https://cloudyni.com/percent-master/delete-data.html
+
+### PeriLog
+
+- **Home:** https://cloudyni.com/perimenopause-tracker/
+- **Privacy:** https://cloudyni.com/perimenopause-tracker/privacy.html
+- **Terms:** https://cloudyni.com/perimenopause-tracker/terms.html
+- **Delete data:** https://cloudyni.com/perimenopause-tracker/delete-data.html
+
 
 ### Plant Care
 

@@ -5,6 +5,10 @@ Support email: **support@cloudyni.com** everywhere.
 
 Generic pattern: `https://cloudyni.com/<slug>/{privacy.html, terms.html, delete-data.html}`
 
+Retired slugs — `facts-kids/`, `bible-buddy/` and `perimenopause-tracker-legal/` — are kept as
+`noindex` redirect stubs to the canonical slug in the table, so an old Play Console field or a
+stale search result still lands on the live page.
+
 ## Site-wide (Facebook / page publisher)
 
 The **CloudyNI Publisher** Facebook app and the **Cloudy NI Apps** page use site-wide pages:
@@ -17,7 +21,7 @@ The **CloudyNI Publisher** Facebook app and the **Cloudy NI Apps** page use site
 |-----|------|-------|-------------|---------|
 | Bible Buddy (renamed → Religious Reader) | `https://cloudyni.com/religious-reader/privacy.html` | `https://cloudyni.com/religious-reader/terms.html` | `https://cloudyni.com/religious-reader/delete-data.html` | `https://cloudyni.com/religious-reader/` |
 | Daily Affirmation | `https://cloudyni.com/daily-affirmation/privacy.html` | `https://cloudyni.com/daily-affirmation/terms.html` | `https://cloudyni.com/daily-affirmation/delete-data.html` | `https://cloudyni.com/daily-affirmation/` |
-| FactSwipe | `https://cloudyni.com/facts-kids/privacy.html` | `https://cloudyni.com/facts-kids/terms.html` | `https://cloudyni.com/facts-kids/delete-data.html` | `https://cloudyni.com/facts-kids/` |
+| FactSwipe | `https://cloudyni.com/factswipe/privacy.html` | `https://cloudyni.com/factswipe/terms.html` | `https://cloudyni.com/factswipe/delete-data.html` | `https://cloudyni.com/factswipe/` |
 | Decibel Meter | `https://cloudyni.com/decibel-meter-pro/privacy.html` | `https://cloudyni.com/decibel-meter-pro/terms.html` | `https://cloudyni.com/decibel-meter-pro/delete-data.html` | `https://cloudyni.com/decibel-meter-pro/` |
 | BT Mic | `https://cloudyni.com/pa-mic/privacy.html` | `https://cloudyni.com/pa-mic/terms.html` | `https://cloudyni.com/pa-mic/delete-data.html` | `https://cloudyni.com/pa-mic/` |
 | Kitchen Buddy | `https://cloudyni.com/synccook/privacy.html` | `https://cloudyni.com/synccook/terms.html` | `https://cloudyni.com/synccook/delete-data.html` | `https://cloudyni.com/synccook/` |
@@ -43,11 +47,14 @@ The **CloudyNI Publisher** Facebook app and the **Cloudy NI Apps** page use site
 | Med Reminder | `https://cloudyni.com/med-reminder/privacy.html` | `https://cloudyni.com/med-reminder/terms.html` | `https://cloudyni.com/med-reminder/delete-data.html` | `https://cloudyni.com/med-reminder/` |
 | Meeting Cost | `https://cloudyni.com/meeting-cost/privacy.html` | `https://cloudyni.com/meeting-cost/terms.html` | `https://cloudyni.com/meeting-cost/delete-data.html` | `https://cloudyni.com/meeting-cost/` |
 | Mileage Log UK | `https://cloudyni.com/mileage-log-uk/privacy.html` | `https://cloudyni.com/mileage-log-uk/terms.html` | `https://cloudyni.com/mileage-log-uk/delete-data.html` | `https://cloudyni.com/mileage-log-uk/` |
+| Morse Beacon | `https://cloudyni.com/morse-beacon/privacy.html` | `https://cloudyni.com/morse-beacon/terms.html` | `https://cloudyni.com/morse-beacon/delete-data.html` | `https://cloudyni.com/morse-beacon/` |
 | Mortgage Overpay | `https://cloudyni.com/mortgage-overpay/privacy.html` | `https://cloudyni.com/mortgage-overpay/terms.html` | `https://cloudyni.com/mortgage-overpay/delete-data.html` | `https://cloudyni.com/mortgage-overpay/` |
 | Paint Room Calc | `https://cloudyni.com/paint-room-calc/privacy.html` | `https://cloudyni.com/paint-room-calc/terms.html` | `https://cloudyni.com/paint-room-calc/delete-data.html` | `https://cloudyni.com/paint-room-calc/` |
+| Pantry Pals | `https://cloudyni.com/pantry-pals/privacy.html` | `https://cloudyni.com/pantry-pals/terms.html` | `https://cloudyni.com/pantry-pals/delete-data.html` | `https://cloudyni.com/pantry-pals/` |
 | Parking Reminder | `https://cloudyni.com/parking-reminder/privacy.html` | `https://cloudyni.com/parking-reminder/terms.html` | `https://cloudyni.com/parking-reminder/delete-data.html` | `https://cloudyni.com/parking-reminder/` |
 | Pass Gen | `https://cloudyni.com/pass-gen/privacy.html` | `https://cloudyni.com/pass-gen/terms.html` | `https://cloudyni.com/pass-gen/delete-data.html` | `https://cloudyni.com/pass-gen/` |
 | Percent Master | `https://cloudyni.com/percent-master/privacy.html` | `https://cloudyni.com/percent-master/terms.html` | `https://cloudyni.com/percent-master/delete-data.html` | `https://cloudyni.com/percent-master/` |
+| PeriLog | `https://cloudyni.com/perimenopause-tracker/privacy.html` | `https://cloudyni.com/perimenopause-tracker/terms.html` | `https://cloudyni.com/perimenopause-tracker/delete-data.html` | `https://cloudyni.com/perimenopause-tracker/` |
 | Plant Care | `https://cloudyni.com/plant-care/privacy.html` | `https://cloudyni.com/plant-care/terms.html` | `https://cloudyni.com/plant-care/delete-data.html` | `https://cloudyni.com/plant-care/` |
 | Pomodoro Focus | `https://cloudyni.com/pomodoro-focus/privacy.html` | `https://cloudyni.com/pomodoro-focus/terms.html` | `https://cloudyni.com/pomodoro-focus/delete-data.html` | `https://cloudyni.com/pomodoro-focus/` |
 | QR Maker | `https://cloudyni.com/qr-maker/privacy.html` | `https://cloudyni.com/qr-maker/terms.html` | `https://cloudyni.com/qr-maker/delete-data.html` | `https://cloudyni.com/qr-maker/` |
