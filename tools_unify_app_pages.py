@@ -2646,7 +2646,13 @@ def main(argv=None):
             print("%s: directory is gone, nothing to stub" % alias)
             continue
         for page in STUB_PAGES:
-            if (base / page).exists():
+            # Stub every page the canonical app publishes, not only the ones this retired directory
+            # happens to hold. `perimenopause-tracker-legal` was a legal-only folder, so it never had
+            # an index.html or a delete-data.html - and both URLs answered 404 while this file's own
+            # docs (`CLOUDYNI_URLS.md:8`, `PLAY_CONSOLE_URLS.md:24`) promised that every retired URL
+            # still lands on the live page. The destination is what makes a stub safe: the canonical
+            # page exists, so the redirect cannot point at nothing.
+            if (base / page).exists() or (ROOT / target / page).exists():
                 pages.append((base / page, stub_page(table[target], page)))
 
     changes = []
