@@ -273,6 +273,13 @@ def app(**kw):
         security_extra=None,
         monetisation="",
         products=[],
+        # True for an app whose only paid product is a one-off. The billing wording
+        # then says "there is nothing to cancel" instead of explaining how to
+        # cancel a subscription, which would be wrong on an ICO-facing page.
+        one_off_only=False,
+        # Optional per-app override of POLICY_DATE — used when a brand-new app is
+        # added and re-dating every other policy would be noise.
+        policy_date=None,
         plans_note="",
         ads_terms=None,
         disclaimers=[],
@@ -1398,6 +1405,118 @@ APPS = [
             "Purchases: optional monthly subscription <code>morse_beacon_premium</code> and one-time <code>morse_beacon_lifetime</code>, sold through Google Play Billing.",
         ],
     ),
+    # ── Spooky Sound Board ───────────────────────────────────────────────────
+    # Profile: AdMob only (banner + interstitial, UMP consent), NO analytics of
+    # any kind, and no Supabase/Firebase code in the build at all — CLOUD_NONE
+    # here is literal, not a "dormant but switched off" claim like CLOUD_GATED_OFF.
+    # One product, one payment: remove_ads_bonus. Haunted Doorway is the reason
+    # the access list names a mediaPlayback foreground service, a partial wake
+    # lock and notifications.
+    app(
+        slug="spooky-sound-board",
+        name="Spooky Sound Board",
+        package="com.cloudyni.spookysoundboard",
+        theme="#ff7519",
+        favicon="assets/icon-512.png",
+        footer_note=(
+            "Halloween sound effects — point the speakers at someone who asked for it."
+        ),
+        # First published after POLICY_DATE, so these pages carry their own date
+        # rather than re-dating the other nine apps' policies.
+        policy_date="29 September 2026",
+        cloud=CLOUD_NONE,
+        services=[
+            "Your device's sound output, to play the 36 bundled sounds. The app never asks for the microphone and cannot record anything",
+            "Haptic feedback, for the optional thump that fires with a Haunted Doorway scare; this uses Android's built-in vibration and needs no extra permission",
+            "Notifications, asked for before a haunting can keep running with the screen off. Without that permission, scares only fire while the app is open",
+            "A foreground service of type media playback, started only when you tap <em>Start the haunting</em>. It is what keeps scares firing while the screen is off, it shows a notification with <em>Stop</em> and <em>Scare now</em>, and it ends when you stop the haunting",
+            "A partial wake lock, held only while a Haunted Doorway session is running, so the timer can fire on a sleeping screen",
+            "Network access, for advertising on the free tier and for Google Play purchases",
+            "Your advertising ID, used by Google AdMob on the free tier",
+        ],
+        collected=[
+            "**Your favourites.** The sounds you starred, stored on the device and checked against the built-in catalogue every launch.",
+            "**Your settings.** Master volume, vibration on tap, the thump a scare gives, keep-screen-awake, reduced motion, the scare flash, and whether a haunting keeps running with the screen off.",
+            "**Your Haunted Doorway options.** The interval between scares, the auto-stop time, which sound groups the haunting draws on, screen flash and haptics.",
+            "**A running haunting holds a countdown.** Whether a session is on, how many scares have fired and when the next one is due. This lives in memory while the session runs and is dropped the moment you stop it.",
+            "**What you play is not kept.** Which sound you tapped is used to show what is playing on screen. It is not written to storage, and the app has no upload path at all.",
+            "**Advertising data** processed by Google AdMob on the free tier (see the advertising section).",
+            "**Correspondence** you send to support.",
+        ],
+        on_device=[
+            "Your favourites, so the sounds you star are still starred after a restart.",
+            "Volume, vibration, keep-awake, reduced-motion and scare-flash settings.",
+            "Your Haunted Doorway options: interval, auto-stop time, sound groups, flash and haptics.",
+            "The locally cached unlock for this install; the purchase itself belongs to your Google account.",
+        ],
+        ads="""
+      The free tier shows a banner and occasional full-screen advertising served by
+      <strong>Google AdMob</strong>. There is no mediator and no second ad network in this build:
+      advertising, and the consent form that asks about it, both come straight from Google. Google
+      may process your advertising ID, IP address and device information to serve and measure ads.
+      AdMob never receives the sounds you play, your favourites, your settings or a running haunting.
+      Once the one-time unlock is bought, the ad SDK is never initialised, so no ad is requested at
+      all.
+    """,
+        consent=True,
+        analytics=[],
+        monetisation="""
+      Spooky Sound Board is free to download and supported by advertising. A single
+      <strong>one-time purchase</strong> through Google Play Billing removes advertising and unlocks
+      the six-sound bonus pack. There is <strong>no subscription</strong> in this app, nothing
+      renews, and no account is needed to buy it or to get it back.
+    """,
+        products=[
+            "<code>remove_ads_bonus</code> &mdash; the one-time product the app requests from Google Play, which removes advertising and unlocks the bonus sound pack",
+        ],
+        one_off_only=True,
+        plans_note="""
+      The unlock is a <strong>one-off payment</strong>, not a subscription: there is no renewal, no
+      recurring charge and nothing to cancel. A reinstall does not lose it either &mdash; the app
+      asks Google Play on every launch, and <em>Restore a previous purchase</em> in Settings checks
+      it again on demand. Buying it unlocks the Midnight Organ, the Zombie Horde, the Lurking Horror
+      Theme, Child's Laughter, Call From Beyond and Blood Drip &amp; Splatter, and takes every ad out
+      for good.
+    """,
+        ads_terms="""
+      The free version contains a banner and occasional full-screen advertising served by Google
+      AdMob. The one-time <code>remove_ads_bonus</code> purchase removes advertising permanently and
+      unlocks the bonus sound pack. There is no subscription, so there is no recurring charge and
+      nothing to cancel.
+    """,
+        disclaimers=[
+            "**It is only as loud as your phone.** Loudness, audio quality and the delay between a tap and the sound depend on your device, its speaker and its case. There is no calibration, no amplifier and no volume beyond your phone's own maximum.",
+            "**Pranks are your responsibility.** A sudden loud noise can frighten children, pets, and people with a heart condition, a hearing aid or sound sensitivity. Keep the volume reasonable, do not aim a scare at anyone who has not asked for one, and never use it where a startle could cause a fall or an accident.",
+            "**The Haunted Doorway needs Android's cooperation.** Background scares depend on the notification permission, on your battery settings and on how your phone's manufacturer manages background work. Some devices stop it early, fire late, or suspend it when the phone is asleep or in battery saver.",
+            "**A haunting is not meant to run for ever.** A session stops automatically after the time you choose (15 minutes up to 2 hours), when you tap <em>Stop the haunting</em>, when you stop it from its notification, or when the phone restarts.",
+            "**Halloween entertainment, not equipment.** The app is a soundboard: it is not an alarm, a doorbell, a security device, a medical device or a safety device, and it must not be relied on for anything of that kind.",
+            "**Six of the 36 sounds are in the bonus pack.** They play only after the one-time unlock, and until then they are left out of the Haunted Doorway rotation.",
+        ],
+        retention="""
+      Everything the app stores &mdash; your favourites, your settings and your Haunted Doorway
+      options &mdash; stays on your device until you reset them in the app, clear the app's storage
+      or uninstall it. A running haunting keeps its countdown in memory only and drops it the moment
+      you stop. Because there is no account and no server, we hold nothing of yours to expire or
+      archive. Support correspondence is kept only as long as needed to answer the query, and it is
+      deleted on request, within 90 days. AdMob data is retained by Google under our configuration
+      and Google's own rules, and Google keeps purchase records as the merchant of record.
+    """,
+        not_stored="""
+      We do not sell your data, and the app has no server of ours to send it to. Your favourites,
+      your settings, the sounds you play and the state of a haunting stay on your phone: there is no
+      account, no sign-in, no sync, no cloud backup and no copy of them anywhere else. The only third
+      party the app talks to is Google, for advertising on the free tier and for the one-time Play
+      purchase. There is no analytics SDK, no crash reporter and no advertising mediator in this
+      build.
+    """,
+        play_answers=[
+            "Users can create an account &mdash; <strong>no</strong>. The app has no sign-in, no account system and no server-side profile.",
+            "Account creation is <strong>not required</strong> and is not available.",
+            "Users can request deletion &mdash; <strong>yes</strong> (clearing app storage or uninstalling removes every favourite, setting and haunting preference at once; this page is the deletion URL).",
+            "Deletion requests are completed within <strong>30 days</strong>.",
+            "Data collected: favourites, settings and the sounds you play are stored on the device and are <strong>not</strong> collected by us; purchases are processed by Google Play Billing; device identifiers and advertising data may be processed by Google AdMob to serve ads on the free tier.",
+        ],
+    ),
     # APPS_MARKER
 ]
 
@@ -1411,6 +1530,16 @@ APPS = [
 
 POLICY_DATE = "27 September 2026"    # bump whenever an APPS entry changes
 WIDTH = 98                           # wrap width used by every generated block
+
+
+def policy_date(app):
+    """The date this app's pages carry.
+
+    A brand-new app can be added without re-dating every existing policy, so an
+    entry may override the table date. Everything else keeps POLICY_DATE, which
+    is bumped when the wording of an existing entry changes.
+    """
+    return app["policy_date"] or POLICY_DATE
 
 ADMOB_PRIVACY = (
     '<a href="https://support.google.com/admob/answer/6128543" '
@@ -1777,6 +1906,10 @@ def privacy_sections(app):
                 para(
                     "A subscription is cancelled in Google Play, not by deleting anything here,"
                     " and deleting your data does not cancel it."
+                ) if not app["one_off_only"] else para(
+                    "A one-time purchase never renews and needs no cancelling, and deleting your"
+                    " data does not take it away: the app asks Google Play again the next time it"
+                    " starts, so the unlock comes back at no extra cost."
                 ),
             ],
         ))
@@ -1862,7 +1995,7 @@ def privacy_sections(app):
                 " Google Play on that date. If a change affects what the app collects or where"
                 " it goes, we update this page and the date above before the change ships. If"
                 " the change is significant we will say so on the app's Google Play listing."
-                % POLICY_DATE
+                % policy_date(app)
             ),
         ],
     ))
@@ -1887,7 +2020,7 @@ def page_meta(app, date_label="Last updated"):
             '<a href="%s" rel="noopener" target="_blank">%s</a>' % (ICO_URL, ICO),
         ),
         ("Region", "Northern Ireland, United Kingdom"),
-        (date_label, POLICY_DATE),
+        (date_label, policy_date(app)),
         ("Contact", '<a href="mailto:%s">%s</a>' % (EMAIL, EMAIL)),
     ]
 
@@ -2077,7 +2210,7 @@ def terms_sections(app):
                 "We may update the app and these terms. This is the current version, dated %s."
                 " If we change the terms in a way that matters we will update this page before"
                 " the change takes effect, and continuing to use the app after that means you"
-                " accept the new version." % POLICY_DATE
+                " accept the new version." % policy_date(app)
             ),
             para(
                 "We may also change, suspend or withdraw the app, or a feature in it. If we"
@@ -2354,7 +2487,23 @@ def deletion_rows(app):
 
 
 def billing_blocks(app):
-    """The reminder that a Play subscription survives a deletion request."""
+    """The reminder that a Play purchase survives a deletion request."""
+    if app["one_off_only"]:
+        return [
+            para(
+                "Your unlock is a purchase record held by Google, not an account with us, so"
+                " deleting your data does not remove it. Uninstalling and reinstalling the app does"
+                " not remove it either: open the app on the same Google account and it asks Play"
+                " whether the product is still active."
+            ),
+            para(
+                "There is nothing to cancel, because the product is bought once and never renews."
+                " Refunds and billing disputes are handled by Google as the merchant of record,"
+                " under %s. If the unlock does not come back after a reinstall, email"
+                ' <a href="mailto:%s">%s</a> with the Google Play order number from your purchase'
+                " confirmation." % (PLAY_TERMS, EMAIL, EMAIL)
+            ),
+        ]
     return [
         para(
             "A purchase is a record held by Google, not an account with us, so deleting your"
@@ -2425,7 +2574,9 @@ def delete_sections(app):
     if app["products"]:
         sections.append((
             "billing",
-            "Deleting data does not cancel a subscription",
+            "Deleting data does not cancel your purchase"
+            if app["one_off_only"]
+            else "Deleting data does not cancel a subscription",
             billing_blocks(app),
         ))
     sections.append(("play", "What we declare to Google Play", play_blocks(app)))

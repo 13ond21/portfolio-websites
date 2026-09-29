@@ -296,6 +296,15 @@
     "shots": []
   },
   {
+    "slug": "spooky-sound-board",
+    "name": "\ud83c\udf83",
+    "title_tag": "Spooky Sound Board \u2014 36 Halloween sounds, offline",
+    "desc": "Spooky Sound Board: 36 Halloween sounds and looping ambience for Android, with a hands-free Haunted Doorway mode. Instant, offline and ad-free after one purchase.",
+    "theme": "#ff7519",
+    "package": "com.cloudyni.spookysoundboard",
+    "shots": []
+  },
+  {
     "slug": "stamp-duty-calc",
     "name": "",
     "title_tag": "Stamp Duty Calc \u2014 privacy-first Android app",

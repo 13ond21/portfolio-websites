@@ -342,6 +342,19 @@ Pattern:
 - **Terms:** https://cloudyni.com/savings-goal/terms.html
 - **Delete data:** https://cloudyni.com/savings-goal/delete-data.html
 
+### Spooky Sound Board
+
+Package `com.cloudyni.spookysoundboard` · **not on Play yet** — these URLs are ready for the
+console fields the moment the first AAB is uploaded. Ad-free after the one-time
+`remove_ads_bonus` purchase; no account and no analytics, so the Data safety form answers are
+strictly AdMob + Play Billing (see `spooky-sound-board/play-store-assets/DATA_SAFETY.md`).
+
+- **Home:** https://cloudyni.com/spooky-sound-board/
+- **Privacy:** https://cloudyni.com/spooky-sound-board/privacy.html
+- **Terms:** https://cloudyni.com/spooky-sound-board/terms.html
+- **Delete data:** https://cloudyni.com/spooky-sound-board/delete-data.html
+- **Credits:** https://cloudyni.com/spooky-sound-board/credits.html
+
 ### Self-Employed Tax
 
 - **Home:** https://cloudyni.com/self-employed-tax/
