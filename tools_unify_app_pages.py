@@ -2591,9 +2591,25 @@ def main(argv=None):
         action="store_true",
         help="list the slugs, cloud posture and product counts, then exit",
     )
+    parser.add_argument(
+        "--urls",
+        action="store_true",
+        help="print the markdown URL table to paste into Play Console, then exit",
+    )
     args = parser.parse_args(argv)
 
     table = check_table()
+
+    if args.urls:
+        print("| App | Privacy policy | Terms | Delete data | Website |")
+        print("|-----|----------------|-------|-------------|---------|")
+        for a in APPS:
+            base = "%s/%s" % (SITE, a["slug"])
+            print(
+                "| %s | `%s/privacy.html` | `%s/terms.html` | `%s/delete-data.html` | `%s/` |"
+                % (a["name"].replace("&amp;", "&"), base, base, base, base)
+            )
+        return 0
 
     if args.list:
         print("%-30s %-10s %8s  %s" % ("SLUG", "CLOUD", "PRODUCTS", "APP"))
