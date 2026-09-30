@@ -389,11 +389,10 @@ APPS = [
     """,
         products=[
             "<code>decibel_premium</code> &mdash; monthly auto-renewing subscription",
-            "<code>decibel_premium_annual</code> &mdash; annual auto-renewing subscription",
         ],
         plans_note="""
       Pro removes advertising and unlocks the extra measurement features described on the app's
-      Google Play listing. Both products are <strong>subscriptions</strong>: neither is a one-off
+      Google Play listing. That product is a <strong>subscription</strong>: it is not a one-off
       payment, and we do not sell a lifetime unlock. If you see a claim elsewhere that Decibel
       Meter Pro is a one-time purchase, it is out of date &mdash; this page describes what the app
       actually sells.
@@ -1528,7 +1527,7 @@ APPS = [
 # every canonical slug, plus a `noindex` redirect stub for every retired alias.
 # Generated pages are never hand-edited: change the entry above and re-run.
 
-POLICY_DATE = "27 September 2026"    # bump whenever an APPS entry changes
+POLICY_DATE = "30 September 2026"    # bump whenever an APPS entry changes
 WIDTH = 98                           # wrap width used by every generated block
 
 
