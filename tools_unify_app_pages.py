@@ -1423,10 +1423,10 @@ APPS = [
         ),
         # First published after POLICY_DATE, so these pages carry their own date
         # rather than re-dating the other nine apps' policies.
-        policy_date="29 September 2026",
+        policy_date="30 September 2026",
         cloud=CLOUD_NONE,
         services=[
-            "Your device's sound output, to play the 36 bundled sounds. The app never asks for the microphone and cannot record anything",
+            "Your device's sound output, to play the 100 bundled sounds. The app never asks for the microphone and cannot record anything",
             "Haptic feedback, for the optional thump that fires with a Haunted Doorway scare; this uses Android's built-in vibration and needs no extra permission",
             "Notifications, asked for before a haunting can keep running with the screen off. Without that permission, scares only fire while the app is open",
             "A foreground service of type media playback, started only when you tap <em>Start the haunting</em>. It is what keeps scares firing while the screen is off, it shows a notification with <em>Stop</em> and <em>Scare now</em>, and it ends when you stop the haunting",
@@ -1463,7 +1463,7 @@ APPS = [
         monetisation="""
       Spooky Sound Board is free to download and supported by advertising. A single
       <strong>one-time purchase</strong> through Google Play Billing removes advertising and unlocks
-      the six-sound bonus pack. There is <strong>no subscription</strong> in this app, nothing
+      the sixty-sound bonus pack. There is <strong>no subscription</strong> in this app, nothing
       renews, and no account is needed to buy it or to get it back.
     """,
         products=[
@@ -1490,7 +1490,7 @@ APPS = [
             "**The Haunted Doorway needs Android's cooperation.** Background scares depend on the notification permission, on your battery settings and on how your phone's manufacturer manages background work. Some devices stop it early, fire late, or suspend it when the phone is asleep or in battery saver.",
             "**A haunting is not meant to run for ever.** A session stops automatically after the time you choose (15 minutes up to 2 hours), when you tap <em>Stop the haunting</em>, when you stop it from its notification, or when the phone restarts.",
             "**Halloween entertainment, not equipment.** The app is a soundboard: it is not an alarm, a doorbell, a security device, a medical device or a safety device, and it must not be relied on for anything of that kind.",
-            "**Six of the 36 sounds are in the bonus pack.** They play only after the one-time unlock, and until then they are left out of the Haunted Doorway rotation.",
+            "**Sixty of the 100 sounds are in the bonus pack.** They play only after the one-time unlock, and until then they are left out of the Haunted Doorway rotation.",
         ],
         retention="""
       Everything the app stores &mdash; your favourites, your settings and your Haunted Doorway
