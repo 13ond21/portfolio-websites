@@ -746,7 +746,7 @@ APPS = [
       features described on the app's Google Play listing.
     """,
         products=[
-            "<code>religious_reader_premium_monthly</code> &mdash; the premium product the app requests from Google Play",
+            "<code>bible_buddy_premium_monthly</code> &mdash; the premium product the app requests from Google Play",
         ],
         plans_note="""
       The identifier names a monthly product, so treat it as an auto-renewing subscription. Whether a
