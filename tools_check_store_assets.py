@@ -19,6 +19,11 @@ WHAT THIS GUARDS
   re-encoded or re-cropped copy of the same screen is the realistic duplicate, not an
   identical file.
 
+  It also warns - never fails - on a feature graphic carrying transparent pixels, and on a
+  screenshot whose proportions are past 2:1. Both are things a person should look at: an
+  opaque alpha channel is what most files here carry and is fine, and 20:9 captures are
+  accepted in practice.
+
 USAGE
     python tools_check_store_assets.py                 # every app folder in this repo
     python tools_check_store_assets.py <dir> [<dir>]   # extra roots, e.g. an app checkout
@@ -68,7 +73,8 @@ def app_dirs(root):
 
 
 def check_asset(app, path, expected, kind, problems, warnings, args):
-    size = Image.open(path).size
+    im = Image.open(path)
+    size = im.size
     if expected is not None:
         if size != expected:
             problems.append("%s: %s is %dx%d, Play wants %dx%d"
@@ -82,6 +88,11 @@ def check_asset(app, path, expected, kind, problems, warnings, args):
             warnings.append("%s: %s is %dx%d, aspect %.2f:1 is over Play's %.1f:1"
                             % (app.name, path.name, size[0], size[1],
                                long_side / short_side, ASPECT_LIMIT))
+    # The icon may keep its alpha; the feature graphic may not - Play asks for "JPEG or 24-bit PNG
+    # (no alpha)" there. An opaque alpha channel is what most of these files carry and is fine.
+    if kind == "graphic" and im.mode.endswith("A") and im.getchannel("A").getextrema()[0] < 255:
+        warnings.append("%s: %s has transparent pixels; Play wants no alpha on the feature graphic"
+                        % (app.name, path.name))
     if not args.quiet:
         print("  %-16s %-10s %-28s %dx%d" % (app.name, kind, path.name, size[0], size[1]))
     return size
