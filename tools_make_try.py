@@ -1,3 +1,12 @@
+"""HISTORICAL: this was the one-shot script that turned apps.html into try.html. Do not re-run it.
+
+It reads `apps.html` and writes the result over `try.html` - but `apps.html` is now a 4-line
+redirect stub, and `try.html` has been hand-maintained since (tiles added, `data-live` flipped,
+the hero rewritten). Running this again would replace the live hub with a redirect stub's body
+and overwrite assets/hub/qr-try-hub.png over the network. The tiles it used to generate are now
+checked by tools_check_hub_tiles.py instead.
+"""
+
 from pathlib import Path
 import urllib.parse
 import urllib.request
