@@ -79,6 +79,9 @@ a:hover { color: var(--accent-2); }
 .brand-mark {
   width: 38px; height: 38px; border-radius: 12px;
   background: linear-gradient(145deg, var(--accent), var(--accent-dim));
+  /* Explicit on purpose: the tile is a steel-blue gradient in both themes, so the glyph must not
+     inherit --ink (which is now a dark #131A22 on this light site and would nearly vanish). */
+  color: #FFFFFF;
   display: grid; place-items: center;
   box-shadow: 0 0 24px var(--glow);
   font-size: 1.1rem;
