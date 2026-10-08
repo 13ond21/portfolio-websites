@@ -269,8 +269,13 @@
           </div>
         </article>
 
-        <!-- data-live="false" = greyed Get on Google Play. Set to "true" when public. -->
-        <article class="app-tile" data-id="daily-affirmation" data-live="true"
+        <!-- data-live="false" = greyed "Get on Google Play"; flip to "true" only when the app is
+             PUBLIC on Play. Every app in this hub is in closed testing for now
+             (see PLAY_CONSOLE_URLS.md: "closed testing unless marked live"), so only Pantry Pals
+             — the one app with a public listing — carries data-live="true". A closed-testing
+             store URL is not a public listing, so the badge and the button must agree with the
+             attribute, or a no-JS reader (and every crawler) sees a claim the page cannot honour. -->
+        <article class="app-tile" data-id="daily-affirmation" data-live="false"
           data-play="https://play.google.com/store/apps/details?id=com.dailyaffirmation.app">
           <div class="art">
             <img src="assets/hub/daily-affirmation.png?v=20260718" alt="Daily Affirmation" loading="eager" />
@@ -287,6 +292,7 @@
             <div class="mini-links">
               <a href="https://cloudyni.com/daily-affirmation/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
               <a href="https://cloudyni.com/daily-affirmation/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+              <a href="https://cloudyni.com/daily-affirmation/delete-data.html" target="_blank" rel="noopener noreferrer">Delete data</a>
             </div>
           </div>
         </article>
@@ -308,6 +314,7 @@
             <div class="mini-links">
               <a href="https://cloudyni.com/factswipe/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
               <a href="https://cloudyni.com/factswipe/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+              <a href="https://cloudyni.com/factswipe/delete-data.html" target="_blank" rel="noopener noreferrer">Delete data</a>
             </div>
           </div>
         </article>
@@ -329,11 +336,12 @@
             <div class="mini-links">
               <a href="https://cloudyni.com/decibel-meter-pro/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
               <a href="https://cloudyni.com/decibel-meter-pro/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+              <a href="https://cloudyni.com/decibel-meter-pro/delete-data.html" target="_blank" rel="noopener noreferrer">Delete data</a>
             </div>
           </div>
         </article>
 
-        <article class="app-tile" data-id="bluetooth-mic" data-live="true"
+        <article class="app-tile" data-id="bluetooth-mic" data-live="false"
           data-play="https://play.google.com/store/apps/details?id=com.btcmic.pamic">
           <div class="art">
             <img src="assets/hub/bt-mic.png?v=20260718" alt="Bluetooth Mic" loading="lazy" />
@@ -350,11 +358,12 @@
             <div class="mini-links">
               <a href="https://cloudyni.com/pa-mic/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
               <a href="https://cloudyni.com/pa-mic/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+              <a href="https://cloudyni.com/pa-mic/delete-data.html" target="_blank" rel="noopener noreferrer">Delete data</a>
             </div>
           </div>
         </article>
 
-        <article class="app-tile" data-id="morse-beacon" data-live="true"
+        <article class="app-tile" data-id="morse-beacon" data-live="false"
           data-play="https://play.google.com/store/apps/details?id=com.luckytools.morse_beacon">
           <div class="art">
             <img src="assets/hub/morse-beacon.png?v=20260718" alt="Morse Beacon" loading="lazy" />
@@ -398,7 +407,7 @@
           </div>
         </article>
 
-        <article class="app-tile" data-id="pass-gen" data-live="true"
+        <article class="app-tile" data-id="pass-gen" data-live="false"
           data-play="https://play.google.com/store/apps/details?id=com.luckytools.pass_gen">
           <div class="art">
             <img src="assets/hub/pass-gen.png?v=20260718" alt="Pass Gen" loading="lazy" />
