@@ -3,22 +3,174 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UK Pay Calc — UK Pay Calc</title>
-  <link rel="canonical" href="https://cloudyni.com/uk-pay-calc/index.html" />
+  <title>UK Pay Calc — UK take-home pay, tax and NI calculator</title>
+  <meta name="description" content="Estimate your UK take-home pay from a gross salary: income tax, National Insurance, pension contributions and student loan repayments, with a line-by-line breakdown. Offline, no account, no ads, nothing leaves your phone." />
+  <meta name="theme-color" content="#38BDF8" />
+  <meta property="og:title" content="UK Pay Calc — what you actually take home" />
+  <meta property="og:description" content="Gross to net for the UK: income tax, NI, pension and student loans, broken down line by line. Offline, no account, no ads, no tracking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cloudyni.com/uk-pay-calc/" />
+  <link rel="canonical" href="https://cloudyni.com/uk-pay-calc/" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect fill='%230A1220' rx='22' width='100' height='100'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='54' fill='%2338BDF8'%3E%E2%97%86%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
-  <header class="site-header"><div class="inner">
-    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">◆</span> UK Pay Calc</a>
-    <nav class="nav"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="delete-data.html">Delete data</a></nav>
-  </div></header>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">&#9670;</span> UK Pay Calc</a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="#what">What it does</a>
+        <a href="#how">How it works</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
   <main class="wrap">
-    <section class="hero"><div>
-      <h1>UK Pay Calc</h1>
-      <p class="lede">A simple, offline salary and take-home-pay calculator for the UK. Estimate your pay after tax, NI and pension.</p>
-      <div class="btn-row"><a class="btn btn-primary" href="privacy.html">Privacy policy</a></div>
-    </div></section>
+    <section class="hero">
+      <div>
+        <p class="hero-eyebrow">Android &middot; Finance &middot; Offline</p>
+        <h1>Your salary,<br /><em>minus the guesswork.</em></h1>
+        <p class="lede">
+          UK Pay Calc turns a gross salary into the number that lands in your account. Income tax,
+          National Insurance, pension contributions and student loan repayments, each shown as its own
+          line &mdash; so you can see where the money goes, not just the total.
+        </p>
+        <div class="badge-row">
+          <span class="badge accent">Works offline</span>
+          <span class="badge">No account</span>
+          <span class="badge">No ads</span>
+          <span class="badge">No tracking</span>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="mailto:support@cloudyni.com?subject=UK%20Pay%20Calc%20tester">Ask to be a tester</a>
+          <a class="btn btn-secondary" href="#what">See what it calculates</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>Gross to net</strong><span>in one screen</span></div>
+          <div class="stat"><strong>Line by line</strong><span>tax, NI, pension</span></div>
+          <div class="stat"><strong>0</strong><span>accounts</span></div>
+          <div class="stat"><strong>0</strong><span>ads</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="pay-card" aria-hidden="true">
+          <div class="pay-head">
+            <strong>Take-home</strong>
+            <span>monthly</span>
+          </div>
+          <div class="pay-row"><span>Gross pay</span><span>&pound;3,200.00</span></div>
+          <div class="pay-row deduct"><span>Pension (5%)</span><span>&minus;&pound;160.00</span></div>
+          <div class="pay-row deduct"><span>Income tax</span><span>&minus;&pound;398.50</span></div>
+          <div class="pay-row deduct"><span>National Insurance</span><span>&minus;&pound;159.36</span></div>
+          <div class="pay-total"><span>Net pay</span><span>&pound;2,482.14</span></div>
+          <div class="pay-bar"><i></i></div>
+          <p class="pay-caption">Illustrative figures &mdash; the app applies the current bands, your own tax code and your pension rate.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ANCHOR-SECTIONS -->
+    <section class="section" id="what">
+      <div class="section-head">
+        <p class="kicker">What it does</p>
+        <h2>Every deduction, on its own line</h2>
+        <p>No black box: each figure is shown with the band or rate that produced it.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Income tax</h3>
+          <p>The personal allowance, the basic, higher and additional rates, and your own tax code &mdash; including 1257L, BR and D0 codes.</p>
+        </div>
+        <div class="card">
+          <h3>National Insurance</h3>
+          <p>Employee Class 1 contributions worked out per pay period, on the part of your pay above the threshold.</p>
+        </div>
+        <div class="card">
+          <h3>Pension</h3>
+          <p>Percentage or fixed-amount contributions, and whether the scheme takes them from gross pay before tax or from net pay after it.</p>
+        </div>
+        <div class="card">
+          <h3>Student loans</h3>
+          <p>Plans 1, 2, 4 and 5, plus the postgraduate loan, each with its own threshold and rate.</p>
+        </div>
+        <div class="card">
+          <h3>Any pay period</h3>
+          <p>Annual, monthly, four-weekly, fortnightly, weekly or daily &mdash; switch the view without re-entering anything.</p>
+        </div>
+        <div class="card">
+          <h3>The whole picture</h3>
+          <p>Take-home per period and per year, your effective tax rate, and a bar showing the share of gross pay you keep.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="section-head">
+        <p class="kicker">How it works</p>
+        <h2>Four taps to a real number</h2>
+      </div>
+      <ol class="steps">
+        <li><strong>Enter your pay</strong> &mdash; in whatever period you are actually paid.</li>
+        <li><strong>Set the details</strong> &mdash; tax code, student loan plan and pension rate.</li>
+        <li><strong>Read the breakdown</strong> &mdash; every deduction, with the rate behind it.</li>
+        <li><strong>Compare</strong> &mdash; change one figure and watch take-home move. Nothing is uploaded: the calculator runs entirely on the phone.</li>
+      </ol>
+    </section>
+
+    <div class="note">
+      <strong>Estimates, not advice.</strong>
+      UK Pay Calc is an informational tool. Tax and NI change, and your own payroll may treat pension or
+      benefits differently, so treat the result as a close estimate rather than a payslip. Always check
+      against official HMRC guidance, and take professional advice for anything that matters financially.
+    </div>
+
+    <section class="section" id="privacy">
+      <div class="section-head">
+        <p class="kicker">Privacy</p>
+        <h2>Nothing to sign up for, nothing to send us</h2>
+        <p>The calculator works offline, with no account, no analytics and no advertising. Clear the app's data and everything you typed is gone.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-secondary" href="privacy.html">Privacy policy</a>
+        <a class="btn btn-secondary" href="terms.html">Terms of use</a>
+        <a class="btn btn-secondary" href="delete-data.html">Delete your data</a>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <h2>Not on Google Play yet</h2>
+      <p>UK Pay Calc is finishing closed testing. Ask for a tester slot and we will send the opt-in link.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:support@cloudyni.com?subject=UK%20Pay%20Calc%20tester">Ask to be a tester</a>
+        <a class="btn btn-secondary" href="privacy.html">Read the privacy policy</a>
+      </div>
+    </section>
+
+    <article class="card meta-card">
+      <h3>App details</h3>
+      <p>
+        Platform: Android<br />
+        Availability: closed testing &mdash; not yet listed on Google Play<br />
+        Support: <a href="mailto:support@cloudyni.com">support@cloudyni.com</a><br />
+        Site: <a href="https://cloudyni.com/uk-pay-calc/">cloudyni.com/uk-pay-calc/</a>
+      </p>
+    </article>
   </main>
-  <footer class="site-footer"><div class="inner"><p style="margin:0">UK Pay Calc · support@cloudyni.com</p></div></footer>
+
+  <footer class="site-footer">
+    <div class="inner">
+      <p><strong>UK Pay Calc</strong> &middot; Published by CloudyNI &middot; <a href="mailto:support@cloudyni.com">support@cloudyni.com</a></p>
+      <nav class="nav" aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="delete-data.html">Delete data</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
