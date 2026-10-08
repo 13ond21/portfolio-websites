@@ -1,26 +1,28 @@
-/* Med Reminder â€” calm, accessible site for older adults & everyday care
-   Matches the in-app oatmeal + sage palette. Large type, clear contrast. */
+/* Choice Roulette — dark royal purple + champagne gold.
+   Matches the shipped app's default background theme (royal_purple) and its
+   icon, feature graphic and screenshots: gold wheel on deep purple. */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 
 :root {
   --font-display: "Outfit", system-ui, sans-serif;
   --font-body: "Outfit", system-ui, sans-serif;
-  --bg: #f4f1fb;
-  --bg-soft: #faf8ff;
-  --surface: #ffffff;
-  --surface-high: #ece6f8;
-  --ink: #1a1625;
-  --muted: #5a5470;
-  --accent: #6750a4;
-  --accent-soft: #7c67c4;
-  --accent-tint: #ebe4ff;
-  --border: #d5cce8;
-  --focus: #4f378b;
-  --danger: #9b3b30;
+  --bg: #1A0F40;
+  --bg-soft: #211456;
+  --surface: #2A1F58;
+  --surface-high: #3A2F6A;
+  --ink: #F5F2FC;
+  --muted: #CFC6E8;
+  --accent: #D4AF37;
+  --accent-soft: #E8D5A3;
+  --accent-tint: #4A3A18;
+  --border: rgba(122, 106, 176, 0.42);
+  --focus: #F0E0A0;
+  --danger: #FFB4AB;
+  --accent-ink: #1A1408; /* onPrimary - text ON the gold */
   --radius: 18px;
   --radius-lg: 26px;
-  --shadow: 0 6px 22px rgba(31, 28, 24, 0.07);
-  --shadow-lg: 0 18px 48px rgba(31, 28, 24, 0.10);
+  --shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.45);
   --max: 1080px;
   --text: 1.125rem; /* 18px */
   --leading: 1.65;
@@ -61,13 +63,13 @@ a:focus-visible, button:focus-visible {
   outline-offset: 3px;
 }
 
-/* Soft calm atmosphere â€” like the app home screen */
+/* Soft calm atmosphere — like the app home screen */
 .page-bg {
   position: fixed; inset: 0; z-index: -2; pointer-events: none;
   background:
-    radial-gradient(ellipse 75% 50% at 8% 0%, rgba(124, 103, 196, 0.16) 0%, transparent 55%),
-    radial-gradient(ellipse 55% 40% at 96% 6%, rgba(244, 210, 180, 0.28) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 35% at 50% 100%, rgba(143, 169, 154, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 75% 50% at 8% 0%, rgba(123, 92, 255, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 40% at 96% 6%, rgba(212, 175, 55, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 35% at 50% 100%, rgba(107, 90, 158, 0.22) 0%, transparent 55%),
     var(--bg);
 }
 
@@ -77,10 +79,10 @@ a:focus-visible, button:focus-visible {
   padding: 0 1.35rem 3.5rem;
 }
 
-/* Header â€” large tap targets */
+/* Header — large tap targets */
 .site-header {
   position: sticky; top: 0; z-index: 40;
-  background: rgba(255, 251, 245, 0.94);
+  background: rgba(26, 15, 64, 0.86);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(12px);
 }
@@ -108,7 +110,7 @@ a:focus-visible, button:focus-visible {
   width: 44px;
   height: 44px;
   border-radius: 14px;
-  box-shadow: 0 4px 14px rgba(103, 80, 164, 0.22);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.30);
 }
 .nav {
   display: flex;
@@ -129,14 +131,14 @@ a:focus-visible, button:focus-visible {
 .nav a:hover, .nav a[aria-current="page"] { color: var(--accent); }
 .nav-cta {
   background: var(--accent) !important;
-  color: #fff !important;
+  color: var(--accent-ink) !important;
   padding: 0.65rem 1.15rem !important;
   border-radius: 999px;
   font-weight: 700 !important;
-  box-shadow: 0 4px 16px rgba(103, 80, 164, 0.25);
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.30);
   text-decoration: none !important;
 }
-.nav-cta:hover { filter: brightness(1.06); color: #fff !important; }
+.nav-cta:hover { filter: brightness(1.06); color: var(--accent-ink) !important; }
 
 /* Hero */
 .hero {
@@ -216,8 +218,8 @@ a:focus-visible, button:focus-visible {
 }
 .btn-primary {
   background: var(--accent);
-  color: #fff !important;
-  box-shadow: 0 8px 24px rgba(103, 80, 164, 0.22);
+  color: var(--accent-ink) !important;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.30);
 }
 .btn-secondary {
   background: var(--surface);
@@ -258,8 +260,8 @@ a:focus-visible, button:focus-visible {
   width: min(300px, 80vw);
   padding: 12px;
   border-radius: 36px;
-  background: linear-gradient(165deg, #ebe4ff, #d8cef5);
-  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(103, 80, 164, 0.12);
+  background: linear-gradient(165deg, #3A2F6A, #2A1F58);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(212, 175, 55, 0.28);
 }
 .device::before {
   content: "";
@@ -267,7 +269,7 @@ a:focus-visible, button:focus-visible {
   top: 16px; left: 50%; transform: translateX(-50%);
   width: 28%; height: 10px;
   border-radius: 999px;
-  background: #c9bddf;
+  background: #1A0F40;
   z-index: 2;
 }
 .device-glow { display: none; }
@@ -415,7 +417,7 @@ a:focus-visible, button:focus-visible {
   line-height: 1.55;
 }
 
-/* Carousel â€” calm, accessible controls */
+/* Carousel — calm, accessible controls */
 .carousel {
   position: relative;
   max-width: 100%;
@@ -486,7 +488,7 @@ a:focus-visible, button:focus-visible {
   border-radius: 999px;
   border: 0;
   padding: 0;
-  background: #c5b9a6;
+  background: #5C4F8A;
   cursor: pointer;
 }
 .carousel-dot.is-active,
@@ -581,7 +583,7 @@ a:focus-visible, button:focus-visible {
   padding: 0.3rem 0.65rem;
   border-radius: 8px;
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
   font-weight: 800;
 }
 .plan .tagline {
@@ -598,7 +600,7 @@ a:focus-visible, button:focus-visible {
   line-height: 1.5;
 }
 .plan li::before {
-  content: "âœ“";
+  content: "✓";
   position: absolute;
   left: 0;
   color: var(--accent);

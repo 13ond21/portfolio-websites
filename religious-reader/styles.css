@@ -1,18 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap");
 
 :root {
-  --bg: #110b0d;
-  --bg-elevated: #1c1215;
-  --surface: #23161a;
-  --surface-2: #311f25;
-  --ink: #f3f4f6;
-  --muted: #9ca3af;
+  --bg: #F7F9FC;
+  --bg-elevated: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #EDF1F7;
+  --ink: #131A22;
+  --muted: #5C6672;
   --accent: #4A6FA5;
-  --accent-2: #8FADCE;
-  --accent-dim: #35528a;
-  --success: #34d399;
-  --border: rgba(74,111,165,0.22);
-  --glow: rgba(74,111,165,0.35);
+  --accent-2: #2E4E7E;
+  --accent-dim: #33578C;
+  --success: #2E7D5B;
+  --border: rgba(74, 111, 165, 0.24);
+  --glow: rgba(74, 111, 165, 0.20);
+  --gold: #E3AE4A; /* the icon's ribbon - warm highlight */
   --radius: 18px;
   --radius-lg: 28px;
   --max: 1120px;
@@ -34,15 +35,16 @@ body {
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--accent-2); text-decoration: none; }
-a:hover { color: #fff; }
+a:hover { color: var(--accent-2); }
 
-/* App-themed atmosphere (Facts for Kids idea: background fits the product) */
+/* App-themed atmosphere — the app's own light steel-blue identity
+   (seed #4A6FA5, cream pages, gold ribbon), not a sibling app's. */
 .page-bg {
   position: fixed; inset: 0; z-index: -2; pointer-events: none;
   background:
-    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(74,111,165,0.32) 0%, transparent 55%),
-    radial-gradient(ellipse 60% 40% at 95% 10%, rgba(53,82,138,0.28) 0%, transparent 50%),
-    radial-gradient(ellipse 50% 35% at 50% 100%, rgba(143,173,206,0.1) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 50% at 10% -10%, rgba(74, 111, 165, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 95% 10%, rgba(53, 82, 138, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 35% at 50% 100%, rgba(143, 173, 206, 0.18) 0%, transparent 55%),
     var(--bg);
 }
 .page-bg::after {
@@ -60,7 +62,7 @@ a:hover { color: #fff; }
 .site-header {
   position: sticky; top: 0; z-index: 40;
   backdrop-filter: blur(16px);
-  background: rgba(17,11,13,0.78);
+  background: rgba(255, 255, 255, 0.86);
   border-bottom: 1px solid var(--border);
 }
 .site-header .inner {
@@ -86,7 +88,7 @@ a:hover { color: #fff; }
 .nav a:hover, .nav a[aria-current="page"] { color: var(--ink); }
 .nav-cta {
   background: linear-gradient(135deg, var(--accent), var(--accent-dim)) !important;
-  color: #0a0a0c !important;
+  color: #FFFFFF !important;
   padding: 0.5rem 0.95rem !important;
   border-radius: 999px;
   font-weight: 700 !important;
@@ -124,7 +126,7 @@ a:hover { color: #fff; }
 }
 .hero h1 em {
   font-style: normal;
-  background: linear-gradient(120deg, var(--accent-2), var(--accent), #86efac);
+  background: linear-gradient(120deg, var(--accent-2), var(--accent), var(--gold));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -137,7 +139,7 @@ a:hover { color: #fff; }
   border-radius: 999px;
   border: 1px solid var(--border);
   color: var(--muted);
-  background: rgba(255,255,255,0.02);
+  background: rgba(19, 26, 34, 0.03);
 }
 .badge.accent {
   color: var(--accent-2);
@@ -156,7 +158,7 @@ a:hover { color: #fff; }
 .btn:hover { transform: translateY(-1px); }
 .btn-primary {
   background: linear-gradient(135deg, var(--accent), var(--accent-dim));
-  color: #0a0a0c;
+  color: #FFFFFF;
   box-shadow: 0 12px 32px var(--glow);
 }
 .btn-secondary { background: transparent; border-color: var(--border); color: var(--ink); }
@@ -171,7 +173,7 @@ a:hover { color: #fff; }
 .stat {
   padding: 0.85rem 0.75rem;
   border-radius: 14px;
-  background: rgba(35,22,26,0.75);
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid var(--border);
   text-align: center;
 }
@@ -190,10 +192,10 @@ a:hover { color: #fff; }
   width: min(300px, 78vw);
   padding: 12px;
   border-radius: 36px;
-  background: linear-gradient(160deg, #311f25, #110b0d);
+  background: linear-gradient(160deg, #FFFFFF, #EDF1F7);
   box-shadow:
     0 0 0 1px rgba(74,111,165,0.28),
-    0 40px 80px rgba(0,0,0,0.55),
+    0 24px 60px rgba(23, 42, 74, 0.18),
     0 0 60px rgba(74,111,165,0.16);
 }
 .device::before {
@@ -202,13 +204,13 @@ a:hover { color: #fff; }
   top: 18px; left: 50%; transform: translateX(-50%);
   width: 28%; height: 10px;
   border-radius: 999px;
-  background: #050508;
+  background: var(--surface-2);
   z-index: 2;
 }
 .device .carousel-viewport {
   border-radius: 26px;
   overflow: hidden !important;
-  background: #0a0a0c;
+  background: #FFFFFF;
   aspect-ratio: 9 / 19.5;
   max-height: min(62vh, 560px);
 }
@@ -225,7 +227,7 @@ a:hover { color: #fff; }
   display: flex; flex-direction: column; justify-content: flex-end; gap: 0.5rem;
   background:
     radial-gradient(ellipse at 30% 20%, rgba(74,111,165,0.35), transparent 55%),
-    linear-gradient(165deg, #311f25, #110b0d);
+    linear-gradient(165deg, #FFFFFF, #EDF1F7);
   color: var(--ink);
 }
 .device .slide-card strong { font-size: 1.15rem; font-weight: 800; }
@@ -250,7 +252,7 @@ a:hover { color: #fff; }
   padding: 0.85rem 1.2rem;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(35,22,26,0.55);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--muted);
   font-size: 0.9rem;
   font-weight: 600;
@@ -349,11 +351,11 @@ a:hover { color: #fff; }
   position: absolute; top: 42%; transform: translateY(-50%); z-index: 5;
   width: 44px; height: 44px; border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(35,22,26,0.94);
+  background: rgba(255, 255, 255, 0.94);
   color: var(--ink);
   font-size: 1.75rem; line-height: 1;
   display: grid; place-items: center; cursor: pointer;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 28px rgba(23, 42, 74, 0.12);
 }
 .carousel-btn:hover { border-color: var(--accent); color: var(--accent-2); }
 .carousel-btn.prev { left: 0.35rem; }
@@ -388,11 +390,11 @@ a:hover { color: #fff; }
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+  box-shadow: 0 16px 40px rgba(23, 42, 74, 0.10);
   display: flex; flex-direction: column;
 }
 .shot-carousel .shot-frame {
-  background: linear-gradient(180deg, #311f25, #110b0d);
+  background: linear-gradient(180deg, #FFFFFF, #EDF1F7);
   padding: 0.85rem 0.85rem 0;
 }
 .shot-carousel .shot-card img {
@@ -411,7 +413,7 @@ a:hover { color: #fff; }
   display: flex; flex-direction: column; justify-content: flex-end; gap: 0.4rem;
   background:
     radial-gradient(ellipse at 40% 15%, rgba(74,111,165,0.4), transparent 50%),
-    linear-gradient(165deg, #311f25, #110b0d);
+    linear-gradient(165deg, #FFFFFF, #EDF1F7);
 }
 .shot-carousel .shot-mock strong { font-size: 1.1rem; }
 .shot-carousel .shot-mock span { color: var(--muted); font-size: 0.88rem; }
