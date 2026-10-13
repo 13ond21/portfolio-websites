@@ -33,7 +33,7 @@
       <strong>Data controller:</strong> Cloudy NI (sole trader)<br />
       <strong>ICO data protection registration:</strong> <a href="https://ico.org.uk" rel="noopener" target="_blank">ZC222090</a><br />
       <strong>Region:</strong> Northern Ireland, United Kingdom<br />
-      <strong>Last updated:</strong> 2 October 2026 &middot; policy version 1.0<br />
+      <strong>Last updated:</strong> 13 October 2026 &middot; policy version 1.1<br />
       <strong>Contact:</strong> <a href="mailto:support@cloudyni.com">support@cloudyni.com</a><br />
     </p>
 
@@ -75,7 +75,7 @@
         <tr><th scope="row">Where is my artwork stored?</th><td><strong>On your device</strong>, in the app's private storage. It is never uploaded.</td></tr>
         <tr><th scope="row">Do you need an internet connection?</th><td><strong>The sandbox does not.</strong> The simulation, the saves and the sharing are all local. Ads and purchases do need a connection, because Google serves both. See &sect;4 and &sect;5.</td></tr>
         <tr><th scope="row">Is there advertising?</th><td><strong>Yes</strong>, and only Google AdMob serves it. Its device identifiers are used to show and measure ads. See &sect;4.</td></tr>
-        <tr><th scope="row">Are there purchases?</th><td><strong>Yes</strong>, one optional one-off unlock, processed entirely by Google. See &sect;5.</td></tr>
+        <tr><th scope="row">Are there purchases?</th><td><strong>Yes</strong> &mdash; optional, and processed entirely by Google: a one-off unlock, two expansion packs, and a PRO subscription billed monthly or yearly until you cancel it in Google Play. See &sect;5.</td></tr>
       </tbody>
     </table>
 
@@ -111,6 +111,11 @@
           <td><strong>Local preferences</strong> &mdash; your chosen element, brush size, haptics setting, view position, and whether you own PRO</td>
           <td>The app's local preferences store</td>
           <td>Settings only, so the app reopens the way you left it.</td>
+        </tr>
+        <tr>
+          <td><strong>The entitlement record</strong> &mdash; whether you own the unlock, and, for a subscription, the date the store said the paid period ends</td>
+          <td>The app's private files directory (<code>persistentDataPath</code>, <code>sandlab.entitlement</code>)</td>
+          <td>A copy of what Google Play told the app, so PRO survives a restart and a subscription is not lost to a network outage. It holds <strong>no payment detail</strong>: no card number, no receipt, no order number, no price and no name.</td>
         </tr>
         <tr>
           <td><strong>The rolling clip cache</strong> &mdash; the last few seconds of gameplay</td>
@@ -164,12 +169,31 @@
 
     <h2 id="purchases">5. Purchases (Google Play Billing)</h2>
     <p>
-      Sand Lab offers three optional one-off purchases &mdash; <strong>Unlock Complete Sandbox</strong>
-      (<code>com.cloudyni.sand_lab.pro_unlock</code>), and the two expansion packs <strong>Volatile</strong>
-      (<code>com.cloudyni.sand_lab.pack_volatile</code>) and <strong>Cosmic</strong>
-      (<code>com.cloudyni.sand_lab.pack_cosmic</code>) &mdash; plus a rewarded-video trial of certain
-      locked materials. Each is non-consumable: bought once, owned on the account, restorable.
+      Sand Lab offers two kinds of optional purchase, both processed entirely by Google.
     </p>
+    <ul>
+      <li>
+        <strong>One-off purchases</strong> &mdash; <strong>Unlock Complete Sandbox</strong>
+        (<code>com.cloudyni.sand_lab.pro_unlock</code>) and the two expansion packs <strong>Volatile</strong>
+        (<code>com.cloudyni.sand_lab.pack_volatile</code>) and <strong>Cosmic</strong>
+        (<code>com.cloudyni.sand_lab.pack_cosmic</code>). Each is non-consumable: bought once, owned on the
+        Google account that bought it, restorable, and never renewed.
+      </li>
+      <li>
+        <strong>A PRO subscription</strong> &mdash; <code>com.cloudyni.sand_lab.pro_monthly</code> at
+        <strong>&pound;1.99 a month</strong>, or <code>com.cloudyni.sand_lab.pro_annual</code> at
+        <strong>&pound;14.99 a year</strong>. The same materials and the same ad-free play as the unlock,
+        rented a period at a time. It <strong>renews automatically at the end of every period until you
+        cancel it</strong>, and cancelling happens in Google Play (<em>Play Store &rarr; Payments &amp;
+        subscriptions</em>), not in the app. The <a href="terms.html">terms of use</a> carry the renewal,
+        price-change, cancellation and refund terms in full.
+      </li>
+      <li>
+        A <strong>rewarded video</strong> may offer a temporary trial of certain locked materials. It is
+        free to watch, entirely optional, and does not unlock anything permanently.
+      </li>
+    </ul>
+    <p>For all of them:</p>
     <ul>
       <li>
         <strong>Payment is processed entirely by Google.</strong> Your card or payment details go to
@@ -178,8 +202,10 @@
       </li>
       <li>
         <strong>What the app receives:</strong> a signed purchase confirmation, from which it records a
-        single flag &mdash; "PRO owned" &mdash; in its own local preferences on your device. It keeps no
-        receipt, no order number and no purchase history.
+        single flag &mdash; "PRO owned" &mdash; in its own local preferences on your device, and, for a
+        subscription, the date the store said the paid period ends. Both live in the app's own storage, so
+        a plan survives a restart and a network outage. It keeps no receipt, no order number, no price and
+        no purchase history.
       </li>
       <li>
         <strong>Restoring purchases</strong> asks Google for that same flag again. Nothing is stored on
