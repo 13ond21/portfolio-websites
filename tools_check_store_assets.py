@@ -24,6 +24,24 @@ WHAT THIS GUARDS
   opaque alpha channel is what most files here carry and is fine, and 20:9 captures are
   accepted in practice.
 
+  Two spellings, one deliverable. The glob used to be "*feature*graphic*.png" alone, which is
+  how fifteen of this repo's sixteen feature graphics are named; the sixteenth,
+  perimenopause-tracker/assets/feature.png, went unmeasured. It is one of three byte-identical
+  copies of the PeriLog feature graphic (this app folder, assets/hub/, and the app repo's own
+  website dir), so the file whose look is the brand's was the one file nothing looked at.
+
+BRAND MARKS ARE PINNED, NOT CROPPED
+  assets/icon.png is the PeriLog mark, and it is the busiest asset here: the favicon of four
+  pages, the 34-38 px brand chip in their headers, and the app's Play icon. It is a rounded
+  tile drawn across a 512x512 canvas with an eight-to-nine pixel transparent margin - that
+  margin is the safe zone the launcher mask and the pages' own border-radius rely on - and its
+  outermost ring of opaque pixels is the mark's own peach bevel rather than a background
+  fringe. Measured, it therefore has no padding to crop, and cropping it would cut the bevel
+  and its anti-aliasing while breaking the square those four placements assume. So the mark is
+  asserted here instead of cropped: the size the placements were laid out around, the alpha
+  channel they need, four transparent corners, and a margin small enough to prove nobody has
+  letterboxed it.
+
 USAGE
     python tools_check_store_assets.py                 # every app folder in this repo
     python tools_check_store_assets.py <dir> [<dir>]   # extra roots, e.g. an app checkout
@@ -42,6 +60,19 @@ from PIL import Image, ImageChops
 ROOT = pathlib.Path(__file__).resolve().parent
 FEATURE_GRAPHIC = (1024, 500)
 ICON = (512, 512)
+# The second spelling of the feature graphic. It is checked for its size - a landing-page hero
+# that is not 1024x500 is what breaks silently - but not for alpha: this spelling is the *web*
+# copy, and the upload Play validates is the app repo's own source/play-store-assets/
+# feature-graphic.png, which has carried no alpha channel since the flatten pass.
+FEATURE_PLAIN = "feature.png"
+# Brand marks, by app folder: (size, widest transparent margin in px, least opaque coverage).
+# The margin ceiling is a letterboxing alarm, not a target: the shipped tile sits at 8-9 px of
+# 512 (1.6%), so 12 catches a re-export that has been scaled down inside its canvas without
+# failing a file that is merely anti-aliased. Coverage floors the same way: 12.5% of this tile
+# is transparent by design, so 60% leaves room for the rounding while catching a shrink.
+BRAND_MARKS = {
+    "perimenopause-tracker": (ICON, 12, 0.60),
+}
 MIN_SIDE, MAX_SIDE = 320, 3840
 # Play's help states a screenshot's longest side "can't be more than twice the minimum dimension".
 # Reported as a warning, not a failure: modern 20:9 captures (1440x3120 = 2.17:1) exceed 2:1 and
@@ -72,7 +103,7 @@ def app_dirs(root):
                   if p.is_dir() and ((p / "assets").is_dir() or (p / "screenshots").is_dir()))
 
 
-def check_asset(app, path, expected, kind, problems, warnings, args):
+def check_asset(app, path, expected, kind, problems, warnings, args, alpha_matters=True):
     im = Image.open(path)
     size = im.size
     if expected is not None:
@@ -90,12 +121,56 @@ def check_asset(app, path, expected, kind, problems, warnings, args):
                                long_side / short_side, ASPECT_LIMIT))
     # The icon may keep its alpha; the feature graphic may not - Play asks for "JPEG or 24-bit PNG
     # (no alpha)" there. An opaque alpha channel is what most of these files carry and is fine.
-    if kind == "graphic" and im.mode.endswith("A") and im.getchannel("A").getextrema()[0] < 255:
+    if alpha_matters and kind == "graphic" and im.mode.endswith("A") and im.getchannel("A").getextrema()[0] < 255:
         warnings.append("%s: %s has transparent pixels; Play wants no alpha on the feature graphic"
                         % (app.name, path.name))
     if not args.quiet:
         print("  %-16s %-10s %-28s %dx%d" % (app.name, kind, path.name, size[0], size[1]))
     return size
+
+
+def check_brand_mark(app, path, spec, problems, args):
+    """Assert the brand mark is still the tile the page layouts were designed around.
+
+    The four placements (the four pages' favicons, the two header chips that scale it to 34 and
+    38 px, the Play icon) all assume the same thing: a square canvas with the rounded tile drawn
+    across it and transparent corners. The realistic way that breaks is a well-meant "remove the
+    padding" crop, which is why the padding is pinned here rather than removed.
+    """
+    size, max_margin, min_coverage = spec
+    im = Image.open(path).convert("RGBA")
+
+    if im.size != size:
+        problems.append("%s: %s is %dx%d, but the brand chip and the four favicons assume %dx%d"
+                        % (app.name, path.name, im.size[0], im.size[1], size[0], size[1]))
+        return im.size
+
+    alpha = im.getchannel("A")
+    box = alpha.getbbox()   # the tile's own edges: everything the canvas actually draws
+    if box is None:
+        problems.append("%s: %s is entirely transparent" % (app.name, path.name))
+        return im.size
+
+    left, top, right, bottom = box
+    margin = max(left, top, size[0] - right, size[1] - bottom)
+    if margin > max_margin:
+        problems.append("%s: %s clears %d px of transparent margin, past the %d px the placements allow"
+                        % (app.name, path.name, margin, max_margin))
+
+    corners = [alpha.getpixel(p) for p in ((0, 0), (size[0] - 1, 0), (0, size[1] - 1), (size[0] - 1, size[1] - 1))]
+    if any(c > 0 for c in corners):
+        problems.append("%s: %s has an opaque corner (%s), so the tile's rounded corners are gone"
+                        % (app.name, path.name, corners))
+
+    opaque = sum(i * n for i, n in enumerate(alpha.histogram())) / (255.0 * size[0] * size[1])
+    if opaque < min_coverage:
+        problems.append("%s: %s is only %.1f%% opaque: the mark has been shrunk inside its canvas"
+                        % (app.name, path.name, opaque * 100))
+
+    if not args.quiet:
+        print("  %-16s %-10s %-28s %dx%d  margin %d px, %.1f%% opaque"
+              % (app.name, "brand", path.name, size[0], size[1], margin, opaque * 100))
+    return im.size
 
 
 def check_screenshots(app, shots, problems, warnings, args):
@@ -132,12 +207,22 @@ def main(argv=None):
         for app in app_dirs(root):
             assets = app / "assets"
             if assets.is_dir():
-                for pattern, expected, kind in (
-                    ("*feature*graphic*.png", FEATURE_GRAPHIC, "graphic"),
-                    ("*icon*.png", ICON, "icon"),
+                for pattern, expected, kind, alpha_matters in (
+                    ("*feature*graphic*.png", FEATURE_GRAPHIC, "graphic", True),
+                    (FEATURE_PLAIN, FEATURE_GRAPHIC, "graphic", False),
+                    ("*icon*.png", ICON, "icon", True),
                 ):
                     for path in sorted(assets.glob(pattern)):
-                        check_asset(app, path, expected, kind, problems, warnings, args)
+                        check_asset(app, path, expected, kind, problems, warnings, args, alpha_matters)
+
+                spec = BRAND_MARKS.get(app.name)
+                if spec is not None:
+                    mark = assets / "icon.png"
+                    if mark.is_file():
+                        check_brand_mark(app, mark, spec, problems, args)
+                    else:
+                        problems.append("%s: assets/icon.png is missing - it is the four favicons and "
+                                        "the header chips" % app.name)
             if (app / "screenshots").is_dir():
                 found = sorted((app / "screenshots").glob("**/*.png"))
                 shots += len(found)

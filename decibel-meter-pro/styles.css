@@ -208,7 +208,7 @@ a:hover { color: #fff; }
   border-radius: 26px;
   overflow: hidden !important;
   background: #111827;
-  aspect-ratio: 9 / 19.5;
+  aspect-ratio: 9 / 18;   /* 1:2.00 exactly: the store captures are 1440x2880, so this box mirrors them */
   max-height: min(62vh, 560px);
 }
 .device .carousel-slide { margin: 0; padding: 0; border: 0; height: 100%; }
@@ -398,12 +398,12 @@ a:hover { color: #fff; }
   width: 100%; height: auto;
   max-height: min(58vh, 520px);
   border-radius: 16px 16px 0 0;
-  aspect-ratio: 9 / 19.5;
+  aspect-ratio: 9 / 18;   /* mirrors the 1440x2880 capture: 1:2.00, no crop and no distortion */
   object-fit: cover; object-position: top center;
   display: block;
 }
 .shot-carousel .shot-mock {
-  aspect-ratio: 9 / 19.5;
+  aspect-ratio: 9 / 18;   /* a placeholder frame that matches the real capture's shape */
   max-height: min(58vh, 520px);
   border-radius: 16px 16px 0 0;
   padding: 1.25rem;
