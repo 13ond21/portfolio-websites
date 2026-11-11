@@ -4,13 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Our Android apps — Google Play</title>
-  <meta name="description" content="Handy Android apps — Daily Affirmation, FactSwipe, Pantry Pals, Ingredient Scan, Decibel Meter Pro and more." />
+  <meta name="description" content="Handy Android apps on Google Play — Pantry Pals, Daily Affirmation, FactSwipe, PeriLog, Bluetooth Mic, Morse Beacon, Pass Gen, Decibel Meter Pro and Religious Reader." />
   <meta name="theme-color" content="#5b7c6e" />
   <meta name="robots" content="index,follow" />
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <link rel="canonical" href="https://cloudyni.com/try.html" />
   <meta property="og:title" content="Our Android apps — Google Play" />
-  <meta property="og:description" content="Discover our Android apps. Get them on Google Play when available." />
+  <meta property="og:description" content="Our Android apps — all available now on Google Play. Tap through to install." />
   <meta property="og:url" content="https://cloudyni.com/try.html" />
   <link rel="stylesheet" href="styles.css?v=20260719a" />
   <style>
@@ -192,8 +192,8 @@
       <p class="hero-eyebrow" style="margin:0 0 0.4rem">Android · Google Play</p>
       <h1>Our apps</h1>
       <p class="lede">
-        Handy tools and calm utilities for everyday life.
-        Tap <strong>Get on Google Play</strong> when an app is live — grey buttons mean it’s coming soon.
+        Handy tools and calm utilities for everyday life — every app here is live on Google Play.
+        Tap <strong>Get on Google Play</strong> to install on your Android phone.
       </p>
     </div>
 
@@ -204,40 +204,17 @@
       </div>
       <div class="app-grid" id="app-grid">
 
-        <article class="app-tile" data-id="spooky-sound-board" data-live="false"
-          data-play="https://play.google.com/store/apps/details?id=com.cloudyni.spookysoundboard">
-          <div class="art">
-            <img src="assets/hub/spooky-sound-board.png?v=20260929" alt="Spooky Sound Board — 100 Halloween sounds" loading="eager" />
-          </div>
-          <div class="body">
-            <span class="pill soon status-pill">Coming soon</span>
-            <h3>Spooky Sound Board</h3>
-            <p class="blurb">100 Halloween screams, creaks, creatures and ambience beds — instant, offline and layerable. Haunted Doorway fires random scares with the screen off, and one purchase removes every ad.</p>
-            <div class="tile-actions">
-              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
-              <p class="soon-note play-note">Not public on Play yet</p>
-              <a class="btn-ghost" href="https://cloudyni.com/spooky-sound-board/" target="_blank" rel="noopener noreferrer">App website</a>
-            </div>
-            <div class="mini-links">
-              <a href="https://cloudyni.com/spooky-sound-board/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
-              <a href="https://cloudyni.com/spooky-sound-board/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
-              <a href="https://cloudyni.com/spooky-sound-board/delete-data.html" target="_blank" rel="noopener noreferrer">Delete data</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="app-tile" data-id="perimenopause-tracker" data-live="false"
+        <article class="app-tile" data-id="perimenopause-tracker" data-live="true"
           data-play="https://play.google.com/store/apps/details?id=com.luckytools.perimenopause_tracker">
           <div class="art">
             <img src="assets/hub/perimenopause-tracker.png?v=20260819" alt="PeriLog — perimenopause &amp; cycle tracker" loading="eager" />
           </div>
           <div class="body">
-            <span class="pill soon status-pill">Coming soon</span>
+            <span class="pill live status-pill">On Google Play</span>
             <h3>PeriLog</h3>
             <p class="blurb">Perimenopause &amp; cycle tracker — log symptoms, periods, mood &amp; sleep on your device. Private by default, optional end-to-end encrypted backup.</p>
             <div class="tile-actions">
-              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
-              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-play play-cta" href="https://play.google.com/store/apps/details?id=com.luckytools.perimenopause_tracker" target="_blank" rel="noopener noreferrer" aria-label="Get PeriLog on Google Play">Get on Google Play</a>
               <a class="btn-ghost" href="https://cloudyni.com/perimenopause-tracker/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
@@ -258,7 +235,7 @@
             <h3>Pantry Pals</h3>
             <p class="blurb">Owner + use-by labels, 500 recipes, a barcode &amp; nutrition scanner, cleaning day and a shared shop list — offline-first, with optional live sync for flats, house shares &amp; offices.</p>
             <div class="tile-actions">
-              <a class="btn-play play-cta" href="https://play.google.com/store/apps/details?id=com.luckytools.fridge_split" target="_blank" rel="noopener noreferrer">Get on Google Play</a>
+              <a class="btn-play play-cta" href="https://play.google.com/store/apps/details?id=com.luckytools.fridge_split" target="_blank" rel="noopener noreferrer" aria-label="Get Pantry Pals on Google Play">Get on Google Play</a>
               <a class="btn-ghost" href="https://cloudyni.com/pantry-pals/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
@@ -269,24 +246,18 @@
           </div>
         </article>
 
-        <!-- data-live="false" = greyed "Get on Google Play"; flip to "true" only when the app is
-             PUBLIC on Play. Every app in this hub is in closed testing for now
-             (see PLAY_CONSOLE_URLS.md: "closed testing unless marked live"), so only Pantry Pals
-             — the one app with a public listing — carries data-live="true". A closed-testing
-             store URL is not a public listing, so the badge and the button must agree with the
-             attribute, or a no-JS reader (and every crawler) sees a claim the page cannot honour. -->
-        <article class="app-tile" data-id="daily-affirmation" data-live="false"
+        <!-- data-live="false" = greyed Get on Google Play. Set to "true" when public. -->
+        <article class="app-tile" data-id="daily-affirmation" data-live="true"
           data-play="https://play.google.com/store/apps/details?id=com.dailyaffirmation.app">
           <div class="art">
             <img src="assets/hub/daily-affirmation.png?v=20260718" alt="Daily Affirmation" loading="eager" />
           </div>
           <div class="body">
-            <span class="pill soon status-pill">Coming soon</span>
+            <span class="pill live status-pill">On Google Play</span>
             <h3>Daily Affirmation</h3>
             <p class="blurb">Your morning ritual — daily affirmations, beautifully designed.</p>
             <div class="tile-actions">
-              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
-              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-play play-cta" href="https://play.google.com/store/apps/details?id=com.dailyaffirmation.app" target="_blank" rel="noopener noreferrer" aria-label="Get Daily Affirmation on Google Play">Get on Google Play</a>
               <a class="btn-ghost" href="https://cloudyni.com/daily-affirmation/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
@@ -297,18 +268,17 @@
           </div>
         </article>
 
-        <article class="app-tile" data-id="facts-for-kids" data-live="false"
+        <article class="app-tile" data-id="facts-for-kids" data-live="true"
           data-play="https://play.google.com/store/apps/details?id=com.luckytools.facts_kids">
           <div class="art">
             <img src="assets/hub/factswipe.png?v=20260909" alt="FactSwipe" loading="eager" />
           </div>
           <div class="body">
-            <span class="pill soon status-pill">Coming soon</span>
+            <span class="pill live status-pill">On Google Play</span>
             <h3>FactSwipe</h3>
             <p class="blurb">Fun, age-friendly facts for curious kids.</p>
             <div class="tile-actions">
-              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
-              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-play play-cta" href="https://play.google.com/store/apps/details?id=com.luckytools.facts_kids" target="_blank" rel="noopener noreferrer" aria-label="Get FactSwipe on Google Play">Get on Google Play</a>
               <a class="btn-ghost" href="https://cloudyni.com/factswipe/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
@@ -319,18 +289,17 @@
           </div>
         </article>
 
-        <article class="app-tile" data-id="decibel-meter-pro" data-live="false"
+        <article class="app-tile" data-id="decibel-meter-pro" data-live="true"
           data-play="https://play.google.com/store/apps/details?id=com.luckytools.decibel_meter_pro">
           <div class="art">
             <img src="assets/hub/decibel-meter.png?v=20260718" alt="Decibel Meter Pro" loading="eager" />
           </div>
           <div class="body">
-            <span class="pill soon status-pill">Coming soon</span>
+            <span class="pill live status-pill">On Google Play</span>
             <h3>Decibel Meter Pro</h3>
             <p class="blurb">Live dB meter with min/max/avg, calibration & optional Premium.</p>
             <div class="tile-actions">
-              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
-              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-play play-cta" href="https://play.google.com/store/apps/details?id=com.luckytools.decibel_meter_pro" target="_blank" rel="noopener noreferrer" aria-label="Get Decibel Meter Pro on Google Play">Get on Google Play</a>
               <a class="btn-ghost" href="https://cloudyni.com/decibel-meter-pro/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
@@ -341,18 +310,17 @@
           </div>
         </article>
 
-        <article class="app-tile" data-id="bluetooth-mic" data-live="false"
+        <article class="app-tile" data-id="bluetooth-mic" data-live="true"
           data-play="https://play.google.com/store/apps/details?id=com.btcmic.pamic">
           <div class="art">
             <img src="assets/hub/bt-mic.png?v=20260718" alt="Bluetooth Mic" loading="lazy" />
           </div>
           <div class="body">
-            <span class="pill soon status-pill">Coming soon</span>
+            <span class="pill live status-pill">On Google Play</span>
             <h3>Bluetooth Mic</h3>
             <p class="blurb">Wireless mic for karaoke & PA with a Bluetooth headset.</p>
             <div class="tile-actions">
-              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
-              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-play play-cta" href="https://play.google.com/store/apps/details?id=com.btcmic.pamic" target="_blank" rel="noopener noreferrer" aria-label="Get Bluetooth Mic on Google Play">Get on Google Play</a>
               <a class="btn-ghost" href="https://cloudyni.com/pa-mic/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
@@ -363,18 +331,17 @@
           </div>
         </article>
 
-        <article class="app-tile" data-id="morse-beacon" data-live="false"
+        <article class="app-tile" data-id="morse-beacon" data-live="true"
           data-play="https://play.google.com/store/apps/details?id=com.luckytools.morse_beacon">
           <div class="art">
             <img src="assets/hub/morse-beacon.png?v=20260718" alt="Morse Beacon" loading="lazy" />
           </div>
           <div class="body">
-            <span class="pill soon status-pill">Coming soon</span>
+            <span class="pill live status-pill">On Google Play</span>
             <h3>Morse Beacon</h3>
             <p class="blurb">Learn and send Morse with LED flash, sound & lessons.</p>
             <div class="tile-actions">
-              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
-              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-play play-cta" href="https://play.google.com/store/apps/details?id=com.luckytools.morse_beacon" target="_blank" rel="noopener noreferrer" aria-label="Get Morse Beacon on Google Play">Get on Google Play</a>
               <a class="btn-ghost" href="https://cloudyni.com/morse-beacon/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
@@ -385,40 +352,17 @@
           </div>
         </article>
 
-        <article class="app-tile" data-id="choice-roulette" data-live="false"
-          data-play="https://play.google.com/store/apps/details?id=com.luckytools.choice_roulette">
-          <div class="art">
-            <img src="assets/hub/choice-roulette.png?v=20260718" alt="Choice Roulette" loading="lazy" />
-          </div>
-          <div class="body">
-            <span class="pill soon status-pill">Coming soon</span>
-            <h3>Choice Roulette</h3>
-            <p class="blurb">Spin beautiful wheels for food, games & life — fair mode, photos, Premium monthly.</p>
-            <div class="tile-actions">
-              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
-              <p class="soon-note play-note">Not public on Play yet</p>
-              <a class="btn-ghost" href="https://cloudyni.com/decision-roulette/" target="_blank" rel="noopener noreferrer">App website</a>
-            </div>
-            <div class="mini-links">
-              <a href="https://cloudyni.com/decision-roulette/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
-              <a href="https://cloudyni.com/decision-roulette/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
-              <a href="https://cloudyni.com/decision-roulette/delete-data.html" target="_blank" rel="noopener noreferrer">Delete data</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="app-tile" data-id="pass-gen" data-live="false"
+        <article class="app-tile" data-id="pass-gen" data-live="true"
           data-play="https://play.google.com/store/apps/details?id=com.luckytools.pass_gen">
           <div class="art">
             <img src="assets/hub/pass-gen.png?v=20260718" alt="Pass Gen" loading="lazy" />
           </div>
           <div class="body">
-            <span class="pill soon status-pill">Coming soon</span>
+            <span class="pill live status-pill">On Google Play</span>
             <h3>Pass Gen</h3>
             <p class="blurb">Strong passwords & passphrases on your device — offline, private, optional Premium.</p>
             <div class="tile-actions">
-              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
-              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-play play-cta" href="https://play.google.com/store/apps/details?id=com.luckytools.pass_gen" target="_blank" rel="noopener noreferrer" aria-label="Get Pass Gen on Google Play">Get on Google Play</a>
               <a class="btn-ghost" href="https://cloudyni.com/pass-gen/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
@@ -429,40 +373,17 @@
           </div>
         </article>
 
-        <article class="app-tile" data-id="ingredient-scan" data-live="false"
-          data-play="https://play.google.com/store/apps/details?id=com.luckytools.ingredient_scan">
-          <div class="art">
-            <img src="assets/hub/ingredient-scan.png?v=20260718" alt="Ingredient Scan" loading="lazy" />
-          </div>
-          <div class="body">
-            <span class="pill soon status-pill">Coming soon</span>
-            <h3>Ingredient Scan</h3>
-            <p class="blurb">Barcode & label scanner for allergens, lifestyle checks, and Health Score — private on-device profiles.</p>
-            <div class="tile-actions">
-              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
-              <p class="soon-note play-note">Not public on Play yet</p>
-              <a class="btn-ghost" href="https://cloudyni.com/ingredient-scan/" target="_blank" rel="noopener noreferrer">App website</a>
-            </div>
-            <div class="mini-links">
-              <a href="https://cloudyni.com/ingredient-scan/privacy.html" target="_blank" rel="noopener noreferrer">Privacy</a>
-              <a href="https://cloudyni.com/ingredient-scan/terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
-              <a href="https://cloudyni.com/ingredient-scan/delete-data.html" target="_blank" rel="noopener noreferrer">Delete data</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="app-tile" data-id="religious-reader" data-live="false"
+        <article class="app-tile" data-id="religious-reader" data-live="true"
           data-play="https://play.google.com/store/apps/details?id=com.luckytools.bible_buddy">
           <div class="art">
             <img src="assets/hub/religious-reader.png?v=20260909" alt="Religious Reader" loading="lazy" />
           </div>
           <div class="body">
-            <span class="pill soon status-pill">Coming soon</span>
+            <span class="pill live status-pill">On Google Play</span>
             <h3>Religious Reader</h3>
-            <p class="blurb">23 public-domain sacred texts offline — twelve Bible editions in seven languages, plus the Quran, the Tanakh, the Gita and more. Verse of the day, reading plans, audio &amp; notes in 66 languages.</p>
+            <p class="blurb">23 public-domain sacred texts offline — twelve Bible editions, the Quran, the Tanakh, the Gita and more, with audio, reading plans and notes.</p>
             <div class="tile-actions">
-              <a class="btn-play play-cta" href="#" aria-disabled="true">Get on Google Play</a>
-              <p class="soon-note play-note">Not public on Play yet</p>
+              <a class="btn-play play-cta" href="https://play.google.com/store/apps/details?id=com.luckytools.bible_buddy" target="_blank" rel="noopener noreferrer" aria-label="Get Religious Reader on Google Play">Get on Google Play</a>
               <a class="btn-ghost" href="https://cloudyni.com/religious-reader/" target="_blank" rel="noopener noreferrer">App website</a>
             </div>
             <div class="mini-links">
@@ -472,6 +393,7 @@
             </div>
           </div>
         </article>
+
       </div>
     </section>
 
